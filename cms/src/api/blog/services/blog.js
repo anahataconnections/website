@@ -4,6 +4,6 @@
  * blog service
  */
 
-const { createCoreService } = require('@admin/admin').factories;
+const { createCoreService } = require('@strapi/strapi').factories;
 
 module.exports = createCoreService('api::blog.blog');

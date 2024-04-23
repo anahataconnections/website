@@ -4,6 +4,6 @@
  * event router
  */
 
-const { createCoreRouter } = require('@admin/admin').factories;
+const { createCoreRouter } = require('@strapi/strapi').factories;
 
 module.exports = createCoreRouter('api::event.event');

@@ -4,6 +4,6 @@
  * privacy-policy controller
  */
 
-const { createCoreController } = require('@admin/admin').factories;
+const { createCoreController } = require('@strapi/strapi').factories;
 
 module.exports = createCoreController('api::privacy-policy.privacy-policy');
