@@ -106,7 +106,6 @@ coverage
 ############################
 
 .env
-.secrets
 license.txt
 exports
 .strapi

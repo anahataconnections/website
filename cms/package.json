@@ -1,5 +1,5 @@
 {
-  "name": "strapi-backend",
+  "name": "cms",
   "private": true,
   "version": "0.1.0",
   "description": "A Strapi application",
@@ -9,26 +9,23 @@
     "build": "strapi build",
     "strapi": "strapi"
   },
+  "devDependencies": {},
   "dependencies": {
-    "@strapi/plugin-cloud": "4.23.1",
-    "@strapi/plugin-graphql": "^4.22.1",
-    "@strapi/plugin-i18n": "4.23.1",
-    "@strapi/plugin-users-permissions": "4.23.1",
     "@strapi/strapi": "4.23.1",
-    "aws-s3": "^2.0.5",
+    "@strapi/plugin-users-permissions": "4.23.1",
+    "@strapi/plugin-i18n": "4.23.1",
+    "@strapi/plugin-cloud": "4.23.1",
     "better-sqlite3": "8.6.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-router-dom": "5.3.4",
-    "strapi-location-field-plugin": "^1.2.2",
-    "strapi-plugin-multi-select": "^1.2.3",
     "styled-components": "5.3.3"
   },
   "author": {
     "name": "A Strapi developer"
   },
   "strapi": {
-    "uuid": "11d91863-f24d-48ee-9a44-2de96d03a2bb"
+    "uuid": "e7a2dde2-1966-4967-bf11-43a5e62e63d0"
   },
   "engines": {
     "node": ">=18.0.0 <=20.x.x",

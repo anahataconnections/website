@@ -27,13 +27,13 @@ const Blogs = async () =>  {
           imageUrl={(baseurl+item.data[0].attributes.image.data.attributes.url).replace(/\s/g, "")}
           heading={item.data[0].attributes.tiltle}
           details={item.data[0].attributes.published}
-          data={item.data[0].attributes.content[0].children[0].text}/></Link>
+          data={item.data[0].attributes.content[0].children[0].text.substring(0, 100)}/></Link>
            <Link  href={`../Blog_main/${item.data[1].attributes.tiltle}`}>
            <Blogcard
           imageUrl={(baseurl+item.data[1].attributes.image.data.attributes.url).replace(/\s/g, "")}
           heading={item.data[1].attributes.tiltle}
           details={item.data[1].attributes.published}
-          data={item.data[1].attributes.content[0].children[0].text}/></Link>
+          data={item.data[1].attributes.content[0].children[0].text.substring(0, 100)}/></Link>
            <Link  href={`../Blog_main/${item.data[2].attributes.tiltle}`}>
            <Blogcard
           imageUrl={(baseurl+item.data[2].attributes.image.data.attributes.url).replace(/\s/g, "")}
