@@ -1,4 +1,4 @@
-# frontend/Dockerfile
+# Dockerfile
 FROM node:18-alpine AS builder
 
 WORKDIR /app
