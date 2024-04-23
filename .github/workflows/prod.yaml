@@ -1,0 +1,45 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Production
+
+# Controls when the workflow will run
+on:
+#  push:
+#    branches:
+#      - main
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Run a one-line script
+        run: echo 'Hello, world!'
+
+      - name: Extract branch name
+        shell: bash
+        run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
+        id: extract_branch
+
+      - name: multiple command
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.HOST_ADDRESS }}
+          username: ec2-user
+          key: ${{ secrets.PRIVATE_KEY }}
+          port: 22
+          command_timeout: 30m
+          script: |
+            docker system prune -a -f
+            cd admin/
+            git fetch
+            git checkout origin/${{ steps.extract_branch.outputs.branch }}
+            git switch -C ${{ steps.extract_branch.outputs.branch }}
+            docker-compose -f docker-compose.prod.yaml up --build --no-start
+            docker-compose -f docker-compose.prod.yaml restart

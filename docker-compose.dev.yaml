@@ -1,0 +1,13 @@
+version: '3'
+services:
+  cms:
+    build:
+      context: cms
+      dockerfile: dev.Dockerfile
+    env_file:
+      - ./cms/.env
+    ports:
+      - "80:1337"
+    volumes:
+      - ./cms/src/api:/app/src/api
+    restart: always
