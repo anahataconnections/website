@@ -16,15 +16,15 @@
       "static/chunks/main-app.js",
       "static/chunks/app/Home/page.js"
     ],
-    "/Events/page": [
+    "/Blog/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/Events/page.js"
+      "static/chunks/app/Blog/page.js"
     ],
-    "/Our_story/page": [
+    "/Blog_main/[Name]/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/Our_story/page.js"
+      "static/chunks/app/Blog_main/[Name]/page.js"
     ]
   }
 }
