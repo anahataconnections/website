@@ -15,6 +15,9 @@ export default function Home() {
        <HowWeWork />
     <Community />
         <Testimonials />
+        <header className="font-Pattaya flex items-center justify-center text-[#094C3B] text-[52px]">
+        Our Blogs{" "}
+      </header>
       <Blogs />
 <div id='faq' className='bg-flower_back bg-no-repeat bg-cover'>
       <FAQ />

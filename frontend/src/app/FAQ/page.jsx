@@ -13,7 +13,7 @@ async function fetchFaq() {
 const FAQ =  async  () => {
 
   const Faq = await fetchFaq();
-  console.log(Faq.data[0].attributes.question);
+  // console.log(Faq.data[0].attributes.question);
   return (
     <div className="h-auto">
       <header className="pattaya-regular flex items-center justify-center text-[#094C3B] text-[52px]">
