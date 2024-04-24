@@ -6,7 +6,7 @@ import Link from "next/link";
 
 async function fetchBlog() {
   try {
-    const res = await fetch(`http://localhost:1337/api/blogs/?populate=*`);
+    const res = await fetch(`https://cms.anahataaconnections.com/api/blogs/?populate=*`);
     const response = await res.json();
     return response;
   } catch (err) {
@@ -14,9 +14,9 @@ async function fetchBlog() {
   }
 }
 const Blogs = async () =>  {
-  const baseurl = "http://localhost:1337 ";
+  const baseurl = "https://cms.anahataaconnections.com";
   const item = await fetchBlog();
-  // console.log((baseurl+item.data[0].attributes.image.data.attributes.url).replace(/\s/g, "")); 
+  // console.log(item.data[0].attributes.image.data.attributes.url); 
   return (
     <div className="h-auto py-20">
       
@@ -24,19 +24,19 @@ const Blogs = async () =>  {
       <div className="py-16 flex justify-center items-center gap-x-10">
       <Link  href={`../Blog_main/${item.data[0].attributes.tiltle}`}>
         <Blogcard
-          imageUrl={(baseurl+item.data[0].attributes.image.data.attributes.url).replace(/\s/g, "")}
+          imageUrl={item.data[0].attributes.image.data.attributes.url}
           heading={item.data[0].attributes.tiltle}
           details={item.data[0].attributes.published}
           data={item.data[0].attributes.content[0].children[0].text.substring(0, 100)}/></Link>
            <Link  href={`../Blog_main/${item.data[1].attributes.tiltle}`}>
            <Blogcard
-          imageUrl={(baseurl+item.data[1].attributes.image.data.attributes.url).replace(/\s/g, "")}
+          imageUrl={item.data[1].attributes.image.data.attributes.url}
           heading={item.data[1].attributes.tiltle}
           details={item.data[1].attributes.published}
           data={item.data[1].attributes.content[0].children[0].text.substring(0, 100)}/></Link>
            <Link  href={`../Blog_main/${item.data[2].attributes.tiltle}`}>
            <Blogcard
-          imageUrl={(baseurl+item.data[2].attributes.image.data.attributes.url).replace(/\s/g, "")}
+          imageUrl={item.data[2].attributes.image.data.attributes.url}
           heading={item.data[2].attributes.tiltle}
           details={item.data[2].attributes.published}
           data={item.data[2].attributes.content[0].children[0].text.substring(0, 100)}/></Link>

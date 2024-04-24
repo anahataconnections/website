@@ -8,7 +8,7 @@ export type EventsProps = {
 
 const Eventcard = (props: EventsProps) => {
   const {events} = props;
-  const baseurl = "http://localhost:1337 ";
+  const baseurl = "https://cms.anahataaconnections.com";
   // console.log(events.data[0].attributes);
   // console.log(events.data[0].attributes.image.data.attributes.url);
   return (
@@ -25,7 +25,7 @@ const Eventcard = (props: EventsProps) => {
           <div className="">
                   
         <Image
-            src={(baseurl+item.attributes.image.data.attributes.url).replace(/\s/g, "")}
+            src={item.attributes.image.data.attributes.url}
             width={300}
             height={300}
             className="border-solid border-2 border-black "

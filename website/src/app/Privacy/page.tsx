@@ -3,7 +3,7 @@ import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
 async function fetchPrivacy() {
   try {
-    const res = await fetch(`http://localhost:1337/api/privacy-policy?populate=*`);
+    const res = await fetch(`https://cms.anahataaconnections.com/api/privacy-policy?populate=*`);
     const response = await res.json();
     return response;
   } catch (err) {

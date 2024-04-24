@@ -4,7 +4,7 @@ import Navbar from '../components/Navbar'
 
 async function fetchTerm() {
     try {
-      const res = await fetch(`http://localhost:1337/api/term?populate=*`);
+      const res = await fetch(`https://cms.anahataaconnections.com/api/term?populate=*`);
       const response = await res.json();
       return response;
     } catch (err) {

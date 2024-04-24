@@ -8,7 +8,7 @@ import Eventcard from  './/eventcard'
 // const blog1="/assets/event1.png";
 async function fetchEvents() {
   try {
-    const res = await fetch(`http://localhost:1337/api/events/?populate=*`);
+    const res = await fetch(`https://cms.anahataaconnections.com/api/events/?populate=*`);
     const response = await res.json();
     return response;
   } catch (err) {
@@ -17,7 +17,7 @@ async function fetchEvents() {
 }
 // export default function Events() {
   const Events = async () =>  {
-  const baseurl = "http://localhost:1337 ";
+  const baseurl = "https://cms.anahataaconnections.com";
   const Event = await fetchEvents();
   
   // console.log(Event.data); 

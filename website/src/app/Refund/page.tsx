@@ -4,7 +4,7 @@ import Navbar from '../components/Navbar'
 // import our from "../Our_story/Our_story"
 async function fetchRefund() {
   try {
-    const res = await fetch(`http://localhost:1337/api/refund-policy?populate=*`);
+    const res = await fetch(`https://cms.anahataaconnections.com/api/refund-policy?populate=*`);
     const response = await res.json();
     return response;
   } catch (err) {

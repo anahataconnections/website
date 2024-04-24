@@ -17,20 +17,21 @@ async function fetchBlog(Name: string) {
 // const queryObject = qs.stringify({
 //  populate,
 // });
-
+console.log(`${Name}`);
 
 
   try {
     const res = await fetch(
     //   `https://strapi.saralgroups.com/api/teachers?filters[Name][$eq]=${Name}&${queryObject}`
-      `http://localhost:1337/api/blogs?filters[tiltle][$eq]=${Name}&populate=*`,
+      // `https://cms.anahataaconnections.com/api/blogs?filters[Name][$eq]=Yoga and Anahata`,
+      `https://cms.anahataaconnections.com/api/blogs?filters[tiltle][$eq]=${Name}&populate=*`,
 
       
     );
    
   
     const response = await res.json();
-   
+  //  console.log(response)
     return response;
   } catch (err) {
     console.error(err);
@@ -40,10 +41,10 @@ async function fetchBlog(Name: string) {
 
 
 const BlogPage = async ({ params }: any) => {
-    const baseurl = "http://localhost:1337 ";
+    const baseurl = "https://cms.anahataaconnections.com";
 
   const item = await fetchBlog(params.Name);
-  console.log(item.data[0].attributes.content[0].children[0].text);
+  // console.log(item);
   return (
     <>
     <main className="bg-white" >
@@ -60,7 +61,7 @@ const BlogPage = async ({ params }: any) => {
           <div className="font-Pattaya mt-2 flex justify-center items-center text-xl text-black">{item.data[0].attributes.published}</div>
           <div className="flex justify-center items-center w-[100%]">
           <Image
-            src={(baseurl+item.data[0].attributes.image.data.attributes.url).replace(/\s/g, "")}
+            src={item.data[0].attributes.image.data.attributes.url}
             width={500}
             height={400}
             className=""

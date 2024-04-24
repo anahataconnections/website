@@ -7,7 +7,7 @@ import Link from "next/link";
 
 async function fetchBlog() {
   try {
-    const res = await fetch(`http://localhost:1337/api/blogs/?populate=*`);
+    const res = await fetch(`https://cms.anahataaconnections.com/api/blogs/?populate=*`);
     const response = await res.json();
     return response;
   } catch (err) {
@@ -17,7 +17,7 @@ async function fetchBlog() {
 // export default function Blog() {
   const Blog = async () =>  {
 
-      const baseurl = "http://localhost:1337 ";
+      const baseurl = "https://cms.anahataaconnections.com";
       const Blog = await fetchBlog();
       // console.log(Blog.data);
   return (
@@ -36,7 +36,7 @@ async function fetchBlog() {
             <div className=" w-[70%]">
           <div className=" my-5 p-5" >
           <Image
-            src={(baseurl+Blog.data[2].attributes.image.data.attributes.url).replace(/\s/g, "")}
+            src={Blog.data[2].attributes.image.data.attributes.url}
             width={800}
             height={400}
             className=""
@@ -50,7 +50,7 @@ async function fetchBlog() {
           </div>
           <div className=" my-5 p-5" >
           <Image
-            src={(baseurl+Blog.data[3].attributes.image.data.attributes.url).replace(/\s/g, "")}
+            src={Blog.data[3].attributes.image.data.attributes.url}
             width={700}
             height={400}
             className=""
@@ -70,7 +70,7 @@ async function fetchBlog() {
             <div>
               <div className="flex flex-row my-4">
               <Image
-            src={(baseurl+item.attributes.image.data.attributes.url).replace(/\s/g, "")}
+            src={item.attributes.image.data.attributes.url}
             width={150}
             height={150}
             className=""
