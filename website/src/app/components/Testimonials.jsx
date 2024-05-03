@@ -2,6 +2,7 @@ import React from "react";
 // import test from "../assets/testimonial.png";
 // import rect from "../assets/rect.png";
 import Image from "next/image";
+import ShowMoreButton from './ShowMoreButton';
 
 const Testimonials = () => {
   return (
@@ -28,7 +29,9 @@ const Testimonials = () => {
             <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor”</p>
+            aliquip ex ea commodo consequat. Duis aute irure dolor , quis nostrud exercitation ”</p>
+            <ShowMoreButton />
+
             <div className="absolute bottom-3 right-32 px-5 satisfy-regular text-3xl">
             - Mr & Mrs Singh
           </div>

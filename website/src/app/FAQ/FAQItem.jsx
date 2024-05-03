@@ -15,14 +15,16 @@ const FAQItem = ({ question, answer }) => {
       }`}
     >
       <div
-        className="bg-inherit px-4 py-5 cursor-pointer"
+        className="bg-inherit px-4 py-5 cursor-pointer flex items-center justify-between"
         onClick={toggleAccordion}
       >
         <h3 className="text-xl font-semibold">{question}</h3>
+        <h1 className="text-xl font-semibold">+</h1>
       </div>
       {isOpen && (
-        <div className="px-4 py-3">
+        <div className="px-4 py-3 flex items-center justify-between">
           <p className="text-lg">{answer}</p>
+         
         </div>
       )}
     </div>

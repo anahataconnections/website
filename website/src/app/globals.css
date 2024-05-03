@@ -3,6 +3,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Cantarell:ital,wght@0,400;0,700;1,400;1,700&family=Pattaya&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cantarell:ital,wght@0,400;0,700;1,400;1,700&family=Pattaya&family=Satisfy&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@font-face {
+  font-family: 'Eva Mayasari';
+  src: url('/fonts/eva-mayasari.woff2') format('woff2'), /* Modern Browsers */
+       url('/fonts/eva-mayasari.woff') format('woff');   /* Legacy Browsers */
+  font-weight: normal;
+  font-style: normal;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

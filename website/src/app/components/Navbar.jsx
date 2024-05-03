@@ -11,9 +11,9 @@ const Navbar = () => {
         
           <Image
             src="/assets/logo1.png"
-            width={50}
-            height={50}
-            className="hidden md:block mr-3"
+            width={100}
+            height={100}
+            className="hidden md:block "
             alt="Screenshots of the dashboard project showing desktop and mobile versions"
           />
           <div className="font-eva font-semibold text-4xl text-white">Anahata Connections</div>
@@ -21,10 +21,10 @@ const Navbar = () => {
           </div>
 
         <div className="flex items-center gap-x-10 font-semibold text-xl ">
-          <div className="cursor-pointer hover:font-bold hover:transition duration-300 ease-in-out text-white"><Link href="/Home">Home</Link></div>
-          <div className="cursor-pointer hover:font-bold hover:transition duration-300 ease-in-out text-white"><Link href="/Our_story">Our Story</Link></div>
-          <div className="cursor-pointer hover:font-bold hover:transition duration-300 ease-in-out text-white"><Link href="/Blog">Blog</Link></div>
-          <div className="cursor-pointer hover:font-bold hover:transition duration-300 ease-in-out text-white"><Link href="/Home/#faq">FAQs</Link></div>
+          <div className="cursor-pointer hover:text-[#808080] hover:transition duration-300 ease-in-out text-white"><Link href="/Home">Home</Link></div>
+          <div className="cursor-pointer hover:text-[#808080] hover:transition duration-300 ease-in-out text-white"><Link href="/Our_story">Our Story</Link></div>
+          <div className="cursor-pointer hover:text-[#808080] hover:transition duration-300 ease-in-out text-white"><Link href="/Blog">Blog</Link></div>
+          <div className="cursor-pointer hover:text-[#808080] hover:transition duration-300 ease-in-out text-white"><Link href="/Home/#faq">FAQs</Link></div>
           <div className="border-solid border-2 border-white bg-[#094C3B] text-white rounded-[32px] px-10 py-2 cursor-pointer hover:bg-[#286f5d]"><Link href="/Signin">Sign In</Link></div>
         </div>
       

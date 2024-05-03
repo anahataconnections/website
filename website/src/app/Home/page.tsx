@@ -21,8 +21,9 @@ export default function Home() {
       <Blogs />
 <div id='faq' className='bg-flower_back bg-no-repeat bg-cover'>
       <FAQ />
-      <Footer />
+      
       </div>
+      <Footer />
     </main>
   );
 }
