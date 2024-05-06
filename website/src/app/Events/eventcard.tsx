@@ -1,6 +1,17 @@
 import React from "react";
 import Image from "next/image";
 
+// interface Event {
+//   id: number;
+//   attributes: {
+//     name: string;
+//     date: string;
+//     // Add other properties as needed
+//   };
+// }
+// export type EventsProps = {
+//   events: Event[]; // Specify that 'events' is an array of 'Event' objects
+// };
 export type EventsProps = {
 
   events :  any[] ;
@@ -9,15 +20,16 @@ export type EventsProps = {
 const Eventcard = (props: EventsProps) => {
   const {events} = props;
   const baseurl = "https://cms.anahataaconnections.com";
-  // console.log(events.data[0].attributes);
+  // console.log(events);
+  console.log(events); 
   // console.log(events.data[0].attributes.image.data.attributes.url);
   return (
    
     <div className="flex  item-center justify-between ">
-       {events.data.map((item) => {
+       {events.map((item : any ) => {
           
         return (
-          <div className="">
+          <div key={item.id} className="">
             <div className="mx-4">
              <Image
             src={item.attributes.image.data.attributes.url}

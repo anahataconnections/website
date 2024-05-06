@@ -10,7 +10,8 @@ async function fetchEvents() {
   try {
     const res = await fetch(`https://cms.anahataaconnections.com/api/events/?populate=*`);
     const response = await res.json();
-    return response;
+
+    return response.data;
   } catch (err) {
     console.error(err);
   }

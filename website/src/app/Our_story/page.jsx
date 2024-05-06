@@ -31,7 +31,7 @@ export default function Our_story() {
             </div>
           </div>
           <div className="m-5 ">
-            <h1 className="font-Pattaya my-6 flex items-center justify-center text-3xl text-[#094C3B]">Founder's Words</h1>
+            <h1 className="font-Pattaya my-6 flex items-center justify-center text-3xl text-[#094C3B]">Founder&apos;s Words</h1>
             <p className="font-nota text-l m-2">Pen auto polygon group edit object polygon. Prototype vector union slice prototype. Blur move subtract flatten editor prototype share device. Component subtract vertical figjam layout auto blur. Team move shadow rectangle component. Italic export connection style background inspect link distribute. Ipsum pixel select layer variant group object. Move rotate vector vertical outline list underline layout ellipse. </p>
             <p className="font-nota text-l m-2">Frame layer image figma union variant flows plugin share component. Auto group draft italic auto arrow component prototype. Subtract stroke scale invite reesizing underline share rotate bold project. Draft subtract vertical subtract team text shadow. Select bullet style auto boolean move. Image horizontal line boolean underline library italic polygon figma strikethrough. </p>
           </div>

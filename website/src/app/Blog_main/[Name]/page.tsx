@@ -69,7 +69,7 @@ const BlogPage = async ({ params }: any) => {
           />
           </div>
           <div>
-            {item.data[0].attributes.content.map((i)=>{
+            {item.data[0].attributes.content.map((i : any)=>{
                 return(
                     <>
                     <p className="mx-20 text-xl">{i.children[0].text}</p>

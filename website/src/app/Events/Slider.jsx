@@ -29,7 +29,7 @@ const Slider = () => {
     return () => {
       clearTimeout(timer);
     };
-  }, [activeImage]);
+  }, [activeImage ]);
   return (
     <main className=" place-items-center flex w-full mx-auto px-20 py-10 bg-grey-gradient shadow-2xl rounded-2xl ">
       <div

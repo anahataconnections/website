@@ -66,10 +66,10 @@ async function fetchBlog() {
           </div>
           </div>
           <div className="my-10 ">
-          {Blog.data.map((item) => {
+          {Blog.data.map((item : any) => {
           
           return (  
-            <div>
+            <div key={item.id}>
               <div className="flex flex-row my-4">
               <Image
             src={item.attributes.image.data.attributes.url}
