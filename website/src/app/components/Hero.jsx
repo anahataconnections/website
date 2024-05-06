@@ -3,7 +3,8 @@ import React from "react";
 
 import Image from "next/image";
 
-import Motionframe from  "./motionframe";
+// import Motionframe from  "./Motionframe";
+import Motionframe from "./Motionframe";
 // import lf from "../assets/left_flower.png";
 // import rf from "../assets/right_flower.png";
 // import logo from "../assets/logo1.png";
