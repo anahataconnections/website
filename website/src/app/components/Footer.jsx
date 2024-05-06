@@ -18,7 +18,7 @@ const Footer = () => {
             className="hidden md:block mr-3"
             alt="Screenshots of the dashboard project showing desktop and mobile versions"
           />
-            <div className="font-Satisfy font-bold pt-4 text-4xl text-[#094C3B]">
+            <div className="font-EvaMayasari font-bold pt-4 text-4xl text-[#094C3B]">
               Anahata Connections
             </div>
             <div className=" text-sm text-[#094C3B] font-bold py-1">
@@ -52,13 +52,13 @@ const Footer = () => {
     <div className=" mb-10 mr-10 flex flex-col justify-start items-start">
       <b><h2>Subscribe for our latest updates</h2></b>
     <form id="myForm">
-    <input type="text" id="name" name="name" className="mr-5 border-solid border-2 border-[#094C3B] h-11 text-[#094C3B]" placeholder="&nbsp;&nbsp;xyz@gmail.com"/>
-    <button className="mt-2 bg-[#094C3B] text-white rounded-[3px] px-14 py-2.5 cursor-pointer hover:bg-[#286f5d] font-semibold" type="submit">Subscribe</button>
+    <input type="text" id="name" name="name" className="mr-5 rounded-[7px] border-solid border-2 border-[#094C3B] h-11 text-[#094C3B]" placeholder="&nbsp;&nbsp;xyz@gmail.com"/>
+    <button className="mt-2 bg-[#094C3B]  text-white rounded-[7px] px-14 py-2.5 cursor-pointer hover:bg-[#286f5d] font-semibold" type="submit">Subscribe</button>
 </form>
 
     </div>
     <div className="grid grid-cols-3 gap-x-32">
-    <div className="flex flex-col">
+    <div className="flex flex-col pl-26">
             <div className="font-semibold text-xl pb-5 underline underline-offset-8 ">
               Overview
             </div>

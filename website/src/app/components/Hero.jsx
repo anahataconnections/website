@@ -17,7 +17,7 @@ const Hero = () => {
    
     </div>
     <div className="h-[750px] bg-white-gradient">
-      <header className="font-Pattaya flex items-center justify-center text-[#0C6242] text-[52px] pt-40">
+      <header className="font-Pattaya flex items-center justify-center text-[#0C6242] text-[52px] pt-20">
         Why Anahata Connections?
       </header>
 

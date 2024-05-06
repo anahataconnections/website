@@ -1,10 +1,21 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import localfont from "next/font/local";
 
 
-
+// const na = eva-maya ;
 const inter = Inter({ subsets: ["latin"] });
+const eva = localfont({
+  src: [
+    {
+      path: "../../public/fonts/eva-mayasari.woff",
+      weight: "700"
+    },
+  ],
+  
+  variable: "--font-eva", // Use '--font-eva' directly
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -13,7 +24,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({children,}: Readonly<{ children: React.ReactNode;}>) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${eva.variable}`}>
      
       <body className={inter.className}>{children}</body>
     

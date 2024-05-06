@@ -18,7 +18,7 @@ const Blogs = async () =>  {
   const item = await fetchBlog();
   // console.log(item.data[0].attributes.image.data.attributes.url); 
   return (
-    <div className="h-auto py-20">
+    <div className="h-auto">
       
 
       <div className="py-16 flex justify-center items-center gap-x-10">

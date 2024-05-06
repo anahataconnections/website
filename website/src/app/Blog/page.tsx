@@ -32,8 +32,8 @@ async function fetchBlog() {
           />
           <div className=" bg-home-page-back bg-contain bg-no-repeat">
           <div className="bg-white-gradient">
-          <div className="font-Pattaya mt-2 flex justify-center items-center text-7xl text-[#094C3B]">Blogs</div>
-          <div className="flex flex-row mx-10">
+          <div className="font-Pattaya mt-20 flex justify-center items-center text-7xl text-[#094C3B]">Blogs</div>
+          <div className="flex flex-row mx-5">
             <div className=" w-[70%]">
           
           <div className=" my-5 p-5" >

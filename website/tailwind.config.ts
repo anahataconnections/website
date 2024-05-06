@@ -33,7 +33,7 @@ const config: Config = {
         'Pattaya' : ["Pattaya", 'sans-serif'],
         'Satisfy' : ["Satisfy", 'cursive'],
         'nota' : ["Noto Sans", 'sans-serif'],
-        'EvaMayasari': ['Eva Mayasari', 'cursive'],
+        'EvaMayasari': ["var(--font-eva)"],
       },
     },
   },

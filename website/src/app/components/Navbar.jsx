@@ -4,7 +4,7 @@ import Link from "next/link";
 // import our from "../Our_story/Our_story"
 const Navbar = () => {
   return (
-    <header className=" bg-[#094C3B] shadow-md h-[100px] flex items-center px-8">
+    <header className=" bg-[#094C3B] shadow-md h-[100px] flex items-center px-4">
       <div className="flex justify-between items-center w-full max-w-screen-xl">
         
         <div className="flex items-center justify-center">
@@ -16,7 +16,7 @@ const Navbar = () => {
             className="hidden md:block "
             alt="Screenshots of the dashboard project showing desktop and mobile versions"
           />
-          <div className="font-eva font-semibold text-4xl text-white">Anahata Connections</div>
+          <div className="mt-3 font-EvaMayasari font-semibold text-5xl text-white">Anahata Connections</div>
           {/* <div className="font-semibold satisfy-regular text-4xl">Anahata Connection</div> */}
           </div>
 

@@ -15,7 +15,7 @@ export default function Home() {
        <HowWeWork />
     <Community />
         <Testimonials />
-        <header className="font-Pattaya flex items-center justify-center text-[#094C3B] text-[52px]">
+        <header className="font-Pattaya flex mt-28 items-center justify-center text-[#094C3B] text-[52px]">
         Our Blogs{" "}
       </header>
       <Blogs />
