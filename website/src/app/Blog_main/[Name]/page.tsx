@@ -9,7 +9,7 @@ import  Blogs from '../../components/Blogs'
 
 import Footer from '../../components/Footer'
 
-
+export const runtime = 'edge';
 
 async function fetchBlog(Name: string) {
 
@@ -92,3 +92,4 @@ const BlogPage = async ({ params }: any) => {
 };
 
 export default BlogPage;
+
