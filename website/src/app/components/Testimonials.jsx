@@ -6,14 +6,13 @@ import ShowMoreButton from './ShowMoreButton';
 
 const Testimonials = () => {
   return (
-    <div className="h-full mx-20 bg-[#DDF7F0] w-[90%]">
+    <div className="h-full mx-auto bg-[#DDF7F0] w-[90%] ">
       <header className="font-Pattaya flex items-center justify-center text-[#094C3B] text-[52px]">
         Hear what our users say about us
       </header>
 
       <div className="flex items-center justify-start py-20 pl-28">
         <div>
-          {/* <img src={test} alt="" /> */}
           <Image
             src="/assets/testimonial.png"
             width={380}

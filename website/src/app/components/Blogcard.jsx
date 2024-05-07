@@ -8,7 +8,7 @@ const Blogcard = ({ imageUrl, heading, data, details }) => {
         {/* <img src={imageUrl} alt="" className="w-[300px]" /> */}
         <Image
             src={imageUrl}
-            width={300}
+            width={500}
             height={300}
             className=""
             alt="Screenshots of the dashboard project showing desktop and mobile versions"
