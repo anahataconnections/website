@@ -10,20 +10,20 @@ import Footer from '../components/Footer'
 export default function Home() {
   return (
     <main className='bg-white' >
-      <Navbar />
-      <Hero />
+      {/* <Navbar /> */}
+      {/* <Hero /> */}
        <HowWeWork />
     <Community />
         <Testimonials />
         <header className="font-Pattaya flex mt-28 items-center justify-center text-[#094C3B] text-[52px]">
         Our Blogs{" "}
       </header>
-      <Blogs />
+      {/* <Blogs /> */}
 <div id='faq' className='bg-flower_back bg-no-repeat bg-cover'>
       <FAQ />
       
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </main>
   );
 }
