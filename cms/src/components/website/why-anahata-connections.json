@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_website_why_anahata_connections",
+  "info": {
+    "displayName": "Why_Anahata_Connections"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "content": {
+      "type": "blocks"
+    }
+  }
+}

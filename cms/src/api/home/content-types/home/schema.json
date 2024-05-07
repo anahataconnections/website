@@ -1,0 +1,46 @@
+{
+  "kind": "singleType",
+  "collectionName": "homes",
+  "info": {
+    "singularName": "home",
+    "pluralName": "homes",
+    "displayName": "Home",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "faqs": {
+      "displayName": "FAQ",
+      "type": "component",
+      "repeatable": true,
+      "component": "website.faq"
+    },
+    "our_community": {
+      "displayName": "Our_Community",
+      "type": "component",
+      "repeatable": false,
+      "component": "website.our-community"
+    },
+    "why_anahata_connections": {
+      "displayName": "Why_Anahata_Connections",
+      "type": "component",
+      "repeatable": false,
+      "component": "website.why-anahata-connections"
+    },
+    "testimonial": {
+      "displayName": "Testimonial",
+      "type": "component",
+      "repeatable": true,
+      "component": "website.testimonial"
+    },
+    "home_blog": {
+      "displayName": "Home_Blog",
+      "type": "component",
+      "repeatable": false,
+      "component": "website.home-blog"
+    }
+  }
+}
