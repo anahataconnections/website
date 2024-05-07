@@ -11,10 +11,49 @@
     /* Add your styles for small devices here */
   }
   
-  /* Medium devices (landscape tablets, 768px and up) */
   @media only screen and (min-width: 768px) {
     /* Add your styles for medium devices here */
-    
+    .logo{
+        position: relative;
+        right: 73px;
+        width: 200px;
+    }
+    .man{
+        position: relative;
+        top: 15px;
+        left: 10px;
+        width: 166px;
+    }
+    .women{
+        position: relative;
+        top: 15px;
+        left: 17px;
+        width: 175px;
+    }
+    .flower-1{
+        position: relative;
+        left: 13px;
+        width: 60px;
+        top: -6px;
+}
+    .flower-2{
+        position: relative;
+        top: 23px;
+        left: 10px;
+        width: px;
+    }
+
+    .onspot{
+        position: relative;
+        left: 20px;
+        margin-top: 18px;
+    }
+    .meet-button{
+        position:relative;
+        top:70px;
+        height: 43px;
+        width: 200px;
+    }
   }
   @media only screen and (min-width: 1024px) {
     /* Add your styles for large devices here */
@@ -25,31 +64,32 @@
     }
     .man{
         position: relative;
-        top: 13px;
-        left: 16px;
+        top: 15px;
+        left: 10px;
         width: 166px;
     }
     .women{
         position: relative;
-        top: 12px;
-        left: 22px;
+        top: 15px;
+        left: 17px;
         width: 175px;
     }
     .flower-1{
-        position: relative; 
-        left: 15px;
-
-     width: 60px;}
+        position: relative;
+        left: 13px;
+        width: 60px;
+        top: -6px;
+}
     .flower-2{
         position: relative;
         top: 23px;
-        left: 20px;
+        left: 10px;
         width: 60px;
     }
 
     .onspot{
         position: relative;
-        left: 33px;
+        left: 20px;
         margin-top: 18px;
     }
     .meet-button{
