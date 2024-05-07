@@ -41,8 +41,7 @@ console.log(`${Name}`);
 
 
 const BlogPage = async ({ params }: any) => {
-    const baseurl = "https://cms.anahataaconnections.com";
-
+   
   const item = await fetchBlog(params.Name);
   // console.log(item);
   return (

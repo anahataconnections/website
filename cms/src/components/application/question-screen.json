@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_application_question_screens",
+  "info": {
+    "displayName": "Question_Screen"
+  },
+  "options": {},
+  "attributes": {
+    "questions": {
+      "type": "component",
+      "repeatable": true,
+      "component": "application.question"
+    }
+  }
+}

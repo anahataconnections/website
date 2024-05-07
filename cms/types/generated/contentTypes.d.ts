@@ -794,12 +794,14 @@ export interface ApiAboutAbout extends Schema.SingleType {
     singularName: 'about';
     pluralName: 'abouts';
     displayName: 'about';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
     about: Attribute.Blocks;
+    title: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -811,6 +813,37 @@ export interface ApiAboutAbout extends Schema.SingleType {
       Attribute.Private;
     updatedBy: Attribute.Relation<
       'api::about.about',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiApplicationApplication extends Schema.SingleType {
+  collectionName: 'applications';
+  info: {
+    singularName: 'application';
+    pluralName: 'applications';
+    displayName: 'Application';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Questions_Screen: Attribute.Component<'application.question-screen', true>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::application.application',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::application.application',
       'oneToOne',
       'admin::user'
     > &
@@ -899,6 +932,33 @@ export interface ApiFaqFaq extends Schema.CollectionType {
     createdBy: Attribute.Relation<'api::faq.faq', 'oneToOne', 'admin::user'> &
       Attribute.Private;
     updatedBy: Attribute.Relation<'api::faq.faq', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+  };
+}
+
+export interface ApiHomeHome extends Schema.SingleType {
+  collectionName: 'homes';
+  info: {
+    singularName: 'home';
+    pluralName: 'homes';
+    displayName: 'Home';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    faqs: Attribute.Component<'website.faq', true>;
+    our_community: Attribute.Component<'website.our-community'>;
+    why_anahata_connections: Attribute.Component<'website.why-anahata-connections'>;
+    testimonial: Attribute.Component<'website.testimonial', true>;
+    home_blog: Attribute.Component<'website.home-blog'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<'api::home.home', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<'api::home.home', 'oneToOne', 'admin::user'> &
       Attribute.Private;
   };
 }
@@ -1004,9 +1064,11 @@ declare module '@strapi/types' {
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'api::about.about': ApiAboutAbout;
+      'api::application.application': ApiApplicationApplication;
       'api::blog.blog': ApiBlogBlog;
       'api::event.event': ApiEventEvent;
       'api::faq.faq': ApiFaqFaq;
+      'api::home.home': ApiHomeHome;
       'api::privacy-policy.privacy-policy': ApiPrivacyPolicyPrivacyPolicy;
       'api::refund-policy.refund-policy': ApiRefundPolicyRefundPolicy;
       'api::term.term': ApiTermTerm;

@@ -1,0 +1,36 @@
+{
+  "collectionName": "components_application_questions",
+  "info": {
+    "displayName": "Question",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Question": {
+      "type": "string"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "single_choice_correct",
+        "multiple_choice_correct",
+        "text"
+      ]
+    },
+    "option_1": {
+      "type": "string"
+    },
+    "option_2": {
+      "type": "string"
+    },
+    "option_3": {
+      "type": "string"
+    },
+    "option_4": {
+      "type": "string"
+    },
+    "others": {
+      "type": "boolean"
+    }
+  }
+}

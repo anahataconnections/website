@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_website_our_communities",
+  "info": {
+    "displayName": "Our_Community"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "content": {
+      "type": "blocks"
+    }
+  }
+}
