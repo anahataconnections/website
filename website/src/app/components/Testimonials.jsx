@@ -12,7 +12,7 @@ const Testimonials = () => {
         Hear what our users say about us
       </header>
 
-      <div className="flex items-center justify-start max-sm:px-6 sm:py-5 max-sm:py-10  lg:py-20 xl:pl-28 md:py-18 md:px-16 lg:px-7 xl:ml-28">
+      <div className="flex items-center justify-start max-sm:px-6 sm:py-5 max-sm:py-10  lg:py-20 xl:pl-28 md:py-18 md:px-16 lg:px-7 xl:ml-18">
         <div>
           <Image
             src="/assets/testimonial.png"
