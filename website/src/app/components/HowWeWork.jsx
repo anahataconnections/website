@@ -5,8 +5,9 @@ import Image from "next/image";
 // import three from "../assets/connection.png";
 const HowWeWork = () => {
   return (
-    <div className="w-[85%] h-[250px] items-center content-center justify-center mx-14 lg:mx-20 bg-[#DDF7F0]">
-      <header className="font-Pattaya  flex items-center content-center text-center justify-center text-[#0C6242] text-[52px]">
+    <div className="flex items-end justify-center">
+    <div className="w-[85%]  h-[250px] max-md:h-[200px] md:mx-20 max-sm:w-[80%]  bg-[#DDF7F0]">
+      <header className="font-Pattaya  flex items-center justify-center text-[#0C6242] text-[52px] md:max-lg:text-[42px] max-sm:text-[32px]">
         How We Work
       </header>
 
@@ -18,11 +19,11 @@ const HowWeWork = () => {
             src="/assets/create.png"
             width={50}
             height={50}
-            className="hidden md:block mr-8 "
+            className=" md:block lg:mr-8 max-md:w-10 max-md:mt-3 "
             alt="Screenshots of the dashboard project showing desktop and mobile versions"
           />
           </div>
-          <div>Create Account</div>
+          <div className="md:max-lg:text-[10px] max-md:text-[8px]">Create Account</div>
         </div>
 
         <div className="flex flex-col items-center justify-center gap-y-5 border-x-2 border-black">
@@ -32,11 +33,11 @@ const HowWeWork = () => {
             src="/assets/discover.png"
             width={50}
             height={50}
-            className="hidden md:block mr-8 "
+            className=" md:block lg:mr-8 max-md:w-10 max-sm:w-6 max-sm:mt-3"
             alt="Screenshots of the dashboard project showing desktop and mobile versions"
           />
           </div>
-          <div>Discover Compatible Profiles</div>
+          <div className="md:max-lg:text-[10px] max-md:text-[8px] max-sm:text-[6px]">Discover Compatible Profiles</div>
         </div>
 
         <div className="flex flex-col items-center justify-center gap-y-2">
@@ -46,13 +47,14 @@ const HowWeWork = () => {
             src="/assets/connection.png"
             width={50}
             height={50}
-            className="hidden md:block mr-8 "
+            className=" md:block lg:mr-8 max-md:w-10 max-md:mt-3"
             alt="Screenshots of the dashboard project showing desktop and mobile versions"
           />
           </div>
-          <div>Build Meaningful Connections</div>
+          <div className="md:max-lg:text-[10px] max-md:text-[8px] max-sm:text-[6px]">Build Meaningful Connections</div>
         </div>
       </div>
+    </div>
     </div>
   );
 };
