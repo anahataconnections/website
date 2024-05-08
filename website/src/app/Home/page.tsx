@@ -18,7 +18,7 @@ export default function Home() {
         <header className="font-Pattaya flex mt-28 items-center justify-center text-[#094C3B] text-[52px]">
         Our Blogs{" "}
       </header>
-      {/* <Blogs /> */}
+      <Blogs />
 <div id='faq' className='bg-flower_back bg-no-repeat bg-cover'>
       <FAQ />
       

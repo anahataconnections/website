@@ -13,14 +13,13 @@ async function fetchFaq() {
 const FAQ =  async  () => {
 
   const Faq = await fetchFaq();
-  // console.log(Faq.data[0].attributes.question);
   return (
     <div className="h-auto">
-      <header className="font-Pattaya flex items-center justify-center text-[#094C3B] text-[52px]">
+      <header className="font-Pattaya flex items-center text-center justify-center text-[#094C3B] text-[52px]">
         Frequently Asked Questions
       </header>
 
-      <div className="flex flex-col justify-center items-center px-32 py-20">
+      <div className="flex flex-col justify-center items-center p-10">
         
         <FAQItem question={Faq.data[0].attributes.question} answer={Faq.data[0].attributes.answer} />
         <FAQItem question={Faq.data[1].attributes.question} answer={Faq.data[1].attributes.answer} />

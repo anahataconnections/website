@@ -5,8 +5,8 @@ import Image from "next/image";
 // import three from "../assets/connection.png";
 const HowWeWork = () => {
   return (
-    <div className="w-[85%] h-[250px] mx-20 bg-[#DDF7F0]">
-      <header className="font-Pattaya  flex items-center justify-center text-[#0C6242] text-[52px]">
+    <div className="w-[85%] h-[250px] items-center content-center justify-center mx-14 lg:mx-20 bg-[#DDF7F0]">
+      <header className="font-Pattaya  flex items-center content-center text-center justify-center text-[#0C6242] text-[52px]">
         How We Work
       </header>
 

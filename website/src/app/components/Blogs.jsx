@@ -20,7 +20,7 @@ const Blogs = () => {
   useEffect(() => {
     const fetchData = async () => {
       const data = await fetchBlog();
-      setBlogs(data?.data.slice(0, 3)); // Slice the array to include only the first three items
+      setBlogs(data?.data.slice(0, 3)); 
     };
     fetchData();
   }, []);
