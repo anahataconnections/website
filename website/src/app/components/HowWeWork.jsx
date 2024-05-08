@@ -5,9 +5,14 @@ import Image from "next/image";
 // import three from "../assets/connection.png";
 const HowWeWork = () => {
   return (
+<<<<<<< HEAD
     <div className="flex items-end justify-center">
     <div className="w-[85%]  h-[250px] max-md:h-[200px] md:mx-20 max-sm:w-[80%]  bg-[#DDF7F0]">
       <header className="font-Pattaya  flex items-center justify-center text-[#0C6242] text-[52px] md:max-lg:text-[42px] max-sm:text-[32px]">
+=======
+    <div className="w-[85%] h-[250px] items-center content-center justify-center mx-14 lg:mx-20 bg-[#DDF7F0]">
+      <header className="font-Pattaya  flex items-center content-center text-center justify-center text-[#0C6242] text-[52px]">
+>>>>>>> 99f9c4216920306169d840f53c49605d4868f570
         How We Work
       </header>
 
