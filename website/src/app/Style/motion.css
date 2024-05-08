@@ -1,0 +1,201 @@
+.man, .women{
+    height: 500px;
+    min-width: max-content;
+}
+.man{
+    margin-right: 20%;
+}
+.logo{
+    object-position: center;
+    
+}
+
+@media only screen and (min-width:1024px){
+.man,.women{
+    height:700px;
+}
+.hero-logo{
+    position:relative;
+    top:50px;
+}
+
+.anahata{
+    position: relative;
+    top:60px;
+    font-size:3rem;
+   
+}
+.logic-blossoms{
+    position: relative;
+    top:60px;
+    font-size: 1rem;
+}
+
+.meet-button{
+    position:relative;
+    top:220px;
+    height: 43px;
+    width: 200px;
+}
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 768px) {
+    .man, .women{
+        height: 600px;
+        /* position:relative;
+        top:50px; */
+        min-width: max-content;
+    }
+    
+    .hero-logo{
+        position:relative;
+        top:70px;
+    }
+
+    .anahata{
+        position: relative;
+        top:80px;
+        font-size:3rem;
+       
+    }
+    .logic-blossoms{
+        position: relative;
+        top:80px;
+        font-size: 1rem;
+    }
+
+    .meet-button{
+        position:relative;
+        top:158px;
+        height: 43px;
+        width: 200px;
+    }
+
+    
+}
+@media only screen and (max-width: 767px) and (min-width: 640px) {
+    .man, .women{
+        height: 560px;
+        min-width: max-content;
+    }
+
+    .hero-logo{
+        position:relative;
+        top:50px;
+    }
+
+    .anahata{
+        position: relative;
+        top:60px;
+        font-size:2.5rem;
+       
+    }
+    .logic-blossoms{
+        position: relative;
+        top:60px;
+        font-size: 1rem;
+    }
+
+    .meet-button{
+        position:relative;
+        top:152px;
+        height: 43px;
+        width: 200px;
+        
+           
+    }
+
+}
+@media only screen and (max-width: 639px) and (min-width: 540px) {
+    .man, .women{
+        height: 460px;
+        min-width: max-content;
+    }
+
+    .hero-logo{
+        position:relative;
+        top:50px;
+    }
+
+    .anahata{
+        position: relative;
+        top:55px;
+        font-size:2rem;
+    }
+    .logic-blossoms{
+        position: relative;
+        top:55px;
+        font-size: 0.75rem;
+    }
+
+        .meet-button{
+            position:relative;
+            top:124px;
+            padding: 0.5rem 0.75rem;
+            font-size:0.75rem;
+            
+        }
+}
+@media only screen and (max-width: 541px) and (min-width: 451px) {
+    .man, .women{
+        height: 460px;
+        min-width: max-content;
+    }
+
+    .hero-logo{
+        position:relative;
+        top:50px;
+    }
+
+    .anahata{
+        position: relative;
+        top:50px;
+        font-size:2rem;
+    }
+    .logic-blossoms{
+        position: relative;
+        top:50px;
+        font-size: 0.75rem;
+    }
+
+        .meet-button{
+            position:relative;
+            top:120px;
+            padding: 0.5rem 0.75rem;
+            font-size:0.75rem;
+            
+        }
+    
+}
+@media only screen and (max-width: 450px) and (min-width: 320px) {
+    .man, .women{
+        height: 400px;
+        /* margin: auto; */
+        min-width: max-content;
+    }
+    
+    .hero-logo{
+        position:relative;
+        top:80px;
+        
+    }
+
+    .anahata{
+        position: relative;
+        top:80px;
+        font-size:1.65rem;
+    }
+    .logic-blossoms{
+        position: relative;
+        top:80px;
+        font-size: 0.65rem;
+    }
+
+    .meet-button{
+        position:relative;
+        top:135px;
+        padding: 0.5rem 0.75rem;
+        font-size:0.75rem;
+        
+    }
+}
