@@ -3,7 +3,7 @@ import React from "react";
 import Image from "next/image";
 const Community = () => {
   return (
-    <div className="h-[670px] mt-20">
+    <div className="h-full my-20">
       <header className="font-Pattaya flex items-center justify-center text-[#094C3B] text-[52px] sm:max-md:text-[42px] max-sm:text-[32px]">
         Our Community
       </header>
