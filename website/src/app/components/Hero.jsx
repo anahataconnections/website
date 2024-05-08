@@ -11,12 +11,13 @@ const Hero = () => {
       <div className="bg-radial-gradient flex justify-center overflow-hidden lg:h-[80vh] md:h-[80vh]">
         <Motionframe/>
       </div>
-      <div className=" bg-white-gradien mb-8">
-        <header className="font-Pattaya flex items-center justify-center text-[#0C6242] text-[52px] pt-20">
+      <div className="h-[750px] bg-white-gradient flex flex-col items-center justify-center">
+        <header className="font-Pattaya  text-[#0C6242] text-[52px] max-sm:text-[29px] sm:max-md:text-[42px] md:pt-20">
           Why Anahata Connections?
         </header>
-        <header className="font-Satisfy flex items-center justify-center text-4xl p-20 pt-10 w-[100%]  text-center mx-auto">
-          Welcome to Anahata Connections, where love intertwines with spirituality. Explore meaningful connections grounded in yogic science
+        <header className="font-Satisfy  text-4xl pt-10 max-sm:text-[20px]  sm:max-md:text-[25px] w-[90%] sm:w-[80%] md:w-[70%]  text-center ">
+          Welcome to Anahata Connections, where love intertwines with
+          spirituality. Explore meaningful connections grounded in yogic science
           and the wisdom of the heart chakra. Our platform unites kindred spirits
           aligned with mindfulness and compassion. Join us on the journey to
           deeper connections and conscious relationships
