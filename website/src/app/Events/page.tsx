@@ -39,7 +39,7 @@ async function fetchEvents() {
     console.error(err);
   }
 }
-// export default function Events() {
+
   const Events = async () =>  {
   const Event = await fetchEvents();
   // const controls = useAnimationControls();

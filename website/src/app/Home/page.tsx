@@ -1,3 +1,4 @@
+"use clients";
 import Navbar from '../components/Navbar'
 import Hero from '../components/Hero'
 import HowWeWork from '../components/HowWeWork'
@@ -17,8 +18,10 @@ async function fetchEvents() {
     console.error(err);
   }
 }
-
-export default function Home() {
+const Home = async () =>  {
+  const Home = await fetchEvents();
+  // const controls = useAnimationControls();
+  console.log(); 
   return (
     <main className='bg-white' >
       <Navbar />
@@ -37,4 +40,5 @@ export default function Home() {
       <Footer />
     </main>
   );
-}
+};
+export default Home;
