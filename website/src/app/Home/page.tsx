@@ -7,6 +7,17 @@ import Blogs from '../components/Blogs'
 import FAQ from '../FAQ/page'
 import Footer from '../components/Footer'
 
+async function fetchEvents() {
+  try {
+    const res = await fetch(`https://cms.anahataaconnections.com/api/home?populate=*`);
+    const response = await res.json();
+
+    return response.data;
+  } catch (err) {
+    console.error(err);
+  }
+}
+
 export default function Home() {
   return (
     <main className='bg-white' >
