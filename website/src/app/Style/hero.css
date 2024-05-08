@@ -1,39 +1,249 @@
 
 /* styles.css */
 
-/* img{
-    max-width: none;
-} */
-
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-    /* Add your styles for extra small devices here */
+  /* Add your styles for extra small devices here */
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+/* @media only screen and (min-width: 425px) {
+  Add your styles for small devices here
+  .logo{
+      position: relative;
+      right: 230px;
+      width: 200px;
   }
-  
-  /* Small devices (portrait tablets and large phones, 600px and up) */
-  @media only screen and (min-width: 425px) {
-    /* Add your styles for small devices here */
-    
-  }
-  
-  @media only screen and (min-width: 768px) {
-    /* Add your styles for medium devices here */
-    
-  }
-  @media only screen and (min-width: 1024px) {
-    /* Add your styles for large devices here */
-    
+  .man{
+      position: relative;
+      top: 17px;
+      right: -170px;
+      width: 114px;
+      max-width: none;
 
   }
-  /* Large devices (laptops/desktops, 992px and up) */
-  @media only screen and (min-width: 1440px) {
-    /* Add your styles for large devices here */
+  .women{
+      position: relative;
+      top: 17px;
+      right: 178px;
+      width: 114px ;
+      max-width: none;
+  }
+  .flower-1{
+      position: relative;
+      left: 10px;
+      width: 40px;
+      top: -6px;
+}
+  .flower-2{
+      position: relative;
+      left: 30px;
+      width: 40px;
+      top: -6px;
+  }
+
+  .onspot{
+      position: relative;
+      right: 140px;
+      margin-top: 20px;
+  }
+  .meet-button{
+      position:relative;
+      top:80px;
+      height: 43px;
+      width: 200px;
+  }
+} */
+@media only screen and (max-width: 450px) and (min-width: 320px) {
+  .man{
+      position: relative;
+      top: 80px;
+      right: -109px;
+      width: 114px;
+      max-width: none;
+
+  }
+  .women{
+      position: relative;
+      top: 80px;
+      right: 100px;
+      width: 114px ;
+      max-width: none;
+  }
+}
+
+@media only screen and (max-width: 541px) and (min-width: 451px) {
+  .man{
+      position: relative;
+      top: 57px;
+      right: -129px;
+      width: 114px;
+      max-width: none;
+
+  }
+  .women{
+      position: relative;
+      top: 50px;
+      right: 120px;
+      width: 114px ;
+      max-width: none;
+  }
+}
+@media only screen and (max-width: 639px) and (min-width: 540px) {
+  .man{
+      position: relative;
+      top: 57px;
+      right: -165px;
+      width: 114px;
+      max-width: none;
+
+  }
+  .women{
+      position: relative;
+      top: 50px;
+      right: 150px;
+      width: 114px ;
+      max-width: none;
+  }
+}
+@media only screen and (max-width: 767px) and (min-width: 640px) {
+  .man{
+      position: relative;
+      top: 57px;
+      right: -180px;
+      width: 114px;
+      max-width: none;
+
+  }
+  .women{
+      position: relative;
+      top: 50px;
+      right: 165px;
+      width: 114px ;
+      max-width: none;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  /* Add your styles for medium devices here */
+  .logo{
+      position: relative;
+      right: 230px;
+      width: 200px;
+  }
+  .man{
+      position: relative;
+      top: 50px;
+      right: -165px;
+      width: 156px !important;
+      max-width: none;
+
+  }
+  .women{
+      position: relative;
+      top: 50px;
+      right: 155px;
+      width: 156px !important;
+      max-width: none;
+  }
  
-  }
-  
-  /* Extra large devices (large laptops and desktops, 1200px and up) */
-  @media only screen and (min-width: 1200px) {
-    /* Add your styles for extra large devices here */
 
+  .onspot{
+      position: relative;
+      right: 140px;
+      margin-top: 20px;
   }
   
+}
+@media only screen and (min-width: 1024px) {
+  /* Add your styles for large devices here */
+  .logo{
+      position: relative;
+      right: 73px;
+      width: 200px;
+  }
+  .man{
+      position: relative;
+      
+      top: 65px;
+      right: -230px;
+      width: 166px;
+  }
+  .women{
+      position: relative;
+      top: 65px;
+      left: -230px;
+      width: 175px;
+  }
+  .left-flower{
+      position:relative;
+      left: 150px;
+     }
+  .right-flower{
+      position:relative;
+      left: -150px;
+     }
+
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 1440px) {
+  .logo{
+      position: relative;
+      left: 90px;
+      width: 200px;
+  }
+  .man{
+      position: relative;
+      top: 70px;
+      left: 370px;
+      width: 195px;
+  }
+  .women{
+      position: relative;
+      top: 70px;
+      left: -370px;
+      width: 195px;
+  }
+ .left-flower{
+  position:relative;
+  left: 220px;
+ }
+
+.right-flower{
+  position:relative;
+  left: -220px;
+}
+  .onspot{
+      position: relative;
+      left: 150px;
+      margin-top: 50px;
+  }
+
+  .hero-logo{
+      position:relative;
+      top:100px;
+  }
+  
+  .anahata{
+      position: relative;
+      top:100px;
+     
+  }
+  .logic-blossoms{
+      position: relative;
+      top:100px;
+  }
+
+  .meet-button{
+      position:relative;
+      top:210px;
+      height: 43px;
+      width: 200px;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  /* Add your styles for extra large devices here */
+
+}
