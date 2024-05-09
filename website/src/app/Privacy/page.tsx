@@ -21,59 +21,35 @@ const Privacy = async () => {
           <div className="font-Pattaya my-4  text-3xl text-[#094C3B]">
             Privacy Policy
           </div>
-          <p
-            className="font-nota py-2 text-gray-800"
-            style={{ fontWeight: "500" }}
-          >
+          <p className="font-nota py-2 text-gray-800 font-semibold">
             {item.data.attributes.policy[0].children[0].text}
           </p>
           <h1 className="font-nota font-bold text-[18px] py-2 text-black">
             Collection of your Information
           </h1>
-          <p
-            className="font-nota py-2 text-gray-800"
-            style={{ fontWeight: "500" }}
-          >
+          <p className="font-nota py-2 text-gray-800 font-semibold">
             {item.data.attributes.policy[1].children[0].text}
           </p>
-          <p
-            className="font-nota py-2 text-gray-800"
-            style={{ fontWeight: "500" }}
-          >
+          <p className="font-nota py-2 text-gray-800 font-semibold">
             {item.data.attributes.policy[1].children[0].text}
           </p>
-          <p
-            className="font-nota py-2 text-gray-800"
-            style={{ fontWeight: "500" }}
-          >
+          <p className="font-nota py-2 text-gray-800 font-semibold">
             {item.data.attributes.policy[1].children[0].text}
           </p>
 
           <h1 className="font-nota font-bold text-[18px] py-2 text-black ">
             Use of Demographic / Profile Data / Your Information
           </h1>
-          <p
-            className="font-nota py-2 text-gray-800"
-            style={{ fontWeight: "500" }}
-          >
+          <p className="font-nota py-2 text-gray-800 font-semibold">
             {item.data.attributes.policy[2].children[0].text}
           </p>
-          <p
-            className="font-nota py-2 text-gray-800"
-            style={{ fontWeight: "500" }}
-          >
+          <p className="font-nota py-2 text-gray-800 font-semibold">
             {item.data.attributes.policy[2].children[0].text}
           </p>
-          <p
-            className="font-nota py-2 text-gray-800"
-            style={{ fontWeight: "500" }}
-          >
+          <p className="font-nota py-2 text-gray-800 font-semibold">
             {item.data.attributes.policy[2].children[0].text}
           </p>
-          <p
-            className="font-nota py-2 text-gray-800"
-            style={{ fontWeight: "500" }}
-          >
+          <p className="font-nota py-2 text-gray-800 font-semibold">
             {item.data.attributes.policy[2].children[0].text}
           </p>
 
@@ -81,13 +57,13 @@ const Privacy = async () => {
             Cookies
           </h1>
           <p
-            className="font-nota py-2 text-gray-800"
+            className="font-nota py-2 text-gray-800 font-semibold"
             style={{ fontWeight: "500" }}
           >
             {item.data.attributes.policy[2].children[0].text}
           </p>
           <p
-            className="font-nota py-2 text-gray-800"
+            className="font-nota py-2 text-gray-800 font-semibold"
             style={{ fontWeight: "500" }}
           >
             {item.data.attributes.policy[2].children[0].text}
