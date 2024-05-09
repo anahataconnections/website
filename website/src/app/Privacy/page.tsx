@@ -58,13 +58,13 @@ const Privacy = async () => {
           </h1>
           <p
             className="font-nota py-2 text-gray-800 font-semibold"
-            style={{ fontWeight: "500" }}
+            
           >
             {item.data.attributes.policy[2].children[0].text}
           </p>
           <p
             className="font-nota py-2 text-gray-800 font-semibold"
-            style={{ fontWeight: "500" }}
+            
           >
             {item.data.attributes.policy[2].children[0].text}
           </p>
