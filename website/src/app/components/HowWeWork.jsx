@@ -17,13 +17,13 @@ const HowWeWork = () => {
             {/* <img src={one} alt="" /> */}
             <Image
             src="/assets/create.png"
-            width={50}
-            height={50}
-            className=" md:block lg:mr-8 max-md:w-10 max-md:mt-3 "
+            width={45}
+           height={45}
+            className=" md:block  max-md:w-10 max-md:mt-3 "
             alt="Screenshots of the dashboard project showing desktop and mobile versions"
           />
           </div>
-          <div className="md:max-lg:text-[10px] max-md:text-[8px]">Create Account</div>
+          <div className=" mt-2 text-[22px] text-black font-semibold  md:max-lg:text-[10px] max-md:text-[8px] ">Create Account</div>
         </div>
 
         <div className="flex flex-col items-center justify-center gap-y-5 border-x-2 border-black">
@@ -31,13 +31,13 @@ const HowWeWork = () => {
             {/* <img src={two} alt="" /> */}
             <Image
             src="/assets/discover.png"
-            width={50}
-            height={50}
+                width={45}
+                height={45}
             className=" md:block lg:mr-8 max-md:w-10 max-sm:w-6 max-sm:mt-3"
             alt="Screenshots of the dashboard project showing desktop and mobile versions"
           />
           </div>
-          <div className="md:max-lg:text-[10px] max-md:text-[8px] max-sm:text-[6px]">Discover Compatible Profiles</div>
+            <div className="text-[22px] text-black font-semibold md:max-lg:text-[10px] max-md:text-[8px] max-sm:text-[6px]">Discover Compatible Profiles</div>
         </div>
 
         <div className="flex flex-col items-center justify-center gap-y-2">
@@ -45,13 +45,13 @@ const HowWeWork = () => {
             {/* <img src={three} alt="" /> */}
             <Image
             src="/assets/connection.png"
-            width={50}
-            height={50}
+                width={45}
+                height={45}
             className=" md:block lg:mr-8 max-md:w-10 max-md:mt-3"
             alt="Screenshots of the dashboard project showing desktop and mobile versions"
           />
           </div>
-          <div className="md:max-lg:text-[10px] max-md:text-[8px] max-sm:text-[6px]">Build Meaningful Connections</div>
+            <div className=" mt-2 text-[22px] text-black font-semibold md:max-lg:text-[10px] max-md:text-[8px] max-sm:text-[6px]">Build Meaningful Connections</div>
         </div>
       </div>
     </div>

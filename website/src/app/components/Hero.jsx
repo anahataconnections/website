@@ -8,7 +8,7 @@ import "@/app/Style/hero.css";
 const Hero = () => {
   return (
     <div className="bg-home-page-back bg-cover bg-no-repeat">
-      <div className="bg-radial-gradient flex justify-center overflow-hidden lg:h-[80vh] md:h-[80vh]">
+      <div className="bg-radial-gradient flex justify-center overflow-hidden lg:h-[780px] md:h-[780px]">
         <Motionframe/>
       </div>
       <div className="h-[750px] bg-white-gradient flex flex-col items-center justify-center">

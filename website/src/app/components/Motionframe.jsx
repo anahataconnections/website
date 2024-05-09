@@ -152,7 +152,7 @@ const Motionframe = () => {
                 data-aos-duration="1000"
                 data-aos-easing="ease-in-out"
                 data-aos-mirror="true">Where Yogic love Blossoms</div>
-            <div className="flex justify-center items-center text-center mt-5 "><button className=" bg-[#094C3B] meet-button  text-white rounded-[32px]"  
+            <div className="flex justify-center items-center text-center mt-5 "><button className=" bg-[#094C3B] meet-button  text-white rounded-[32px] opacity-70"  
                >Meet Your Match Now</button></div>
         </div>
         <div className=" p-2 lg:col-span-4 md:col-span-4 sm:col-span-4 col-span-4" >

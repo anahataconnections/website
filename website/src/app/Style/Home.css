@@ -1,0 +1,4 @@
+/* Add smooth scrolling behavior to the main element */
+.smooth-scroll {
+    scroll-behavior: smooth;
+}

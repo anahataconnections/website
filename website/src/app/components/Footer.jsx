@@ -1,3 +1,5 @@
+// "use-client"
+
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -7,7 +9,7 @@ const Footer = () => {
   return (
     <>
     
-      <div className="flex justify-center items-center overflow-hidden">
+      <div className="flex justify-center items-center overflow-hidden border-t-2 border-gray-700  ">
         <div className="flex flex-row items-start justify-between mx-10 md:ml-2 md:mr-3 max-sm:mx-[0px] max-sm:w-[40%]">
           <div className="flex flex-col items-center justify-center">
             {/* <img src={logo} alt="" className="object-cover h-32 w-32" /> */}
@@ -47,7 +49,7 @@ const Footer = () => {
           
           
     </div>
-    <div className="flex flex-col items-end justify-end lg:ml-10 md:mr-3" >
+    <div className="flex flex-col items-end justify-end lg:ml-10 md:mr-3 text-black" >
     <div className="md:mt-2 md:text-[10px] max-sm:text-[7px] max-sm:mr-7 mb-10 max-sm:mb-3 mr-10 flex flex-col justify-start items-start">
       <b><h2>Subscribe for our latest updates</h2></b>
     <form id="myForm">

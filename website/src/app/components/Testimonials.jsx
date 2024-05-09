@@ -32,7 +32,7 @@ const Testimonials = () => {
             aliquip ex ea commodo consequat. Duis aute irure dolor , quis nostrud exercitation ”</p>
             <ShowMoreButton />
 
-            <div className="md:text-[20px] max-md:text-[10px] max-md:bottom-0 max-md:right-12 absolute bottom-3 right-32 px-5 satisfy-regular text-3xl lg:text-[23px]">
+            <div className="md:text-[20px] max-md:text-[10px] max-md:bottom-0 max-md:right-12 absolute bottom-3 right-32  satisfy-regular text-3xl lg:text-[25px] -translate-x-24">
             - Mr & Mrs Singh
           </div>
           </div>

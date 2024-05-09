@@ -9,7 +9,7 @@ const Community = () => {
       </header>
 
       <div className="flex items-center justify-center pt-10 pb-10 mx-5">
-        <div className="bg-[#FFFAF0] w-[460px] h-[300px] text-[22px] sm:max-md:text-[15px] sm:max-md:w-[300px] max-sm:h-[200px] max-sm:text-[11px] text-center flex items-center justify-center rounded-lg md:p-4 px-5 max-sm:px-2 max-sm:py-2 border border-black">
+        <div className=" text-gray-700  font-semibold bg-[#FFFAF0] w-[460px] h-[300px] text-[22px] sm:max-md:text-[15px] sm:max-md:w-[300px] max-sm:h-[200px] max-sm:text-[11px] text-center flex items-center justify-center rounded-lg md:p-4 px-5 max-sm:px-2 max-sm:py-2 border border-black">
           At Anahata Connection, we believe that love transcends physical
           boundaries. Our sacred platform brings together yogic souls seeking
           authentic connections rooted in mindfulness, compassion, and shared

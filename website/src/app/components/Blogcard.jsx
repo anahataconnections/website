@@ -19,8 +19,8 @@ const Blogcard = ({ imageUrl, heading, data, details }) => {
         <div className=" text-lg font-bold">
           {heading}
         </div>
-        <div className="font-thin text-[#9CA3AF] py-2">{details}</div>
-        <div className="py-2  w-[300px] px-5 h-[100px]">{data}</div>
+        <div className="font-bold text-[20px] text-[#9CA3AF] py-2">{details}</div>
+        <div className="py-2   w-[300px] ml-16 lg:ml:6 md:ml-6 h-[100px]">{data}</div>
       </div>
     </div>
   );

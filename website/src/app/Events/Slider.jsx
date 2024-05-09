@@ -31,9 +31,10 @@ const Slider = () => {
     };
   }, [activeImage ]);
   return (
-    <main className=" place-items-center flex w-full mx-auto px-20 py-10 bg-grey-gradient shadow-2xl rounded-2xl ">
+    <main className="place-items-center flex w-full mx-2 px-20 py-10 relative mt-4 ">
+      <div className="absolute inset-0 bg-gray-700 opacity-75 rounded-2xl"></div>
       <div
-              className=" absolute left-20 cursor-pointer"
+              className=" absolute left-10 cursor-pointer "
               onClick={clickPrev}
             >
               <Image src={left} alt="" />
@@ -46,7 +47,7 @@ const Slider = () => {
             key={idx}
             className={`${
               idx === activeImage
-                ? "block w-full h-[80vh] object-cover transition-all duration-500 ease-in-out"
+                ? "block w-full h-[80vh] object-cover transition-all duration-500 ease-in-out z-10"
                 : "hidden"
             }`}
           >
@@ -62,7 +63,7 @@ const Slider = () => {
       </div>
       <div
       
-              className="absolute right-20 cursor-pointer"
+              className="absolute right-10 cursor-pointer"
               onClick={clickNext}
             >
               <Image src={right} alt="" />
