@@ -29,27 +29,26 @@ const Slider = () => {
     return () => {
       clearTimeout(timer);
     };
-  }, [activeImage ]);
+  }, [activeImage]);
   return (
     <main className="place-items-center flex w-full mx-2 px-20 py-10 relative mt-4 ">
       <div className="absolute inset-0 bg-gray-700 opacity-75 rounded-2xl"></div>
       <div
-              className=" absolute left-10 cursor-pointer "
-              onClick={clickPrev}
-            >
-              <Image src={left} alt="" />
-            </div>
+        className=" absolute left-10 cursor-pointer "
+        onClick={clickPrev}
+      >
+        <Image src={left} alt="" />
+      </div>
       <div
         className={`w-full flex justify-center items-center gap-4 transition-transform ease-in-out duration-500 md:rounded-2xl p-6 md:p-0`}
       >
         {images.map((elem, idx) => (
           <div
             key={idx}
-            className={`${
-              idx === activeImage
-                ? "block w-full h-[80vh] object-cover transition-all duration-500 ease-in-out z-10"
-                : "hidden"
-            }`}
+            className={`${idx === activeImage
+              ? "block w-full h-[80vh] object-cover transition-all duration-500 ease-in-out z-10"
+              : "hidden"
+              }`}
           >
             <Image
               src={elem.src}
@@ -62,12 +61,12 @@ const Slider = () => {
         ))}
       </div>
       <div
-      
-              className="absolute right-10 cursor-pointer"
-              onClick={clickNext}
-            >
-              <Image src={right} alt="" />
-            </div>
+
+        className="absolute right-10 cursor-pointer"
+        onClick={clickNext}
+      >
+        <Image src={right} alt="" />
+      </div>
       {/* <Description absolute right-2
         activeImage={activeImage}
         clickNext={clickNext}
