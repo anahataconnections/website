@@ -60,7 +60,7 @@ const Events = async () => {
           <Eventcard events={Event} />
           {/* absolute top-[1326px] right-[-400px] transform -transform-x-full transition duration-200 ease-in-out */}
         </div>
-        <div className="w-[40vw] border-b-2 items-center ml-48 ">
+        <div className="w-[40vw] border-b-1 items-center ml-48 ">
           <h1 className=" text-3xl font-nota font-bold border-[#808080]">
             Filter
           </h1>
