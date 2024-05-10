@@ -7,8 +7,8 @@ import Image from "next/image";
 
 const Contact = () => {
   return ( 
-    <>
-    <div className="bg-home-page-back bg-cover bg-no-repeat">
+    <div>
+    <div className="bg-home-page-back bg-cover bg-no-repeat ">
     <div className="font-Pattaya my-4  text-3xl text-[#094C3B]">Connect with us via mail</div>
     <form className="flex flex-col ">
   <label for="userReview">Send your mail we will reach out to you shortly</label>
@@ -19,7 +19,7 @@ const Contact = () => {
 </form>
 
     </div>
-    </>
+    </div>
   );
 };
 

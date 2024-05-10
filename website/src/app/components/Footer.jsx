@@ -11,13 +11,13 @@ const Footer = () => {
     
       <div className="flex justify-center items-center overflow-hidden border-t-2 border-gray-700  ">
         <div className="flex flex-row items-start justify-between mx-10 md:ml-2 md:mr-3 max-sm:mx-[0px] max-sm:w-[40%]">
-          <div className="flex flex-col items-center justify-center">
+          <div className="flex flex-col items-center justify-center pt-2">
             {/* <img src={logo} alt="" className="object-cover h-32 w-32" /> */}
             <Image
             src="/assets/logo1.png"
             width={130}
             height={130}
-            className=" w-10 md:block ml-10 lg:mr-3 md:mr-0 md:w-24  max-sm:mr-10 "
+            className=" w-10 md:block ml-10  lg:mr-3 md:mr-0 md:w-24  max-sm:mr-10"
             alt="Screenshots of the dashboard project showing desktop and mobile versions"
           />
             <div className="font-EvaMayasari font-bold lg:pt-4 pt-0  text-4xl md:text-[30px] max-sm:text-[15px] text-[#094C3B]">
@@ -45,11 +45,11 @@ const Footer = () => {
         <Image src="/assets/appstore.png" width={150} height={150} className="cursor-pointer max-sm:w-10" alt="error" />
         </div>
       </div>
-          </div>
+      </div>
           
           
     </div>
-    <div className="flex flex-col items-end justify-end lg:ml-10 md:mr-3 text-black" >
+    <div className="flex flex-col items-end justify-end lg:ml-10 md:mr-3 text-black -translate-y-10 pt-2" >
     <div className="md:mt-2 md:text-[10px] max-sm:text-[7px] max-sm:mr-7 mb-10 max-sm:mb-3 mr-10 flex flex-col justify-start items-start">
       <b><h2>Subscribe for our latest updates</h2></b>
     <form id="myForm">

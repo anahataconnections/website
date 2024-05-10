@@ -26,12 +26,12 @@ const Eventcard = (props: EventsProps) => {
   // console.log(events.data[0].attributes.image.data.attributes.url);
   return (
    
-    <div className="flex  item-center justify-between ">
+    <div className="flex font-sarabun item-center justify-between overflow-x-hidden">
        {events.map((item : any ) => {
           
         return (
           <div key={item.id} className="w-[400px]">
-            <div className="mx-4">
+            <div className="mx-6">
               <Image
                 src={item.attributes.image.data.attributes.url}
                 width={400}
@@ -39,18 +39,22 @@ const Eventcard = (props: EventsProps) => {
                 className="border-solid  rounded-t-xl border-2 border-black "
                 alt="Screenshots of  the dashboard project showing desktop and mobile versions"
               />
+
               <div className="bg-white px-5  text-black py-5 rounded-b-2xl border-solid border-2 border-black">
-                <div className=" text-lg font-bold">{item.attributes.name}</div>
-                <div className="font-medium text-gray-600 text- py-2">
+                <div className=" text-lg font-bold">{item.attributes.name}...</div>
+
+                <div className="py-2 text-gray-500 font-semibold  h-[100px]">
+                  {item.attributes.date}
+                </div>
+
+                <div className="font-semibold font-sarabun text-gray-500 text-xl pb-4 -translate-y-6">
                   {item.attributes.description[0].children[0].text.substring(
                     0,
                     90
                   )}
                   ...
                 </div>
-                <div className="py-2 text-gray-500 font-semibold  h-[100px]">
-                  {item.attributes.date}
-                </div>
+
                 <button
                   className="mt-2 bg-[#094C3B] text-white rounded-[3px] px-14 py-2.5 cursor-pointer hover:bg-[#286f5d] font-semibold"
                   type="submit"

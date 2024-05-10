@@ -1,4 +1,4 @@
-import { Pattaya, Satisfy } from "next/font/google";
+import { Pattaya, Satisfy,Sarabun } from "next/font/google";
 import type { Config } from "tailwindcss";
 
 
@@ -34,7 +34,31 @@ const config: Config = {
         'Satisfy' : ["Satisfy", 'cursive'],
         'nota' : ["Noto Sans", 'sans-serif'],
         'EvaMayasari': ["var(--font-eva)"],
+        'sarabun': ['Sarabun', 'sans-serif'],
       },
+      
+      translate: {
+        // Custom translation-x values
+        '-full': '-100%',
+        '-3/4': '-75%',
+        '-1/2': '-50%',
+        '-1/4': '-25%',
+        '-1/6': '-16.666667%',
+        '-1/12': '-8.333333%',
+        '1/12': '8.333333%',
+        '1/6': '16.666667%',
+        '1/4': '25%',
+        '1/2': '50%',
+        '3/4': '75%',
+        'full': '100%',
+        '50': '196px',
+        '52': '200px',
+        '54': '204px',
+        '56': '206px',
+        '58': '212px',
+        '60': '216px',
+        '62': '220px',
+      }
     },
   },
   plugins: [],

@@ -20,14 +20,9 @@ const FAQ =  async  () => {
       </header>
 
       <div className="flex flex-col justify-center items-center p-10">
-        
         <FAQItem question={Faq.data[0].attributes.question} answer={Faq.data[0].attributes.answer} />
         <FAQItem question={Faq.data[1].attributes.question} answer={Faq.data[1].attributes.answer} />
         <FAQItem question={Faq.data[2].attributes.question} answer={Faq.data[2].attributes.answer} />
-        {/* <FAQItem question={Faq.data[3].attributes.question} answer={Faq.data[3].attributes.answer} /> */}
-        {/* <FAQItem question={Faq.data[4].attributes.question} answer={Faq.data[4].attributes.answer} /> */}
-
-      
       </div>
     </div>
   );

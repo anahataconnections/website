@@ -5,28 +5,28 @@ import Image from "next/image";
 // import three from "../assets/connection.png";
 const HowWeWork = () => {
   return (
-    <div className="flex items-end justify-center">
-    <div className="w-[85%]  h-[250px] max-md:h-[200px] md:mx-20 max-sm:w-[80%]  bg-[#DDF7F0]">
+    <div className="flex items-end justify-center -translate-y-32">
+    <div className="w-[90%]  h-[250px] max-md:h-[200px] md:mx-20 max-sm:w-[80%] bg-[#DDF7F0]">
       <header className="font-Pattaya  flex items-center justify-center text-[#0C6242] text-[52px] md:max-lg:text-[42px] max-sm:text-[32px]">
         How We Work
       </header>
 
-      <div className="grid grid-cols-3 pt-10 font-medium">
-        <div className="flex flex-col items-center justify-center gap-y-2">
+      <div className="grid grid-cols-3 pt-10 font-medium font-sarabun">
+        <div className="flex flex-col items-center justify-center ">
           <div>
             {/* <img src={one} alt="" /> */}
             <Image
             src="/assets/create.png"
             width={45}
            height={45}
-            className=" md:block  max-md:w-10 max-md:mt-3 "
+            className=" md:block  max-md:w-10 max-md:mt-3"
             alt="Screenshots of the dashboard project showing desktop and mobile versions"
           />
           </div>
           <div className=" mt-2 text-[22px] text-black font-semibold  md:max-lg:text-[10px] max-md:text-[8px] ">Create Account</div>
         </div>
 
-        <div className="flex flex-col items-center justify-center gap-y-5 border-x-2 border-black">
+        <div className="flex flex-col items-center justify-center gap-y-2 border-x-2 border-black">
           <div>
             {/* <img src={two} alt="" /> */}
             <Image
@@ -40,7 +40,7 @@ const HowWeWork = () => {
             <div className="text-[22px] text-black font-semibold md:max-lg:text-[10px] max-md:text-[8px] max-sm:text-[6px]">Discover Compatible Profiles</div>
         </div>
 
-        <div className="flex flex-col items-center justify-center gap-y-2">
+        <div className="flex flex-col items-center justify-center ">
           <div>
             {/* <img src={three} alt="" /> */}
             <Image

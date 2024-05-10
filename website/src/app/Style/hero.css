@@ -165,23 +165,27 @@
   .man{
       position: relative;
       
-      top: 65px;
-      right: -230px;
+      top: 30px;
+      right: -340px;
       width: 166px;
   }
   .women{
       position: relative;
-      top: 65px;
-      left: -230px;
+      top: 30px;
+      left: -340px;
       width: 175px;
   }
   .left-flower{
       position:relative;
-      left: 150px;
+      left: 210px;
+      top:20px;
+      
+      /* transform: translateY(30px); */
      }
   .right-flower{
       position:relative;
-      left: -150px;
+      left: -230px;
+
      }
 
 }
