@@ -1,4 +1,7 @@
-import React, { Suspense } from "react";
+// Home/page.tsx
+"use client"
+
+import React, { Suspense, useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import HowWeWork from "../components/HowWeWork";
@@ -24,10 +27,19 @@ async function fetchEvents() {
   }
 }
 
-const Home = async () => {
-  const homeData = await fetchEvents();
-  // const controls = useAnimationControls();
+const Home = () => {
+  const [homeData, setHomeData] = useState(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const data = await fetchEvents();
+      setHomeData(data);
+    };
+    fetchData();
+  }, []);
+
   console.log(homeData);
+
   return (
     <main className="bg-white smooth-scroll">
       <Navbar />
@@ -41,7 +53,7 @@ const Home = async () => {
       <Blogs />
       <div id="faq" className="bg-flower_back bg-no-repeat bg-cover">
         <Suspense fallback={<div>Loading FAQ...</div>}>
-          <FAQ />
+          {homeData && <FAQ />}
         </Suspense>
       </div>
       <Footer />

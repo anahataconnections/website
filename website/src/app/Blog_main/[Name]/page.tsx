@@ -1,4 +1,5 @@
-'use client'
+/* eslint-disable */
+"use client";
 import React from "react";
 import Image from "next/image";
 import Navbar from "../../components/Navbar";

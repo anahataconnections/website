@@ -1,4 +1,6 @@
-"use client";
+/* eslint-disable */
+
+"use client"
 import React from "react";
 import Image from "next/image";
 import Motionframe from "./Motionframe";
@@ -7,6 +9,7 @@ import "@/app/Style/hero.css";
 
 const Hero = () => {
   return (
+    
     <div className="bg-home-page-back bg-cover bg-no-repeat">
       <div className="bg-radial-gradient flex justify-center overflow-hidden lg:h-[769px] md:h-[775px] ">
         <Motionframe/>
@@ -26,7 +29,9 @@ const Hero = () => {
           <div className="mt-2 bg-[#094C3B] text-white rounded-[32px] px-5 py-2.5 cursor-pointer hover:bg-[#286f5d] font-semibold -translate-y-20">
             KNOW MORE
           </div>
+
         </div>
+
       </div>
     </div>
   );

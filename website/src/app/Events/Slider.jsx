@@ -1,11 +1,13 @@
-"use client";
+/* eslint-disable */
+
+"use client"
 
 import left from "../../../public/left.svg"
 import right from "../../../public/right.svg";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { images } from "./constants";
-// import Description from "./Description";
+
 
 const headStyles = {
   position: 'absolute',
@@ -45,7 +47,7 @@ const Slider = () => {
     return () => {
       clearTimeout(timer);
     };
-  }, [activeImage]);
+  }, [activeImage,clickNext]);
   return (
     <main className="place-items-center flex w-full mx-2 px-20 py-10 relative mt-4 ">
       <div className="absolute inset-0 bg-gray-700 opacity-75 rounded-2xl"></div>

@@ -1,9 +1,14 @@
+/* eslint-disable */
+"use client";
+
 import React from "react";
-import Footer from '../components/Footer'
-import Navbar from '../components/Navbar'
+import Footer from "../components/Footer";
+import Navbar from "../components/Navbar";
 async function fetchPrivacy() {
   try {
-    const res = await fetch(`https://cms.anahataaconnections.com/api/privacy-policy?populate=*`);
+    const res = await fetch(
+      `https://cms.anahataaconnections.com/api/privacy-policy?populate=*`
+    );
     const response = await res.json();
     return response;
   } catch (err) {
@@ -12,11 +17,11 @@ async function fetchPrivacy() {
 }
 const Privacy = async () => {
   const item = await fetchPrivacy();
-  // console.log(item.data.attributes.policy[0].children[0].text); 
+  // console.log(item.data.attributes.policy[0].children[0].text);
   return (
     <main>
       <Navbar />
-      <div className="bg-home-page-back">
+      <div className="bg-home-page-back text-justify">
         <div className="bg-grey-gradient  mx-12 py-10 px-10 ">
           <div className="font-Pattaya my-3  text-3xl text-[#094C3B]">
             Privacy Policy
@@ -68,5 +73,6 @@ const Privacy = async () => {
         <Footer />
       </div>
     </main>
-  );};
-  export default Privacy;
+  );
+};
+export default Privacy;

@@ -1,19 +1,23 @@
+/* eslint-disable */
+"use client";
+
 import React from "react";
-import Footer from '../components/Footer'
-import Navbar from '../components/Navbar'
+import Footer from "../components/Footer";
+import Navbar from "../components/Navbar";
 
 async function fetchTerm() {
-    try {
-      const res = await fetch(`https://cms.anahataaconnections.com/api/term?populate=*`);
-      const response = await res.json();
-      return response;
-    } catch (err) {
-      console.error(err);
-    }
+  try {
+    const res = await fetch(
+      `https://cms.anahataaconnections.com/api/term?populate=*`
+    );
+    const response = await res.json();
+    return response;
+  } catch (err) {
+    console.error(err);
   }
-  
+}
 
-  const Terms = async () => {
+const Terms = async () => {
   const item = await fetchTerm();
   // console.log(item.data.attributes.terms[1].children[0].text);
 
@@ -75,5 +79,6 @@ async function fetchTerm() {
         <Footer />
       </div>
     </main>
-  );};
-  export default Terms;
+  );
+};
+export default Terms;

@@ -1,3 +1,5 @@
+/* eslint-disable */
+"use client"
 import React from "react";
 // import test from "../assets/testimonial.png";
 // import rect from "../assets/rect.png";

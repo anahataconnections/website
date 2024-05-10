@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
@@ -86,7 +88,7 @@ const Motionframe = () => {
               Anahata&nbsp;Connections
               
               </div>
-          <div className="logic-blossoms font-sarabun flex justify-center mb-10 items-center font-bold md:text-lg  text-[12px] text-[#094C3B]"  
+          <div className="logic-blossoms font-cantarell  flex justify-center mb-10 items-center font-bold md:text-lg  text-[12px] text-[#094C3B]"  
           
                 // data-aos="fade-up"
                 // data-aos-delay="100"

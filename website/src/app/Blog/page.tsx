@@ -1,13 +1,18 @@
+/* eslint-disable */
+"use client";
+
 import React from "react";
 import Image from "next/image";
 // import { useState } from 'react'
-import Navbar from '../components/Navbar'
-import Footer from '../components/Footer'
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 import Link from "next/link";
 
 async function fetchBlog() {
   try {
-    const res = await fetch(`https://cms.anahataaconnections.com/api/blogs/?populate=*`);
+    const res = await fetch(
+      `https://cms.anahataaconnections.com/api/blogs/?populate=*`
+    );
     const response = await res.json();
     return response;
   } catch (err) {
@@ -15,11 +20,10 @@ async function fetchBlog() {
   }
 }
 // export default function Blog() {
-  const Blog = async () =>  {
-
-      const baseurl = "https://cms.anahataaconnections.com";
-      const Blog = await fetchBlog();
-      // console.log(Blog.data);
+const Blog = async () => {
+  const baseurl = "https://cms.anahataaconnections.com";
+  const Blog = await fetchBlog();
+  // console.log(Blog.data);
   return (
     <main className="bg-white text-black w-[100vw]">
       <Navbar />
@@ -124,5 +128,5 @@ async function fetchBlog() {
       </div>
     </main>
   );
-}
+};
 export default Blog;

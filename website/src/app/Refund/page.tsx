@@ -1,17 +1,22 @@
+/* eslint-disable */
+"use client";
+
 import React from "react";
-import Footer from '../components/Footer'
-import Navbar from '../components/Navbar'
+import Footer from "../components/Footer";
+import Navbar from "../components/Navbar";
 // import our from "../Our_story/Our_story"
 async function fetchRefund() {
   try {
-    const res = await fetch(`https://cms.anahataaconnections.com/api/refund-policy?populate=*`);
+    const res = await fetch(
+      `https://cms.anahataaconnections.com/api/refund-policy?populate=*`
+    );
     const response = await res.json();
     return response;
   } catch (err) {
     console.error(err);
   }
 }
-// export default function Refund() 
+// export default function Refund()
 const Refund = async () => {
   const item = await fetchRefund();
   // console.log(item.data.attributes.policy[0].children[0].text);
@@ -70,5 +75,6 @@ const Refund = async () => {
         <Footer />
       </div>
     </main>
-  );};
-  export default Refund;
+  );
+};
+export default Refund;

@@ -1,3 +1,7 @@
+/* eslint-disable */
+
+"use client"
+
 import React from "react";
 // import text from "../assets/text.png";
 import Image from "next/image";

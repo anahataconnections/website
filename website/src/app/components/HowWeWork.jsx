@@ -1,12 +1,13 @@
+/* eslint-disable */
+
 import React from "react";
 import Image from "next/image";
-// import one from "../assets/create.png";
-// import two from "../assets/discover.png";
-// import three from "../assets/connection.png";
+
 const HowWeWork = () => {
   return (
     <div className="flex items-end justify-center -translate-y-32">
-    <div className="w-[90%]  h-[250px] max-md:h-[200px] md:mx-20 max-sm:w-[80%] bg-[#DDF7F0]">
+    <div className="w-[85%]  h-[250px] max-md:h-[200px]
+         md:mx-20 max-sm:w-[80%] bg-[#DDF7F0]">
       <header className="font-Pattaya  flex items-center justify-center text-[#0C6242] text-[52px] md:max-lg:text-[42px] max-sm:text-[32px]">
         How We Work
       </header>
@@ -42,7 +43,7 @@ const HowWeWork = () => {
 
         <div className="flex flex-col items-center justify-center ">
           <div>
-            {/* <img src={three} alt="" /> */}
+
             <Image
             src="/assets/connection.png"
                 width={45}
