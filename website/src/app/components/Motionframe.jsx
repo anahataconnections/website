@@ -74,20 +74,27 @@ const Motionframe = () => {
             data-aos-anchor-placement="top-left"
             data-offset="200"
           />
-            <div className={` anahata font-EvaMayasari font-bold flex justify-center items-center lg:text-[3rem] text-[20px] text-[#094C3B]`}  data-aos="fade-up"
-                data-aos-delay="100"
-                data-aos-duration="1000"
-                data-aos-easing="ease-in-out"
-                data-aos-mirror="true">
+            <div className={` anahata font-EvaMayasari font-bold flex justify-center items-center lg:text-[3rem] text-[20px] text-[#094C3B]`}       
+            // data-aos="fade-up"
+            //     data-aos-delay="100"
+            //     data-aos-duration="1000"
+            //     data-aos-easing="ease-in-out"
+            //     data-aos-mirror="true"
+                
+                >
            
               Anahata&nbsp;Connections
               
               </div>
-          <div className="logic-blossoms font-sarabun flex justify-center mb-10 items-center font-bold md:text-lg  text-[12px] text-[#094C3B]"  data-aos="fade-up"
-                data-aos-delay="100"
-                data-aos-duration="1000"
-                data-aos-easing="ease-in-out"
-                data-aos-mirror="true">Where Yogic love Blossoms</div>
+          <div className="logic-blossoms font-sarabun flex justify-center mb-10 items-center font-bold md:text-lg  text-[12px] text-[#094C3B]"  
+          
+                // data-aos="fade-up"
+                // data-aos-delay="100"
+                // data-aos-duration="1000"
+                // data-aos-easing="ease-in-out"
+                // data-aos-mirror="true"
+                
+                >Where Yogic love Blossoms</div>
           <div className="font-sarabun flex justify-center items-center text-center mt-5 "><button className=" bg-[#094C3B] meet-button  text-white rounded-[32px] opacity-70"  
                >Meet Your Match Now</button></div>
         </div>

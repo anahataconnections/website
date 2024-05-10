@@ -1,4 +1,5 @@
 "use client"
+
 import React, { useState } from "react";
 
 const FAQItem = ({ question, answer }) => {
@@ -7,6 +8,11 @@ const FAQItem = ({ question, answer }) => {
   const toggleAccordion = () => {
     setIsOpen(!isOpen);
   };
+
+  const capitalizeFirstLetter = (str) => {
+    return str.charAt(0).toUpperCase() + str.slice(1);
+  };
+
 
   return (
     <div
@@ -18,7 +24,7 @@ const FAQItem = ({ question, answer }) => {
         className="bg-inherit px-4 py-5 cursor-pointer flex items-center justify-between font-sarabun"
         onClick={toggleAccordion}
       >
-        <h3 className="text-xl font-semibold">{question}</h3>
+        <h3 className="text-xl font-semibold ">{capitalizeFirstLetter(question)}</h3>
         <h1 className="text-xl font-semibold">+</h1>
       </div>
       {isOpen && (

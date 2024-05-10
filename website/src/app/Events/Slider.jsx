@@ -7,7 +7,22 @@ import { useEffect, useState } from "react";
 import { images } from "./constants";
 // import Description from "./Description";
 
-
+const headStyles = {
+  position: 'absolute',
+  width: '776px',
+  height: '104px',
+  left: '45px',
+  top: '465px',
+  fontFamily: 'Pattaya',
+  fontStyle: 'normal',
+  fontWeight: '400',
+  fontSize: '52px',
+  lineHeight: '104px',
+  textAlign: 'center',
+  textTransform: 'capitalize',
+  color: '#FFFFFF',
+  textShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)',
+};
 
 const Slider = () => {
   const [activeImage, setActiveImage] = useState(0);
@@ -51,6 +66,14 @@ const Slider = () => {
               : "hidden"
               }`}
           >
+            <div>
+
+              <h1 style={headStyles} >
+                3 Ways For healthy relationship
+              </h1>
+
+            </div>
+
             <Image
               src={elem.src}
               alt=""
@@ -58,6 +81,7 @@ const Slider = () => {
               height={400}
               className="w-full h-full object-cover md:rounded-3xl"
             />
+            
           </div>
         ))}
       </div>

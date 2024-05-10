@@ -20,48 +20,48 @@ const Refund = async () => {
       <Navbar />
       <div className="bg-home-page-back">
         <div className="bg-grey-gradient mx-12 py-20 px-10 text-justify">
-          <div className="font-Pattaya my-4  text-3xl text-[#094C3B]">
+          <div className="font-Pattaya my-3  text-3xl text-[#094C3B]">
             Refund Policy
           </div>
-          <p className="font-sarabun  py-2 text-gray-800 font-semibold">
+          <p className="font-sarabun py-1 text-gray-600 font-medium text-[18px]">
             {item.data.attributes.policy[0].children[0].text}
           </p>
-          <h1 className="font-sarabun  font-bold text-[18px] text-black pb-2 pt-8">
+          <h1 className="font-sarabun  font-bold text-[20px] text-black pt-8">
             Collection of your Information
           </h1>
-          <p className="font-sarabun py-2 text-gray-800 font-semibold">
+          <p className="font-sarabun py-1 text-gray-600 font-medium text-[18px]">
             {item.data.attributes.policy[1].children[0].text}
           </p>
-          <p className="font-sarabun py-2 text-gray-800 font-semibold">
+          <p className="font-sarabun py-1 text-gray-600 font-medium text-[18px]">
             {item.data.attributes.policy[1].children[0].text}
           </p>
-          <p className="font-sarabun py-2 text-gray-800 font-semibold">
+          <p className="font-sarabun py-1 text-gray-600 font-medium text-[18px]">
             {item.data.attributes.policy[1].children[0].text}
           </p>
 
-          <h1 className="font-sarabun font-bold text-[18px] text-black pb-2 pt-8">
+          <h1 className="font-sarabun font-bold text-[20px] text-black pt-8">
             Use of Demographic / Profile Data / Your Information
           </h1>
-          <p className="font-sarabun py-2 text-gray-800 font-semibold">
+          <p className="font-sarabun py-1 text-gray-600 font-medium text-[18px]">
             {item.data.attributes.policy[2].children[0].text}
           </p>
-          <p className="font-sarabun py-2 text-gray-800 font-semibold">
+          <p className="font-sarabun py-1 text-gray-600 font-medium text-[18px]">
             {item.data.attributes.policy[2].children[0].text}
           </p>
-          <p className="font-sarabun py-2 text-gray-800 font-semibold">
+          <p className="font-sarabun py-1 text-gray-600 font-medium text-[18px]">
             {item.data.attributes.policy[2].children[0].text}
           </p>
-          <p className="font-sarabun py-2 text-gray-800 font-semibold">
+          <p className="font-sarabun py-1 text-gray-600 font-medium text-[18px]">
             {item.data.attributes.policy[2].children[0].text}
           </p>
 
-          <h1 className="font-sarabun font-bold text-[18px] text-black pb-2 pt-8">
+          <h1 className="font-sarabun font-bold text-[20px] text-black pt-8">
             Cookies
           </h1>
-          <p className="font-sarabun py-2 text-gray-800 font-semibold">
+          <p className="font-sarabun py-1 text-gray-600 font-medium text-[18px]">
             {item.data.attributes.policy[2].children[0].text}
           </p>
-          <p className="font-sarabun py-2 text-gray-800 font-semibold">
+          <p className="font-sarabun py-1 text-gray-600 font-medium text-[18px]">
             {item.data.attributes.policy[2].children[0].text}
           </p>
         </div>

@@ -6,7 +6,7 @@ import Link from "next/link";
 // import our from "../Our_story/Our_story"
 const Navbar = () => {
   return (
-    <header className="bg-[#094C3B] shadow-md h-[90px] flex items-center px-14">
+    <header className="bg-[#094C3B] h-[90px] flex items-center px-14">
       <div className="flex flex-col md:flex-row justify-between items-center w-full max-w-screen-xl">
         
         <div className="flex items-center justify-center md:justify-start">
@@ -20,7 +20,7 @@ const Navbar = () => {
           <div className="mt-2 md:mt-2 ml-[-14px] font-EvaMayasari font-semibold text-xl md:text-3xl sm:text-2xl text-white">Anahata Connections</div>
         </div>
 
-        <div className="flex items-center gap-x-8 font-semibold lg:text-[16px] md:text-xs sm:text-sm  text-[9px]">
+        <div className="flex items-center gap-x-8 font-semibold lg:text-[16px] md:text-xs sm:text-sm  text-[9px] font-sarabun">
           <div className="cursor-pointer hover:text-[#808080] hover:transition duration-300 ease-in-out text-white"><Link href="/Home">Home</Link></div>
           <div className="cursor-pointer hover:text-[#808080] hover:transition duration-300 ease-in-out text-white"><Link href="/Our_story">Our Story</Link></div>
           <div className="cursor-pointer hover:text-[#808080] hover:transition duration-300 ease-in-out text-white"><Link href="/Blog">Blog</Link></div>

@@ -42,14 +42,14 @@ async function fetchBlog() {
                   src={Blog.data[3].attributes.image.data.attributes.url}
                   width={700}
                   height={400}
-                  className=" w-[750px] "
+                  className=" w-[750px] -translate-x-3"
                   alt="Screenshots of the dashboard project showing desktop and mobile versions"
                 />
                 <div className="my-3">{Blog.data[3].attributes.published}</div>
                 <div className=" my-3 font-sarabun  text-[35px] text-black">
                   {Blog.data[3].attributes.tiltle}
                 </div>
-                <div className="my-3 font-sarabun text-[16px]">
+                <div className="my-3 font-sarabun text-[16px]text-justify">
                   {Blog.data[3].attributes.content[0].children[0].text.substring(
                     0,
                     150
@@ -73,7 +73,7 @@ async function fetchBlog() {
                   alt="Screenshots of the dashboard project showing desktop and mobile versions"
                 />
                 <div className="my-3">{Blog.data[2].attributes.published}</div>
-                <div className=" my-3 font-sarabun  text-[35px] text-black">
+                <div className=" my-3 font-sarabun  text-[35px] text-black text-justify">
                   {Blog.data[2].attributes.tiltle}
                 </div>
                 <div className="my-3 font-sarabun text-[16px]">
@@ -116,7 +116,6 @@ async function fetchBlog() {
                   </div>
                 );
               })}
-              
             </div>
           </div>
         </div>

@@ -58,7 +58,7 @@ const Footer = () => {
 </form>
 
     </div>
-    <div className="grid grid-cols-3 gap-x-32 max-sm:gap-x-12">
+    <div className="grid grid-cols-3 gap-x-32 max-sm:gap-x-12  translate-y-10">
     <div className="flex flex-col max-sm:pl-10 pl-[60px] lg:pl-[50px]">
             <div className="font-semibold text-xl md:text-[18px] max-sm:text-[10px] pb-5 max-sm:pb-1 underline underline-offset-8 ">
               Overview
@@ -76,6 +76,7 @@ const Footer = () => {
             <div className="font-medium md:text-[13px] max-sm:text-[8px] py-1 hover:underline underline-offset-4 cursor-pointer">
               <label for="tw-model2" className="cursor-pointer rounder ">Contact&nbsp;Us</label>
             </div>
+
           </div>
           <div className="flex flex-col ">
             <div className="font-semibold  max-sm:pb-1 md:text-[18px] max-sm:text-[10px] text-xl pb-5 underline underline-offset-8 ">

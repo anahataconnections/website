@@ -63,7 +63,7 @@ const Events = async () => {
         <div className="order-2 lg:order-1 px-6 justify-center items-center flex flex-row w-full lg:w-[80vw] lg:-translate-x-20">
           <Eventcard events={Event} />
         </div>
-        <div className="lg:translate-x-62   order-1 lg:order-2 w-full lg:w-[20vw] border-b border-gray-300 lg:border-0">
+        <div className="lg:translate-x-72  order-1 lg:order-2 w-full lg:w-[20vw] border-b border-gray-300 lg:border-0">
           <h1 className="text-3xl font-bold border-b border-gray-300 pb-2 px-6 lg:px-0">
             Filter
           </h1>
