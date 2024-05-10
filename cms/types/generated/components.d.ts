@@ -40,6 +40,16 @@ export interface WebsiteFaq extends Schema.Component {
   };
 }
 
+export interface WebsiteFounderWords extends Schema.Component {
+  collectionName: 'components_website_founder_words';
+  info: {
+    displayName: 'Founder_words';
+  };
+  attributes: {
+    content: Attribute.Blocks;
+  };
+}
+
 export interface WebsiteHomeBlog extends Schema.Component {
   collectionName: 'components_website_home_blogs';
   info: {
@@ -91,16 +101,28 @@ export interface WebsiteWhyAnahataConnections extends Schema.Component {
   };
 }
 
+export interface WebsiteWhyChooseUs extends Schema.Component {
+  collectionName: 'components_website_why_choose_uses';
+  info: {
+    displayName: 'Why_choose_us';
+  };
+  attributes: {
+    content: Attribute.Blocks;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
       'application.question-screen': ApplicationQuestionScreen;
       'application.question': ApplicationQuestion;
       'website.faq': WebsiteFaq;
+      'website.founder-words': WebsiteFounderWords;
       'website.home-blog': WebsiteHomeBlog;
       'website.our-community': WebsiteOurCommunity;
       'website.testimonial': WebsiteTestimonial;
       'website.why-anahata-connections': WebsiteWhyAnahataConnections;
+      'website.why-choose-us': WebsiteWhyChooseUs;
     }
   }
 }

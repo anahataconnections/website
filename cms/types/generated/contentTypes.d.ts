@@ -876,6 +876,38 @@ export interface ApiBlogBlog extends Schema.CollectionType {
   };
 }
 
+export interface ApiCareerCareer extends Schema.CollectionType {
+  collectionName: 'careers';
+  info: {
+    singularName: 'career';
+    pluralName: 'careers';
+    displayName: 'Career';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    role_picture: Attribute.Media;
+    role_title: Attribute.String;
+    role_description: Attribute.Text;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::career.career',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::career.career',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiEventEvent extends Schema.CollectionType {
   collectionName: 'events';
   info: {
@@ -959,6 +991,37 @@ export interface ApiHomeHome extends Schema.SingleType {
     createdBy: Attribute.Relation<'api::home.home', 'oneToOne', 'admin::user'> &
       Attribute.Private;
     updatedBy: Attribute.Relation<'api::home.home', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+  };
+}
+
+export interface ApiOurStoryOurStory extends Schema.SingleType {
+  collectionName: 'our_stories';
+  info: {
+    singularName: 'our-story';
+    pluralName: 'our-stories';
+    displayName: 'Our_Story';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Founder_words: Attribute.Component<'website.founder-words'>;
+    why_choose_us: Attribute.Component<'website.why-choose-us'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::our-story.our-story',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::our-story.our-story',
+      'oneToOne',
+      'admin::user'
+    > &
       Attribute.Private;
   };
 }
@@ -1066,9 +1129,11 @@ declare module '@strapi/types' {
       'api::about.about': ApiAboutAbout;
       'api::application.application': ApiApplicationApplication;
       'api::blog.blog': ApiBlogBlog;
+      'api::career.career': ApiCareerCareer;
       'api::event.event': ApiEventEvent;
       'api::faq.faq': ApiFaqFaq;
       'api::home.home': ApiHomeHome;
+      'api::our-story.our-story': ApiOurStoryOurStory;
       'api::privacy-policy.privacy-policy': ApiPrivacyPolicyPrivacyPolicy;
       'api::refund-policy.refund-policy': ApiRefundPolicyRefundPolicy;
       'api::term.term': ApiTermTerm;
