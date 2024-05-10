@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_website_why_choose_uses",
+  "info": {
+    "displayName": "Why_choose_us"
+  },
+  "options": {},
+  "attributes": {
+    "content": {
+      "type": "blocks"
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_website_founder_words",
+  "info": {
+    "displayName": "Founder_words"
+  },
+  "options": {},
+  "attributes": {
+    "content": {
+      "type": "blocks"
+    }
+  }
+}
