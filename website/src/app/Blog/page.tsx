@@ -30,8 +30,8 @@ const Blog = async () => {
       <Image
         src="/assets/blog_bg.png"
         width={500}
-        height={500}
-        className="w-[100%] h-[85vh] object-cover object-center"
+        height={300}
+        className="w-[100%] h-[50vh] object-cover object-center"
         alt="Screenshots of the dashboard project showing desktop and mobile versions"
       />
       <div className=" bg-home-page-back bg-contain bg-no-repeat">
