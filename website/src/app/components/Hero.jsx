@@ -10,11 +10,11 @@ const Hero = () => {
 
   return (
     <div className="bg-home-page-back bg-cover bg-no-repeat">
-      <div className="bg-radial-gradient flex justify-center overflow-hidden lg:h-[769px] md:h-[775px] ">
+      <div className="bg-radial-gradient flex justify-center overflow-hidden lg:h-[446px] md:h-[775px] ">
         <Motionframe />
       </div>
       <div className="h-[750px] bg-white-gradient flex flex-col items-center justify-center ">
-        <header className="font-Pattaya text-[#0C6242] text-[52px] max-sm:text-[29px] sm:max-md:text-[42px] -translate-y-28">
+        <header className="font-Pattaya text-[#0C6242] text-[45px] max-sm:text-[29px] sm:max-md:text-[42px] -translate-y-[125px]">
           Why Anahata Connections?
         </header>
         <header className="text-black font-Satisfy text-[35px] pt-6 max-sm:text-[20px] sm:max-md:text-[25px] w-[90%] sm:w-[80%] md:w-[70%] text-center -translate-y-28">
@@ -28,7 +28,7 @@ const Hero = () => {
         <div className="flex justify-center">
           <Link
             href="/WhyAnahita" // Corrected the typo here
-            className="mt-2 bg-[#094C3B] text-white rounded-[32px] px-5 py-2.5 cursor-pointer hover:bg-[#286f5d] font-semibold -translate-y-20"
+            className="mt-2 bg-[#094C3B] text-white rounded-[32px] px-5 py-3 cursor-pointer hover:bg-[#286f5d] font-semibold -translate-y-20"
           >
             KNOW MORE
           </Link>

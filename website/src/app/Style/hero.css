@@ -160,33 +160,38 @@
   .logo{
       position: relative;
       right: 73px;
-      width: 200px;
+      width: 176px;
   }
   .man{
       position: relative;
       
-      top: 30px;
-      right: -340px;
-      width: 166px;
+      top: 0px;
+      right: -330px;
+      width: 176px;
   }
   .women{
       position: relative;
-      top: 30px;
-      left: -340px;
-      width: 175px;
+      top: 0px;
+      left: -330px;
+      width: 180px;
   }
   .left-flower{
       position:relative;
-      left: 215px;
-      top:22px;
+      left: 350px;
+      bottom: 50px;
       
       /* transform: translateY(30px); */
      }
   .right-flower{
       position:relative;
-      left: -210px;
-
+      left: -350px;
+      bottom: 60px;
      }
+    /* .home-page-back{
+        
+        transform: translateY(-100px);
+    } */
+     
 
 }
 /* Large devices (laptops/desktops, 992px and up) */

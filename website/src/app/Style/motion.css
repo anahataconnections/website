@@ -12,32 +12,34 @@
 
 @media only screen and (min-width:1024px){
 .man,.women{
-    height:735px;
+    height:458px;
+    
+    /* transform: translateY(-40px); */
 }
 .hero-logo{
     position:relative;
-    top:50px;
+    top:0px;
 }
 
 .anahata{
     position: relative;
-    top:60px;
-    font-size:3rem;
-   
+    top:0px;
+    font-size:2.6rem;
 }
 .logic-blossoms{
     position: relative;
-    top:60px;
+    top:0px;
     font-size: 1rem;
 }
 
 .meet-button{
     position:relative;
-    top:200px;
-    height: 50px;
-    width: 300px;
+    top:50px;
+    height: 40px;
+    width: 200px;
     cursor: pointer;
-    
+    margin-bottom: 10px;
+    margin-left: 20px;
 }
 }
 

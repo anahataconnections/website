@@ -31,12 +31,12 @@ const Blog = async () => {
         src="/assets/blog_bg.png"
         width={500}
         height={300}
-        className="w-[100%] h-[50vh] object-cover object-center"
+        className="w-full h-[52vh] object-cover object-center"
         alt="Screenshots of the dashboard project showing desktop and mobile versions"
       />
       <div className=" bg-home-page-back bg-contain bg-no-repeat">
         <div className="bg-white-gradient">
-          <div className="font-Pattaya mt-20 flex justify-center items-center text-7xl text-[#094C3B]">
+          <div className="font-Pattaya mt-6 flex justify-center items-center text-7xl text-[#094C3B]">
             Blogs
           </div>
           <div className="flex flex-row mx-5">

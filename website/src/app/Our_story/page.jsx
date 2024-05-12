@@ -21,7 +21,7 @@ export default function Our_story() {
           <div className="flex flex-row justify-between my-10 mx-10 space-y-4">
             <div >
             <div className="font-Pattaya my-4  text-3xl text-[#094C3B]">Rashmi Bansal</div>
-          <p className="font-sarabun text-gray-800 text-[35px] font-semibold">Journey Begins on 4th april 2022</p>
+          <p className="font-sarabun text-gray-500 text-[35px] font-semibold">Journey Begins on 4th april 2022</p>
             </div>
             <div className="bg-[#094C3B] p-2 rounded-xl">
             <Image
@@ -33,7 +33,7 @@ export default function Our_story() {
           />
             </div>
           </div>
-      <div className="mt-12 mx-5 ">
+      <div className="mt-12 mx-8 ">
         <h1 className="font-Pattaya my-6 flex items-center justify-center text-3xl text-[#094C3B]">Founder&apos;s Words</h1>
         <p className="font-sarabun text-[25px] m-2 text-black text-justify">Pen auto polygon group edit object polygon. Prototype vector union slice prototype. Blur move subtract flatten editor prototype share device. Component subtract vertical figjam layout auto blur. Team move shadow rectangle component. Italic export connection style background inspect link distribute. Ipsum pixel select layer variant group object. Move rotate vector vertical outline list underline layout ellipse. </p>
         <p className="font-sarabun text-[25px] m-2 text-black text-justify">Frame layer image figma union variant flows plugin share component. Auto group draft italic auto arrow component prototype. Subtract stroke scale invite reesizing underline share rotate bold project. Draft subtract vertical subtract team text shadow. Select bullet style auto boolean move. Image horizontal line boolean underline library italic polygon figma strikethrough. </p>

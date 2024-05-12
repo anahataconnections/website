@@ -38,9 +38,9 @@ const Motionframe = () => {
       
 
      
-      <div className="grid lg:grid-cols-12 md:grid-cols-12 sm:grid-cols-12 grid-cols-12 place-items-center ">
+      <div className="grid lg:grid-cols-12 md:grid-cols-12 sm:grid-cols-12 grid-cols-12 place-items-center">
         <div className=" p-2 lg:col-span-1 md:col-span-1 sm:col-span-1 col-span-1">
-          <Image src="/assets/left_flower.png" alt="img" width={790} height={2000} className="left-flower mt-6 mr-56"
+          <Image src="/assets/left_flower.png" alt="img" width={790} height={2000} className="left-flower  mr-44"
           // data-aos="fade-right"
           // data-aos-delay="20"
           // data-aos-duration="800"
@@ -51,7 +51,7 @@ const Motionframe = () => {
           />
         </div>
         <div className=" p-2 lg:col-span-4 md:col-span-4 sm:col-span-4 col-span-4">
-          <Image src="/assets/man.png" alt="work icons" height={isLargeScreen?2000:1500} width={1000} className=" man  mt-6" data-aos="fade-right"
+          <Image src="/assets/man.png" alt="work icons" height={isLargeScreen?2000:1500} width={1000} className=" man mb-[120px] " data-aos="fade-right"
                 data-aos-delay="20"
                 data-aos-duration="800"
                 data-aos-easing="ease-in-out"
@@ -60,13 +60,13 @@ const Motionframe = () => {
                 data-aos-anchor-placement="top-left"
                 />
         </div>
-        <div className=" p-2 w-[300px] lg:col-span-2 md:lg:col-span-2 sm:col-span-2 col-span-2">
+        <div className=" p-2 w-[300px] lg:col-span-2 md:lg:col-span-2 sm:col-span-2 mb-[73px] col-span-2 mr-6 pr-6">
           
         <Image
             src="/assets/logo1.png"
-            width={isMobile?70:200}
-            height={isMobile?70:200}
-            className="hero-logo mx-auto"
+             width={isMobile?70:180}
+            height={isMobile?70:180}
+            className="hero-logo ml-14 "
             alt="Anahata Connections Logo"
             data-aos="zoom-in-right"
             data-aos-delay="40"
@@ -88,7 +88,7 @@ const Motionframe = () => {
               Anahata&nbsp;Connections
               
               </div>
-          <div className="logic-blossoms font-cantarell  flex justify-center mb-10 items-center font-bold md:text-lg  text-[12px] text-[#094C3B]"  
+          <div className="logic-blossoms font-cantarell  flex justify-center  items-center font-bold md:text-lg  text-[12px] text-[#094C3B]"  
           
                 // data-aos="fade-up"
                 // data-aos-delay="100"
@@ -97,11 +97,11 @@ const Motionframe = () => {
                 // data-aos-mirror="true"
                 
                 >Where Yogic love Blossoms</div>
-          <div className="font-sarabun flex justify-center items-center text-center mt-5 "><button className=" bg-[#094C3B] meet-button  text-white rounded-[32px] opacity-70"  
+          <div className="font-sarabun flex justify-center items-center text-center mt-8"><button className=" bg-[#095340] meet-button  text-white rounded-[32px]"  
                >Meet Your Match Now</button></div>
         </div>
         <div className=" p-2 lg:col-span-4 md:col-span-4 sm:col-span-4 col-span-4" >
-          <Image src="/assets/women.png" alt="work icons" height={2000} width={1000} className="women mt-8 md:me-0 z-[10]" 
+          <Image src="/assets/women.png" alt="work icons" height={2000} width={1000} className="women mb-[117px] md:me-0 z-[10]" 
                 data-aos="fade-left"
                 data-aos-delay="20"
                 data-aos-duration="800"
@@ -111,7 +111,7 @@ const Motionframe = () => {
                 data-aos-anchor-placement="top-left"/>
         </div>
         <div className="p-2 lg:col-span-1 md:col-span-1 sm:col-span-1 col-span-1">
-          <Image src="/assets/right_flower.png" alt="" width={700} height={2000} className="right-flower mt-6 mr-56  z-[1]"
+          <Image src="/assets/right_flower.png" alt="" width={700} height={2000} className="right-flower  mr-44 z-[1]"
               // data-aos="fade-left"
               // data-aos-delay="20"
               // data-aos-duration="800"
