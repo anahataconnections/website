@@ -39,8 +39,8 @@ const Motionframe = () => {
 
      
       <div className="grid lg:grid-cols-12 md:grid-cols-12 sm:grid-cols-12 grid-cols-12 place-items-center">
-        <div className=" p-2 lg:col-span-1 md:col-span-1 sm:col-span-1 col-span-1">
-          <Image src="/assets/left_flower.png" alt="img" width={790} height={2000} className="left-flower  mr-44"
+        <div className=" p-2 :col-span-1 md:col-span-1 sm:col-span-1 col-splgan-1">
+          <Image src="/assets/left_flower.png" alt="img" width={790} height={2000} className="left-flower  mr-36"
           // data-aos="fade-right"
           // data-aos-delay="20"
           // data-aos-duration="800"
@@ -97,7 +97,7 @@ const Motionframe = () => {
                 // data-aos-mirror="true"
                 
                 >Where Yogic love Blossoms</div>
-          <div className="font-sarabun flex justify-center items-center text-center mt-8"><button className=" bg-[#095340] meet-button  text-white rounded-[32px]"  
+          <div className="font-sarabun flex justify-center items-center text-center mt-6"><button className=" bg-[#095340] meet-button  text-white rounded-[32px]"  
                >Meet Your Match Now</button></div>
         </div>
         <div className=" p-2 lg:col-span-4 md:col-span-4 sm:col-span-4 col-span-4" >
@@ -111,7 +111,7 @@ const Motionframe = () => {
                 data-aos-anchor-placement="top-left"/>
         </div>
         <div className="p-2 lg:col-span-1 md:col-span-1 sm:col-span-1 col-span-1">
-          <Image src="/assets/right_flower.png" alt="" width={700} height={2000} className="right-flower  mr-44 z-[1]"
+          <Image src="/assets/right_flower.png" alt="" width={700} height={2000} className="right-flower  mr-36 z-[1]"
               // data-aos="fade-left"
               // data-aos-delay="20"
               // data-aos-duration="800"

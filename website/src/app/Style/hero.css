@@ -134,7 +134,7 @@
   .man{
       position: relative;
       top: 50px;
-      right: -165px;
+      right: -16px;
       width: 156px !important;
       max-width: none;
 
@@ -166,25 +166,25 @@
       position: relative;
       
       top: 0px;
-      right: -330px;
+      right: -338px;
       width: 176px;
   }
   .women{
       position: relative;
       top: 0px;
-      left: -330px;
+      left: -338px;
       width: 180px;
   }
   .left-flower{
       position:relative;
-      left: 350px;
+      left: 380px;
       bottom: 50px;
       
       /* transform: translateY(30px); */
      }
   .right-flower{
       position:relative;
-      left: -350px;
+      left: -380px;
       bottom: 60px;
      }
     /* .home-page-back{
