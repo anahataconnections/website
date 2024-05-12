@@ -14,7 +14,7 @@ const headStyles = {
   width: '776px',
   height: '104px',
   right:'470px',
-  top: '330px',
+  top: '315px',
   fontFamily: 'Pattaya',
   fontStyle: 'normal',
   fontWeight: '400',

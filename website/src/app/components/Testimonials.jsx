@@ -27,12 +27,17 @@ const Testimonials = () => {
 
         <div className="absolute ">
          {/* //max-sm:mt-24  max-sm:ml-52 max-sm:mr-14  */}
-          <div className="flex flex-col justify-between max-md:py-4 max-md:pl-2 max-md:mt-20 max-md:text-[10px] max-md:ml-32  max-md:mr-10  lg:ml-[300px] md:ml-[280px] lg:mt-[100px] md:w-[50%] md:mt-[100px]  lg:w-[60%] rounded-[12px] lg:px-10  lg:pt-10 lg:pb-[70px] bg-[#F9EBCC]  text-[#094C3B] font-Satisfy xl:text-3xl lg:text-[23px] md:text-[20px] md:px-6 md:py-8 underline underline-offset-8">
-            <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor , quis nostrud exercitation ”</p>
-            <ShowMoreButton />
+            <div className="flex flex-col justify-between max-md:py-4 max-md:pl-2 max-md:mt-20 max-md:text-[10px] max-md:ml-32 max-md:mr-10 lg:ml-[300px] md:ml-[280px] lg:mt-[100px] md:w-[50%] md:mt-[100px] lg:w-[60%] rounded-[12px] lg:px-10 lg:pt-10 lg:pb-[70px] bg-[#F9EBCC] text-[#094C3B] font-Satisfy xl:text-3xl lg:text-[23px] md:text-[20px] md:px-6 md:py-8">
+              <p className="text-[24px]">
+                <span className="underline underline-offset-4">“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do</span>
+                <br />
+                <span className="underline underline-offset-4">eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim</span>
+                <br />
+                <span className="underline underline-offset-4">ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut</span>
+                <br />
+                <span className="underline underline-offset-4">aliquip ex ea commodo consequat. Duis aute irure dolor , quis nostrud exercitation ”</span>
+              </p>
+              <ShowMoreButton />
 
             <div className="md:text-[20px] max-md:text-[10px] max-md:bottom-0 max-md:right-12 absolute bottom-3 right-32  satisfy-regular text-3xl lg:text-[25px] -translate-x-24">
             - Mr & Mrs Singh
