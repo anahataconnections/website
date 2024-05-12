@@ -1,0 +1,46 @@
+{
+  "kind": "singleType",
+  "collectionName": "collaborations",
+  "info": {
+    "singularName": "collaboration",
+    "pluralName": "collaborations",
+    "displayName": "Collaboration",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "collaboration": {
+      "displayName": "Collaboration",
+      "type": "component",
+      "repeatable": false,
+      "component": "website.collaboration"
+    },
+    "advertisement": {
+      "displayName": "Advertisements",
+      "type": "component",
+      "repeatable": false,
+      "component": "website.advertisements"
+    },
+    "yoga": {
+      "displayName": "Yoga",
+      "type": "component",
+      "repeatable": false,
+      "component": "website.yoga"
+    },
+    "business_partner": {
+      "displayName": "Business_Partner",
+      "type": "component",
+      "repeatable": true,
+      "component": "website.business-partner"
+    },
+    "any_plans": {
+      "displayName": "Any_Plans",
+      "type": "component",
+      "repeatable": false,
+      "component": "website.any-plans"
+    }
+  }
+}

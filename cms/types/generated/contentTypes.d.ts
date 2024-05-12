@@ -908,6 +908,41 @@ export interface ApiCareerCareer extends Schema.CollectionType {
   };
 }
 
+export interface ApiCollaborationCollaboration extends Schema.SingleType {
+  collectionName: 'collaborations';
+  info: {
+    singularName: 'collaboration';
+    pluralName: 'collaborations';
+    displayName: 'Collaboration';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    collaboration: Attribute.Component<'website.collaboration'>;
+    advertisement: Attribute.Component<'website.advertisements'>;
+    yoga: Attribute.Component<'website.yoga'>;
+    business_partner: Attribute.Component<'website.business-partner', true>;
+    any_plans: Attribute.Component<'website.any-plans'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::collaboration.collaboration',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::collaboration.collaboration',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiEventEvent extends Schema.CollectionType {
   collectionName: 'events';
   info: {
@@ -1130,6 +1165,7 @@ declare module '@strapi/types' {
       'api::application.application': ApiApplicationApplication;
       'api::blog.blog': ApiBlogBlog;
       'api::career.career': ApiCareerCareer;
+      'api::collaboration.collaboration': ApiCollaborationCollaboration;
       'api::event.event': ApiEventEvent;
       'api::faq.faq': ApiFaqFaq;
       'api::home.home': ApiHomeHome;

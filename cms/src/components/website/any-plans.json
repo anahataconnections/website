@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_website_any_plans",
+  "info": {
+    "displayName": "Any_Plans"
+  },
+  "options": {},
+  "attributes": {
+    "content": {
+      "type": "blocks"
+    }
+  }
+}

@@ -29,6 +29,50 @@ export interface ApplicationQuestion extends Schema.Component {
   };
 }
 
+export interface WebsiteAdvertisements extends Schema.Component {
+  collectionName: 'components_website_advertisements';
+  info: {
+    displayName: 'Advertisements';
+  };
+  attributes: {
+    image: Attribute.Media;
+    content: Attribute.Blocks;
+  };
+}
+
+export interface WebsiteAnyPlans extends Schema.Component {
+  collectionName: 'components_website_any_plans';
+  info: {
+    displayName: 'Any_Plans';
+  };
+  attributes: {
+    content: Attribute.Blocks;
+  };
+}
+
+export interface WebsiteBusinessPartner extends Schema.Component {
+  collectionName: 'components_website_business_partners';
+  info: {
+    displayName: 'Business_Partner';
+  };
+  attributes: {
+    image: Attribute.Media;
+    name: Attribute.String;
+    description: Attribute.Text;
+  };
+}
+
+export interface WebsiteCollaboration extends Schema.Component {
+  collectionName: 'components_website_collaborations';
+  info: {
+    displayName: 'Collaboration';
+  };
+  attributes: {
+    image: Attribute.Media;
+    content: Attribute.Blocks;
+  };
+}
+
 export interface WebsiteFaq extends Schema.Component {
   collectionName: 'components_website_faqs';
   info: {
@@ -111,11 +155,26 @@ export interface WebsiteWhyChooseUs extends Schema.Component {
   };
 }
 
+export interface WebsiteYoga extends Schema.Component {
+  collectionName: 'components_website_yogas';
+  info: {
+    displayName: 'Yoga';
+  };
+  attributes: {
+    image: Attribute.Media;
+    content: Attribute.Blocks;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
       'application.question-screen': ApplicationQuestionScreen;
       'application.question': ApplicationQuestion;
+      'website.advertisements': WebsiteAdvertisements;
+      'website.any-plans': WebsiteAnyPlans;
+      'website.business-partner': WebsiteBusinessPartner;
+      'website.collaboration': WebsiteCollaboration;
       'website.faq': WebsiteFaq;
       'website.founder-words': WebsiteFounderWords;
       'website.home-blog': WebsiteHomeBlog;
@@ -123,6 +182,7 @@ declare module '@strapi/types' {
       'website.testimonial': WebsiteTestimonial;
       'website.why-anahata-connections': WebsiteWhyAnahataConnections;
       'website.why-choose-us': WebsiteWhyChooseUs;
+      'website.yoga': WebsiteYoga;
     }
   }
 }

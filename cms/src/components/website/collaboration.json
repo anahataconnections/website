@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_website_collaborations",
+  "info": {
+    "displayName": "Collaboration"
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "content": {
+      "type": "blocks"
+    }
+  }
+}
