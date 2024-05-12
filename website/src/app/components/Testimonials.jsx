@@ -9,7 +9,7 @@ import ShowMoreButton from './ShowMoreButton';
 const Testimonials = () => {
   return (
     <div className="flex items-center justify-center">
-    <div className="h-full  bg-[#DDF7F0] w-[90%] ">
+    <div className="h-[600px]  bg-[#DDF7F0] w-[90%] ">
       <header className="font-Pattaya flex items-center justify-center  md:text-[40px] max-md:text-[24px] text-[#094C3B] lg:text-[52px]">
         Hear what our users say about us
       </header>
@@ -20,7 +20,7 @@ const Testimonials = () => {
             src="/assets/testimonial.png"
             width={380}
             height={600}
-            className="md:w-65 max-md:w-[200px] "
+            className="md:w-65 h-[450px] max-md:w-[200px] "
             alt="Screenshots of the dashboard project showing desktop and mobile versions"
           />
         </div>
@@ -31,7 +31,7 @@ const Testimonials = () => {
               <p className="text-[24px]">
                 <span className="underline underline-offset-4">“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do</span>
                 <br />
-                <span className="underline underline-offset-4">eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim</span>
+                <span className="underline underline-offset-4">eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut</span>
                 <br />
                 <span className="underline underline-offset-4">ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut</span>
                 <br />

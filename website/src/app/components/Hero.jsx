@@ -17,7 +17,7 @@ const Hero = () => {
         <header className="font-Pattaya text-[#0C6242] text-[45px] max-sm:text-[29px] sm:max-md:text-[42px] -translate-y-[135px]">
           Why Anahata Connections?
         </header>
-        <header className="text-black font-Satisfy text-[35px] pt-6 max-sm:text-[20px] sm:max-md:text-[25px] w-[90%] sm:w-[80%] md:w-[70%] text-center -translate-y-28">
+        <header className="text-black font-Satisfy text-[30px] pt-6 max-sm:text-[20px] sm:max-md:text-[25px] w-[90%] sm:w-[80%] md:w-[70%] text-center -translate-y-28">
           Welcome to Anahata Connections, where love intertwines with
           spirituality. Explore meaningful connections grounded in yogic
           science and the wisdom of the heart chakra. Our platform unites

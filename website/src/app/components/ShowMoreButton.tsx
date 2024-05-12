@@ -22,7 +22,7 @@ const ShowMoreButton: React.FC = () => {
           </span>
           <br />
           <span className="underline underline-offset-4">
-            irure dolor Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+            irure dolor Lorem ipsum dolor sit amet, consectetur adipiscing,
           </span>
           <br />
           <span className="underline underline-offset-4">

@@ -187,72 +187,55 @@
       left: -380px;
       bottom: 60px;
      }
-    /* .home-page-back{
-        
-        transform: translateY(-100px);
-    } */
-     
-
-}
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 1440px) {
-  .logo{
-      position: relative;
-      left: 90px;
-      width: 200px;
-  }
-  .man{
-      position: relative;
-      top: 70px;
-      left: 370px;
-      width: 195px;
-  }
-  .women{
-      position: relative;
-      top: 70px;
-      left: -370px;
-      width: 195px;
-  }
- .left-flower{
-  position:relative;
-  left: 220px;
- }
-
-.right-flower{
-  position:relative;
-  left: -220px;
-}
-  .onspot{
-      position: relative;
-      left: 150px;
-      margin-top: 50px;
-  }
-
-  .hero-logo{
-      position:relative;
-      top:100px;
-  }
-  
-  .anahata{
-      position: relative;
-      top:100px;
-     
-  }
-  .logic-blossoms{
-      position: relative;
-      top:100px;
-  }
-
-  .meet-button{
-      position:relative;
-      top:210px;
-      height: 43px;
-      width: 200px;
-  }
 }
 
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-  /* Add your styles for extra large devices here */
+
+@media only screen and (min-width: 1920px) and (min-height: 1080px) {
+    /* Add your styles for 1920px width and 1080px height here */
+    /* These styles will only apply when the viewport is exactly 1920px width and 1080px height */
+    
+    .bg-radial-gradient{
+         height: 800px;
+
+    }
+
+    .logo {
+            position: relative;
+            right: 73px;
+            width: 176px;
+        }
+    
+        .man {
+            position: relative;
+    
+            top: 124px;
+            right: -482px;
+            width: 176px;
+        }
+    
+        .women {
+            position: relative;
+            top: 124px;
+            left: -482px;
+            width: 180px;
+        }
+    
+        .left-flower {
+            position: relative;
+            top:76px;
+            left: 480px;
+            margin-right:260px ;
+            
+            
+        }
+    
+        .right-flower {
+            position: relative;
+            top: 76px;
+            right: 50px;
+            margin-right: 120px;
+        }
+
 
 }
+

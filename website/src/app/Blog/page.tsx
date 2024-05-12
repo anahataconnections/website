@@ -25,7 +25,7 @@ const Blog = async () => {
   const Blog = await fetchBlog();
   // console.log(Blog.data);
   return (
-    <main className="bg-white text-black w-[100vw]">
+    <main className="bg-white text-black w-[100%] overflow-x-hidden">
       <Navbar />
       <Image
         src="/assets/blog_bg.png"
