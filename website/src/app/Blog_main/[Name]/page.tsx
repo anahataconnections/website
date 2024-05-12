@@ -1,4 +1,5 @@
-
+/* eslint-disable */
+"use client";
 import React from "react";
 import Image from "next/image";
 import Navbar from "../../components/Navbar";
@@ -11,10 +12,10 @@ interface BlogPageProps {
   };
 }
 
-const fetchBlog = async (Name: string) => {
+const fetchBlog = async (id: string) => {
   try {
     const res = await fetch(
-      `https://cms.anahataaconnections.com/api/blogs?filters[tiltle][$eq]=${Name}&populate=*`
+      `https://cms.anahataaconnections.com/api/blogs?filters[tiltle][$eq]=${id}&populate=*`
     );
     const response = await res.json();
     return response;

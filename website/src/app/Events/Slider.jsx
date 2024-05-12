@@ -1,12 +1,30 @@
-"use client";
+/* eslint-disable */
+
+"use client"
+
 import left from "../../../public/left.svg"
 import right from "../../../public/right.svg";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { images } from "./constants";
-// import Description from "./Description";
 
 
+const headStyles = {
+  position: 'absolute',
+  width: '776px',
+  height: '104px',
+  left: '45px',
+  top: '465px',
+  fontFamily: 'Pattaya',
+  fontStyle: 'normal',
+  fontWeight: '400',
+  fontSize: '52px',
+  lineHeight: '104px',
+  textAlign: 'center',
+  textTransform: 'capitalize',
+  color: '#FFFFFF',
+  textShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)',
+};
 
 const Slider = () => {
   const [activeImage, setActiveImage] = useState(0);
@@ -29,15 +47,15 @@ const Slider = () => {
     return () => {
       clearTimeout(timer);
     };
-  }, [activeImage]);
+  }, [activeImage,clickNext]);
   return (
     <main className="place-items-center flex w-full mx-2 px-20 py-10 relative mt-4 ">
       <div className="absolute inset-0 bg-gray-700 opacity-75 rounded-2xl"></div>
       <div
-        className=" absolute left-10 cursor-pointer "
+        className=" absolute left-10 cursor-pointer"
         onClick={clickPrev}
       >
-        <Image src={left} alt="" />
+        <Image src={left} alt="" className="" />
       </div>
       <div
         className={`w-full flex justify-center items-center gap-4 transition-transform ease-in-out duration-500 md:rounded-2xl p-6 md:p-0`}
@@ -46,17 +64,26 @@ const Slider = () => {
           <div
             key={idx}
             className={`${idx === activeImage
-              ? "block w-full h-[80vh] object-cover transition-all duration-500 ease-in-out z-10"
+              ? "block w-full h-[80vh] object-cover object-center transition-all duration-500 ease-in-out z-10"
               : "hidden"
               }`}
           >
+            <div>
+
+              <h1 style={headStyles} >
+                3 Ways For healthy relationship
+              </h1>
+
+            </div>
+
             <Image
               src={elem.src}
               alt=""
               width={400}
               height={400}
-              className="w-full h-full object-cover md:rounded-3xl "
+              className="w-full h-full object-cover md:rounded-3xl"
             />
+            
           </div>
         ))}
       </div>

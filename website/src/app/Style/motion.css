@@ -1,5 +1,5 @@
 .man, .women{
-    height: 500px;
+    height: 560px;
     min-width: max-content;
 }
 .man{
@@ -12,7 +12,7 @@
 
 @media only screen and (min-width:1024px){
 .man,.women{
-    height:700px;
+    height:735px;
 }
 .hero-logo{
     position:relative;
@@ -33,7 +33,7 @@
 
 .meet-button{
     position:relative;
-    top:220px;
+    top:200px;
     height: 50px;
     width: 300px;
     cursor: pointer;

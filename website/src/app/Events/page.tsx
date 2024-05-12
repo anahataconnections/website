@@ -1,11 +1,13 @@
-// "use client";
+/* eslint-disable */
+
+"use client";
 import React from "react";
 import Image from "next/image";
 // import { useState } from 'react'
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Slider from "./Slider";
-import Eventcard from ".//eventcard";
+import Eventcard from "./eventcard";
 import { useAnimationControls } from "framer-motion";
 
 const wrapperVariants = {
@@ -47,7 +49,11 @@ const Events = async () => {
   // const controls = useAnimationControls();
   // console.log(Event.data);
   return (
-    <main className="bg-white w-[100%]">
+    <main
+      className="bg-white w-[100%] scroll-smooth 
+     overflow-x-hidden 
+    "
+    >
       <Navbar />
       <div className="bg-home-page-back bg-cover bg-no-repeat">
         <Slider />
@@ -55,81 +61,74 @@ const Events = async () => {
           Upcoming Event
         </div>
       </div>
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 mt-10 ">
-        <div className=" px-6 justify-center items-center flex flex-row w-[60vw]">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 mt-10">
+        <div className="order-2 lg:order-1 px-6 justify-center items-center flex flex-row w-full lg:w-[80vw] lg:-translate-x-20">
           <Eventcard events={Event} />
-          {/* absolute top-[1326px] right-[-400px] transform -transform-x-full transition duration-200 ease-in-out */}
         </div>
-        <div className="w-[40vw] border-b-1 items-center ml-48 ">
-          <h1 className=" text-3xl font-nota font-bold border-[#808080]">
+        <div className="lg:translate-x-72  order-1 lg:order-2 w-full lg:w-[20vw] border-b border-gray-300 lg:border-0">
+          <h1 className="text-3xl font-bold border-b border-gray-300 pb-2 px-6 lg:px-0">
             Filter
           </h1>
+          <form className="my-8 relative text-black px-6   ">
+            <h1 className="text-2xl my-4 font-bold">Select Date Range</h1>
 
-          <form className="my-8 absolute text-black">
-            <h1 className="text-2xl my-4 font-nota font-bold">
-              Select Date Range
-            </h1>
-            <label className="text-[14px] bg-[#FEF7FF] text-[#6750A4] absolute left-2 top-[-10]">
-              Date
-            </label>
             <input
               type="date"
-              className=" w-[300px] lg:max-xl:w-[250px]  mt-2 h-10 border-2 px-4  border-[#6750A4]"
-              placeholder="&nbsp;&nbsp;18-1-2004"
+              className="w-full lg:max-w-md mt-2 h-10 border border-gray-300 px-4"
+              placeholder="MM/DD/YYYY"
               id="date"
               name="bday"
             />
-            <p className="my-2 text-[10px]">MM/DD/YYYY</p>
-            <div className="flex flex-col">
-              <h1 className="text-2xl my-2 font-nota font-bold">
-                Event Agenda
-              </h1>
-              <div>
+            <p className="my-2 text-xs text-gray-600">MM/DD/YYYY</p>
+            <div className="flex flex-col mt-4">
+              <h1 className="text-2xl my-2 font-bold">Event Agenda</h1>
+              <div className="flex items-center">
                 <input
                   type="radio"
                   id="relationship"
-                  className="w-[20px] my-1"
+                  className="w-4 h-4 mr-2"
                   name="agenda"
-                  value="HTML"
+                  value="relationship"
                 />
-                <label>Relationship</label>
+                <label htmlFor="relationship">Relationship</label>
               </div>
-              <div>
+              <div className="flex items-center">
                 <input
                   type="radio"
-                  id="life partner"
-                  className="w-[20px] my-1"
+                  id="life_partner"
+                  className="w-4 h-4 mr-2"
                   name="agenda"
-                  value="HTML"
+                  value="life_partner"
                 />
-                <label>Life Partner</label>
+                <label htmlFor="life_partner">Life Partner</label>
               </div>
-              <div className="text-black">
+              <div className="flex items-center">
                 <input
                   type="radio"
                   id="marriage"
-                  className="w-[20px] my-1"
+                  className="w-4 h-4 mr-2"
                   name="agenda"
-                  value="HTML"
+                  value="marriage"
                 />
-                <label>Marriage</label>
+                <label htmlFor="marriage">Marriage</label>
               </div>
-              <div className="flex flex-col">
-                <h1 className="text-2xl my-2 font-nota font-bold">Sort By:</h1>
-                <button className="border-2 border-[#094C3B] hover:bg-[#094C3B]  hover:text-white font-bold py-2 px-4 lg:max-xl:px-0 lg:max-xl:w-24  rounded-[32px] my-2">
-                  Duration
-                </button>
-                <button className="border-2 border-[#094C3B] hover:bg-[#094C3B] hover:text-white font-bold py-2 px-4 lg:max-xl:px-0 lg:max-xl:w-32   rounded-[32px] my-2">
-                  Feature Event
-                </button>
-                <button className="border-2 border-[#094C3B] hover:bg-[#094C3B] hover:text-white font-bold py-2 px-4 lg:max-xl:px-0 lg:max-xl:w-32  rounded-[32px] my-2">
-                  Relavance
-                </button>
-              </div>
+            </div>
+            <div className="flex flex-col mt-4">
+              <h1 className="text-2xl my-2 font-bold">Sort By:</h1>
+              <button className="border border-green-500 hover:bg-green-500 hover:text-white font-bold py-2 px-4 rounded-3xl my-2 w-[180px]">
+                Duration
+              </button>
+              <button className="border border-green-500 hover:bg-green-500 hover:text-white font-bold py-2 px-4 rounded-3xl my-2">
+                Feature Event
+              </button>
+              <button className="border border-green-500 hover:bg-green-500 hover:text-white font-bold py-2 px-4 rounded-3xl my-2 w-[180px]">
+                Relevance
+              </button>
             </div>
           </form>
         </div>
       </div>
+
       <div className=" pt-40">
         <Footer />
       </div>
