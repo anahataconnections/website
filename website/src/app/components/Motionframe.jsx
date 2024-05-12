@@ -88,7 +88,7 @@ const Motionframe = () => {
               Anahata&nbsp;Connections
               
               </div>
-          <div className="logic-blossoms font-cantarell  flex justify-center  items-center font-bold md:text-lg  text-[12px] text-[#094C3B]"  
+          <div className="logic-blossoms font-cantarell  flex justify-center  items-center font-bold md:text-lg  text-[12px] text-[#094C3B] pb-3"  
           
                 // data-aos="fade-up"
                 // data-aos-delay="100"
