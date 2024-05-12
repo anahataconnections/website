@@ -19,7 +19,7 @@ const config: Config = {
         'hero': `url('/assets/hero1.png')`,
         'rf': "url('/assets/right_flower.png')",
         'lf': "url('/assets/left_flower.png')",
-        'flower_back': "url('/assets/BackFlower.png')"
+        'flower_back': "url('/assets/flowerr.svg')"
       },
       
       fontFamily: {
