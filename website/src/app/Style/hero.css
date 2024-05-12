@@ -190,52 +190,44 @@
 }
 
 
-@media only screen and (min-width: 1920px) and (min-height: 1080px) {
-    /* Add your styles for 1920px width and 1080px height here */
-    /* These styles will only apply when the viewport is exactly 1920px width and 1080px height */
-    
-    .bg-radial-gradient{
-         height: 800px;
+@media only screen and (min-width: 1920px) and (max-width: 2892px) and (min-height: 1080px) {
 
+    /* Add your styles for the specified dimensions here */
+    .bg-radial-gradient {
+        height: 800px;
     }
 
     .logo {
-            position: relative;
-            right: 73px;
-            width: 176px;
-        }
-    
-        .man {
-            position: relative;
-    
-            top: 124px;
-            right: -482px;
-            width: 176px;
-        }
-    
-        .women {
-            position: relative;
-            top: 124px;
-            left: -482px;
-            width: 180px;
-        }
-    
-        .left-flower {
-            position: relative;
-            top:76px;
-            left: 480px;
-            margin-right:260px ;
-            
-            
-        }
-    
-        .right-flower {
-            position: relative;
-            top: 76px;
-            right: 50px;
-            margin-right: 120px;
-        }
+        position: relative;
+        right: 73px;
+        width: 176px;
+    }
 
+    .man {
+        position: relative;
+        top: 124px;
+        right: -482px;
+        width: 176px;
+    }
 
+    .women {
+        position: relative;
+        top: 124px;
+        left: -482px;
+        width: 180px;
+    }
+
+    .left-flower {
+        position: relative;
+        top: 76px;
+        left: 480px;
+        margin-right: 260px;
+    }
+
+    .right-flower {
+        position: relative;
+        top: 76px;
+        right: 50px;
+        margin-right: 120px;
+    }
 }
-
