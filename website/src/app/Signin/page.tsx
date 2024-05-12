@@ -15,7 +15,7 @@ export default function Signin() {
               alt="Screenshots of the dashboard project showing desktop and mobile versions"
             />
 
-            <div className="mx-40 pt-12  flex flex-col items-center justify-center w-[60%]">
+            <div className="mx-40 pt-20  flex flex-col items-center justify-center w-[60%]">
               <Image
                 src="/assets/logo1.png"
                 width={100}
