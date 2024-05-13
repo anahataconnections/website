@@ -9,7 +9,9 @@ import Footer from "../components/Footer";
 import Link from "next/link";
 
 async function fetchBlog() {
+  
   try {
+
     const res = await fetch(
       `https://cms.anahataaconnections.com/api/blogs/?populate=*`
     );

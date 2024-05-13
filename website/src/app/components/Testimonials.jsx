@@ -1,53 +1,66 @@
 /* eslint-disable */
-"use client"
-import React from "react";
-// import test from "../assets/testimonial.png";
-// import rect from "../assets/rect.png";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import ShowMoreButton from './ShowMoreButton';
 
+async function fetchTestimonialData() {
+  try {
+    const res = await fetch(
+      `https://cms.anahataaconnections.com/api/home?populate=*`
+    );
+    const response = await res.json();
+    return response.data.attributes.testimonial.find(item => item.id === 1); //Extracting testimonial data with id: 1
+  } catch (err) {
+    console.error(err);
+  }
+}
+
 const Testimonials = () => {
+  const [testimonialData, setTestimonialData] = useState(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const data = await fetchTestimonialData();
+      setTestimonialData(data);
+    };
+    fetchData();
+  }, []);
+
+  if (!testimonialData) {
+    return <div>Loading...</div>;
+  }
+
   return (
     <div className="flex items-center justify-center">
-    <div className="h-[600px]  bg-[#DDF7F0] w-[90%] ">
-      <header className="font-Pattaya flex items-center justify-center  md:text-[40px] max-md:text-[24px] text-[#094C3B] lg:text-[52px]">
-        Hear what our users say about us
-      </header>
+      <div className="h-[600px] bg-[#DDF7F0] w-[75%]">
+        <header className="font-Pattaya flex items-center justify-center  md:text-[40px] max-md:text-[24px] text-[#094C3B] lg:text-[52px]">
+          {testimonialData.title}
+        </header>
 
-      <div className="flex items-center justify-start max-md:px-6 sm:py-5 max-md:py-10  lg:py-20 xl:pl-28 md:py-18 md:px-16 lg:px-7 xl:ml-18">
-        <div>
-          <Image
-            src="/assets/testimonial.png"
-            width={380}
-            height={600}
-            className="md:w-65 h-[450px] max-md:w-[200px] "
-            alt="Screenshots of the dashboard project showing desktop and mobile versions"
-          />
-        </div>
+        <div className="flex items-center justify-start max-md:px-6 sm:py-5 max-md:py-10 lg:py-20 xl:pl-28 md:py-18 md:px-16 lg:px-7 xl:ml-18 -translate-y-12">
+          <div>
+            <Image
+              src="/assets/testimonial.png"
+              width={380}
+              height={600}
+              className="md:w-65 h-[480px] max-md:w-[200px] "
+              alt="Screenshots of the dashboard project showing desktop and mobile versions"
+            />
+          </div>
 
-        <div className="absolute ">
-         {/* //max-sm:mt-24  max-sm:ml-52 max-sm:mr-14  */}
-            <div className="flex flex-col justify-between max-md:py-4 max-md:pl-2 max-md:mt-20 max-md:text-[10px] max-md:ml-32 max-md:mr-10 lg:ml-[300px] md:ml-[280px] lg:mt-[100px] md:w-[50%] md:mt-[100px] lg:w-[60%] rounded-[12px] lg:px-10 lg:pt-10 lg:pb-[70px] bg-[#F9EBCC] text-[#094C3B] font-Satisfy xl:text-3xl lg:text-[23px] md:text-[20px] md:px-6 md:py-8">
-              <p className="text-[24px]">
-                <span className="underline underline-offset-4">“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do</span>
-                <br />
-                <span className="underline underline-offset-4">eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut</span>
-                <br />
-                <span className="underline underline-offset-4">ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut</span>
-                <br />
-                <span className="underline underline-offset-4">aliquip ex ea commodo consequat. Duis aute irure dolor , quis nostrud exercitation ”</span>
-              </p>
+          <div className="absolute -translate-y-8 translate-x-6  ">
+            <div className="flex flex-col text-justify justify-between max-md:py-4 max-md:pl-2 max-md:mt-20 max-md:text-[10px] max-md:ml-32 max-md:mr-10 lg:ml-[300px] md:ml-[280px] lg:mt-[100px] md:w-[50%] md:mt-[100px] lg:w-[60%] rounded-[12px] lg:px-10 lg:pt-10 lg:pb-[50px] bg-[#F9EBCC] text-[#094C3B] font-Satisfy xl:text-[16px] lg:text-[23px] md:text-[16px] md:px-6 md:py-8">
+              {testimonialData.content.map((paragraph, index) => (
+                <p className="underline underline-offset-8 " key={index}>{paragraph.children[0].text}</p>
+              ))}
               <ShowMoreButton />
-
-            <div className="md:text-[20px] max-md:text-[10px] max-md:bottom-0 max-md:right-12 absolute bottom-3 right-32  satisfy-regular text-3xl lg:text-[25px] -translate-x-24">
-            - Mr & Mrs Singh
+              <div className="md:text-[20px] max-md:text-[10px] max-md:bottom-0 max-md:right-12 absolute right-32 satisfy-regular text-xl lg:text-[18px] -translate-x-24 bottom-9">
+                - Mr & Mrs Singh
+              </div>
+            </div>
           </div>
-          </div>
-
-         
         </div>
       </div>
-    </div>
     </div>
   );
 };
