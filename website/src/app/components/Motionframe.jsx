@@ -57,7 +57,7 @@ const Motionframe = () => {
 
 
         <div className=" p-2 w-[330px] lg:col-span-2 md:lg:col-span-2 sm:col-span-2 col-span-2 mr-6 pr-6 
-          anahMain
+          anahMain ml-3
       flex flex-col justify-center items-center
 ">
           <Image
@@ -80,7 +80,7 @@ const Motionframe = () => {
           <div className="logic-blossoms font-cantarell font-bold md:text-lg  text-[12px] text-[#094C3B] pb-3">
             Where Yogic love Blossoms
           </div>
-          <div className="font-sarabun text-center ">
+          <div className="font-sarabun text-center ml-3">
             <button className="bg-[#095340] meet-button text-white rounded-[32px] ">
               Meet Your Match Now
             </button>

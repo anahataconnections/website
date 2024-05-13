@@ -7,7 +7,7 @@ const HowWeWork = () => {
   return (
     <div className="flex items-end justify-center -translate-y-32">
     <div className="w-[75%]  h-[250px] max-md:h-[200px]
-         md:mx-20 max-sm:w-[80%] bg-[#c8f3e7] ">
+         md:mx-20 max-sm:w-[80%] bg-[#F1FDFA] ">
       <header className="font-Pattaya flex items-center justify-center text-[#0C6242] text-[50px] md:max-lg:text-[42px] max-sm:text-[32px]">
         How We Work
       </header>
