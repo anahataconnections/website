@@ -10,7 +10,7 @@ const Hero = () => {
 
   return (
     <div className="bg-home-page-back bg-cover bg-no-repeat">
-      <div className="bg-radial-gradient flex justify-center overflow-hidden lg:h-[420px] md:h-[775px] ">
+      <div className="bg-radial-gradient flex justify-center overflow-hidden  frame">
         <Motionframe />
       </div>
       <div className="h-[750px] bg-white-gradient flex flex-col items-center justify-center ">
