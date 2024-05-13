@@ -60,6 +60,9 @@ const config: Config = {
       colors: {
         'rgba-black-33': 'rgba(0, 0, 0, 0.33)',
       },
+      screens: {
+        'custom': '1280px', // Define a custom breakpoint
+      },
     },
   },
   plugins: [],
