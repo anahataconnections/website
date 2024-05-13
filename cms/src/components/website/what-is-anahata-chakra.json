@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_website_what_is_anahata_chakras",
+  "info": {
+    "displayName": "What_is_Anahata_Chakra"
+  },
+  "options": {},
+  "attributes": {
+    "Heading_title": {
+      "type": "string"
+    },
+    "date": {
+      "type": "date"
+    },
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "content": {
+      "type": "blocks"
+    }
+  }
+}

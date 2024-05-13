@@ -1,15 +1,11 @@
 {
-  "collectionName": "components_website_why_choose_uses",
+  "collectionName": "components_website_banner_images",
   "info": {
-    "displayName": "Why_choose_us",
-    "description": ""
+    "displayName": "Banner Image"
   },
   "options": {},
   "attributes": {
-    "content": {
-      "type": "blocks"
-    },
-    "image": {
+    "bannerImage": {
       "allowedTypes": [
         "images",
         "files",

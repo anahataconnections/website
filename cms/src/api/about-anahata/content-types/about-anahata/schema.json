@@ -1,0 +1,27 @@
+{
+  "kind": "singleType",
+  "collectionName": "about_anahatas",
+  "info": {
+    "singularName": "about-anahata",
+    "pluralName": "about-anahatas",
+    "displayName": "About Anahata"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "banner_Image": {
+      "displayName": "Banner Image",
+      "type": "component",
+      "repeatable": false,
+      "component": "website.banner-image"
+    },
+    "what_is_anahata_chakra": {
+      "displayName": "What_is_Anahata_Chakra",
+      "type": "component",
+      "repeatable": false,
+      "component": "website.what-is-anahata-chakra"
+    }
+  }
+}

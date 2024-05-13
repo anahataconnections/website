@@ -820,6 +820,37 @@ export interface ApiAboutAbout extends Schema.SingleType {
   };
 }
 
+export interface ApiAboutAnahataAboutAnahata extends Schema.SingleType {
+  collectionName: 'about_anahatas';
+  info: {
+    singularName: 'about-anahata';
+    pluralName: 'about-anahatas';
+    displayName: 'About Anahata';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    banner_Image: Attribute.Component<'website.banner-image'>;
+    what_is_anahata_chakra: Attribute.Component<'website.what-is-anahata-chakra'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::about-anahata.about-anahata',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::about-anahata.about-anahata',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiApplicationApplication extends Schema.SingleType {
   collectionName: 'applications';
   info: {
@@ -979,30 +1010,6 @@ export interface ApiEventEvent extends Schema.CollectionType {
   };
 }
 
-export interface ApiFaqFaq extends Schema.CollectionType {
-  collectionName: 'faqs';
-  info: {
-    singularName: 'faq';
-    pluralName: 'faqs';
-    displayName: 'faq';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    question: Attribute.Text;
-    answer: Attribute.Text;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<'api::faq.faq', 'oneToOne', 'admin::user'> &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<'api::faq.faq', 'oneToOne', 'admin::user'> &
-      Attribute.Private;
-  };
-}
-
 export interface ApiHomeHome extends Schema.SingleType {
   collectionName: 'homes';
   info: {
@@ -1036,6 +1043,7 @@ export interface ApiOurStoryOurStory extends Schema.SingleType {
     singularName: 'our-story';
     pluralName: 'our-stories';
     displayName: 'Our_Story';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -1043,6 +1051,8 @@ export interface ApiOurStoryOurStory extends Schema.SingleType {
   attributes: {
     Founder_words: Attribute.Component<'website.founder-words'>;
     why_choose_us: Attribute.Component<'website.why-choose-us'>;
+    about_founder: Attribute.Component<'website.about-founder'>;
+    Images: Attribute.Component<'website.images'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1162,12 +1172,12 @@ declare module '@strapi/types' {
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'api::about.about': ApiAboutAbout;
+      'api::about-anahata.about-anahata': ApiAboutAnahataAboutAnahata;
       'api::application.application': ApiApplicationApplication;
       'api::blog.blog': ApiBlogBlog;
       'api::career.career': ApiCareerCareer;
       'api::collaboration.collaboration': ApiCollaborationCollaboration;
       'api::event.event': ApiEventEvent;
-      'api::faq.faq': ApiFaqFaq;
       'api::home.home': ApiHomeHome;
       'api::our-story.our-story': ApiOurStoryOurStory;
       'api::privacy-policy.privacy-policy': ApiPrivacyPolicyPrivacyPolicy;

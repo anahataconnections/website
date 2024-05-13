@@ -1,25 +1,33 @@
 {
   "collectionName": "components_website_business_partners",
   "info": {
-    "displayName": "Business_Partner"
+    "displayName": "Business_Partner",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "name": {
       "type": "string"
     },
     "description": {
       "type": "text"
+    },
+    "rating": {
+      "type": "integer"
+    },
+    "country": {
+      "type": "string"
     }
   }
 }
