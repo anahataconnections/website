@@ -20,6 +20,8 @@ const Community = () => {
         </div>
         <div>
           {/* <img src={text} alt="" className="h-[340px]" /> */}
+          
+
           <Image
             src="/assets/conversation.png"
             width={400}
@@ -27,6 +29,8 @@ const Community = () => {
             className="sm:max-md:w-[300px] md:block mr-8"
             alt="Screenshots of the dashboard project showing desktop and mobile versions"
           />
+
+
         </div>
       </div>
     </div>

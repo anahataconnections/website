@@ -13,12 +13,12 @@ const headStyles = {
   position: 'absolute',
   width: '776px',
   height: '104px',
-  left: '45px',
-  top: '465px',
+  right:'470px',
+  top: '310px',
   fontFamily: 'Pattaya',
   fontStyle: 'normal',
   fontWeight: '400',
-  fontSize: '52px',
+  fontSize: '2.8rem',
   lineHeight: '104px',
   textAlign: 'center',
   textTransform: 'capitalize',
@@ -49,33 +49,34 @@ const Slider = () => {
     };
   }, [activeImage,clickNext]);
   return (
-    <main className="place-items-center flex w-full mx-2 px-20 py-10 relative mt-4 ">
-      <div className="absolute inset-0 bg-gray-700 opacity-75 rounded-2xl"></div>
+    <main className="place-items-center flex w-full mx- px-20 py-10 relative mt-4 ">
+      <div className="absolute inset-0 bg-rgba-black-33 opacity-75"></div>
+
       <div
-        className=" absolute left-10 cursor-pointer"
+        className="absolute cursor-pointer top-1/2 transform -translate-y-1/2 left-24 z-50"
         onClick={clickPrev}
       >
-        <Image src={left} alt="" className="" />
+        <Image src={left} alt="" />
       </div>
       <div
-        className={`w-full flex justify-center items-center gap-4 transition-transform ease-in-out duration-500 md:rounded-2xl p-6 md:p-0`}
+        className={`w-full flex justify-center items-center gap-4 transition-transform ease-in-out duration-500 md:rounded-2xl p-6 md:p-0 relative`}
       >
         {images.map((elem, idx) => (
           <div
             key={idx}
             className={`${idx === activeImage
-              ? "block w-full h-[80vh] object-cover object-center transition-all duration-500 ease-in-out z-10"
+              ? "block w-full h-[65vh] object-cover object-center transition-all duration-500 ease-in-out relative"
               : "hidden"
               }`}
           >
             <div>
-
-              <h1 style={headStyles} >
+              <h1 style={headStyles}
+                  // className=" max-[1024px]:-translate-x-10
+                  // "
+              >
                 3 Ways For healthy relationship
               </h1>
-
             </div>
-
             <Image
               src={elem.src}
               alt=""
@@ -83,22 +84,15 @@ const Slider = () => {
               height={400}
               className="w-full h-full object-cover md:rounded-3xl"
             />
-            
           </div>
         ))}
       </div>
       <div
-
-        className="absolute right-10 cursor-pointer"
+        className="absolute cursor-pointer top-1/2 transform -translate-y-1/2 right-24 z-50"
         onClick={clickNext}
       >
         <Image src={right} alt="" />
       </div>
-      {/* <Description absolute right-2
-        activeImage={activeImage}
-        clickNext={clickNext}
-        clickPrev={clickPrev}
-      /> */}
     </main>
   );
 };

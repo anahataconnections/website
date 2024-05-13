@@ -5,7 +5,8 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-// import our from "../Our_story/Our_story"
+
+
 const Navbar = () => {
   return (
     <header className="bg-[#094C3B] h-[90px] flex items-center px-14">

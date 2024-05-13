@@ -15,11 +15,19 @@ const ShowMoreButton: React.FC = () => {
   return (
     <div>
       {showContent && (
-        <div>
+        <div className="text-[24px]">
           {/* Your hidden content goes here */}
-          ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-          irure dolor Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-          sed do eiusmod tempor incididunt
+          <span className="underline underline-offset-4">
+            ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+          </span>
+          <br />
+          <span className="underline underline-offset-4">
+            irure dolor Lorem ipsum dolor sit amet, consectetur adipiscing,
+          </span>
+          <br />
+          <span className="underline underline-offset-4">
+            sed do eiusmod tempor incididunt
+          </span>
         </div>
       )}
 

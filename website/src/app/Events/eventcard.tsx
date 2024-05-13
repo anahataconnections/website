@@ -2,6 +2,7 @@
 "use client";
 import React from "react";
 import Image from "next/image";
+import './event.css'
 
 // interface Event {
 //   id: number;
@@ -17,6 +18,9 @@ import Image from "next/image";
 export type EventsProps = {
   events: any[];
 };
+
+
+
 
 const Eventcard = (props: EventsProps) => {
   const { events } = props;
@@ -43,11 +47,11 @@ const Eventcard = (props: EventsProps) => {
                   {item.attributes.name}...
                 </div>
 
-                <div className="py-2 text-gray-500 font-semibold  h-[100px]">
+                <div className="py-2 text-gray-500  h-[100px]">
                   {item.attributes.date}
                 </div>
 
-                <div className="font-semibold font-sarabun text-gray-500 text-xl pb-4 -translate-y-6">
+                <div className="weight font-sarabun text-gray-500 text-xl pb-4 -translate-y-6">
                   {item.attributes.description[0].children[0].text.substring(
                     0,
                     90

@@ -48,17 +48,17 @@ const BlogPage: React.FC<BlogPageProps> = ({ params }) => {
         src="/assets/blog_bg.png"
         width={500}
         height={500}
-        className="w-[100%]"
+        className="w-[100vw] h-[67vh]"
         alt="Screenshots of the dashboard project showing desktop and mobile versions"
       />
       <div className="bg-home-page-back bg-cover bg-no-repeat ">
-        <div className="font-Pattaya mt-2 flex justify-center items-center text-7xl text-[#094C3B]">
+        <div className=" text-center font-Pattaya mt-6 flex justify-center items-center  md:text-[60px] text-[#094C3B]">
           {blog.attributes.tiltle}
         </div>
         <div className="font-Pattaya mt-2 flex justify-center items-center text-xl text-black">
           {blog.attributes.published}
         </div>
-        <div className="flex justify-center items-center w-[100%]">
+        <div className="flex justify-center items-center pt-2 mx-6 md:mx-0">
           <Image
             src={blog.attributes.image.data.attributes.url}
             width={500}
@@ -69,7 +69,10 @@ const BlogPage: React.FC<BlogPageProps> = ({ params }) => {
         </div>
         <div>
           {blog.attributes.content.map((i: any, index: number) => (
-            <p key={index} className="mx-20 text-xl">
+            <p
+              key={index}
+              className="text-justify py-4 text-[#6E6E6E] md:mx-20 mx-6 text-[18px]"
+            >
               {i.children[0].text}
             </p>
           ))}
@@ -87,3 +90,5 @@ const BlogPage: React.FC<BlogPageProps> = ({ params }) => {
 };
 
 export default BlogPage;
+
+ export const runtime = "edge";

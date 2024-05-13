@@ -65,8 +65,8 @@ const Events = async () => {
         <div className="order-2 lg:order-1 px-6 justify-center items-center flex flex-row w-full lg:w-[80vw] lg:-translate-x-20">
           <Eventcard events={Event} />
         </div>
-        <div className="lg:translate-x-72  order-1 lg:order-2 w-full lg:w-[20vw] border-b border-gray-300 lg:border-0">
-          <h1 className="text-3xl font-bold border-b border-gray-300 pb-2 px-6 lg:px-0">
+        <div className="lg:translate-x-72 mt-8 translate-y-4  order-1 lg:order-2 w-full lg:w-[20vw] border-b border-gray-300 lg:border-0">
+          <h1 className="text-3xl font-bold border-b border-gray-300 pb-2 px-6 lg:px-0 text-black">
             Filter
           </h1>
           <form className="my-8 relative text-black px-6   ">
@@ -115,13 +115,13 @@ const Events = async () => {
             </div>
             <div className="flex flex-col mt-4">
               <h1 className="text-2xl my-2 font-bold">Sort By:</h1>
-              <button className="border border-green-500 hover:bg-green-500 hover:text-white font-bold py-2 px-4 rounded-3xl my-2 w-[180px]">
+              <button className="border border-green-500 hover:bg-[#094C3B] hover:text-white font-bold py-2 px-4 rounded-3xl my-2 w-[180px]">
                 Duration
               </button>
-              <button className="border border-green-500 hover:bg-green-500 hover:text-white font-bold py-2 px-4 rounded-3xl my-2">
+              <button className="border border-green-500 hover:bg-[#094C3B] hover:text-white font-bold py-2 px-4 rounded-3xl my-2 w-[180px]">
                 Feature Event
               </button>
-              <button className="border border-green-500 hover:bg-green-500 hover:text-white font-bold py-2 px-4 rounded-3xl my-2 w-[180px]">
+              <button className="border border-green-500 hover:bg-[#094C3B] hover:text-white font-bold py-2 px-4 rounded-3xl my-2 w-[180px]">
                 Relevance
               </button>
             </div>

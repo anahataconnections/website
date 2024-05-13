@@ -25,18 +25,18 @@ const Blog = async () => {
   const Blog = await fetchBlog();
   // console.log(Blog.data);
   return (
-    <main className="bg-white text-black w-[100vw]">
+    <main className="bg-white text-black w-[100%] overflow-x-hidden">
       <Navbar />
       <Image
         src="/assets/blog_bg.png"
         width={500}
-        height={500}
-        className="w-[100%] h-[85vh] object-cover object-center"
+        height={300}
+        className="w-full h-[52vh] object-cover object-center"
         alt="Screenshots of the dashboard project showing desktop and mobile versions"
       />
       <div className=" bg-home-page-back bg-contain bg-no-repeat">
         <div className="bg-white-gradient">
-          <div className="font-Pattaya mt-20 flex justify-center items-center text-7xl text-[#094C3B]">
+          <div className="font-Pattaya mt-6 flex justify-center items-center text-7xl text-[#094C3B]">
             Blogs
           </div>
           <div className="flex flex-row mx-5">
