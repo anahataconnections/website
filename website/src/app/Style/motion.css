@@ -4,6 +4,47 @@
     min-width: max-content;
 }
 
+
+@media only screen and (max-device-width:1920px) and (max-height:1080px){
+    .man,
+        .women {
+            height: 600px;
+    
+            /* transform: translateY(-40px); */
+        }
+    
+        .anahMain {
+            transform: translateY(270px);
+            margin-left: 100px;
+        }
+    
+        .hero-logo {
+            position: relative;
+            top: 0px;
+        }
+    
+        .anahata {
+            position: relative;
+            top: 0px;
+            font-size: 2.2rem;
+        }
+    
+        .logic-blossoms {
+            position: relative;
+            top: 0px;
+            font-size: 1rem;
+        }
+    
+        .meet-button {
+            position: relative;
+            top: 89px;
+            height: 36px;
+            width: 200px;
+            cursor: pointer;
+            margin-left: 15px;
+        }
+}
+
 @media only screen and (min-device-width: 1024px) and (max-device-width:1500px) {
 
     /* .man,
@@ -44,47 +85,7 @@
     }
 }
 
-@media only screen and (min-device-width: 1501px) and (max-device-width: 1920px) {
 
-    .man,
-    .women {
-        height: 500px;
-
-        /* transform: translateY(-40px); */
-    }
-
-    .anahMain {
-           transform: translateY(320px);
-    }
-    .hero-logo {
-        position: relative;
-        top: 0px;
-    }
-
-    .anahata {
-        position: relative;
-        top: 0px;
-        font-size: 2.2rem;
-    }
-
-    .logic-blossoms {
-        position: relative;
-        top: 0px;
-        font-size: 1rem;
-    }
-
-    .meet-button {
-        position: relative;
-        top: 89px;
-        height: 36px;
-        width: 200px;
-        cursor: pointer;
-       
-        margin-left: 35px;
-    }
-
-
-}
 
 @media only screen and (max-width: 1024px) and (min-width: 768px) {
 
