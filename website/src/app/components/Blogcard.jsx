@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const Blogcard = ({ imageUrl, heading, data, details }) => {
   return (
-    <div className="flex flex-col -space-y-2">
+    <div className="w-[21rem] flex flex-col -space-y-2">
       <div>
         {/* <img src={imageUrl} alt="" className="w-[300px]" /> */}
         <Image
@@ -20,8 +20,8 @@ const Blogcard = ({ imageUrl, heading, data, details }) => {
         <div className=" text-lg font-bold">
           {heading}
         </div>
-        <div className="text-[22px] text-[#9CA3AF] py-2">{details}</div>
-        <div className="py-2   w-[300px] ml-16 lg:ml:6 md:ml-6 h-[100px]">{data}</div>
+        <div className="text-[22px] text-[#9CA3AF] py-2 ">{details}</div>
+        <div className="py-2   w-[300px] ml-16 lg:ml:6 md:ml-6 h-[100px] ">{data}</div>
       </div>
     </div>
   );
