@@ -29,6 +29,18 @@ export interface ApplicationQuestion extends Schema.Component {
   };
 }
 
+export interface WebsiteAboutFounder extends Schema.Component {
+  collectionName: 'components_website_about_founders';
+  info: {
+    displayName: 'About_founder';
+  };
+  attributes: {
+    founder_name: Attribute.String;
+    subline: Attribute.String;
+    founder_image: Attribute.Media;
+  };
+}
+
 export interface WebsiteAdvertisements extends Schema.Component {
   collectionName: 'components_website_advertisements';
   info: {
@@ -50,15 +62,28 @@ export interface WebsiteAnyPlans extends Schema.Component {
   };
 }
 
+export interface WebsiteBannerImage extends Schema.Component {
+  collectionName: 'components_website_banner_images';
+  info: {
+    displayName: 'Banner Image';
+  };
+  attributes: {
+    bannerImage: Attribute.Media;
+  };
+}
+
 export interface WebsiteBusinessPartner extends Schema.Component {
   collectionName: 'components_website_business_partners';
   info: {
     displayName: 'Business_Partner';
+    description: '';
   };
   attributes: {
     image: Attribute.Media;
     name: Attribute.String;
     description: Attribute.Text;
+    rating: Attribute.Integer;
+    country: Attribute.String;
   };
 }
 
@@ -110,6 +135,16 @@ export interface WebsiteHomeBlog extends Schema.Component {
   };
 }
 
+export interface WebsiteImages extends Schema.Component {
+  collectionName: 'components_website_images';
+  info: {
+    displayName: 'Images';
+  };
+  attributes: {
+    banner_image: Attribute.Media;
+  };
+}
+
 export interface WebsiteOurCommunity extends Schema.Component {
   collectionName: 'components_website_our_communities';
   info: {
@@ -134,6 +169,20 @@ export interface WebsiteTestimonial extends Schema.Component {
   };
 }
 
+export interface WebsiteWhatIsAnahataChakra extends Schema.Component {
+  collectionName: 'components_website_what_is_anahata_chakras';
+  info: {
+    displayName: 'What_is_Anahata_Chakra';
+  };
+  attributes: {
+    Heading_title: Attribute.String;
+    date: Attribute.Date;
+    image: Attribute.Media;
+    subtitle: Attribute.String;
+    content: Attribute.Blocks;
+  };
+}
+
 export interface WebsiteWhyAnahataConnections extends Schema.Component {
   collectionName: 'components_website_why_anahata_connections';
   info: {
@@ -149,9 +198,11 @@ export interface WebsiteWhyChooseUs extends Schema.Component {
   collectionName: 'components_website_why_choose_uses';
   info: {
     displayName: 'Why_choose_us';
+    description: '';
   };
   attributes: {
     content: Attribute.Blocks;
+    image: Attribute.Media;
   };
 }
 
@@ -171,15 +222,19 @@ declare module '@strapi/types' {
     export interface Components {
       'application.question-screen': ApplicationQuestionScreen;
       'application.question': ApplicationQuestion;
+      'website.about-founder': WebsiteAboutFounder;
       'website.advertisements': WebsiteAdvertisements;
       'website.any-plans': WebsiteAnyPlans;
+      'website.banner-image': WebsiteBannerImage;
       'website.business-partner': WebsiteBusinessPartner;
       'website.collaboration': WebsiteCollaboration;
       'website.faq': WebsiteFaq;
       'website.founder-words': WebsiteFounderWords;
       'website.home-blog': WebsiteHomeBlog;
+      'website.images': WebsiteImages;
       'website.our-community': WebsiteOurCommunity;
       'website.testimonial': WebsiteTestimonial;
+      'website.what-is-anahata-chakra': WebsiteWhatIsAnahataChakra;
       'website.why-anahata-connections': WebsiteWhyAnahataConnections;
       'website.why-choose-us': WebsiteWhyChooseUs;
       'website.yoga': WebsiteYoga;

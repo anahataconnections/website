@@ -4,7 +4,8 @@
   "info": {
     "singularName": "our-story",
     "pluralName": "our-stories",
-    "displayName": "Our_Story"
+    "displayName": "Our_Story",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -22,6 +23,18 @@
       "type": "component",
       "repeatable": false,
       "component": "website.why-choose-us"
+    },
+    "about_founder": {
+      "displayName": "About_founder",
+      "type": "component",
+      "repeatable": false,
+      "component": "website.about-founder"
+    },
+    "Images": {
+      "displayName": "Images",
+      "type": "component",
+      "repeatable": false,
+      "component": "website.images"
     }
   }
 }
