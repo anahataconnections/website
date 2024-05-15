@@ -27,7 +27,7 @@ const Hero = () => {
         {/* Use Link component to navigate to WhyAnahita page */}
         <div className="flex justify-center">
           <Link
-            href="../WhyAnahata" // Corrected the typo here
+            href="/Whyanahata" // Corrected the typo here
             className="mt-2 bg-[#094C3B] text-white rounded-[32px] px-5 py-3 cursor-pointer hover:bg-[#286f5d] font-semibold custom:my-8"
           >
             KNOW MORE

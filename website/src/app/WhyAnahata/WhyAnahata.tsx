@@ -3,11 +3,14 @@
 
 import React from 'react'
 
-function WhyAnahata() {
+export default function WhyAnahata (){
 
-  return <div>WhyAnahita</div>;
+  return(
 
-  
+        <main>
+          Hello
+        </main>
+
+  )
+
 }
-
-export default WhyAnahata;
