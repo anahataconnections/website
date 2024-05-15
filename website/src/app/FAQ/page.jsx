@@ -34,12 +34,12 @@ const FAQ = () => {
   }
 
   return (
-    <div className="h-auto">
+    <div className="h-auto ">
       <header className="font-Pattaya flex items-center text-center justify-center text-[#094C3B] text-[52px]">
         Frequently Asked Questions
       </header>
 
-      <div className="flex flex-col justify-center items-center mx-28 my-8">
+      <div className="flex flex-col justify-center items-center mx-[95px] my-8">
         {faqData.map((faq, index) => (
           <FAQItem key={index} question={faq.question} answer={faq.answer} /> // Access 'question' and 'answer' directly
         ))}

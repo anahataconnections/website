@@ -28,8 +28,8 @@ const Blogs = () => {
   }, []);
 
   return (
-    <div className="container items-center mx-auto px-8 md:px-8 lg:px-20 py-8 ">
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 font-sarabun max-sm:ml-[12]">
+    <div className="container items-center mx-auto px-16 md:px-8 lg:px-20 py-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 font-sarabun max-sm:ml-[12]">
         {blogs?.map((blog, index) => (
           <Link key={index} href={`../Blog_main/${blog.attributes.tiltle}`}>
         

@@ -13,8 +13,8 @@ const headStyles = {
   position: 'absolute',
   width: '776px',
   height: '104px',
-  right:'470px',
-  top: '310px',
+  right:'430px',
+  top: '400px',
   fontFamily: 'Pattaya',
   fontStyle: 'normal',
   fontWeight: '400',
@@ -49,7 +49,7 @@ const Slider = () => {
     };
   }, [activeImage,clickNext]);
   return (
-    <main className="place-items-center flex w-full mx- px-20 py-10 relative mt-4 ">
+    <main className="place-items-center flex w-full mx- px-20 py-10 relative">
       <div className="absolute inset-0 bg-rgba-black-33 opacity-75"></div>
 
       <div

@@ -17,7 +17,7 @@ const Hero = () => {
         <header className="font-Pattaya text-[#0C6242] text-[45px] max-sm:text-[29px] sm:max-md:text-[42px] custom:translate-y-[-50px]">
           Why Anahata Connections?
         </header>
-        <header className="text-black font-Satisfy text-[30px]  max-sm:text-[20px] sm:max-md:text-[25px] w-[90%] sm:w-[80%] md:w-[70%] text-center ">
+        <header className="text-black font-Satisfy text-[27px]  max-sm:text-[20px] sm:max-md:text-[25px] w-[90%] sm:w-[80%] md:w-[70%] text-center ">
           Welcome to Anahata Connections, where love intertwines with
           spirituality. Explore meaningful connections grounded in yogic
           science and the wisdom of the heart chakra. Our platform unites
@@ -27,7 +27,7 @@ const Hero = () => {
         {/* Use Link component to navigate to WhyAnahita page */}
         <div className="flex justify-center">
           <Link
-            href="/WhyAnahita" // Corrected the typo here
+            href="../WhyAnahata" // Corrected the typo here
             className="mt-2 bg-[#094C3B] text-white rounded-[32px] px-5 py-3 cursor-pointer hover:bg-[#286f5d] font-semibold custom:my-8"
           >
             KNOW MORE

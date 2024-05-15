@@ -31,8 +31,8 @@ const Testimonials = () => {
   }
 
   return (
-    <div className="flex items-center justify-center">
-      <div className="h-[600px] bg-[#DDF7F0] w-[75%]">
+    <div className="flex items-center justify-center pt-3 px-20">
+      <div className="h-[630px] bg-[#F0FDF9] w-[80%] ">
         <header className="font-Pattaya flex items-center justify-center  md:text-[40px] max-md:text-[24px] text-[#094C3B] lg:text-[52px]">
           {testimonialData.title}
         </header>

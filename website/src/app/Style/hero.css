@@ -45,49 +45,79 @@
 
 }
 
+@media only screen and (min-device-width:1680px){
+    .frame{
+        height:74vh;
+    }
+
+    .man{
+        position:relative;
+        top:200px;   
+        
+        }
+    .women{
+        position: relative;
+        top: 200px;
+        
+    }
+    .left-flower{
+         
+        position: relative;
+        top: 200px;
+        margin-right: 190px;
+
+    }
+    .right-flower{
+        position: relative;
+        top: 200px;
+        margin-right: 180px;
+
+    }
+}
+
+
+
 
 
 @media only screen and (min-device-width:1920px) and (min-height:1080px) {
 
-        
-
-        .frame {
-                height: 75vh;
-            }
-        
-            .logo {
-                position: relative;
-                right: 73px;
-                width: 176px;
-            }
-        
-            .man {
-                position: relative;
-                top: 230px;
-                right: -420px;
-                width: 176px;
-            }
-        
-            .women {
-                position: relative;
-                top: 230px;
-                left: -560px;
-                width: 180px;
-            }
-        
-            .left-flower {
-                position: relative;
-                top: 300px;
-                left: 560px;
-                margin-right: 200px;
-            }
-        
-            .right-flower {
-                position: relative;
-                top: 300px;
-                right: 420px;
-                margin-right: 200px;
-            }
-        }
 
 
+    .frame {
+        height: 75vh;
+    }
+
+    .logo {
+        position: relative;
+        right: 73px;
+        width: 176px;
+    }
+
+    .man {
+        position: relative;
+        top: 230px;
+        right: -420px;
+        width: 176px;
+    }
+
+    .women {
+        position: relative;
+        top: 230px;
+        left: -560px;
+        width: 180px;
+    }
+
+    .left-flower {
+        position: relative;
+        top: 300px;
+        left: 560px;
+        margin-right: 200px;
+    }
+
+    .right-flower {
+        position: relative;
+        top: 300px;
+        right: 420px;
+        margin-right: 200px;
+    }
+}
