@@ -5,17 +5,18 @@ import Footer from '../components/Footer'
 export default function Signin() {
     return (
       <main className="bg-white">
+        <Navbar />
         <div className="bg-home-page-back ">
           <div className="bg-home-grad pb-20 h-[100vh] flex justify-between ">
             <Image
               src="/assets/hugging.jpg"
               width={400}
               height={200}
-              className="h-[100vh] w-[40%]"
+              className="h-[100vh] w-[50%]"
               alt="Screenshots of the dashboard project showing desktop and mobile versions"
             />
 
-            <div className="mx-40 pt-20  flex flex-col items-center justify-center w-[60%]">
+            <div className="mx-40 pt-20  flex flex-col items-center justify-center w-[50%]">
               <Image
                 src="/assets/logo1.png"
                 width={100}

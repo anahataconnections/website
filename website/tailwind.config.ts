@@ -64,7 +64,9 @@ const config: Config = {
       screens: {
         'custom': '1376px',
         'custom1':'992px',
+        'custom2':'1280px',
         'customMax':'1920px'
+
         
 
       },

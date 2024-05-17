@@ -67,7 +67,7 @@ const images: ImageProps[] = [
 
 const ChatBox: React.FC = () => {
   return (
-    <section className="flex flex-col max-w-[495px] customMax:max-w-[530px] ml-6 text-left h-[320px]">
+    <section className="flex flex-col max-w-[495px] customMax:max-w-[530px] custom2:max-w-[500px] ml-6 text-left h-[320px]">
       {images.map((image, index) => (
         <Image
           key={index}

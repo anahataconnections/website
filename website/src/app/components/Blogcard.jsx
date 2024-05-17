@@ -10,7 +10,7 @@ const formatDate = (publishedDate) => {
 
 const Blogcard = ({ imageUrl, heading, data, published }) => {
   return (
-    <div className="w-[20.33rem] custom1:w-[17rem] flex flex-col -space-y-2 customMax:w-[25rem]">
+    <div className="w-[20.33rem] custom1:w-[17rem] custom2:w-[19rem] flex flex-col -space-y-2 customMax:w-[25rem]">
       <div>
         {/* <img src={imageUrl} alt="" className="w-[300px]" /> */}
         <Image
@@ -22,7 +22,8 @@ const Blogcard = ({ imageUrl, heading, data, published }) => {
           />
       </div>
 
-      <div className="w-[20.33rem] custom1:w-[17rem] customMax:w-[25rem]  bg-[#094C3B] text-center text-white py-5 rounded-b-2xl">
+      <div className="w-[20.33rem] custom1:w-[17rem]
+      custom2:w-[19rem] customMax:w-[25rem]  bg-[#094C3B] text-center text-white py-5 rounded-b-2xl">
         <div className=" text-lg font-bold">
           {heading}
         </div>
