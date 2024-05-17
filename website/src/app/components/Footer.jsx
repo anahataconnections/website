@@ -11,8 +11,9 @@ const Footer = () => {
   return (
     <>
     
-      <div className="flex justify-center items-center overflow-hidden border-t-2 border-gray-100 pt-4">
-        <div className="flex flex-row items-start justify-between mx-10 md:ml-2 md:mr-3 max-sm:mx-[0px] max-sm:w-[40%]">
+      <div className="bg-transparent flex justify-center items-center overflow-hidden customMax:justify-around customMax:space-x-16 border-t-2 border-gray-100 pt-4">
+
+        <div className="flex flex-row items-start justify-between mx-10 md:ml-2 md:mr-3 max-sm:mx-[0px] max-sm:w-[60%] custom:max-w-[100vw]">
           <div className="flex flex-col items-center justify-center pt-2">
             {/* <img src={logo} alt="" className="object-cover h-32 w-32" /> */}
             <Image
@@ -104,7 +105,7 @@ const Footer = () => {
             <Link href="/Events">Events</Link>
             </div>
             <div className="font-medium md:text-[13px] max-sm:text-[8px] py-1 hover:underline underline-offset-4 cursor-pointer">
-            <Link href="/Partner">Partner&nbsp;With Us</Link>
+            <Link href="/collaboration">Partner&nbsp;With Us</Link>
             </div>
             <div className="font-medium py-1 hover:underline underline-offset-4 cursor-pointer">
             <label for="tw-model" className="cursor-pointer rounder md:text-[13px] max-sm:text-[8px]">Help&nbsp;Center</label>

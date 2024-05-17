@@ -22,7 +22,7 @@ const Privacy = async () => {
     <main>
       <Navbar />
       <div className="bg-home-page-back text-justify">
-        <div className="bg-grey-gradient  mx-12 py-10 px-10 ">
+        <div className="bg-grey-gradient mx-20 py-10 px-10 ">
           <div className="font-Pattaya my-3  text-3xl text-[#094C3B]">
             Privacy Policy
           </div>

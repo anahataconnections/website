@@ -1,0 +1,5 @@
+.placeholder-styled::placeholder {
+    color: gray;
+    padding-left: 15px;
+    font-size: 26px;
+}

@@ -1,4 +1,5 @@
 /* eslint-disable */
+"use-client"
 
 import React from "react";
 import Image from "next/image";
@@ -7,6 +8,10 @@ import Motionframe from "./Motionframe";
 import "@/app/Style/hero.css";
 
 const Hero = () => {
+
+  const handleClick = () => {
+    router.push('/Whyanahata');
+  };
 
   return (
     <div className="bg-home-page-back bg-cover bg-no-repeat">
@@ -27,7 +32,7 @@ const Hero = () => {
         {/* Use Link component to navigate to WhyAnahita page */}
         <div className="flex justify-center">
           <Link
-            href="/Whyanahata" // Corrected the typo here
+            href="../../Whyanahata" // Corrected the typo here
             className="mt-2 bg-[#094C3B] text-white rounded-[32px] px-5 py-3 cursor-pointer hover:bg-[#286f5d] font-semibold custom:my-8"
           >
             KNOW MORE

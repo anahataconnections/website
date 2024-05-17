@@ -9,9 +9,9 @@ import Link from "next/link";
 
 const Navbar = () => {
   return (
-    <header className="bg-[#094C3B] h-[90px] flex items-center px-14">
-      <div className="flex flex-col md:flex-row justify-between items-center w-full max-w-screen-xl">
-        
+    <header className="bg-[#094C3B] h-[90px] custom:h-[90px] flex px-16">
+      <div className="flex flex-col md:flex-row  justify-between items-center w-full ">
+
         <div className="flex items-center justify-center md:justify-start">
           <Image
             src="/assets/logo1.png"
@@ -30,7 +30,7 @@ const Navbar = () => {
           <div className="cursor-pointer hover:text-[#808080] hover:transition duration-300 ease-in-out text-white"><Link href="/Home/#faq">FAQs</Link></div>
           <div className="border-solid border-2 border-white bg-[#094C3B] text-white rounded-[32px] w-20 lg:w-24 text-center px-2 py-2 cursor-pointer hover:bg-[#286f5d]"><Link href="/Signin">Sign In</Link></div>
         </div>
-      
+
       </div>
     </header>
   );

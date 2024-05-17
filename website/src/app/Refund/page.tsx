@@ -24,7 +24,7 @@ const Refund = async () => {
     <main>
       <Navbar />
       <div className="bg-home-page-back">
-        <div className="bg-grey-gradient mx-12 py-20 px-10 text-justify">
+        <div className="bg-grey-gradient mx-20 py-20 px-10 text-justify">
           <div className="font-Pattaya my-3  text-3xl text-[#094C3B]">
             Refund Policy
           </div>

@@ -39,7 +39,7 @@ const FAQ = () => {
         Frequently Asked Questions
       </header>
 
-      <div className="flex flex-col justify-center items-center mx-[95px] my-8">
+      <div className="flex flex-col justify-center items-center mx-[95px] customMax:px-36 my-8">
         {faqData.map((faq, index) => (
           <FAQItem key={index} question={faq.question} answer={faq.answer} /> // Access 'question' and 'answer' directly
         ))}

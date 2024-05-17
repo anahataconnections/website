@@ -15,7 +15,7 @@ const ShowMoreButton: React.FC = () => {
   return (
     <div>
       {showContent && (
-        <div className="text-[16px] text-justify">
+        <div className="text-[1.2rem] text-justify">
           {/* Your hidden content goes here */}
           <span className="underline underline-offset-4">
             ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute

@@ -1,19 +1,21 @@
-/** @type {import('next').NextConfig} */
-// const nextConfig = {};
+// next.config.js
+
 const nextConfig = {
   images: {
     remotePatterns: [
       {
-        // protocol: 'http',
-        // hostname: 'localhost',
-        // port: '1337',
-        protocol: 'https', // Use 'https' instead of 'http'
+        protocol: 'https',
         hostname: 'anahata-cms.s3.ap-south-1.amazonaws.com',
       },
+      // {
+      //   protocol: 'https',
+      //   hostname: 'cms.anahataaconnections.com',
+      // },
     ],
   },
   eslint: {
     ignoreDuringBuilds: true,
   },
 };
+
 export default nextConfig;

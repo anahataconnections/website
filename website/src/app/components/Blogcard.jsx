@@ -2,9 +2,15 @@
 import React from "react";
 import Image from "next/image";
 
-const Blogcard = ({ imageUrl, heading, data, details }) => {
+const formatDate = (publishedDate) => {
+  const options = { month: "long", day: "numeric", year: "numeric" };
+  const date = new Date(publishedDate);
+  return date.toLocaleDateString("en-US", options);
+};
+
+const Blogcard = ({ imageUrl, heading, data, published }) => {
   return (
-    <div className="w-[20.33rem] flex flex-col -space-y-2">
+    <div className="w-[20.33rem] custom1:w-[17rem] flex flex-col -space-y-2 customMax:w-[25rem]">
       <div>
         {/* <img src={imageUrl} alt="" className="w-[300px]" /> */}
         <Image
@@ -16,12 +22,14 @@ const Blogcard = ({ imageUrl, heading, data, details }) => {
           />
       </div>
 
-      <div className="bg-[#094C3B] text-center text-white py-5 rounded-b-2xl">
+      <div className="w-[20.33rem] custom1:w-[17rem] customMax:w-[25rem]  bg-[#094C3B] text-center text-white py-5 rounded-b-2xl">
         <div className=" text-lg font-bold">
           {heading}
         </div>
-        <div className="text-[22px] text-[#9CA3AF] py-2 ">{details}</div>
-        <div className="pt-4  w-[300px]  lg:mr-4 md:ml-6 h-[100px] ">{data}</div>
+        <p className="text-[#9CA3AF]">
+        {formatDate(published)}
+        </p>
+        <div className="pt-4 mx-auto  w-[300px] h-[100px] text-center">{data}</div>
       </div>
     </div>
   );

@@ -8,6 +8,7 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    
     extend: {
       backgroundImage: {
         'radial-gradient': 'radial-gradient(56.4% 103.55% at 55.76% 54.29%, rgba(252, 217, 182, 0.85) 0%, rgba(12, 98, 66, 0.5) 50%, rgba(12, 98, 66, 1) 100%)',
@@ -19,7 +20,7 @@ const config: Config = {
         'hero': `url('/assets/hero1.png')`,
         'rf': "url('/assets/right_flower.png')",
         'lf': "url('/assets/left_flower.png')",
-        'flower_back': "url('/assets/flowerr.svg')"
+        'flower_back': "url('/assets/bottom.svg')"
       },
       
       fontFamily: {
@@ -61,7 +62,11 @@ const config: Config = {
         'rgba-black-33': 'rgba(0, 0, 0, 0.33)',
       },
       screens: {
-        'custom': '1280px', // Define a custom breakpoint
+        'custom': '1376px',
+        'custom1':'992px',
+        'customMax':'1920px'
+        
+
       },
     },
   },

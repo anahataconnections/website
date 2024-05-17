@@ -8,6 +8,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Slider from "./Slider";
 import Eventcard from "./eventcard";
+import SliderProgressBar from '../components/SliderProgressBar'
 import { useAnimationControls } from "framer-motion";
 
 const wrapperVariants = {
@@ -57,6 +58,9 @@ const Events = async () => {
       <Navbar />
       <div className="bg-home-page-back bg-cover bg-no-repeat">
         <Slider />
+        {/* <div>
+          <SliderProgressBar/>
+        </div> */}
         <div className="font-Pattaya my-4 flex justify-center items-center  text-5xl text-[#094C3B] pb-10">
           Upcoming Event
         </div>

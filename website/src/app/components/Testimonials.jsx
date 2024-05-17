@@ -32,7 +32,7 @@ const Testimonials = () => {
 
   return (
     <div className="flex items-center justify-center pt-3 px-20">
-      <div className="h-[630px] bg-[#F0FDF9] w-[80%] ">
+      <div className="h-[630px] bg-[#F0FDF9] w-[82%] ">
         <header className="font-Pattaya flex items-center justify-center  md:text-[40px] max-md:text-[24px] text-[#094C3B] lg:text-[52px]">
           {testimonialData.title}
         </header>
@@ -43,18 +43,18 @@ const Testimonials = () => {
               src="/assets/testimonial.png"
               width={380}
               height={600}
-              className="md:w-65 h-[480px] max-md:w-[200px] "
+              className="md:w-65 h-[480px] max-md:w-[200px] customMax:w-[350px]"
               alt="Screenshots of the dashboard project showing desktop and mobile versions"
             />
           </div>
 
-          <div className="absolute -translate-y-8 translate-x-6  ">
-            <div className="flex flex-col text-justify justify-between max-md:py-4 max-md:pl-2 max-md:mt-20 max-md:text-[10px] max-md:ml-32 max-md:mr-10 lg:ml-[300px] md:ml-[280px] lg:mt-[100px] md:w-[50%] md:mt-[100px] lg:w-[60%] rounded-[12px] lg:px-10 lg:pt-10 lg:pb-[50px] bg-[#F9EBCC] text-[#094C3B] font-Satisfy xl:text-[16px] lg:text-[23px] md:text-[16px] md:px-6 md:py-8">
+          <div className="absolute -translate-y-8 translate-x-6 customMax:translate-y-1 customMax:-translate-x-6">
+            <div className="flex flex-col text-justify justify-between max-md:py-4 max-md:pl-2 max-md:mt-20 max-md:text-[10px] max-md:ml-32 max-md:mr-10 lg:ml-[300px] md:ml-[280px] lg:mt-[100px] md:w-[50%] md:mt-[100px] lg:w-[60%] rounded-[12px] lg:px-10 lg:pt-10 lg:pb-[50px] bg-[#F9EBCC] text-[#094C3B] font-Satisfy xl:text-[16px] lg:text-[23px] md:text-[16px] md:px-6 md:py-8 customMax:text-[1.2rem]">
               {testimonialData.content.map((paragraph, index) => (
                 <p className="underline underline-offset-8 " key={index}>{paragraph.children[0].text}</p>
               ))}
               <ShowMoreButton />
-              <div className="md:text-[20px] max-md:text-[10px] max-md:bottom-0 max-md:right-12 absolute right-32 satisfy-regular text-xl lg:text-[18px] -translate-x-24 bottom-9">
+              <div className="md:text-[20px] max-md:text-[10px] max-md:bottom-0 max-md:right-12 absolute right-32 satisfy-regular text-xl lg:text-[18px] -translate-x-24 bottom-9 customMax:-translate-x-40">
                 - Mr & Mrs Singh
               </div>
             </div>

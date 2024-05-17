@@ -7,24 +7,10 @@ import right from "../../../public/right.svg";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { images } from "./constants";
+import './event.css'
 
 
-const headStyles = {
-  position: 'absolute',
-  width: '776px',
-  height: '104px',
-  right:'430px',
-  top: '400px',
-  fontFamily: 'Pattaya',
-  fontStyle: 'normal',
-  fontWeight: '400',
-  fontSize: '2.8rem',
-  lineHeight: '104px',
-  textAlign: 'center',
-  textTransform: 'capitalize',
-  color: '#FFFFFF',
-  textShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)',
-};
+
 
 const Slider = () => {
   const [activeImage, setActiveImage] = useState(0);
@@ -49,7 +35,7 @@ const Slider = () => {
     };
   }, [activeImage,clickNext]);
   return (
-    <main className="place-items-center flex w-full mx- px-20 py-10 relative">
+    <main className="  place-items-center flex w-full mx- px-20 py-10 relative">
       <div className="absolute inset-0 bg-rgba-black-33 opacity-75"></div>
 
       <div
@@ -59,7 +45,7 @@ const Slider = () => {
         <Image src={left} alt="" />
       </div>
       <div
-        className={`w-full flex justify-center items-center gap-4 transition-transform ease-in-out duration-500 md:rounded-2xl p-6 md:p-0 relative`}
+        className={`w-full  flex justify-center items-center gap-4 transition-transform ease-in-out duration-500 md:rounded-2xl p-6 md:p-0 relative`}
       >
         {images.map((elem, idx) => (
           <div
@@ -70,9 +56,10 @@ const Slider = () => {
               }`}
           >
             <div>
-              <h1 style={headStyles}
-                  // className=" max-[1024px]:-translate-x-10
-                  // "
+              <h1 className="headStyles customMax:translate-y-[13rem]
+              customMax:-translate-x-[40rem]
+              "
+                  
               >
                 3 Ways For healthy relationship
               </h1>
