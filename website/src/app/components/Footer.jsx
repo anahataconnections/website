@@ -107,6 +107,9 @@ const Footer = () => {
             <div className="font-medium md:text-[13px] max-sm:text-[8px] py-1 hover:underline underline-offset-4 cursor-pointer">
             <Link href="/collaboration">Partner&nbsp;With Us</Link>
             </div>
+            <div className="font-medium md:text-[13px] max-sm:text-[8px] py-1 hover:underline underline-offset-4 cursor-pointer">
+            <Link href="/career">Career</Link>
+            </div>
             <div className="font-medium py-1 hover:underline underline-offset-4 cursor-pointer">
             <label for="tw-model" className="cursor-pointer rounder md:text-[13px] max-sm:text-[8px]">Help&nbsp;Center</label>
             <input type="checkbox" id="tw-model" className="peer fixed appearance-none opacity-0"/>
