@@ -115,4 +115,4 @@ const Collaboration: React.FC = () => {
   );
 };
 
-export default Collaborati
+export default Collaboration;
