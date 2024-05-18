@@ -27,6 +27,7 @@ async function fetchEvents() {
   }
 }
 
+
 const Home = () => {
   const [homeData, setHomeData] = useState(null);
 

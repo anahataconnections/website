@@ -57,6 +57,8 @@ const config: Config = {
         '68': '232px',
         '70': '236px',
         '72': '240px',
+        '74': '260px',
+        '76': '280px',
       },
       colors: {
         'rgba-black-33': 'rgba(0, 0, 0, 0.33)',
@@ -65,6 +67,7 @@ const config: Config = {
         'custom': '1376px',
         'custom1':'992px',
         'custom2':'1280px',
+        'custom3':'1440px',
         'customMax':'1920px'
 
         

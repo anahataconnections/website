@@ -4,7 +4,7 @@ import Footer from "./Footer";
 
 const JobCard = ({ role_title, role_description, role_picture }) => {
     return (
-        <div className="bg-white rounded-xl shadow-lg overflow-hidden relative w-full sm:w-80 md:w-96 lg:w-80 xl:w-96">
+        <div className="bg-white rounded-xl shadow-lg overflow-hidden relative w-full sm:w-80 md:w-96 lg:w-80 xl:w-96 customMax:w-[30rem] customMax:h-[32rem]">
             <div className="relative h-52">
                 <Image
                     src="assets/jobcard.svg"
@@ -45,9 +45,9 @@ const CareersPage = () => {
     }, []);
 
     return (
-        <div className="container mx-28 py-12 px-4">
+        <div className="container custom3:px-4 py-12">
             <h1 className="text-3xl font-semibold text-center mb-8">Current Job Openings</h1>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 customMax:px-12">
                 {jobs.map((job) => (
                     <JobCard
                         key={job.id}

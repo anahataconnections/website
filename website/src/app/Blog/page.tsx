@@ -33,16 +33,16 @@ const Blog = async () => {
         src="/assets/blog_bg.png"
         width={500}
         height={300}
-        className="w-full h-[52vh] customMax:h-[70vh] object-cover object-center "
+        className="w-[100vw] h-[52vh] custom3:h-[70vh] customMax:h-[75vh] object-cover object-center "
         alt="Screenshots of the dashboard project showing desktop and mobile versions"
       />
       <div className=" bg-home-page-back bg-contain bg-no-repeat">
         <div className="bg-white-gradient">
-          <div className="font-Pattaya mt-[7.2rem]  flex justify-center items-center text-7xl text-[#094C3B]">
+          <div className="font-Pattaya mt-[7.2rem]  flex justify-center items-center text-7xl text-[#094C3B] custom3:mt-[4.7rem] customMax:mt-[6rem]">
             Blogs
           </div>
-          <div className="flex flex-row mx-5 customMax:mt-12">
-            <div className=" w-[60%]">
+          <div className="flex flex-row mx-5 customMax:mt-12 custom3:px-20">
+            <div className=" w-[60%] customMax:px-20">
               <div className=" my-5 p-8">
                 <Image
                   src={Blog.data[3].attributes.image.data.attributes.url}
@@ -98,10 +98,10 @@ const Blog = async () => {
                 </div>
               </div>
             </div>
-            <div className="pt-[24px] w-[40%]  space-y-16 ">
+            <div className="pt-[24px] w-[40%]   space-y-16 ">
               {Blog.data.map((item: any) => {
                 return (
-                  <div key={item.id} className="mx-16">
+                  <div key={item.id} className=" customMax:px-40 custom3:px-20">
                     <div className="flex flex-row mt-6 ">
                       <Image
                         src={item.attributes.image.data.attributes.url}

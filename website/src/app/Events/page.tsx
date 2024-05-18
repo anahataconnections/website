@@ -61,15 +61,15 @@ const Events = async () => {
         {/* <div>
           <SliderProgressBar/>
         </div> */}
-        <div className="font-Pattaya my-4 flex justify-center items-center  text-5xl text-[#094C3B] pb-10">
+        <div className="font-Pattaya my-4 flex justify-center items-center text-5xl text-[#094C3B] pb-10 custom3:pt-10">
           Upcoming Event
         </div>
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 mt-10">
-        <div className="order-2 lg:order-1 px-6 justify-center items-center flex flex-row w-full lg:w-[80vw] lg:-translate-x-20">
+        <div className="order-2 lg:order-1 px-6 justify-center items-center flex flex-row w-full lg:w-[80vw] lg:-translate-x-20 xl:px-28">
           <Eventcard events={Event} />
         </div>
-        <div className="lg:translate-x-72 mt-8 translate-y-4  order-1 lg:order-2 w-full lg:w-[20vw] border-b border-gray-300 lg:border-0">
+        <div className="lg:translate-x-72 custom3:translate-x-76 mt-8 translate-y-4  order-1 lg:order-2 w-full lg:w-[20vw] border-b border-gray-300 lg:border-0">
           <h1 className="text-3xl font-bold border-b border-gray-300 pb-2 px-6 lg:px-0 text-black">
             Filter
           </h1>

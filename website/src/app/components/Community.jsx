@@ -37,13 +37,13 @@ const Community = () => {
         {communityData.title}
       </header>
 
-      <div className="flex items-center justify-center py-8 mx-5 font-sarabun -translate-x-10">
-        <div className="text-gray-700 font-semibold bg-[#FFFAF0] w-[460px] custom2:w-[500px] customMax:w-[570px] h-[330px] text-[22px] sm:max-md:text-[15px] sm:max-md:w-[300px] max-sm:h-[200px] max-sm:text-[11px] text-center flex items-center  justify-center rounded-lg md:p-4 px-5 max-sm:px-2 max-sm:py-2 border border-black customMax:-translate-x-16">
+      <div className="flex items-center justify-center py-8 mx-5 font-sarabun -translate-x-10 custom3:gap-7">
+        <div className="text-gray-700 font-semibold bg-[#FFFAF0] w-[460px] custom2:w-[500px] custom3:w-[540px] customMax:w-[570px] h-[330px] text-[22px] sm:max-md:text-[15px] sm:max-md:w-[300px] max-sm:h-[200px] max-sm:text-[11px] text-center flex items-center  justify-center rounded-lg md:p-4 px-5 max-sm:px-2 max-sm:py-2 border border-black customMax:-translate-x-16">
           {communityData.content.map((paragraph, index) => (
             <p key={index}>{paragraph.children[0].text}</p>
           ))}
         </div>
-        <div className="-translate-x-6 customMax:translate-x-2">
+        <div className="-translate-x-6 custom3:-translate-x-[1.6rem] customMax:translate-x-2">
           <ChatBox/>
         </div>
       </div>
