@@ -13,9 +13,9 @@ const ShowMoreButton: React.FC = () => {
   };
 
   return (
-    <div>
+    <div className="">
       {showContent && (
-        <div className="xl:text-[14px] text-[1rem] text-justify">
+        <div className="xl:text-[14px] px-8 text-[1rem] text-justify">
           {/* Your hidden content goes here */}
           <span className="underline underline-offset-4">
             ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
@@ -31,7 +31,7 @@ const ShowMoreButton: React.FC = () => {
         </div>
       )}
 
-      <button onClick={handleButtonClick} className="text-black text-m">
+      <button onClick={handleButtonClick} className="text-black text-m pl-8">
         {showContent ? "Less" : "more..."}
       </button>
     </div>

@@ -39,12 +39,12 @@ const Motionframe = () => {
 
      
       <div className="grid lg:grid-cols-12 md:grid-cols-12 sm:grid-cols-12 grid-cols-12 place-items-center">
-        <div className=" p-2 :col-span-1 md:col-span-1 sm:col-span-1 col-splgan-1">
+        {/* <div className=" p-2 :col-span-1 md:col-span-1 sm:col-span-1 col-splgan-1">
           <Image src="/assets/left_flower.png" alt="img" width={790} height={2000} className="left-flower  "
          
           />
-        </div>
-        <div className=" p-2 lg:col-span-4 md:col-span-4 sm:col-span-4 col-span-4">
+        </div> */}
+        {/* <div className=" p-2 lg:col-span-4 md:col-span-4 sm:col-span-4 col-span-4">
           <Image src="/assets/man.png" alt="work icons" height={isLargeScreen?2000:1500} width={1000} className=" man  " data-aos="fade-right"
                 data-aos-delay="20"
                 data-aos-duration="800"
@@ -53,11 +53,10 @@ const Motionframe = () => {
                 data-aos-offset="5"
                 data-aos-anchor-placement="top-left"
                 />
-        </div>
+        </div> */}
 
 
-        <div className=" p-2 w-[330px] lg:col-span-2 md:lg:col-span-2 sm:col-span-2 col-span-2 mr-6 pr-6 
-          anahMain ml-3
+        <div className=" p-2 w-[330px] lg:col-span-2 md:lg:col-span-2 sm:col-span-2 col-span-2 custom3:mx-auto translate-x-[35rem] translate-y-[10rem]
       flex flex-col justify-center items-center
 ">
           <Image
@@ -65,14 +64,14 @@ const Motionframe = () => {
             width={isMobile ? 70 : 180}
             height={isMobile ? 70 : 180}
             className="hero-logo"
-            alt="Anahata Connections Logo"
-            data-aos="zoom-in-right"
-            data-aos-delay="40"
-            data-aos-duration="1500"
-            data-aos-easing="ease-in-out"
-            data-aos-mirror="true"
-            data-aos-anchor-placement="top-left"
-            data-offset="200"
+            // alt="Anahata Connections Logo"
+            // data-aos="zoom-in-right"
+            // data-aos-delay="40"
+            // data-aos-duration="1500"
+            // data-aos-easing="ease-in-out"
+            // data-aos-mirror="true"
+            // data-aos-anchor-placement="top-left"
+            // data-offset="200"
           />
           <div className={`anahata font-EvaMayasari font-bold lg:text-[3rem] text-[20px] text-[#094C3B]`}>
             Anahata&nbsp;Connections
@@ -89,7 +88,7 @@ const Motionframe = () => {
 
 
 
-        <div className=" p-2 lg:col-span-4 md:col-span-4 sm:col-span-4 col-span-4" >
+        {/* <div className=" p-2 lg:col-span-4 md:col-span-4 sm:col-span-4 col-span-4" >
           <Image src="/assets/women.png" alt="work icons" height={2000} width={1000} className="women md:me-0 z-[10]" 
                 data-aos="fade-left"
                 data-aos-delay="20"
@@ -98,12 +97,12 @@ const Motionframe = () => {
                 data-aos-mirror="true"
                 data-aos-offset="5"
                 data-aos-anchor-placement="top-left"/>
-        </div>
-        <div className="p-2 lg:col-span-1 md:col-span-1 sm:col-span-1 col-span-1">
+        </div> */}
+        {/* <div className="p-2 lg:col-span-1 md:col-span-1 sm:col-span-1 col-span-1">
           <Image src="/assets/right_flower.png" alt="" width={700} height={2000} className="right-flower z-[1]"
              
           />
-        </div>
+        </div> */}
       </div>
     </div>
   );

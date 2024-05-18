@@ -6,9 +6,9 @@ import Image from "next/image";
 const HowWeWork = () => {
   return (
     <div className="flex items-end justify-center -translate-y-32 mt-4  ">
-    <div className="w-[78%] custom2:w-[75vw] custom3:w-[75vw] customMax:w-[75vw]  h-[270px]  max-md:h-[200px]
-         md:mx-20 max-sm:w-[80%] customMax:mx-24 bg-[#F0FDF9]">
-      <header className="font-Pattaya flex items-center justify-center text-[#0C6242] text-[50px] md:max-lg:text-[42px] max-sm:text-[32px]">
+    <div className="w-[78%] custom2:w-[75vw] custom3:w-[72vw] customMax:w-[75vw]  h-[270px]  max-md:h-[200px]
+         md:mx-20 custom3:mx-32  customMax:mx-24 bg-[rgb(240,253,249)]">
+      <header className="font-Pattaya flex items-center justify-center text-[2.2rem] text-[#0C6242] md:max-lg:text-[42px]">
         How We Work
       </header>
 

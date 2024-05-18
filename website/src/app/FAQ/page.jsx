@@ -35,7 +35,7 @@ const FAQ = () => {
 
   return (
     <div className="h-auto ">
-      <header className="font-Pattaya flex items-center text-center justify-center text-[#094C3B] text-[52px]">
+      <header className="font-Pattaya flex items-center text-center justify-center text-[#094C3B] text-[2.2rem]">
         Frequently Asked Questions
       </header>
 

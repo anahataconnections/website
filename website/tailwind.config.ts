@@ -10,6 +10,7 @@ const config: Config = {
   theme: {
     
     extend: {
+    
       backgroundImage: {
         'radial-gradient': 'radial-gradient(56.4% 103.55% at 55.76% 54.29%, rgba(252, 217, 182, 0.85) 0%, rgba(12, 98, 66, 0.5) 50%, rgba(12, 98, 66, 1) 100%)',
         "gradient-conic": "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
@@ -22,6 +23,10 @@ const config: Config = {
         'lf': "url('/assets/left_flower.png')",
         'flower_back': "url('/assets/bottom.svg')"
       },
+
+        backgroundSize:{
+           'custom':'1500px'
+        },
       
       fontFamily: {
         'cantarell': ["Cantarell", 'sans-serif'],

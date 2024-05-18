@@ -25,12 +25,10 @@ const Image: React.FC<ImageProps> = ({ src, alt, className = "", text }) => {
         style={{ maxWidth: "100%", height: "auto" }} // Ensure the image scales properly
       />
       <div
-        className={`absolute inset-0 flex justify-center items-center text-white p-2 font-semibold ${
-          className.includes("translate-x-32") && "translate-x-32"
+        className={`absolute inset-0 flex justify-center items-center text-white text-[15px]  ${
+          className.includes("translate-x-32") && "translate-x-32" 
         }`}
-
-                style={{ padding: "10px", margin: "10px", textAlign: "left" }} // Add padding and margin to the text
-
+        style={{ padding: "0 5px", margin: "5px", textAlign: "center" }} // Add padding and margin to the text
       >
         {text}
       </div>
@@ -42,7 +40,7 @@ const images: ImageProps[] = [
   {
     src: "https://cdn.builder.io/api/v1/image/assets/TEMP/8c5cb3314e4dec866eb4e69af801b4bc01903a7f655293c7abdca7bb6083b7dc?apiKey=b0951f87dee4449fa252b5f3cfc3b012&",
     alt: "Image 1",
-    className: "max-w-full aspect-[3] text-justify",
+    className: "max-w-full aspect-[3.2] text-justify",
     text: "Ultricies vitae commodo interdum fermentum lacus integer sagittis.",
   },
   {
@@ -67,7 +65,7 @@ const images: ImageProps[] = [
 
 const ChatBox: React.FC = () => {
   return (
-    <section className="flex flex-col max-w-[495px] customMax:max-w-[530px] custom2:max-w-[500px] ml-6 text-left h-[320px]">
+    <section className="flex flex-col max-w-[495px] customMax:max-w-[530px] custom2:max-w-[500px] ml-6 text-left h-[300px]">
       {images.map((image, index) => (
         <Image
           key={index}

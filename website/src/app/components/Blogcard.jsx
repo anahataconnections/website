@@ -24,7 +24,7 @@ const Blogcard = ({ imageUrl, heading, data, published }) => {
 
       <div className="w-[20.33rem] custom1:w-[17rem]
       custom2:w-[19rem] customMax:w-[25rem]  bg-[#094C3B] text-center text-white py-5 rounded-b-2xl">
-        <div className=" text-lg font-bold">
+        <div className="text-lg font-bold">
           {heading}
         </div>
         <p className="text-[#9CA3AF]">

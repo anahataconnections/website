@@ -13,7 +13,8 @@
     }
 
     .anahMain {
-        transform: translateY(50px);
+        /* transform: translateY(50px), translateX(400px); */
+
     }
 
     .hero-logo {
