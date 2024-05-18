@@ -7,6 +7,8 @@ import Footer from "../components/Footer";
 import WhyChoose from "../components/WhyChoose";
 import Image from "next/image";
 import WhatWeDo from "../components/WhatWeDo";
+import CollabCards from "../components/CollabCards";
+import LetsGet from "../components/LetsGet";
 
 interface CollaborationData {
   data: {
@@ -76,8 +78,9 @@ const Collaboration: React.FC = () => {
   return (
     <div className="h-screen scroll-smooth overflow-x-hidden">
       <Navbar />
+
       <section className="">
-        <div className="w-full h-[60vh] relative">
+        <div className="w-full custom2:h-[70vh] h-[60vh] relative">
           <Image
             src="/assets/image160.svg"
             alt="Additional Image"
@@ -98,12 +101,18 @@ const Collaboration: React.FC = () => {
           </div>
         </div>
 
+        <WhyChoose/>
+
         <WhatWeDo
         collaboration={collaboration}
         advertisement={advertisement}
         yoga={yoga}
-      />
+         />
         
+        <CollabCards/>
+
+        <LetsGet/>
+
       </section>
      
 

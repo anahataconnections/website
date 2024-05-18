@@ -4,7 +4,7 @@ import Footer from "./Footer";
 
 const JobCard = ({ role_title, role_description, role_picture }) => {
     return (
-        <div className="bg-white rounded-xl shadow-lg overflow-hidden relative w-full sm:w-80 md:w-96 lg:w-80 xl:w-96 customMax:w-[30rem] customMax:h-[32rem]">
+        <div className="bg-white rounded-xl shadow-lg overflow-hidden relative w-full sm:w-80 md:w-96 lg:w-80  custom2:w-[20rem] customMax:w-[30rem] customMax:h-[32rem]">
             <div className="relative h-52">
                 <Image
                     src="assets/jobcard.svg"

@@ -42,13 +42,13 @@ const BlogPage: React.FC<BlogPageProps> = ({ params }) => {
   }
 
   return (
-    <main className="bg-white">
+    <main className="bg-white overflow-x-hidden">
       <Navbar />
       <Image
         src="/assets/blog_bg.png"
         width={500}
         height={500}
-        className="w-[100vw] h-[67vh] customMax:w-[100vw]
+        className="w-[100vw] h-[67vh] custom3:h-[70vh] customMax:w-[100vw]
         customMax:h-[70vh]
         "
         alt="Screenshots of the dashboard project showing desktop and mobile versions"
@@ -60,20 +60,20 @@ const BlogPage: React.FC<BlogPageProps> = ({ params }) => {
         <div className="font-Pattaya mt-2 flex justify-center items-center text-xl text-black">
           {blog.attributes.published}
         </div>
-        <div className="flex justify-center items-center pt-2 mx-6 md:mx-0">
+        <div className="flex justify-center items-center pt-4 mx-6 md:mx-0">
           <Image
             src={blog.attributes.image.data.attributes.url}
             width={200}
             height={100}
-            className=" customMax:max-h-[600px] w-[75vw] text-left"
+            className=" custom3:max-h-[430px] customMax:max-h-[600px] w-[75vw] text-left"
             alt="Screenshots of the dashboard project showing desktop and mobile versions"
           />
         </div>
-        <div className="md:w-[75vw] w-[75vw] customMax:w-[75vw]">
+        <div className="md:w-[75vw] w-[75vw] custom3:w-[75vw] customMax:w-[75vw]">
           {blog.attributes.content.map((i: any, index: number) => (
             <p
               key={index}
-              className="py-4 text-[#6E6E6E]  text-[18px] text-left customMax:pl-[15rem]  customMax:mt-6"
+              className="py-4 text-[#6E6E6E]  text-[18px] text-left custom3: custom3:pl-[11.2rem] customMax:pl-[15rem]  customMax:mt-6"
             >
               {i.children[0].text}
             </p>

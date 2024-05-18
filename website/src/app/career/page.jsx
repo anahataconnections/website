@@ -13,7 +13,7 @@ const career = () => {
 
         <Navbar/>
        
-          <div className="w-[100%] h-[70vh] custom3:h-[68vh] customMax:h-[70vh] relative">
+          <div className="w-[100%] h-[70vh] custom2:h-[66vh] custom3:h-[68vh] customMax:h-[70vh] relative">
               <div className="relative h-full">
                   <Image
                       src="assets/careers.svg"
@@ -31,7 +31,7 @@ const career = () => {
                       <p className="text-white text-[24px] customMax:text-[28px] mb-6   font-sarabun pt-4 text-justify">
                           individuals who share our passion yo be the best and achieve their full potential
                       </p>
-                      
+
                   </div>
                   
                   <div className="absolute inset-0 bg-black opacity-50 z-30"></div>{" "}
@@ -50,7 +50,7 @@ const career = () => {
               </div>
           </div>
           
-          <div className=' custom3:px-24 '>
+          <div className=' custom2:px-24 custom3:px-24 '>
               <CareersPage/>
           </div>
           

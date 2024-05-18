@@ -15,14 +15,14 @@ const Hero = () => {
 
   return (
     <div className="bg-home-page-back bg-cover bg-no-repeat">
-      <div className="bg-radial-gradient flex justify-center overflow-hidden frame">
+      <div className="bg-radial-gradient flex justify-center overflow-hidden  frame">
         <Motionframe />
       </div>
       <div className="h-[680px] bg-white-gradient flex flex-col items-center justify-center ">
         <header className="font-Pattaya text-[#0C6242] text-[45px] max-sm:text-[29px] sm:max-md:text-[42px] custom:translate-y-[-50px] custom2:translate-y-[-55px]">
           Why Anahata Connections?
         </header>
-        <header className="text-black font-Satisfy text-[27px]  max-sm:text-[20px] sm:max-md:text-[25px] w-[90%] sm:w-[80%] md:w-[70%] custom2:w-[70%] custom3:w-[75%] custom3:text-[1.7rem] text-center ">
+        <header className="text-black font-Satisfy text-[27px]  max-sm:text-[20px] sm:max-md:text-[25px] w-[90%] sm:w-[80%] md:w-[70%] custom2:w-[70%] custom3:w-[75%] custom3:text-[1.5rem] text-center ">
           Welcome to Anahata Connections, where love intertwines with
           spirituality. Explore meaningful connections grounded in yogic
           science and the wisdom of the heart chakra. Our platform unites

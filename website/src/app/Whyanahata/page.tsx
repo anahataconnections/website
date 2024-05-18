@@ -75,7 +75,7 @@ export default function WhyAnahata() {
   return (
     <div className="bg-white w-[100vw] h-full top-0">
       <Navbar />
-
+      
       <Image
         src="assets/banner.svg"
         alt="Hero Image"
