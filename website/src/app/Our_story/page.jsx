@@ -12,7 +12,7 @@ export default function Ourstory() {
   return (
     <>
     <Navbar />
-    <main className="bg-white scroll-smooth ">
+      <main className="bg-white scroll-smooth  overflow-x-hidden">
       
       <Image
             src="/assets/bg2.png"

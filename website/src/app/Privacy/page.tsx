@@ -19,9 +19,9 @@ const Privacy = async () => {
   const item = await fetchPrivacy();
   // console.log(item.data.attributes.policy[0].children[0].text);
   return (
-    <main>
+    <main className=" overflow-x-hidden">
       <Navbar />
-      <div className="bg-home-page-back text-justify">
+      <div className="bg-home-page-back text-justify ">
         <div className="bg-grey-gradient mx-20 py-10 px-10 ">
           <div className="font-Pattaya my-3  text-3xl text-[#094C3B]">
             Privacy Policy

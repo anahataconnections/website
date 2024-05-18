@@ -4,7 +4,7 @@ import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 export default function Signin() {
     return (
-      <main className="bg-white">
+      <main className="bg-white  overflow-x-hidden">
         <Navbar />
         <div className="bg-home-page-back ">
           <div className="bg-home-grad pb-20 h-[100vh] flex justify-between ">

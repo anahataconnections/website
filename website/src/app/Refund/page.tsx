@@ -21,7 +21,7 @@ const Refund = async () => {
   const item = await fetchRefund();
   // console.log(item.data.attributes.policy[0].children[0].text);
   return (
-    <main>
+    <main className=" overflow-x-hidden">
       <Navbar />
       <div className="bg-home-page-back">
         <div className="bg-grey-gradient mx-20 py-20 px-10 text-justify">

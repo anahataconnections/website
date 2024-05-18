@@ -9,7 +9,7 @@ import Footer from '../components/Footer'
 
 export default function Our_story() {
   return (
-    <main className="bg-white">
+    <main className="bg-white  overflow-x-hidden">
       <Navbar />
       <div className="bg-home-page-back">
         <Image

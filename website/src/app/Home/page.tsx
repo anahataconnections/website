@@ -42,7 +42,7 @@ const Home = () => {
   console.log(homeData);
 
   return (
-    <main className="bg-white smooth-scroll">
+    <main className="bg-white smooth-scroll overflow-x-hidden">
       <Navbar />
       <Hero />
       <HowWeWork />
