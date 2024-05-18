@@ -40,7 +40,7 @@ const Testimonials = () => {
         </header>
 
         <div className="flex items-center justify-start max-md:px-6 sm:py-5 custom3:pt-24 lg:py-20 xl:pl-28 md:py-18 md:px-16 lg:px-7 xl:ml-18 -translate-y-12">
-          <div className="flex ">
+          <div className="flex">
             <Image
               src="/assets/testimonial.png"
               width={380}
@@ -48,7 +48,7 @@ const Testimonials = () => {
               className="md:w-65 h-[480px] max-md:w-[200px] custom3:w-[350px] customMax:w-[350px]"
               alt="Screenshots of the dashboard project showing desktop and mobile versions"
             />
-            <div className="pl-[14rem]">
+            <div className="pl-[23rem]">
               <Btn />
             </div>
           </div>
