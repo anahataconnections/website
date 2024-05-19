@@ -32,7 +32,7 @@ const Testimonials = () => {
   }
 
   return (
-    <div className="flex items-center justify-center pt-3 px-20">
+    <div className="flex items-center justify-center pt-3 px-[60px] ">
       <div className="h-[630px] bg-[#F0FDF9] xl:w-[82%] custom3:w-[82%] w-[82%]">
         <header className="font-Pattaya flex items-center justify-center custom3:pt-8 text-[2.2rem]  text-[#094C3B]">
           {testimonialData.title}
@@ -60,7 +60,7 @@ const Testimonials = () => {
                 <p className="underline underline-offset-8 px-8" key={index}>{paragraph.children[0].text}</p>
               ))}
               <div>
-              <ShowMoreButton />
+                <ShowMoreButton />
               </div>
               <div className="md:text-[20px] max-md:text-[10px] max-md:bottom-0 max-md:right-12 absolute right-32 satisfy-regular text-xl lg:text-[18px] -translate-x-24 bottom-9  custom2:-translate-x-8 customMax:-translate-x-40">
                 - Mr & Mrs Singh

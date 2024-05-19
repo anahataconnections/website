@@ -1,6 +1,4 @@
 // FAQ/page.tsx
-"use client"
-
 import React, { useEffect, useState } from "react";
 import FAQItem from "./FAQItem";
 
@@ -17,6 +15,7 @@ async function fetchFaq() {
 
 const FAQ = () => {
   const [faqData, setFaqData] = useState(null);
+  const [openIndex, setOpenIndex] = useState(null); // Initialize openIndex state
 
   useEffect(() => {
     const fetchData = async () => {
@@ -29,9 +28,15 @@ const FAQ = () => {
     };
     fetchData();
   }, []);
+
   if (!faqData) {
     return <div>Loading...</div>;
   }
+
+  // Define setOpenIndex function to handle opening and closing FAQ items
+  const handleOpenIndex = (index) => {
+    setOpenIndex(openIndex === index ? null : index); // Toggle open/close state
+  };
 
   return (
     <div className="h-auto ">
@@ -41,7 +46,14 @@ const FAQ = () => {
 
       <div className="flex flex-col justify-center items-center mx-[95px] custom2:px-12 customMax:px-36 my-8">
         {faqData.map((faq, index) => (
-          <FAQItem key={index} question={faq.question} answer={faq.answer} /> // Access 'question' and 'answer' directly
+          <FAQItem
+            key={index}
+            question={faq.question}
+            answer={faq.answer}
+            index={index} // Pass index as a prop
+            openIndex={openIndex} // Pass openIndex state as a prop
+            setOpenIndex={handleOpenIndex} // Pass setOpenIndex function as a prop
+          />
         ))}
       </div>
     </div>

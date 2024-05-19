@@ -25,7 +25,10 @@ const config: Config = {
       },
 
         backgroundSize:{
-           'custom':'1500px'
+           'custom':'1500px',
+           'custom1':'400px',
+           'custom2':'1000px'
+
         },
       
       fontFamily: {
@@ -69,6 +72,9 @@ const config: Config = {
         'rgba-black-33': 'rgba(0, 0, 0, 0.33)',
       },
       screens: {
+        'customPhone':'360px',
+        'customPhone1':'390px',
+        'customPhone2':'430px',
         'custom': '1376px',
         'custom1':'992px',
         'custom2':'1280px',

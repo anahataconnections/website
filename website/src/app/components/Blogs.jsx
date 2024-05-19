@@ -30,8 +30,8 @@ const Blogs = () => {
   }, []);
 
   return (
-    <div className="container items-center px-16 md:px-8 custom1:px-20 custom2:px-[9.7rem] custom3:px-[10rem]  lg:px-20 customMax:px-48 custom3:translate-x-4 customMax:translate-x-10 py-8">
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 custom1:gap-3 font-sarabun customMax:gap-0 ">
+    <div className="container items-center custom1:px-20 custom2:px-[9.7rem] custom3:px-[190px] lg:px-20 customMax:px-48  customMax:translate-x-10 py-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 custom1:gap-3 font-sarabun customMax:gap-0 custom3:translate-x-6">
         {blogs?.map((blog, index) => (
           <Link key={index} href={`../Blog_main/${blog.attributes.tiltle}`}>
         
@@ -46,7 +46,7 @@ const Blogs = () => {
         ))}
       </div>
 
-      <div className="flex justify-center items-center gap-x-2 text-2xl font-semibold text-[#979797] text-center pt-10">
+      <div className="flex justify-center items-center gap-x-2 text-2xl font-semibold text-[#979797] text-center pt-10 " >
         <span className="hover:underline underline-offset-4 cursor-pointer">
           <Link className="underline font-nota font-bold" href="/Blog">Read More</Link>
         </span>

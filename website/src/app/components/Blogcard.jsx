@@ -10,7 +10,7 @@ const formatDate = (publishedDate) => {
 
 const Blogcard = ({ imageUrl, heading, data, published }) => {
   return (
-    <div className="w-[20.33rem] custom1:w-[17rem] custom2:w-[19rem] flex flex-col -space-y-2 customMax:w-[25rem]">
+    <div className="w-[20.33rem] custom1:w-[17rem] custom2:w-[19rem]  custom3:w-[20rem] flex flex-col -space-y-2 customMax:w-[25rem]">
       <div>
         {/* <img src={imageUrl} alt="" className="w-[300px]" /> */}
         <Image
@@ -23,14 +23,14 @@ const Blogcard = ({ imageUrl, heading, data, published }) => {
       </div>
 
       <div className="w-[20.33rem] custom1:w-[17rem]
-      custom2:w-[19rem] customMax:w-[25rem]  bg-[#094C3B] text-center text-white py-5 rounded-b-2xl">
+      custom2:w-[19rem] custom3:w-[20rem] customMax:w-[25rem]  bg-[#094C3B] text-center text-white py-5 rounded-b-2xl">
         <div className="text-lg font-bold">
           {heading}
         </div>
         <p className="text-[#9CA3AF]">
         {formatDate(published)}
         </p>
-        <div className="pt-4 mx-auto  w-[300px] h-[100px] text-center">{data}</div>
+        <p className=" font-sarabun py-4 text-[1.2rem] custom3:text-[1rem]">{data}</p>
       </div>
     </div>
   );

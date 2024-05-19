@@ -16,18 +16,22 @@ const Image: React.FC<ImageProps> = ({ src, alt, className = "", text }) => {
   const width = Math.max(minWidth, textLength * 10); // Adjust width based on text length
 
   return (
-    <div className="relative">
+    <div
+      className={`relative  ${
+        className.includes("translate-x-32")
+          ? " custom3:translate-x-16 customPhone:translate-x-32-customPhone"
+          : ""
+      }`}
+      style={{ maxWidth: "100%", height: "auto" }} // Ensure the container scales properly
+    >
       <img
         loading="lazy"
         src={src}
         alt={alt}
-        className={`${className} w-full object-contain`}
-        style={{ maxWidth: "100%", height: "auto" }} // Ensure the image scales properly
+        className={`${className} w-full object-contain customPhone:max-w-[130px] custom3:max-w-[300px]`}
       />
       <div
-        className={`absolute inset-0 flex justify-center items-center text-white text-[15px]  ${
-          className.includes("translate-x-32") && "translate-x-32" 
-        }`}
+        className={`absolute inset-0 flex justify-center items-center text-white customPhone:text-[0.4rem] custom3:text-[1rem] text-[15px]`}
         style={{ padding: "0 5px", margin: "5px", textAlign: "center" }} // Add padding and margin to the text
       >
         {text}
@@ -46,7 +50,8 @@ const images: ImageProps[] = [
   {
     src: "https://cdn.builder.io/api/v1/image/assets/TEMP/f6728f1e3b72f8911007d935de40a1bf559620668c2a750d090da224406fc2ee?apiKey=b0951f87dee4449fa252b5f3cfc3b012&",
     alt: "Image 2",
-    className: "self-end mt-1 aspect-[4] text-right translate-x-32",
+    className:
+      "self-end mt-1 aspect-[4] text-right translate-x-32 ",
     text: "Ultricies vitae commodo interdum fermentum lacus integer sagittis.",
   },
   {
@@ -58,14 +63,15 @@ const images: ImageProps[] = [
   {
     src: "https://cdn.builder.io/api/v1/image/assets/TEMP/f6728f1e3b72f8911007d935de40a1bf559620668c2a750d090da224406fc2ee?apiKey=b0951f87dee4449fa252b5f3cfc3b012&",
     alt: "Image 4",
-    className: "self-end mt-1 aspect-[3.9] text-left translate-x-32",
+    className:
+      "self-end mt-1 aspect-[3.9] text-left translate-x-32 ",
     text: "Ultricies vitae commodo interdum fermentum lacus integer ",
   },
 ];
 
 const ChatBox: React.FC = () => {
   return (
-    <section className="flex flex-col max-w-[495px] customMax:max-w-[530px] custom2:max-w-[500px] ml-6 text-left h-[300px]">
+    <section className="flex flex-col max-w-[495px] customPhone:max-w-[300px] customMax:max-w-[530px] custom2:max-w-[500px] ml-6 text-left h-[300px]">
       {images.map((image, index) => (
         <Image
           key={index}

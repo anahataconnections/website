@@ -45,4 +45,14 @@ body {
   }
 }
 
+@layer utilities {
+  @screen customPhone {
+    .translate-x-32-customPhone {
+      transform: translateX(-4rem);
+      
+      /* Adjust the value as needed */
+    }
+  }
+}
+
 
