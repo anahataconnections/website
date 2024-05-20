@@ -10,6 +10,7 @@ import Testimonials from "../components/Testimonials";
 import Blogs from "../components/Blogs";
 import Footer from "../components/Footer";
 import "../Style/Home.css";
+import "../Style/flowerBack.css"
 
 // Lazy load FAQ component
 const FAQ = React.lazy(() => import("../FAQ/page"));
@@ -52,12 +53,15 @@ const Home = () => {
         Our Blogs{" "}
       </header>
       <Blogs />
-      <div id="faq" className="bg-flower_back bg-no-repeat bg-cover">
+      <div
+        id="faq"
+        className="bg-flower_back bg-no-repeat bg-custom1 bg-custom-position"
+      >
         <Suspense fallback={<div>Loading FAQ...</div>}>
           {homeData && <FAQ />}
         </Suspense>
+        <Footer />
       </div>
-      <Footer />
     </main>
   );
 };

@@ -128,6 +128,13 @@
         right: 420px;
         margin-right: 200px;
     }
+
+        .bg-custom-position {
+    
+            /* Adjust the size as needed */
+            background-position: center 210px;
+            /* Adjust the y-axis value as needed */
+        }
 }
 
 .bg-custom-position {

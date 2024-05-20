@@ -38,11 +38,13 @@ const Community = () => {
       </header>
 
       <div className="flex items-center justify-center py-8 mx-5 font-sarabun -translate-x-10 custom3:gap-7 customPhone:pl-4">
-        <div className="text-gray-700  bg-[#FFFAF0] w-[460px] customPhone:max-w-[210px] customPhone:max-h-[180px] custom2:w-[500px] custom3:max-w-[500px] customMax:w-[570px] h-[300px] text-[18px] custom3:max-h-[450px]  max-sm:text-[11px] text-center flex items-center  justify-center rounded-lg  px-8 max-sm:px-2 max-sm:py-1 border border-black customMax:-translate-x-16">
+        <div className="text-gray-700 bg-[#FFFAF0] w-[460px] h-[400px] custom3:w-[500px] custom3:h-[360px]  custom3:text-[1.5rem] max-sm:text-[11px] text-center flex items-center justify-center rounded-lg px-8 max-sm:px-2 max-sm:py-1 border border-black customMax:-translate-x-16">
           {communityData.content.map((paragraph, index) => (
             <p className="px-6" key={index}>{paragraph.children[0].text}</p>
           ))}
         </div>
+
+
         <div className="-translate-x-6 custom3:-translate-x-[1.6rem] customMax:translate-x-2">
           <ChatBox/>
         </div>

@@ -32,7 +32,7 @@ const Testimonials = () => {
   }
 
   return (
-    <div className="flex items-center justify-center pt-3 px-[60px] ">
+    <div className="flex items-center justify-center pt-3 px-[60px] custom3:px-[80px] ">
       <div className="h-[630px] bg-[#F0FDF9] xl:w-[82%] custom3:w-[82%] w-[82%]">
         <header className="font-Pattaya flex items-center justify-center custom3:pt-8 text-[2.2rem]  text-[#094C3B]">
           {testimonialData.title}
@@ -48,7 +48,7 @@ const Testimonials = () => {
               className="md:w-65 h-[480px] max-md:w-[200px] custom3:w-[350px] customMax:w-[350px]"
               alt="Screenshots of the dashboard project showing desktop and mobile versions"
             />
-            <div className="pl-[23rem]">
+            <div className="pl-[37rem]">
               <Btn />
             </div>
           </div>

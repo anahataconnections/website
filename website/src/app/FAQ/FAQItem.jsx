@@ -1,3 +1,5 @@
+"use client"
+
 import React, { useState } from "react";
 
 const FAQItem = ({ question, answer, index, openIndex, setOpenIndex }) => {
@@ -13,7 +15,7 @@ const FAQItem = ({ question, answer, index, openIndex, setOpenIndex }) => {
 
   return (
     <div
-      className={`rounded-[32px] w-full border border-gray-500 mb-4 px-8 ease-linear transition-all duration-300 ${isOpen ? "bg-[#094C3B] text-white " : "bg-white text-black"}`}
+      className={`rounded-[32px] w-full border border-gray-500 mb-4 px-8 ease-linear transition-all duration-300 ${isOpen ? "bg-[#094C3B] text-white " : "bg-transparent text-black"}`}
     >
       <div
         className="bg-inherit h-[58px] px-4 py-5 cursor-pointer flex items-center justify-between font-sarabun"

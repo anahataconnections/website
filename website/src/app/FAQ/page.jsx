@@ -1,4 +1,6 @@
 // FAQ/page.tsx
+"use client"
+
 import React, { useEffect, useState } from "react";
 import FAQItem from "./FAQItem";
 
@@ -44,7 +46,7 @@ const FAQ = () => {
         Frequently Asked Questions
       </header>
 
-      <div className="flex flex-col justify-center items-center mx-[95px] custom2:px-12 customMax:px-36 my-8">
+      <div className="flex flex-col justify-center items-center mx-[95px] custom3:px-[80px] custom2:px-12 customMax:px-36 my-8">
         {faqData.map((faq, index) => (
           <FAQItem
             key={index}

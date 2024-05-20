@@ -1,88 +1,59 @@
-"use-client";
+"use client"
 
-import React from "react";
+import * as React from "react";
 
-interface ImageProps {
+
+type ImageProps = {
   src: string;
   alt: string;
-  className?: string;
-  text: string;
-}
-
-const Image: React.FC<ImageProps> = ({ src, alt, className = "", text }) => {
-  // Calculate the width of the image based on the length of the text
-  const textLength = text.length;
-  const minWidth = 200; // Minimum width of the image
-  const width = Math.max(minWidth, textLength * 10); // Adjust width based on text length
-
-  return (
-    <div
-      className={`relative  ${
-        className.includes("translate-x-32")
-          ? " custom3:translate-x-16 customPhone:translate-x-32-customPhone"
-          : ""
-      }`}
-      style={{ maxWidth: "100%", height: "auto" }} // Ensure the container scales properly
-    >
-      <img
-        loading="lazy"
-        src={src}
-        alt={alt}
-        className={`${className} w-full object-contain customPhone:max-w-[130px] custom3:max-w-[300px]`}
-      />
-      <div
-        className={`absolute inset-0 flex justify-center items-center text-white customPhone:text-[0.4rem] custom3:text-[1rem] text-[15px]`}
-        style={{ padding: "0 5px", margin: "5px", textAlign: "center" }} // Add padding and margin to the text
-      >
-        {text}
-      </div>
-    </div>
-  );
+  className: string;
 };
 
-const images: ImageProps[] = [
-  {
-    src: "https://cdn.builder.io/api/v1/image/assets/TEMP/8c5cb3314e4dec866eb4e69af801b4bc01903a7f655293c7abdca7bb6083b7dc?apiKey=b0951f87dee4449fa252b5f3cfc3b012&",
-    alt: "Image 1",
-    className: "max-w-full aspect-[3.2] text-justify",
-    text: "Ultricies vitae commodo interdum fermentum lacus integer sagittis.",
-  },
-  {
-    src: "https://cdn.builder.io/api/v1/image/assets/TEMP/f6728f1e3b72f8911007d935de40a1bf559620668c2a750d090da224406fc2ee?apiKey=b0951f87dee4449fa252b5f3cfc3b012&",
-    alt: "Image 2",
-    className:
-      "self-end mt-1 aspect-[4] text-right translate-x-32 ",
-    text: "Ultricies vitae commodo interdum fermentum lacus integer sagittis.",
-  },
-  {
-    src: "https://cdn.builder.io/api/v1/image/assets/TEMP/67727ed6f5a88b60de2df7fe91ee219f487ddbe82649ce9244b6ce1c72e75221?apiKey=b0951f87dee4449fa252b5f3cfc3b012&",
-    alt: "Image 3",
-    className: "mt-1 max-w-full aspect-[6] text-center",
-    text: "Ultricies vitae commodo interdum",
-  },
-  {
-    src: "https://cdn.builder.io/api/v1/image/assets/TEMP/f6728f1e3b72f8911007d935de40a1bf559620668c2a750d090da224406fc2ee?apiKey=b0951f87dee4449fa252b5f3cfc3b012&",
-    alt: "Image 4",
-    className:
-      "self-end mt-1 aspect-[3.9] text-left translate-x-32 ",
-    text: "Ultricies vitae commodo interdum fermentum lacus integer ",
-  },
-];
+const Image: React.FC<ImageProps> = ({ src, alt, className }) => (
+  <div className={`relative w-full ${className}`}>
+    <img loading="lazy" src={src} alt={alt} className="w-full h-auto block" />
+    <div className="absolute bottom-0 left-0 w-full bg-opacity-50 text-white text-center p-2 box-border text-sm">
+      {alt}
+    </div>
+  </div>
+);
 
-const ChatBox: React.FC = () => {
+const MyComponent: React.FC = () => {
+  const images = [
+    {
+      src: "https://cdn.builder.io/api/v1/image/assets/TEMP/5b98072059023c1cb512919babbfd7091b1e6f4c30e17685f334605454329f07?apiKey=b0951f87dee4449fa252b5f3cfc3b012&",
+      alt: "Image 1 description",
+      className: "aspect-w-16 aspect-h-9",
+    },
+    {
+      src: "https://cdn.builder.io/api/v1/image/assets/TEMP/3b6276de1c719c39f7ef529931d0f9363baf8c463fed31657c275cc214691980?apiKey=b0951f87dee4449fa252b5f3cfc3b012&",
+      alt: "Image 2 description",
+      className: "aspect-w-16 aspect-h-9 mt-1",
+    },
+    {
+      src: "https://cdn.builder.io/api/v1/image/assets/TEMP/00bd5a9f903d195224eb1daadeb0557f1d7ac99bc58a161a20213f7e4037c86b?apiKey=b0951f87dee4449fa252b5f3cfc3b012&",
+      alt: "Image 3 description",
+      className: "aspect-w-16 aspect-h-9 mt-1",
+    },
+    {
+      src: "https://cdn.builder.io/api/v1/image/assets/TEMP/3b6276de1c719c39f7ef529931d0f9363baf8c463fed31657c275cc214691980?apiKey=b0951f87dee4449fa252b5f3cfc3b012&",
+      alt: "Image 4 description",
+      className: "aspect-w-16 aspect-h-9 mt-1",
+    },
+  ];
+
   return (
-    <section className="flex flex-col max-w-[495px] customPhone:max-w-[300px] customMax:max-w-[530px] custom2:max-w-[500px] ml-6 text-left h-[300px]">
-      {images.map((image, index) => (
+    <section className="flex flex-col max-w-[495px]">
+      {images.map((image, idx) => (
         <Image
-          key={index}
+          key={idx}
           src={image.src}
           alt={image.alt}
           className={image.className}
-          text={image.text}
         />
       ))}
     </section>
   );
 };
 
-export default ChatBox;
+export default MyComponent;

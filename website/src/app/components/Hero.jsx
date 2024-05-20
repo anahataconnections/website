@@ -18,11 +18,11 @@ const Hero = () => {
       <div className="bg-radial-gradient flex justify-center overflow-hidden  frame">
         <Motionframe />
       </div>
-      <div className="h-[620px] customPhone:h-[450px] bg-white-gradient custom3:mx-[60px] custom2:mx-[60px] custom1:mx-[60px] custom:mx-[60px] flex flex-col items-center  justify-center customPhone:px-4 custom3:pt-14">
+      <div className="h-[620px] customPhone:h-[450px] bg-white-gradient custom3:mx-[60px] custom2:mx-[60px] custom1:mx-[60px] custom:mx-[60px] customMax:px-[60px] flex flex-col items-center  justify-center customPhone:px-4 custom3:pt-14 customMax:pt-14">
         <header className="font-Pattaya text-[#0C6242] text-[2.2rem] max-sm:text-[29px] customPhone:text-[1.5rem] custom:translate-y-[-50px] custom2:translate-y-[-55px] ">
           Why Anahata Connections?
         </header>
-        <header className="text-black font-Satisfy text-[27px]  max-sm:text-[20px] sm:max-md:text-[25px] w-[90%]  sm:w-[80%]  md:w-[70%] custom2:w-[70%] custom3:w-[75%]  customPhone:text-[1rem] max-customPhone:pt-[0.6rem] 
+        <header className="text-black font-Satisfy text-[27px]  max-sm:text-[20px] sm:max-md:text-[25px] w-[90%]  sm:w-[80%]  md:w-[70%] custom2:w-[70%] custom3:w-[75%]  customPhone:text-[1rem] max-customPhone:pt-[0.6rem] customMax:text-[1.4rem] 
      custom3:text-[1.2rem] text-center ">
           Welcome to Anahata Connections, where love intertwines with
           spirituality. Explore meaningful connections grounded in yogic
