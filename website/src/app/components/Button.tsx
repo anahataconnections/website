@@ -30,7 +30,7 @@ const Btn: React.FC = () => {
   };
 
   return (
-    <section className="flex gap-3.5 custom3:ml-10">
+    <section className="flex gap-3.5 max-custom4:-translate-x-32  custom3:ml-10">
       {images.map((image, index) => (
         <button
           key={index}

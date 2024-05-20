@@ -30,8 +30,10 @@ const Blogs = () => {
   }, []);
 
   return (
-    <div className="container items-center custom1:px-20 custom2:px-[9.7rem] custom3:px-[190px] lg:px-20 customMax:px-48  customMax:translate-x-10 py-8">
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 custom1:gap-3 font-sarabun customMax:gap-0 custom3:translate-x-6">
+    <div className="container items-center custom1:px-20
+     
+    custom2:px-[9.7rem] custom3:px-[190px] lg:px-[60px] customMax:px-48  customMax:translate-x-10 py-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 custom1:gap-3 font-sarabun customMax:gap-0 lg:translate-x-10 custom3:translate-x-6">
         {blogs?.map((blog, index) => (
           <Link key={index} href={`../Blog_main/${blog.attributes.tiltle}`}>
         

@@ -15,7 +15,7 @@ const ShowMoreButton: React.FC = () => {
   return (
     <div className="">
       {showContent && (
-        <div className="xl:text-[14px] px-8 text-[1rem] text-justify">
+        <div className="  xl:text-[14px] customMax:text-[1.2rem] px-8  text-justify">
           {/* Your hidden content goes here */}
           <span className="underline underline-offset-4">
             ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute

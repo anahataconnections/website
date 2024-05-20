@@ -78,6 +78,7 @@ const config: Config = {
       'custom1': '992px',
       'custom2': '1280px',
       'custom3': '1440px',
+      'custom4':'1660px',
       'customMax': '1920px',
 
         

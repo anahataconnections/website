@@ -9,8 +9,17 @@
 .bg-custom-position {
 
         /* Adjust the size as needed */
-        background-position: right -8% bottom 4%;
+        background-position: right 20% bottom 24%;
         /* Adjust the y-axis value as needed */
         /* transform: translateX(100px); */
     }
+}
+@media only screen and (min-device-width:1024px){
+    .bg-custom-position {
+    
+            /* Adjust the size as needed */
+            background-position: right -20% bottom 8%;
+            /* Adjust the y-axis value as needed */
+            /* transform: translateX(100px); */
+        }
 }
