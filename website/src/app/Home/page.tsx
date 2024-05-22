@@ -47,8 +47,11 @@ const Home = () => {
       <Navbar />
       <Hero />
       <HowWeWork />
+     
       <Community />
-      <Testimonials />
+      
+       <Testimonials />
+     
       <header className="font-Pattaya flex mt-28 items-center justify-center text-[#094C3B] text-[2.2rem] ">
         Our Blogs{" "}
       </header>

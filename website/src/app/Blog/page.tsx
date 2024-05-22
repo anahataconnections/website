@@ -48,7 +48,7 @@ const Blog = async () => {
                   src={Blog.data[3].attributes.image.data.attributes.url}
                   width={700}
                   height={400}
-                  className=" w-[850px] -translate-x-3"
+                  className=" w-[850px] -translate-x-6"
                   alt="Screenshots of the dashboard project showing desktop and mobile versions"
                 />
                 <div className="my-3">{Blog.data[3].attributes.published}</div>

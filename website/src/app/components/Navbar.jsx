@@ -9,7 +9,7 @@ import Link from "next/link";
 
 const Navbar = () => {
   return (
-    <header className="bg-[#094C3B] h-[90px] customPhone:h-[75px] custom:h-[90px] flex px-16">
+    <header className="bg-[#094C3B] h-[90px] customPhone:h-[75px] custom:h-[90px] flex px-4">
       <div className="flex flex-col md:flex-row  justify-between items-center w-full ">
 
         <div className="flex items-center justify-center md:justify-start">

@@ -48,7 +48,7 @@ const Blogs = () => {
         ))}
       </div>
 
-      <div className="flex justify-center items-center gap-x-2 text-2xl font-semibold text-[#979797] text-center pt-10 " >
+      <div className="flex justify-center items-center gap-x-0 text-2xl font-semibold text-[#979797] text-center pt-5" >
         <span className="hover:underline underline-offset-4 cursor-pointer">
           <Link className="underline font-nota font-bold" href="/Blog">Read More</Link>
         </span>
