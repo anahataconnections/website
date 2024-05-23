@@ -2,9 +2,7 @@
 "use client";
 
 import React from "react";
-import Footer from "../components/Footer";
-import Navbar from "../components/Navbar";
-// import our from "../Our_story/Our_story"
+
 async function fetchRefund() {
   try {
     const res = await fetch(
@@ -22,7 +20,6 @@ const Refund = async () => {
   // console.log(item.data.attributes.policy[0].children[0].text);
   return (
     <main className=" overflow-x-hidden">
-      <Navbar />
       <div className="bg-home-page-back">
         <div className="bg-grey-gradient mx-20 py-20 px-10 text-justify">
           <div className="font-Pattaya my-3  text-3xl text-[#094C3B]">
@@ -70,9 +67,6 @@ const Refund = async () => {
             {item.data.attributes.policy[2].children[0].text}
           </p>
         </div>
-      </div>
-      <div className="bg-flower_back bg-no-repeat bg-cover pt-40">
-        <Footer />
       </div>
     </main>
   );

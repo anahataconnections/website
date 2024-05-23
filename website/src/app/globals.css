@@ -15,44 +15,10 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  /* --background-end-rgb: 255, 255, 255; */
+
+.right-message {
+  clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 86% 75%, 75% 100%, 74% 75%, 0% 75%);
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0, 0;
-  }
+.left-message {
+ clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 26% 75%, 25% 99%, 14% 75%, 0% 75%);
 }
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(to bottom,
-      transparent,
-      rgb(var(--background-end-rgb)));
-  background-color: white;
-  /* Fallback background color */
-}
-
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-}
-
-@layer utilities {
-  @screen customPhone {
-    .translate-x-32-customPhone {
-      transform: translateX(-4rem);
-      
-      /* Adjust the value as needed */
-    }
-  }
-}
-
-

@@ -2,60 +2,41 @@
 
 import React from "react";
 import Image from "next/image";
+import { BsPersonAdd } from "react-icons/bs";
+import { TiGroupOutline } from "react-icons/ti";
+import { FaMagnifyingGlass } from "react-icons/fa6";
 
 const HowWeWork = () => {
   return (
-    <div className="flex items-end justify-center customPhone:mt-28 -translate-y-40 mt-14 custom3:px-[60px] customMax:mx-[60px] customMax:pt-14">
-    <div className="w-[78%]  custom2:w-[75vw] custom3:w-[72vw] customMax:w-[75vw]  h-[270px] customPhone:h-[150px]  max-md:h-[200px]
-         md:mx-20 custom3:mx-32  customMax:mx-24 bg-[rgb(240,253,249)]">
-        <header className="font-Pattaya flex items-center justify-center text-[2.2rem] customPhone:text-[1.5rem]  text-[#0C6242] md:max-lg:text-[42px]">
+    <div className="w-[100%]  flex flex-col justify-end gap-[20px] mobile:gap-[50px] bg-[rgb(240,253,249)] box-border pt-[40px] pb-[40px]">
+      <header className="font-Pattaya flex items-center justify-center text-[#0C6242] text-[25px] mobile:text-[45px] max-mobile:pt-[20px]  ">
         How We Work
       </header>
 
-      <div className="grid grid-cols-3 pt-10 customPhone:pt-4 font-medium font-sarabun">
-        <div className="flex flex-col items-center justify-center">
-          <div>
-            {/* <img src={one} alt="" /> */}
-            <Image
-            src="/assets/create.png"
-            width={45}
-           height={45}
-            className=" md:block  max-md:w-10 max-md:mt-3"
-            alt="Screenshots of the dashboard project showing desktop and mobile versions"
-          />
+      <div className=" flex max-mobile:flex-col items-center max-mobile:gap-[20px] font-medium font-sarabun">
+        <div className=" mobile:w-[33%] flex flex-col gap-[10px] items-center justify-center">
+          <BsPersonAdd className="text-[#0C6242] text-[50px]" />
+          <div className=" text-[18px] text-black font-medium ">
+            Create Account
           </div>
-            <div className=" mt-2 text-[18px] text-black font-medium  md:max-lg:text-[10px] max-md:text-[8px] ">Create Account</div>
         </div>
 
-        <div className="flex flex-col items-center justify-center gap-y-2 border-x-2 border-black">
-          <div>
-            {/* <img src={two} alt="" /> */}
-            <Image
-            src="/assets/discover.png"
-                width={45}
-                height={45}
-            className=" md:block lg:mr-8 max-md:w-10 max-sm:w-6 max-sm:mt-3"
-            alt="Screenshots of the dashboard project showing desktop and mobile versions"
-          />
+        <div className="mobile:w-[33%] flex flex-col items-center  gap-[10px] justify-center max-mobile:border-y-[1px] mobile:border-x-2 border-black max-mobile:py-[20px]">
+          {/* <img src={two} alt="" /> */}
+          <FaMagnifyingGlass className="text-[#0C6242] text-[40px]" />
+
+          <div className="text-[18px] text-black font-medium ">
+            Discover Compatible Profiles
           </div>
-            <div className="text-[18px] text-black font-medium md:max-lg:text-[10px] max-md:text-[8px] max-sm:text-[6px]">Discover Compatible Profiles</div>
         </div>
 
-        <div className="flex flex-col items-center justify-center ">
-          <div>
-
-            <Image
-            src="/assets/connection.png"
-                width={45}
-                height={45}
-            className=" md:block lg:mr-8 max-md:w-10 max-md:mt-3"
-            alt="Screenshots of the dashboard project showing desktop and mobile versions"
-          />
+        <div className="mobile:w-[33%] flex flex-col  items-center gap-[10px] justify-center ">
+          <TiGroupOutline className="text-[#0C6242] text-[50px]" />
+          <div className=" mt-2 text-[18px] text-black ">
+            Build Meaningful Connections
           </div>
-            <div className=" mt-2 text-[18px] text-black font-medium md:max-lg:text-[10px] max-md:text-[8px] max-sm:text-[6px]">Build Meaningful Connections</div>
         </div>
       </div>
-    </div>
     </div>
   );
 };

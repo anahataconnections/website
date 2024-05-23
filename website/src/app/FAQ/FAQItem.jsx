@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import React, { useState } from "react";
 
@@ -15,14 +15,20 @@ const FAQItem = ({ question, answer, index, openIndex, setOpenIndex }) => {
 
   return (
     <div
-      className={`rounded-[32px] w-full border border-gray-500 mb-4 px-8 ease-linear transition-all duration-300 ${isOpen ? "bg-[#094C3B] text-white " : "bg-transparent text-black"}`}
+      className={` rounded-xl w-[80vw] mobile:w-[70vw] border border-gray-500 mb-4  ease-linear transition-all duration-200 ${
+        isOpen ? "bg-[#094C3B] text-white " : "bg-transparent text-black"
+      }`}
     >
       <div
         className="bg-inherit h-[58px] px-4 py-5 cursor-pointer flex items-center justify-between font-sarabun"
         onClick={toggleAccordion}
       >
-        <h3 className="text-xl font-semibold">{capitalizeFirstLetter(question)}</h3>
-        <h1 className="text-xl font-semibold">{isOpen ? "-" : "+"}</h1>
+        <h3 className="text-[15px] mobile:text-[20px] font-semibold">
+          {capitalizeFirstLetter(question)}
+        </h3>
+        <h1 className="mobile:text-[20px]  font-semibold">
+          {isOpen ? "-" : "+"}
+        </h1>
       </div>
       {isOpen && (
         <div className="px-4 py-3 flex items-center justify-between">

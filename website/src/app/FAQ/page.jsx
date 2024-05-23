@@ -1,12 +1,14 @@
 // FAQ/page.tsx
-"use client"
+"use client";
 
 import React, { useEffect, useState } from "react";
 import FAQItem from "./FAQItem";
 
 async function fetchFaq() {
   try {
-    const res = await fetch(`https://cms.anahataaconnections.com/api/home?populate=*`);
+    const res = await fetch(
+      `https://cms.anahataaconnections.com/api/home?populate=*`
+    );
     const response = await res.json();
     return response.data.attributes.faqs;
   } catch (err) {
@@ -41,12 +43,12 @@ const FAQ = () => {
   };
 
   return (
-    <div className="h-auto ">
-      <header className="font-Pattaya flex items-center text-center justify-center text-[#094C3B] text-[2.2rem]">
+    <div className="w-[100%] flex flex-col gap-[20px] mt-[50px] mb-[50px] ">
+      <header className="font-Pattaya flex items-center text-center justify-center text-[#094C3B] text-[25px] mobile:text-[40px]">
         Frequently Asked Questions
       </header>
 
-      <div className="flex flex-col justify-center items-center mx-[200px] custom3:px-[80px] custom2:px-12 customMax:px-36 my-8">
+      <div className="w-[100%] flex flex-col justify-center items-center ">
         {faqData.map((faq, index) => (
           <FAQItem
             key={index}

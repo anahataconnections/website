@@ -1,16 +1,14 @@
 // Home/page.tsx
-"use client"
+"use client";
 
 import React, { Suspense, useEffect, useState } from "react";
-import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import HowWeWork from "../components/HowWeWork";
 import Community from "../components/Community";
 import Testimonials from "../components/Testimonials";
 import Blogs from "../components/Blogs";
-import Footer from "../components/Footer";
 import "../Style/Home.css";
-import "../Style/flowerBack.css"
+import "../Style/flowerBack.css";
 
 // Lazy load FAQ component
 const FAQ = React.lazy(() => import("../FAQ/page"));
@@ -28,7 +26,6 @@ async function fetchEvents() {
   }
 }
 
-
 const Home = () => {
   const [homeData, setHomeData] = useState(null);
 
@@ -43,27 +40,31 @@ const Home = () => {
   console.log(homeData);
 
   return (
-    <main className="bg-white smooth-scroll overflow-x-hidden">
-      <Navbar />
+    <main className="w-screen flex flex-col items-center  bg-white smooth-scroll overflow-x-hidden">
       <Hero />
-      <HowWeWork />
-     
-      <Community />
-      
-       <Testimonials />
-     
-      <header className="font-Pattaya flex mt-28 items-center justify-center text-[#094C3B] text-[2.2rem] ">
-        Our Blogs{" "}
-      </header>
-      <Blogs />
-      <div
-        id="faq"
-        className="bg-flower_back bg-no-repeat bg-custom1 bg-custom-position"
-      >
-        <Suspense fallback={<div>Loading FAQ...</div>}>
-          {homeData && <FAQ />}
-        </Suspense>
-        <Footer />
+
+      <div className="w-[80vw] mobile:w-[70vw] flex flex-col items-center">
+        <HowWeWork />
+
+        <Community />
+
+        <Testimonials />
+
+        <div className="w-[100%] flex flex-col gap-[20px] mobile:gap-[50px] ">
+          <header className="text-[25px] mobile:text-[40px] font-Pattaya flex mt-[50px] items-center justify-center text-[#094C3B]">
+            Our Blogs{" "}
+          </header>
+          {/* blog container */}
+          <Blogs />
+        </div>
+        <div
+          id="faq"
+          className="bg-flower_back bg-no-repeat bg-custom1 bg-custom-position"
+        >
+          <Suspense fallback={<div>Loading FAQ...</div>}>
+            {homeData && <FAQ />}
+          </Suspense>
+        </div>
       </div>
     </main>
   );

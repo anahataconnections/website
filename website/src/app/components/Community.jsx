@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
-import ChatBox from './ChatBox';
+import ChatBox from "./ChatBox";
 
 async function fetchCommunityData() {
   try {
@@ -32,22 +32,21 @@ const Community = () => {
   }
 
   return (
-    <div className="h-full -translate-y-40 mb-4 lg:pt-14 custom3:pt-14 custom3:px-[60px]">
-      <header className="font-Pattaya flex items-center justify-center text-[#094C3B] customPhone:text-[2.8rem] text-[2.2rem]">
+    <div className="w-[100%] flex flex-col justify-center items-center mt-[50px] mb-[50px] mobile:mt-[100px] gap-[50px]   mobile:mb-[100px]  ">
+      <header className="font-Pattaya flex items-center justify-center text-[#094C3B] text-[25px] mobile:text-[45px]">
         {communityData.title}
       </header>
- 
-      <div className="flex items-center justify-center py-8 mx-5 font-sarabun -translate-x-10 custom3:gap-7 customPhone:pl-4">
-        <div className="text-gray-700 bg-[#FFFAF0] w-[460px] h-[400px] lg:w-[400px] lg:h-[300px] lg:text-[1.7] custom3:w-[500px] custom3:h-[360px]  custom3:text-[1.5rem] customMax:pt-14 max-sm:text-[11px] text-center flex items-center justify-center rounded-lg px-8 max-sm:px-2 max-sm:py-1 border border-black customMax:-translate-x-16">
+
+      <div className="w-[100%] flex max-mobile:flex-col justify-center items-center gap-[50px] mobile:gap-[150px]  font-sarabun mobile:translate-x-[-100px]">
+        <div className="text-gray-700 bg-[#FFFAF0] small-tab:w-[450px] tab:w-[400px] py-[30px] flex justify-center items-center small-tab:text-[20px] tab:text-[22px] text-center rounded-lg border-[1px] border-black">
           {communityData.content.map((paragraph, index) => (
-            <p className="px-6" key={index}>{paragraph.children[0].text}</p>
+            <p className="px-6" key={index}>
+              {paragraph.children[0].text}
+            </p>
           ))}
         </div>
 
-
-        <div className=" lg:px-[60px] custom3:-translate-x-[1.6rem] customMax:translate-x-2">
-          <ChatBox/>
-        </div>
+        <ChatBox />
       </div>
     </div>
   );

@@ -1,9 +1,8 @@
 // Collaboration.tsx
-"use client"
+"use client";
 
 import React, { useState, useEffect } from "react";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
+
 import WhyChoose from "../components/WhyChoose";
 import Image from "next/image";
 import WhatWeDo from "../components/WhatWeDo";
@@ -77,8 +76,6 @@ const Collaboration: React.FC = () => {
 
   return (
     <div className="h-screen scroll-smooth overflow-x-hidden">
-      <Navbar />
-
       <section className="">
         <div className="w-full custom2:h-[70vh] h-[60vh] relative">
           <Image
@@ -101,25 +98,18 @@ const Collaboration: React.FC = () => {
           </div>
         </div>
 
-        <WhyChoose/>
+        <WhyChoose />
 
         <WhatWeDo
-        collaboration={collaboration}
-        advertisement={advertisement}
-        yoga={yoga}
-         />
-        
-        <CollabCards/>
+          collaboration={collaboration}
+          advertisement={advertisement}
+          yoga={yoga}
+        />
 
-        <LetsGet/>
+        <CollabCards />
 
+        <LetsGet />
       </section>
-     
-
-
-
-
-      <Footer />
     </div>
   );
 };

@@ -2,35 +2,21 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import Navbar from "../../components/Navbar";
 import Blogs from "../../components/Blogs";
-import Footer from "../../components/Footer";
-
+import { fetchBlogByName } from "@/helpers/blog";
 interface BlogPageProps {
   params: {
     Name: string;
   };
 }
 
-const fetchBlog = async (id: string) => {
-  try {
-    const res = await fetch(
-      `https://cms.anahataaconnections.com/api/blogs?filters[tiltle][$eq]=${id}&populate=*`
-    );
-    const response = await res.json();
-    return response;
-  } catch (err) {
-    console.error(err);
-    throw new Error("Failed to fetch blog");
-  }
-};
-
 const BlogPage: React.FC<BlogPageProps> = ({ params }) => {
   const [blog, setBlog] = React.useState<any>(null);
 
   React.useEffect(() => {
     const fetchBlogData = async () => {
-      const blogData = await fetchBlog(params.Name);
+      const blogName = params.Name.split("-").join(" ");
+      const blogData = await fetchBlogByName(blogName);
       setBlog(blogData?.data[0]);
     };
 
@@ -43,48 +29,52 @@ const BlogPage: React.FC<BlogPageProps> = ({ params }) => {
 
   return (
     <main className="bg-white overflow-x-hidden">
-      <Navbar />
-      <Image
-        src="/assets/blog_bg.png"
-        width={500}
-        height={500}
-        className="w-[100vw] h-[67vh] custom3:h-[70vh] customMax:w-[100vw]
-        customMax:h-[70vh]
+      <div
+        style={{
+          backgroundImage: "url('/assets/blog_bg.png')",
+        }}
+        className="w-[100vw] h-[50vh] mobile:h-[65vh]
+         bg-cover bg-no-repeat bg-center
         "
-        alt="Screenshots of the dashboard project showing desktop and mobile versions"
-      />
-      <div className="bg-home-page-back bg-cover bg-no-repeat customMax:mt-28">
-        <div className=" text-center font-Pattaya mt-6 flex justify-center items-center  md:text-[60px] text-[#094C3B] customMax:px-20">
-          {blog.attributes.tiltle}
-        </div>
-        <div className="font-Pattaya mt-2 flex justify-center items-center text-xl text-black">
-          {blog.attributes.published}
-        </div>
-        <div className="flex justify-center items-center pt-4 mx-6 md:mx-0">
-          <Image
-            src={blog.attributes.image.data.attributes.url}
-            width={200}
-            height={100}
-            className=" custom3:max-h-[430px] customMax:max-h-[600px] w-[75vw] text-left"
-            alt="Screenshots of the dashboard project showing desktop and mobile versions"
-          />
-        </div>
-        <div className="md:w-[75vw] w-[75vw] custom3:w-[75vw] customMax:w-[75vw]">
-          {blog.attributes.content.map((i: any, index: number) => (
-            <p
-              key={index}
-              className="py-4 text-[#6E6E6E]  text-[18px] text-left custom3: custom3:pl-[11.2rem] customMax:pl-[15rem]  customMax:mt-6"
-            >
-              {i.children[0].text}
-            </p>
-          ))}
-        </div>
-        <div className="bg-flower_back bg-no-repeat bg-cover">
-          <div className="font-Pattaya mt-2 flex justify-center items-center text-7xl text-[#094C3B]">
-            More From Us
+      ></div>
+      <div className="w-screen flex justify-center bg-home-page-back pt-[30px] pb-[60px] mobile:pt-[50px] mobile:pb-[100px]">
+        <div className="w-[90vw] flex flex-col items-center  bg-cover bg-no-repeat customMax:mt-28">
+          <div className="flex flex-col gap-[30px] mobile:gap-[60px]">
+            <div className="flex flex-col gap-[10px] mobile:gap-[30px]">
+              <h1 className=" text-center font-Pattaya text-[#094C3B] text-[30px] small-tab:text-[60px] tab:text-[70px]">
+                {blog.attributes.tiltle}
+              </h1>
+              <h3 className="font-Pattaya flex justify-center items-center text-xl text-black">
+                {blog.attributes.published}
+              </h3>
+            </div>
+            <div className="flex flex-col items-center gap-[50px]">
+              <Image
+                src={blog.attributes.image.data.attributes.url}
+                width={500}
+                height={500}
+                className="w-[90vw] mobile:w-[50vw] h-auto "
+                alt="youga image"
+              />
+              <div className="w-[90vw] mobile:w-[70vw]">
+                {blog.attributes.content.map((i: any, index: number) => (
+                  <p
+                    key={index}
+                    className=" text-[#6E6E6E] text-[16px]  mobile:text-[18px] text-center"
+                  >
+                    {i.children[0].text}
+                  </p>
+                ))}
+              </div>
+            </div>
           </div>
-          <Blogs />
-          <Footer />
+          {/* more bolgs */}
+          <div className="bg-flower_back bg-no-repeat bg-cover mt-[30px] mobile:mt-[50px]">
+            <div className="font-Pattaya  flex justify-center items-center text-[30px] mobile:text-[60px] tab:text-[70px] text-[#094C3B]">
+              More From Us
+            </div>
+            <Blogs />
+          </div>
         </div>
       </div>
     </main>
@@ -93,4 +83,14 @@ const BlogPage: React.FC<BlogPageProps> = ({ params }) => {
 
 export default BlogPage;
 
- export const runtime = "edge";
+export const runtime = "edge";
+//  <div className="flex flex-col items-center w-[100%]">
+//
+//    <div className="font-Pattaya flex justify-center items-center text-xl text-black">
+//      {blog.attributes.published}
+//    </div>
+//    <div className="flex justify-center items-center ">
+//
+//    </div>
+//
+//  </div>;

@@ -10,27 +10,24 @@ const formatDate = (publishedDate) => {
 
 const Blogcard = ({ imageUrl, heading, data, published }) => {
   return (
-    <div className="w-[20.33rem] custom1:w-[17rem] custom2:w-[19rem] custom3:w-[20rem] flex flex-col -space-y-2 customMax:w-[25rem]">
+    <div className="w-[320px]">
       <div>
         {/* <img src={imageUrl} alt="" className="w-[300px]" /> */}
         <Image
-            src={imageUrl}
-            width={500}
-            height={300}
-            className=""
-            alt="Screenshots of the dashboard project showing desktop and mobile versions"
-          />
+          src={imageUrl}
+          width={500}
+          height={300}
+          className="w-[100%] h-[60%]"
+          alt="Screenshots of the dashboard project showing desktop and mobile versions"
+        />
       </div>
 
-      <div className="w-[20.33rem] custom1:w-[17rem]
-      custom2:w-[19rem] custom3:w-[20rem] customMax:w-[25rem]  bg-[#094C3B] text-center text-white py-5 rounded-b-2xl font-sarabun">
-        <div className="text-lg font-bold">
-          {heading}
-        </div>
-        <p className="text-[#9CA3AF]">
-        {formatDate(published)}
+      <div className="w-[100%] h-[40%] flex flex-col items-center gap-[20px] bg-[#094C3B] text-center text-white  font-sarabun rounded-b-2xl box-border pt-[20px]">
+        <div className="text-lg font-bold">{heading}</div>
+        <p className="text-[#9CA3AF]">{formatDate(published)}</p>
+        <p className=" w-[80%] text-[16px] mobile:text-[18px]  pb-[30px]">
+          {data}
         </p>
-        <p className=" lg:py-2 lg:px-2 text-[1.2rem] lg:text-[0.7rem] custom3:text-[1rem]">{data}</p>
       </div>
     </div>
   );

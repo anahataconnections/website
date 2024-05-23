@@ -2,8 +2,6 @@
 "use client";
 
 import React from "react";
-import Footer from "../components/Footer";
-import Navbar from "../components/Navbar";
 async function fetchPrivacy() {
   try {
     const res = await fetch(
@@ -20,7 +18,6 @@ const Privacy = async () => {
   // console.log(item.data.attributes.policy[0].children[0].text);
   return (
     <main className=" overflow-x-hidden">
-      <Navbar />
       <div className="bg-home-page-back text-justify ">
         <div className="bg-grey-gradient mx-20 py-10 px-10 ">
           <div className="font-Pattaya my-3  text-3xl text-[#094C3B]">
@@ -69,9 +66,7 @@ const Privacy = async () => {
           </p>
         </div>
       </div>
-      <div className="bg-flower_back bg-no-repeat bg-cover pt-40">
-        <Footer />
-      </div>
+      <div className="bg-flower_back bg-no-repeat bg-cover pt-40"></div>
     </main>
   );
 };

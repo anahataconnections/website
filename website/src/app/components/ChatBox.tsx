@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import * as React from "react";
 
 type ImageProps = {
@@ -8,56 +9,53 @@ type ImageProps = {
   className: string;
 };
 
-const Image: React.FC<ImageProps> = ({ src, alt, className }) => (
-  <div className={`relative w-full ${className}`}>
-    <img loading="lazy" src={src} alt={alt} className="w-full h-auto block" />
-    <div className="absolute bottom-0 left-0 w-full bg-opacity-50 text-white text-center lg:pb-7 lg:px-4 custom3:pb-7 box-border lg:text-[0.85rem] ">
-      {alt}
-    </div>
-  </div>
-);
-
 const MyComponent: React.FC = () => {
   const images = [
     {
       src: "https://cdn.builder.io/api/v1/image/assets/TEMP/5b98072059023c1cb512919babbfd7091b1e6f4c30e17685f334605454329f07?apiKey=b0951f87dee4449fa252b5f3cfc3b012&",
-      alt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt .",
-      className:
-        "aspect-w-16 aspect-h-9 sm:aspect-w-8 sm:aspect-h-5 md:aspect-w-6 md:aspect-h-4",
+      message:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun",
     },
     {
       src: "https://cdn.builder.io/api/v1/image/assets/TEMP/3b6276de1c719c39f7ef529931d0f9363baf8c463fed31657c275cc214691980?apiKey=b0951f87dee4449fa252b5f3cfc3b012&",
-      alt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
-      className:
-        "aspect-w-16 aspect-h-9 mt-1 sm:aspect-w-8 sm:aspect-h-5 md:aspect-w-6 md:aspect-h-4",
+      message:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
     },
     {
       src: "https://cdn.builder.io/api/v1/image/assets/TEMP/00bd5a9f903d195224eb1daadeb0557f1d7ac99bc58a161a20213f7e4037c86b?apiKey=b0951f87dee4449fa252b5f3cfc3b012&",
-      alt: "Lorem ipsum dolor sit amet, consectetur",
-      className:
-        "aspect-w-16 aspect-h-9 mt-1 sm:aspect-w-8 sm:aspect-h-5 md:aspect-w-6 md:aspect-h-4",
+      message: "Lorem ipsum dolor sit amet, consectetur",
     },
     {
       src: "https://cdn.builder.io/api/v1/image/assets/TEMP/3b6276de1c719c39f7ef529931d0f9363baf8c463fed31657c275cc214691980?apiKey=b0951f87dee4449fa252b5f3cfc3b012&",
-      alt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
-      className:
-        "aspect-w-16 aspect-h-9 mt-1 sm:aspect-w-8 sm:aspect-h-5 md:aspect-w-6 md:aspect-h-4",
+      message:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
     },
   ];
 
   return (
-    <section className="flex flex-col max-w-[495px] lg:max-w-[440px] lg:h-[350px] custom3:translate-x-20 ">
-      {images.map((image, idx) => (
-        <Image
-          key={idx}
-          src={image.src}
-          alt={image.alt}
-          className={`${image.className} ${
-            idx === 1 || idx === 3 ? "translate-x-28" : ""
-          }`}
-        />
-      ))}
-    </section>
+    <div className="relative flex flex-col w-fit gap-[10px]">
+      {images.map(({ message, src }, index) => {
+        return (
+          <div
+            key={index}
+            className={`w-[100%] h-min-fit flex  justify-center ${
+              (index === 1 || index === 3) && "mobile:translate-x-[60%]"
+            }`}
+          >
+            <img
+              src={src}
+              width={100}
+              height={60}
+              className="w-[100%] h-min-fit"
+              alt="image"
+            />
+            <p className="absolute flex justify-center items-center text-white text-[16px] box-border p-[6px] mobile:p-[10px]">
+              {message}
+            </p>
+          </div>
+        );
+      })}
+    </div>
   );
 };
 

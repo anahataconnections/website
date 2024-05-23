@@ -3,8 +3,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
+
 import Image from "next/image";
 import Blogs from "../components/Blogs";
 
@@ -71,11 +70,9 @@ export default function WhyAnahata() {
   const bannerImageUrl =
     banner_Image?.bannerImage?.formats?.thumbnail?.url || "";
 
-    console.log(bannerImageUrl);
+  console.log(bannerImageUrl);
   return (
     <div className="bg-white w-[100vw] h-full top-0  overflow-x-hidden">
-      <Navbar />
-      
       <Image
         src="assets/banner.svg"
         alt="Hero Image"
@@ -123,7 +120,6 @@ export default function WhyAnahata() {
         </h1>
         <Blogs />
       </div>
-      <Footer />
     </div>
   );
 }

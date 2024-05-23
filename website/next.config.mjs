@@ -7,6 +7,10 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'anahata-cms.s3.ap-south-1.amazonaws.com',
       },
+      {
+        protocol: 'https',
+        hostname: 'cdn.builder.io',
+      },
       // {
       //   protocol: 'https',
       //   hostname: 'cms.anahataaconnections.com',

@@ -4,14 +4,13 @@ import React from 'react'
 import Image from "next/image";
 import '../Style/whyAnahat.css'
 import CareersPage from '../components/JobCard'
-import Footer from '../components/Footer';
-import Navbar from '../components/Navbar';
+
 
 const career = () => {
   return (
     <section className=' custom3:w-[100%] overflow-x-hidden'>
 
-        <Navbar/>
+        
        
           <div className="w-[100%] h-[70vh] custom2:h-[66vh] custom3:h-[68vh] customMax:h-[70vh] relative">
               <div className="relative h-full">
@@ -59,7 +58,7 @@ const career = () => {
           </h1>
 
 
-          <Footer/>
+     
 
        
 
