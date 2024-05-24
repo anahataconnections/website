@@ -31,11 +31,11 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={`${eva.variable}`}>
-      <body className={inter.className}>
+      <body className={`${inter.className} overflow-x-hidden`}>
         <Navbar />
         <MobileNavbar />
         {children}
-        <div className="bg-flower_back bg-no-repeat bg-cover">
+        <div className=" bg-no-repeat bg-cover">
           <Footer />
         </div>
       </body>

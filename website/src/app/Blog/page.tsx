@@ -10,7 +10,7 @@ const Blog = async () => {
   const Blog = await fetchBlog();
   // console.log(Blog.data);
   return (
-    <main className="bg-white text-black w-[100%] overflow-x-hidden">
+    <main className="bg-white text-black w-screen overflow-x-hidden pb-[160px]">
       <Image
         src="/assets/blog_bg.png"
         width={500}
@@ -18,20 +18,20 @@ const Blog = async () => {
         className="w-[100vw] h-[35vh] mobile:h-[52vh] custom3:h-[70vh] customMax:h-[75vh] object-cover object-center "
         alt="Screenshots of the dashboard project showing desktop and mobile versions"
       />
-      <div className="bg-home-page-back bg-contain bg-no-repeat">
-        <div className="w-screen flex flex-col items-center bg-white-gradient">
+      <div className="w-screen flex justify-center items-center bg-home-page-back bg-contain bg-no-repeat">
+        <div className="w-[80vw] small-tab:w-[60vw] flex flex-col items-center bg-white-gradient">
           <div className="font-Pattaya mt-[30px] mobile:[100px]  flex justify-center items-center text-[50px] mobile:text-7xl text-[#094C3B] custom3:mt-[4.7rem] customMax:mt-[6rem]">
             Blogs
           </div>
-          <div className="w-screen  flex  justify-center  mt-[30px] mb-[50px] mobile:mt-[100px] mobile:mb-[100px] ">
-            <div className="w-[90%]  mobile:w-[80%] flex max-mobile:flex-col max-mobile:items-center mobile:justify-center gap-[30px]">
+          <div className="w-[100%]  flex  justify-center  mt-[30px] mb-[50px] mobile:mt-[100px] mobile:mb-[100px] ">
+            <div className="w-[100%] flex max-mobile:flex-col max-mobile:items-center mobile:justify-center gap-[30px]">
               <div className="flex flex-col gap-[30px]">
                 <div className=" ">
                   <Image
                     src={Blog.data[3].attributes.image.data.attributes.url}
                     width={700}
                     height={400}
-                    className=" w-[100%]"
+                    className="w-[100%] "
                     alt="yoga images"
                   />
                   <div className="my-3">
@@ -49,7 +49,7 @@ const Blog = async () => {
                   <div>
                     <Link
                       className="my-3 underline font-nota font-bold"
-                      href={`/Blog_main/${Blog.data[3].attributes.tiltle
+                      href={`/Blog-main/${Blog.data[3].attributes.tiltle
                         .split(" ")
                         .join("-")}`}
                     >
@@ -62,7 +62,7 @@ const Blog = async () => {
                     src={Blog.data[2].attributes.image.data.attributes.url}
                     width={700}
                     height={400}
-                    className=" w-[750px]"
+                    className=" w-[100%]"
                     alt="yoga images"
                   />
                   <div className="my-3">
@@ -80,7 +80,7 @@ const Blog = async () => {
                   <div>
                     <Link
                       className="my-3 underline font-nota font-bold"
-                      href={`/Blog_main/${Blog.data[2].attributes.tiltle
+                      href={`/Blog-main/${Blog.data[2].attributes.tiltle
                         .split(" ")
                         .join("-")}`}
                     >
@@ -102,12 +102,12 @@ const Blog = async () => {
                           width={150}
                           height={150}
                           className="object-fit object-center"
-                          alt="Screenshots of the dashboard project showing desktop and mobile versions"
+                          alt="you image"
                         />
                         <div className="w-[200px] ml-4">
                           <h1 className="text-[20px] text-2xl font-sarabun font-bold text-black ">
                             <Link
-                              href={`/Blog_main/${item.attributes.tiltle
+                              href={`/Blog-main/${item.attributes.tiltle
                                 .split(" ")
                                 .join("-")}`}
                             >

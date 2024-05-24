@@ -18,6 +18,13 @@ const Motionframe = () => {
   return (
     <div className="relative flex flex-col items-center">
       <div className="absolute bottom-[200px] flex flex-col items-center">
+        <Image
+          src="/assets/logo1.png"
+          width={150}
+          height={150}
+          className=""
+          alt="Anahata Connections Logo"
+        />
         <div
           className={`font-EvaMayasari text-[35px] small-tab:text-[70px] text-[#094C3B]`}
         >

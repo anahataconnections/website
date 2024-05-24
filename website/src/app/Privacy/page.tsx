@@ -66,7 +66,7 @@ const Privacy = async () => {
           </p>
         </div>
       </div>
-      <div className="bg-flower_back bg-no-repeat bg-cover pt-40"></div>
+      <div className=" bg-no-repeat bg-cover pt-40"></div>
     </main>
   );
 };

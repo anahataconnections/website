@@ -1,16 +1,11 @@
 /* eslint-disable */
 import React from "react";
 import Image from "next/image";
-
-const formatDate = (publishedDate) => {
-  const options = { month: "long", day: "numeric", year: "numeric" };
-  const date = new Date(publishedDate);
-  return date.toLocaleDateString("en-US", options);
-};
+import { formatDate } from "@/helpers/blog";
 
 const Blogcard = ({ imageUrl, heading, data, published }) => {
   return (
-    <div className="w-[320px]">
+    <div className=" mobile:w-[250px] tab:w-[300px]">
       <div>
         {/* <img src={imageUrl} alt="" className="w-[300px]" /> */}
         <Image
@@ -23,9 +18,9 @@ const Blogcard = ({ imageUrl, heading, data, published }) => {
       </div>
 
       <div className="w-[100%] h-[40%] flex flex-col items-center gap-[20px] bg-[#094C3B] text-center text-white  font-sarabun rounded-b-2xl box-border pt-[20px]">
-        <div className="text-lg font-bold">{heading}</div>
+        <div className="text-[16px] tab:text-[18px] font-bold">{heading}</div>
         <p className="text-[#9CA3AF]">{formatDate(published)}</p>
-        <p className=" w-[80%] text-[16px] mobile:text-[18px]  pb-[30px]">
+        <p className=" w-[80%] text-[15px] tab:text-[18px]  pb-[30px]">
           {data}
         </p>
       </div>

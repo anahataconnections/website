@@ -39,7 +39,8 @@ const MyComponent: React.FC = () => {
           <div
             key={index}
             className={`w-[100%] h-min-fit flex  justify-center ${
-              (index === 1 || index === 3) && "mobile:translate-x-[60%]"
+              (index === 1 || index === 3) &&
+              "mobile:translate-x-[30%] tab:translate-x-[60%]"
             }`}
           >
             <img

@@ -1,4 +1,4 @@
-import { baseurl } from "@/constants";
+import { baseurl, monthsArray } from "@/constants";
 
 export async function fetchBlog() {
   try {
@@ -21,4 +21,13 @@ export const fetchBlogByName = async (id: string) => {
     console.error(err);
     throw new Error("Failed to fetch blog");
   }
+};
+
+export const formatDate = (publishedDate: string) => {
+  const date = new Date(publishedDate);
+  return date.toLocaleDateString("en-US", {
+    month: "long",
+    day: "numeric",
+    year: "numeric",
+  });
 };

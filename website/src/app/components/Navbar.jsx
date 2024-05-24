@@ -20,9 +20,9 @@ const Navbar = () => {
   return (
     <header
       ref={navbar}
-      className="hidden mobile:flex fixed top-0 w-screen bg-[#094C3B] h-[90px] customPhone:h-[75px] custom:h-[90px] flex px-4 z-[50] transition-all delay-300 duration-300"
+      className="hidden mobile:flex fixed top-0 w-screen bg-[#094C3B] h-[90px] customPhone:h-[75px] custom:h-[90px]  px-4 z-[50] transition-all delay-300 duration-300"
     >
-      <div className="flex flex-col md:flex-row  justify-between items-center w-full box-border mobile:pr-[50px]  pc:pr-[150px] ">
+      <div className="flex flex-col md:flex-row  justify-between items-center w-full box-border mobile:pr-[50px]   pc:pr-[100px] ">
         <div className="flex items-center justify-center md:justify-start">
           <Image
             src="/assets/logo1.png"
@@ -36,7 +36,7 @@ const Navbar = () => {
           </div>
         </div>
 
-        <ul className="flex items-center gap-[55px] font-semibold lg:text-[16px]   text-[9px] font-sarabun ">
+        <ul className="flex items-center gap-[55px] pc:gap-[100px] font-semibold lg:text-[16px]   text-[9px] font-sarabun ">
           {navElemObj.map(({ link, title }) => {
             return (
               <Link href={link} key={link}>
@@ -45,7 +45,7 @@ const Navbar = () => {
                     {title}
                   </li>
                 ) : (
-                  <button className="border-[1px] border-white rounded-full px-[25px] py-[7px] hover:bg-[#286f5d] text-[16px] text-white font-[500] ">
+                  <button className="border-[1px] border-white rounded-full px-[25px] py-[7px] hover:bg-[#286f5d] text-[16px] text-white font-[500]">
                     Sign In
                   </button>
                 )}

@@ -11,7 +11,9 @@ import { footerElem, socialObj } from "@/constants";
 import { IconsManifest } from "react-icons";
 const Footer = () => {
   return (
-    <div>
+    <div className="relative">
+      {/* flower */}
+      <div className="w-[350px] h-[600px] small-tab:w-[1080px] small-tab:h-[1200px] absolute bottom-0 right-0 mobile:translate-x-[18%] bg-flower_back bg-cover bg-no-repeat"></div>
       <div className="bg-transparent flex max-mobile:flex-col justify-center items-center gap-[20px] mobile:gap-[300px] border-t-[2px] border-gray-200 pt-[20px] pb-[40px]">
         <div className="flex flex-col gap-[10px]">
           <div className="flex flex-col items-center justify-center gap-[10px] mobile:gap-[15px]">
@@ -70,31 +72,31 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="w-[90%] mobile:w-[35vw] flex flex-col items-end justify-end text-black gap-[20px] ">
-          <div className="flex flex-col ">
-            <h3 className="text-[20px] mobile:text-2xl font-semibold capitalize">
+        <div className="w-[90%] mobile:w-[40vw] flex flex-col items-end justify-end text-black gap-[50px] ">
+          <div className="flex flex-col items-center z-[2]">
+            <h3 className="text-[20px] mobile:text-[22px] font-[500] capitalize">
               Subscribe for our latest updates
             </h3>
             <form
               id="myForm"
-              className="flex max-mobile:flex-col items-center items-center gap-[25px] mt-[10px]"
+              className="flex max-mobile:flex-col items-center gap-[25px] mt-[10px]"
             >
               <input
                 type="text"
                 id="name"
                 name="name"
-                className="w-[300px] h-[40px]  rounded-md border-solid border-[1px] border-[#094C3B] text-[#094C3B]"
+                className="w-[300px] h-[40px]  rounded-md border-solid border-[1px] border-[#094C3B] text-[#094C3B] placeholder:text-black"
                 placeholder="&nbsp;&nbsp; xyz@gmail.com"
               />
               <button
-                className="bg-[#094C3B] h-[40px]  py-[5px] px-[10px] text-white rounded-[7px] cursor-pointer hover:bg-[#286f5d] font-semibold"
+                className="bg-[#094C3B] h-[40px]  py-[5px] px-[10px] text-white rounded-[7px] cursor-pointer hover:bg-[#286f5d] font-semibold "
                 type="submit"
               >
                 Subscribe
               </button>
             </form>
           </div>
-          <div className="w-[100%] flex  flex-wrap justify-between">
+          <div className="w-[100%] flex max-mobile:gap-[20px]  flex-wrap  justify-between">
             {Object.keys(footerElem).map((key) => {
               return (
                 <div
@@ -124,28 +126,27 @@ const Footer = () => {
                 </div>
               );
             })}
+            <div className="mobile:hidden flex flex-col gap-[10px] z-[2]">
+              <div className="text-[25px] text-[#094C3B] font-bold mt-[20px]">
+                Follow us on :
+              </div>
+              <div className="flex  gap-[5px]">
+                {socialObj.map(({ icon, title }) => {
+                  return (
+                    <div
+                      key={title}
+                      className="text-[14px] text-white bg-[#094C3B] hover:bg-[#094C3Ba8] p-[5px] rounded-full cursor-pointer "
+                    >
+                      {icon}
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
           </div>
         </div>
-
         {/* social's */}
-        <div className=" mobile:hidden flex flex-col items-center gap-[20px]">
-          <div className="flex flex-col gap-[10px]">
-            <div className="text-[25px] text-[#094C3B] font-bold">
-              Follow us on :
-            </div>
-            <div className="flex  gap-[5px]">
-              {socialObj.map(({ icon, title }) => {
-                return (
-                  <div
-                    key={title}
-                    className="text-[14px] text-white bg-[#094C3B] hover:bg-[#094C3Ba8] p-[5px] rounded-full cursor-pointer "
-                  >
-                    {icon}
-                  </div>
-                );
-              })}
-            </div>
-          </div>
+        <div className=" mobile:hidden flex flex-col items-center gap-[20px] mt-[30px]">
           <div className="flex flex-col justify-center items-center">
             <div className="text-[25px] font-Pattaya text-[#094C3B]">
               DOWNLOAD THE APP

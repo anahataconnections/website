@@ -10,7 +10,7 @@ export const baseurl = "https://cms.anahataaconnections.com/api";
 
 export const navElemObj: { title: string; link: string }[] = [
   { title: "Home", link: "/Home" },
-  { title: "Out Story", link: "/Our_story" },
+  { title: "Out Story", link: "/Our-story" },
   { title: "Blog", link: "/Blog" },
   { title: "FAQs", link: "/Home#faq" },
   { title: "Sign In", link: "/Signin" },
@@ -20,7 +20,7 @@ interface FooterElemProp {
 }
 export const footerElem: FooterElemProp = {
   overview: navElemObj.filter(({ link }) => link !== "/Signin"),
-  privacyPolicy: [
+  "privacy Policy": [
     { title: "Privacy Policy", link: "/Privacy" },
     { title: "Terms Of Use", link: "/Terms" },
     { title: "Refund Policy", link: "/Refund" },
@@ -43,4 +43,19 @@ export const socialObj: {
   { title: "facebook", link: "", icon: <FaFacebookF /> },
   { title: "telegram", link: "", icon: <FaTelegramPlane /> },
   { title: "instagram", link: "", icon: <FaInstagram /> },
+];
+
+export const monthsArray = [
+  "January",
+  "Febuary",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
 ];

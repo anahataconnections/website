@@ -81,17 +81,6 @@ export const MobileNavbar = () => {
               );
             })}
           </ul>
-          {/* logo */}
-          <Link href={"/Home"}>
-            <Image
-              onClick={() => setOpen(false)}
-              src="/assets/logo1.png"
-              width={70}
-              height={80}
-              className="w-[70px] h-fit"
-              alt="Anahata Connections Logo"
-            />
-          </Link>
         </div>
       </div>
     </header>

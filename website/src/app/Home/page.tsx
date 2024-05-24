@@ -3,7 +3,6 @@
 
 import React, { Suspense, useEffect, useState } from "react";
 import Hero from "../components/Hero";
-import HowWeWork from "../components/HowWeWork";
 import Community from "../components/Community";
 import Testimonials from "../components/Testimonials";
 import Blogs from "../components/Blogs";
@@ -43,9 +42,7 @@ const Home = () => {
     <main className="w-screen flex flex-col items-center  bg-white smooth-scroll overflow-x-hidden">
       <Hero />
 
-      <div className="w-[80vw] mobile:w-[70vw] flex flex-col items-center">
-        <HowWeWork />
-
+      <div className="w-[80vw] mobile:w-[60vw] flex flex-col items-center">
         <Community />
 
         <Testimonials />
@@ -57,10 +54,7 @@ const Home = () => {
           {/* blog container */}
           <Blogs />
         </div>
-        <div
-          id="faq"
-          className="bg-flower_back bg-no-repeat bg-custom1 bg-custom-position"
-        >
+        <div id="faq" className=" bg-no-repeat bg-custom1 bg-custom-position">
           <Suspense fallback={<div>Loading FAQ...</div>}>
             {homeData && <FAQ />}
           </Suspense>
