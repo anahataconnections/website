@@ -10,7 +10,7 @@ export const baseurl = "https://cms.anahataaconnections.com/api";
 
 export const navElemObj: { title: string; link: string }[] = [
   { title: "Home", link: "/Home" },
-  { title: "Out Story", link: "/Our-story" },
+  { title: "Our Story", link: "/Our-story" },
   { title: "Blog", link: "/Blog" },
   { title: "FAQs", link: "/Home#faq" },
   { title: "Sign In", link: "/Signin" },

@@ -18,13 +18,13 @@ const config: Config = {
           "radial-gradient(56.4% 103.55% at 55.76% 54.29%, rgba(211, 211, 211, 0.5) 0%, rgba(211, 211, 211, 0.8) 100%)",
         "white-gradient":
           "radial-gradient(56.4% 103.55% at 55.76% 54.29%, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.6) 100%)",
-        "home-page-back": "url('/assets/mandla.svg')",
+        "home-page-back": "url('/assets/watermark2.png')",
         "home-grad":
           "radial-gradient(56.4% 103.55% at 55.76% 54.29%, rgba(9, 76, 59, 0.8) 0%, rgba(9, 76, 59, 0.8) 100%)",
         hero: `url('/assets/hero1.png')`,
         rf: "url('/assets/right_flower.png')",
         lf: "url('/assets/left_flower.png')",
-        flower_back: "url('/assets/bottom.svg')",
+        flower_back: "url('/assets/lotus.svg')",
       },
 
       backgroundSize: {
@@ -85,6 +85,7 @@ const config: Config = {
         customMax: "1920px",
         mobile: "500px",
         "small-tab": "800px",
+        "1300": "1300px",
         tab: "1400px",
         pc: "1500px",
       },

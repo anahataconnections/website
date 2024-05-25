@@ -56,7 +56,7 @@ export const MobileNavbar = () => {
         ></div>
         {/*navbar*/}
         <div
-          className={`fixed top-0 right-0 flex flex-col gap-[20px]  bg-[#094C3B] w-[50vw] h-screen flex   z-[50] ${
+          className={`fixed top-0 right-0 flex flex-col gap-[20px]  bg-[#094C3B] w-[50vw] h-screen   z-[50] ${
             open ? "" : "scale-x-0"
           } origin-right trasition-all duration-[300ms]  `}
         >

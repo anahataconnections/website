@@ -1,0 +1,32 @@
+@keyframes moveLeft {
+  0% {
+    left: -100px;
+  }
+  25% {
+    left: -100px;
+  }
+  100%{
+    left: 24%;
+  }
+}
+
+
+@keyframes moveRight {
+   0% {
+    right: -100px;
+  }
+  25% {
+    right: -100px;
+  }
+  100%{
+    right: 18%;
+  }
+   
+}
+
+.man-image {
+   animation: moveLeft 3s  ease-out ;
+}
+.woman-image {
+    animation: moveRight 3s   ease-out ;
+}
