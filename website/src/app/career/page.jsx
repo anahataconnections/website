@@ -1,17 +1,45 @@
-"use client"
+import React from "react";
+import "../Style/whyAnahat.css";
+import { Banner } from "../components/pages/career";
+import { getJobs } from "@/api/career";
+import { JobCard } from "../components/pages/career/JobCard";
 
-import React from 'react'
-import Image from "next/image";
-import '../Style/whyAnahat.css'
-import CareersPage from '../components/JobCard'
-
-
-const career = () => {
+const career = async () => {
+  const { data } = await getJobs();
+  console.log(data[0]);
   return (
-    <section className=' custom3:w-[100%] overflow-x-hidden'>
+    <div className="w-screen min-h-screen flex flex-col items-center pb-[200px] z-[2]">
+      {/* banner */}
+      <Banner />
 
-        
-       
+      <div className="w-[80vw] mobile:w-[60vw] flex flex-col   mt-[50px]">
+        {/* search bar */}
+        <input
+          type="text"
+          placeholder="Job title or category"
+          className="w-[80vw] mobile:w-[60vw] h-[80px]  outline-none bg-[#F6F6F6]  mobile:text-[25px] text-[#6C6C6C] mobile:placeholder:text-[25px]  placeholder:text-[#6C6C6C] rounded-lg box-border px-[30px]"
+        />
+        <div className="w-[100%] flex flex-wrap justify-around">
+          {data.map(({ attributes, id }) => {
+            return (
+              <JobCard
+                key={id}
+                image_url={attributes.role_picture.data.attributes.url}
+                role_description={attributes.role_description}
+                role_title={attributes.role_title}
+              />
+            );
+          })}
+        </div>
+        <div className="text-[11px] mobile:text-[20px] font-sarabun flex justify-center items-center mt-[100px]  ">
+          for open position email us career@anahataconnections.com
+        </div>
+      </div>
+    </div>
+  );
+};
+/*
+ <section className=' custom3:w-[100%] overflow-x-hidden'>  
           <div className="w-[100%] h-[70vh] custom2:h-[66vh] custom3:h-[68vh] customMax:h-[70vh] relative">
               <div className="relative h-full">
                   <Image
@@ -50,20 +78,19 @@ const career = () => {
           </div>
           
           <div className=' custom2:px-24 custom3:px-24 '>
-              <CareersPage/>
           </div>
           
           <h1 className='text-[24px] mt-16 customMax:pb-8 pb-8 text-center font-bold text-black '>
-              For open positions email us career@anahataconnections.com
+          For open positions email us career@anahataconnections.com
           </h1>
+          
+          
+          
+          
+          
+          <CareersPage />;
+          
+          </section>
+          */
 
-
-     
-
-       
-
-    </section>
-  )
-}
-
-export default career
+export default career;

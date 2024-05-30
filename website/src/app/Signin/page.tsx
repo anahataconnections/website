@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function Signin() {
   return (
     <main className="bg-white  overflow-x-hidden">
-      <div className="bg-home-page-back ">
+      <div className=" ">
         <div className="bg-home-grad pb-20 h-[100vh] flex justify-between ">
           <Image
             src="/assets/hugging.jpg"

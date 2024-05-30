@@ -8,6 +8,7 @@ import Testimonials from "../components/Testimonials";
 import Blogs from "../components/Blogs";
 import "../Style/Home.css";
 import "../Style/flowerBack.css";
+import HowWeWork from "../components/HowWeWork";
 
 // Lazy load FAQ component
 const FAQ = React.lazy(() => import("../FAQ/page"));
@@ -42,7 +43,8 @@ const Home = () => {
     <main className="w-screen flex flex-col items-center  bg-white smooth-scroll overflow-x-hidden">
       <Hero />
 
-      <div className="w-[80vw] mobile:w-[60vw] flex flex-col items-center">
+      <div className="w-[80vw] mobile:w-[60vw] flex flex-col items-center mt-[80px]">
+        <HowWeWork />
         <Community />
 
         <Testimonials />

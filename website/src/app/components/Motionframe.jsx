@@ -16,15 +16,15 @@ const Motionframe = () => {
   });
 
   return (
-    <div className="relative flex flex-col items-center">
-      <div className="absolute bottom-[200px] flex flex-col items-center">
-        <Image
-          src="/assets/logo1.png"
-          width={150}
-          height={150}
-          className=""
-          alt="Anahata Connections Logo"
-        />
+    <div className="w-[100%] h-[100%] relative flex flex-col items-center justify-center">
+      <Image
+        src="/assets/logo1.png"
+        width={300}
+        height={300}
+        className="absolute top-[25%] 1250:left-[43%] pc:left-[45%] logo-animation max-w-[150px]  mobile:max-w-[300px]"
+        alt="Anahata Connections Logo"
+      />
+      <div className="absolute bottom-[100px] mobile:bottom-[200px] flex flex-col items-center">
         <div
           className={`font-EvaMayasari text-[35px] small-tab:text-[70px] text-[#094C3B]`}
         >

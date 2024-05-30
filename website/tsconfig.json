@@ -33,7 +33,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts"
-  ],
+, "src/app/components/pages/career/index.jsx", "src/app/components/pages/career/Banner.jsx", "src/app/components/pages/career/JobCard.jsx"  ],
   "exclude": [
     "node_modules"
   ]

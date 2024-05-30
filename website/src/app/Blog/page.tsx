@@ -18,7 +18,7 @@ const Blog = async () => {
         className="w-[100vw] h-[35vh] mobile:h-[52vh] custom3:h-[70vh] customMax:h-[75vh] object-cover object-center "
         alt="Screenshots of the dashboard project showing desktop and mobile versions"
       />
-      <div className="w-screen flex justify-center items-center bg-home-page-back bg-contain bg-no-repeat">
+      <div className="w-screen flex justify-center items-center  bg-contain bg-no-repeat">
         <div className="w-screen flex justify-center  bg-white bg-opacity-[0.5]">
           <div className="w-[80vw] small-tab:w-[60vw] flex flex-col items-center">
             <div className="font-Pattaya mt-[30px] mobile:[100px]  flex justify-center items-center text-[50px] mobile:text-7xl text-[#094C3B] custom3:mt-[4.7rem] customMax:mt-[6rem]">

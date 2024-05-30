@@ -6,16 +6,15 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Contact from "./contact";
-import Help_center from "./help-center";
 import { footerElem, socialObj } from "@/constants";
-import { IconsManifest } from "react-icons";
+
 const Footer = () => {
   return (
-    <div className="relative">
+    <div className="relative z-[10]">
       {/* flower */}
-      <div className="w-[350px] h-[600px] small-tab:w-[1080px] small-tab:h-[1200px] absolute bottom-0 right-0 mobile:translate-x-[18%] bg-flower_back bg-cover bg-no-repeat"></div>
-      <div className="bg-transparent flex max-mobile:flex-col justify-center items-center gap-[20px] mobile:gap-[300px] border-t-[2px] border-gray-200 pt-[20px] pb-[40px]">
-        <div className="flex flex-col gap-[10px]">
+      <div className="w-[350px] h-[600px] small-tab:w-[1080px] small-tab:h-[1200px] absolute bottom-0 right-0 mobile:translate-x-[18%] bg-flower_back bg-cover bg-no-repeat z-0"></div>
+      <div className="bg-transparent flex max-mobile:flex-col justify-center items-center gap-[20px] mobile:gap-[300px] border-t-[2px] border-gray-200 pt-[20px] pb-[40px] z-[10]">
+        <div className="flex flex-col gap-[10px] z-[2]">
           <div className="flex flex-col items-center justify-center gap-[10px] mobile:gap-[15px]">
             {/* <img src={logo} alt="" className="object-cover h-32 w-32" /> */}
             <Image
@@ -31,7 +30,7 @@ const Footer = () => {
           </div>
           {/* social's */}
           <div className="hidden mobile:flex flex-col items-center gap-[15px] mobile:gap-[20px]">
-            <div className="flex flex-col gap-[5px]">
+            <div className="flex flex-col gap-[5px] z-[2] ">
               <div className="text-[25px] text-[#094C3B] font-bold">
                 Follow us on
               </div>
@@ -96,7 +95,7 @@ const Footer = () => {
               </button>
             </form>
           </div>
-          <div className="w-[100%] flex max-mobile:gap-[20px]  flex-wrap  justify-between">
+          <div className="w-[100%] flex max-mobile:gap-[20px]  flex-wrap  justify-between z-[2]">
             {Object.keys(footerElem).map((key) => {
               return (
                 <div
@@ -147,7 +146,7 @@ const Footer = () => {
         </div>
         {/* social's */}
         <div className=" mobile:hidden flex flex-col items-center gap-[20px] mt-[30px]">
-          <div className="flex flex-col justify-center items-center">
+          <div className="flex flex-col justify-center items-center z-[2]">
             <div className="text-[25px] font-Pattaya text-[#094C3B]">
               DOWNLOAD THE APP
             </div>
