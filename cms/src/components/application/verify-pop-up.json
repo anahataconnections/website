@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_application_verify_pop_ups",
+  "info": {
+    "displayName": "verify_pop_up"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "text"
+    },
+    "content": {
+      "type": "blocks"
+    }
+  }
+}

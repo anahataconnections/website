@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_application_profile_popups",
+  "info": {
+    "displayName": "Profile-popup"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "text"
+    },
+    "content": {
+      "type": "blocks"
+    }
+  }
+}

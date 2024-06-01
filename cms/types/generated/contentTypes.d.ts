@@ -882,6 +882,38 @@ export interface ApiApplicationApplication extends Schema.SingleType {
   };
 }
 
+export interface ApiApplicationPopUpApplicationPopUp extends Schema.SingleType {
+  collectionName: 'application_pop_ups';
+  info: {
+    singularName: 'application-pop-up';
+    pluralName: 'application-pop-ups';
+    displayName: 'Application Pop-Up';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    profile_pop_up: Attribute.Component<'application.profile-popup'>;
+    verify_pop_up: Attribute.Component<'application.verify-pop-up'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::application-pop-up.application-pop-up',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::application-pop-up.application-pop-up',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiBlogBlog extends Schema.CollectionType {
   collectionName: 'blogs';
   info: {
@@ -1174,6 +1206,7 @@ declare module '@strapi/types' {
       'api::about.about': ApiAboutAbout;
       'api::about-anahata.about-anahata': ApiAboutAnahataAboutAnahata;
       'api::application.application': ApiApplicationApplication;
+      'api::application-pop-up.application-pop-up': ApiApplicationPopUpApplicationPopUp;
       'api::blog.blog': ApiBlogBlog;
       'api::career.career': ApiCareerCareer;
       'api::collaboration.collaboration': ApiCollaborationCollaboration;

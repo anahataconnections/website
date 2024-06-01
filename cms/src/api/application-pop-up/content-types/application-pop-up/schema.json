@@ -1,0 +1,28 @@
+{
+  "kind": "singleType",
+  "collectionName": "application_pop_ups",
+  "info": {
+    "singularName": "application-pop-up",
+    "pluralName": "application-pop-ups",
+    "displayName": "Application Pop-Up",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "profile_pop_up": {
+      "displayName": "Profile-popup",
+      "type": "component",
+      "repeatable": false,
+      "component": "application.profile-popup"
+    },
+    "verify_pop_up": {
+      "displayName": "verify_pop_up",
+      "type": "component",
+      "repeatable": false,
+      "component": "application.verify-pop-up"
+    }
+  }
+}

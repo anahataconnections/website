@@ -1,5 +1,16 @@
 import type { Schema, Attribute } from '@strapi/strapi';
 
+export interface ApplicationProfilePopup extends Schema.Component {
+  collectionName: 'components_application_profile_popups';
+  info: {
+    displayName: 'Profile-popup';
+  };
+  attributes: {
+    heading: Attribute.Text;
+    content: Attribute.Blocks;
+  };
+}
+
 export interface ApplicationQuestionScreen extends Schema.Component {
   collectionName: 'components_application_question_screens';
   info: {
@@ -26,6 +37,17 @@ export interface ApplicationQuestion extends Schema.Component {
     option_3: Attribute.String;
     option_4: Attribute.String;
     others: Attribute.Boolean;
+  };
+}
+
+export interface ApplicationVerifyPopUp extends Schema.Component {
+  collectionName: 'components_application_verify_pop_ups';
+  info: {
+    displayName: 'verify_pop_up';
+  };
+  attributes: {
+    heading: Attribute.Text;
+    content: Attribute.Blocks;
   };
 }
 
@@ -220,8 +242,10 @@ export interface WebsiteYoga extends Schema.Component {
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
+      'application.profile-popup': ApplicationProfilePopup;
       'application.question-screen': ApplicationQuestionScreen;
       'application.question': ApplicationQuestion;
+      'application.verify-pop-up': ApplicationVerifyPopUp;
       'website.about-founder': WebsiteAboutFounder;
       'website.advertisements': WebsiteAdvertisements;
       'website.any-plans': WebsiteAnyPlans;
