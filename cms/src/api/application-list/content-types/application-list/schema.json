@@ -1,0 +1,21 @@
+{
+  "kind": "singleType",
+  "collectionName": "application_lists",
+  "info": {
+    "singularName": "application-list",
+    "pluralName": "application-lists",
+    "displayName": "Application-List"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "interests": {
+      "displayName": "Interests list",
+      "type": "component",
+      "repeatable": false,
+      "component": "application.interests-list"
+    }
+  }
+}

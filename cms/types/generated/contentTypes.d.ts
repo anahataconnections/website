@@ -882,6 +882,36 @@ export interface ApiApplicationApplication extends Schema.SingleType {
   };
 }
 
+export interface ApiApplicationListApplicationList extends Schema.SingleType {
+  collectionName: 'application_lists';
+  info: {
+    singularName: 'application-list';
+    pluralName: 'application-lists';
+    displayName: 'Application-List';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    interests: Attribute.Component<'application.interests-list'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::application-list.application-list',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::application-list.application-list',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiApplicationPopUpApplicationPopUp extends Schema.SingleType {
   collectionName: 'application_pop_ups';
   info: {
@@ -1206,6 +1236,7 @@ declare module '@strapi/types' {
       'api::about.about': ApiAboutAbout;
       'api::about-anahata.about-anahata': ApiAboutAnahataAboutAnahata;
       'api::application.application': ApiApplicationApplication;
+      'api::application-list.application-list': ApiApplicationListApplicationList;
       'api::application-pop-up.application-pop-up': ApiApplicationPopUpApplicationPopUp;
       'api::blog.blog': ApiBlogBlog;
       'api::career.career': ApiCareerCareer;

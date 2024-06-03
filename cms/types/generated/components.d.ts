@@ -1,5 +1,15 @@
 import type { Schema, Attribute } from '@strapi/strapi';
 
+export interface ApplicationInterestsList extends Schema.Component {
+  collectionName: 'components_application_interests_lists';
+  info: {
+    displayName: 'Interests list';
+  };
+  attributes: {
+    interests: Attribute.JSON;
+  };
+}
+
 export interface ApplicationProfilePopup extends Schema.Component {
   collectionName: 'components_application_profile_popups';
   info: {
@@ -242,6 +252,7 @@ export interface WebsiteYoga extends Schema.Component {
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
+      'application.interests-list': ApplicationInterestsList;
       'application.profile-popup': ApplicationProfilePopup;
       'application.question-screen': ApplicationQuestionScreen;
       'application.question': ApplicationQuestion;
