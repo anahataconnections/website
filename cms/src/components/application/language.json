@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_application_languages",
+  "info": {
+    "displayName": "Language"
+  },
+  "options": {},
+  "attributes": {
+    "language_list": {
+      "type": "json"
+    }
+  }
+}

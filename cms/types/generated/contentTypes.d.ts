@@ -888,12 +888,18 @@ export interface ApiApplicationListApplicationList extends Schema.SingleType {
     singularName: 'application-list';
     pluralName: 'application-lists';
     displayName: 'Application-List';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
     interests: Attribute.Component<'application.interests-list'>;
+    education: Attribute.Component<'application.education'>;
+    Professions: Attribute.Component<'application.professions'>;
+    Religion: Attribute.Component<'application.religion'>;
+    Language: Attribute.Component<'application.language'>;
+    Looking_for: Attribute.Component<'application.looking-for'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

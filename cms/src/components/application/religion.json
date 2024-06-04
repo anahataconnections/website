@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_application_religions",
+  "info": {
+    "displayName": "Religion"
+  },
+  "options": {},
+  "attributes": {
+    "religion_list": {
+      "type": "json"
+    }
+  }
+}

@@ -4,7 +4,8 @@
   "info": {
     "singularName": "application-list",
     "pluralName": "application-lists",
-    "displayName": "Application-List"
+    "displayName": "Application-List",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -16,6 +17,36 @@
       "type": "component",
       "repeatable": false,
       "component": "application.interests-list"
+    },
+    "education": {
+      "displayName": "Education",
+      "type": "component",
+      "repeatable": false,
+      "component": "application.education"
+    },
+    "Professions": {
+      "displayName": "Professions",
+      "type": "component",
+      "repeatable": false,
+      "component": "application.professions"
+    },
+    "Religion": {
+      "displayName": "Religion",
+      "type": "component",
+      "repeatable": false,
+      "component": "application.religion"
+    },
+    "Language": {
+      "displayName": "Language",
+      "type": "component",
+      "repeatable": false,
+      "component": "application.language"
+    },
+    "Looking_for": {
+      "displayName": "Looking for",
+      "type": "component",
+      "repeatable": false,
+      "component": "application.looking-for"
     }
   }
 }

@@ -1,11 +1,12 @@
 {
   "collectionName": "components_application_interests_lists",
   "info": {
-    "displayName": "Interests list"
+    "displayName": "Interests list",
+    "description": ""
   },
   "options": {},
   "attributes": {
-    "interests": {
+    "interests_list": {
       "type": "json"
     }
   }

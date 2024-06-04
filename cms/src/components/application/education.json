@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_application_educations",
+  "info": {
+    "displayName": "Education"
+  },
+  "options": {},
+  "attributes": {
+    "education_list": {
+      "type": "json"
+    }
+  }
+}

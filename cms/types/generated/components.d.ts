@@ -1,12 +1,53 @@
 import type { Schema, Attribute } from '@strapi/strapi';
 
+export interface ApplicationEducation extends Schema.Component {
+  collectionName: 'components_application_educations';
+  info: {
+    displayName: 'Education';
+  };
+  attributes: {
+    education_list: Attribute.JSON;
+  };
+}
+
 export interface ApplicationInterestsList extends Schema.Component {
   collectionName: 'components_application_interests_lists';
   info: {
     displayName: 'Interests list';
+    description: '';
   };
   attributes: {
-    interests: Attribute.JSON;
+    interests_list: Attribute.JSON;
+  };
+}
+
+export interface ApplicationLanguage extends Schema.Component {
+  collectionName: 'components_application_languages';
+  info: {
+    displayName: 'Language';
+  };
+  attributes: {
+    language_list: Attribute.JSON;
+  };
+}
+
+export interface ApplicationLookingFor extends Schema.Component {
+  collectionName: 'components_application_looking_fors';
+  info: {
+    displayName: 'Looking for';
+  };
+  attributes: {
+    looking_for_list: Attribute.JSON;
+  };
+}
+
+export interface ApplicationProfessions extends Schema.Component {
+  collectionName: 'components_application_professions';
+  info: {
+    displayName: 'Professions';
+  };
+  attributes: {
+    professions_list: Attribute.JSON;
   };
 }
 
@@ -47,6 +88,16 @@ export interface ApplicationQuestion extends Schema.Component {
     option_3: Attribute.String;
     option_4: Attribute.String;
     others: Attribute.Boolean;
+  };
+}
+
+export interface ApplicationReligion extends Schema.Component {
+  collectionName: 'components_application_religions';
+  info: {
+    displayName: 'Religion';
+  };
+  attributes: {
+    religion_list: Attribute.JSON;
   };
 }
 
@@ -252,10 +303,15 @@ export interface WebsiteYoga extends Schema.Component {
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
+      'application.education': ApplicationEducation;
       'application.interests-list': ApplicationInterestsList;
+      'application.language': ApplicationLanguage;
+      'application.looking-for': ApplicationLookingFor;
+      'application.professions': ApplicationProfessions;
       'application.profile-popup': ApplicationProfilePopup;
       'application.question-screen': ApplicationQuestionScreen;
       'application.question': ApplicationQuestion;
+      'application.religion': ApplicationReligion;
       'application.verify-pop-up': ApplicationVerifyPopUp;
       'website.about-founder': WebsiteAboutFounder;
       'website.advertisements': WebsiteAdvertisements;

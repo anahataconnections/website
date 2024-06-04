@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_application_professions",
+  "info": {
+    "displayName": "Professions"
+  },
+  "options": {},
+  "attributes": {
+    "professions_list": {
+      "type": "json"
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_application_looking_fors",
+  "info": {
+    "displayName": "Looking for"
+  },
+  "options": {},
+  "attributes": {
+    "looking_for_list": {
+      "type": "json"
+    }
+  }
+}
