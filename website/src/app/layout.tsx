@@ -32,11 +32,8 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${eva.variable}`}>
       <body className={`${inter.className} overflow-x-hidden`}>
-        <Navbar />
-        <MobileNavbar />
-        {children}
-        <div className=" bg-no-repeat bg-cover">
-          <Footer />
+        <div className="w-screen h-screen flex justify-center items-center">
+          <h1 className="text-[50px]">Coming soon....</h1>
         </div>
       </body>
     </html>
