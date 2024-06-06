@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_application_workouts",
+  "info": {
+    "displayName": "Workout"
+  },
+  "options": {},
+  "attributes": {
+    "workout_list": {
+      "type": "json"
+    }
+  }
+}

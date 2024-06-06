@@ -112,6 +112,16 @@ export interface ApplicationVerifyPopUp extends Schema.Component {
   };
 }
 
+export interface ApplicationWorkout extends Schema.Component {
+  collectionName: 'components_application_workouts';
+  info: {
+    displayName: 'Workout';
+  };
+  attributes: {
+    workout_list: Attribute.JSON;
+  };
+}
+
 export interface WebsiteAboutFounder extends Schema.Component {
   collectionName: 'components_website_about_founders';
   info: {
@@ -313,6 +323,7 @@ declare module '@strapi/types' {
       'application.question': ApplicationQuestion;
       'application.religion': ApplicationReligion;
       'application.verify-pop-up': ApplicationVerifyPopUp;
+      'application.workout': ApplicationWorkout;
       'website.about-founder': WebsiteAboutFounder;
       'website.advertisements': WebsiteAdvertisements;
       'website.any-plans': WebsiteAnyPlans;

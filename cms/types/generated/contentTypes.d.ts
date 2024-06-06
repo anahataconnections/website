@@ -900,6 +900,7 @@ export interface ApiApplicationListApplicationList extends Schema.SingleType {
     Religion: Attribute.Component<'application.religion'>;
     Language: Attribute.Component<'application.language'>;
     Looking_for: Attribute.Component<'application.looking-for'>;
+    workout: Attribute.Component<'application.workout'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

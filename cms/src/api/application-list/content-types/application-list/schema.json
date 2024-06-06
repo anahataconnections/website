@@ -47,6 +47,12 @@
       "type": "component",
       "repeatable": false,
       "component": "application.looking-for"
+    },
+    "workout": {
+      "displayName": "Workout",
+      "type": "component",
+      "repeatable": false,
+      "component": "application.workout"
     }
   }
 }
