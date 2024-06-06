@@ -22,6 +22,8 @@
  
 }
 
+
+
 @keyframes logo-animation {
   0%{
     
@@ -111,6 +113,15 @@
  .rose-opacity {
   animation: opcity-0-1 4.5s ease-out;
 }
+}
+
+@media (max-height:700px) {
+  .man-image {
+    left: -4%;
+ }
+ .woman-image {
+     right: -4%
+ }
 }
 
 
