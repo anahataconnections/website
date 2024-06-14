@@ -44,8 +44,6 @@ async function fetchEvents() {
 
 const Events = async () => {
   const Event = await fetchEvents();
-  // const controls = useAnimationControls();
-  // console.log(Event.data);
   return (
     <main
       className="bg-white w-[100%] scroll-smooth 

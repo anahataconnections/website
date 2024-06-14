@@ -70,7 +70,6 @@ export default function WhyAnahata() {
   const bannerImageUrl =
     banner_Image?.bannerImage?.formats?.thumbnail?.url || "";
 
-  console.log(bannerImageUrl);
   return (
     <div className="bg-white w-[100vw] h-full top-0  overflow-x-hidden">
       <Image

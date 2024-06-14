@@ -30,7 +30,6 @@ const Testimonials = () => {
   if (!testimonialData) {
     return <div>Loading...</div>;
   }
-  console.log(testimonialData);
 
   return (
     <div className="w-[100%]  bg-[#F0FDF9] flex flex-col   gap-[50px] items-center max-mobile:py-[30px] py-[30px] pb-[50px]">
