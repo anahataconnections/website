@@ -12,7 +12,7 @@ const Footer = () => {
   return (
     <div className="relative z-[10]">
       {/* flower */}
-      <div className="w-[350px] h-[600px] small-tab:w-[1080px] small-tab:h-[1200px] absolute bottom-0 right-0 mobile:translate-x-[18%] bg-flower_back bg-cover bg-no-repeat z-0"></div>
+      <div className="w-[350px] h-[600px] small-tab:w-[1080px] small-tab:h-[1200px] absolute bottom-0 right-0 mobile:translate-x-[18%] bg-flower_back bg-cover bg-no-repeat -z-[50]"></div>
 
 
       <div className="bg-transparent flex max-mobile:flex-col justify-center items-center gap-[20px] mobile:gap-[300px] border-t-[2px] border-gray-200 pt-[20px] pb-[40px] z-[10] mx-10">

@@ -71,13 +71,13 @@ export default function WhyAnahata() {
     banner_Image?.bannerImage?.formats?.thumbnail?.url || "";
 
   return (
-    <div className="bg-white w-[100vw] h-full top-0  overflow-x-hidden">
+    <div className="bg-white w-full h-full top-0 overflow-x-hidden">
       <Image
         src="assets/banner.svg"
         alt="Hero Image"
-        width={1920} // Set width to cover the full width of the screen
-        height={400} // Adjust height as needed
-        className="w-full object-cover h-[60vh] custom1:h-[70vh] custom:h-[68vh]" // Use w-full to occupy full width
+        width={1920} 
+        height={400} 
+        className="w-full object-cover h-[60vh] custom1:h-[70vh] custom:h-[68vh]" 
       />
 
       <div className="flex justify-center items-center "></div>
@@ -113,8 +113,8 @@ export default function WhyAnahata() {
         ))}
       </div>
 
-      <div className="mt-16">
-        <h1 className="text-[#166534] font-Pattaya text-center text-[2.5rem] xl:text-[3rem] ">
+      <div className="mb-10">
+        <h1 className="my-20 text-[#166534] font-Pattaya text-center text-[2.5rem] xl:text-[3rem] ">
           More from us
         </h1>
         <Blogs />
