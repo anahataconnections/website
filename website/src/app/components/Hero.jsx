@@ -37,7 +37,7 @@ const Hero = () => {
           <div className="flex justify-center">
             <Link
               href="../../Whyanahata" // Corrected the typo here
-              className="bg-[#094C3B] text-white rounded-full text-[20px] tracking-wider font-sarabun px-[50px] py-[10px] cursor-pointer hover:bg-[#286f5d] font-[550] hover:font-bold "
+              className="bg-[#094C3B] text-white rounded-full text-[20px] font-sarabun px-[50px] py-[10px] cursor-pointer hover:bg-[#286f5d] font-[550] hover:font-bold "
             >
               Know More
             </Link>
