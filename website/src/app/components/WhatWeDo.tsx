@@ -26,12 +26,12 @@ const WhatWeDo: React.FC<WhatWeDoProps> = ({
 }) => {
   return (
     <div className=" custom2:px-28  pt-16 flex flex-col space-y-3">
-      <h1 className="font-Pattaya text-emerald-900 text-center text-5xl mb-8">
+      <h1 className="font-Pattaya text-emerald-900 text-center text-5xl my-10">
         What we do?
       </h1>
 
       {/* First Item */}
-      <div className="text-black flex flex-row md:flex-row items-center md:items-start gap-2">
+      <div className="text-black py-10 flex flex-row md:flex-row items-center md:items-start gap-2 gap-x-10">
         <div className="md:w-1/2">
           <Image
             src="assets/collab.svg"
@@ -51,7 +51,7 @@ const WhatWeDo: React.FC<WhatWeDoProps> = ({
       </div>
 
       {/* Second Item */}
-      <div className="text-black flex flex-row md:flex-row-reverse items-center md:items-center gap-2">
+      <div className="text-black py-10 flex flex-row md:flex-row-reverse items-center md:items-center gap-2 gap-x-10">
         <div className="md:w-1/2 custom2:pl-6">
           <Image
             src="assets/collab.svg"
@@ -71,7 +71,7 @@ const WhatWeDo: React.FC<WhatWeDoProps> = ({
       </div>
 
       {/* Third Item */}
-      <div className="text-black flex flex-row md:flex-row items-center md:items-start gap-2">
+      <div className="text-black py-10 flex flex-row md:flex-row items-center md:items-start gap-2 gap-x-10">
         <div className="md:w-1/2">
           <Image
             src="assets/collab.svg"

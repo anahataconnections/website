@@ -75,7 +75,7 @@ const Collaboration: React.FC = () => {
   const { collaboration, advertisement, yoga } = attributes;
 
   return (
-    <div className="h-screen scroll-smooth overflow-x-hidden">
+    <div className="h-auto scroll-smooth">
       <section className="">
         <div className="w-full custom2:h-[70vh] h-[60vh] relative">
           <Image
@@ -89,7 +89,7 @@ const Collaboration: React.FC = () => {
             <h2 className="font-Satisfy text-white text-[4rem] mb-4">
               Collaborate with us?
             </h2>
-            <p className="text-white text-lg mb-6 text-center font-sarabun">
+            <p className="text-white font-semibold text-lg mb-6 text-center font-sarabun">
               Our collaboration opens doors to new connections.
             </p>
             <button className="bg-[rgb(9,76,59)] text-white px-6 py-3 rounded-md hover:bg-green-800 font-sarabun">

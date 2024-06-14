@@ -31,9 +31,9 @@ const Blogs = () => {
 
   return (
     <div className="w-[100%] flex flex-col  items-center gap-[20px] ">
-      <div className="w-[100%] font-sarabun flex max-mobile:flex-col max-mobile:gap-[50px] items-center justify-between">
+      <div className="w-[100%] font-sarabun flex justify-center items-center gap-x-10 max-mobile:flex-col max-mobile:gap-[50px]">
         {blogs?.map((blog, index) => (
-          <Link key={index} href={`../Blog-main/${blog.attributes.tiltle}`}>
+          <Link key={index} href={`../Blog-main/${blog.attributes.tiltle}` }>
             <Blogcard
               imageUrl={blog.attributes.image.data.attributes.url}
               heading={blog.attributes.tiltle}
