@@ -12,12 +12,12 @@ export default function Ourstory() {
         src="/assets/bg2.png"
         width={500}
         height={100}
-        className="story-img  w-[100%] h-[50vh] mobile:h-[65vh] object-cover object-center"
+        className="story-img w-[100%] h-[50vh] mobile:h-[65vh] object-cover object-center"
         alt="our story banner"
       />
-      <div className="w-[80vw] mobile:w-[60vw] flex flex-col items-center pt-[30px] pb-[50px]  mobile:pt-[50px] gap-[50px] ">
+      <div className="w-full lg:w-full px-5 lg:px-32 flex flex-col items-center pt-[30px] pb-[50px]  mobile:pt-[50px] gap-[50px] ">
         {/* image and info */}
-        <div className="w-[100%] flex  max-mobile:flex-col-reverse max-mobile:items-center mobile:justify-between">
+        <div className="w-full flex max-mobile:flex-col-reverse max-mobile:items-center mobile:justify-between">
           <div className="flex flex-col gap-[5px] mobile:gap-[20px] max-mobile:items-center ">
             <div className="font-Pattaya text-[30px] mobile:text-[35px] text-[#094C3B]">
               Rashmi Bansal
@@ -92,7 +92,7 @@ export default function Ourstory() {
         </div>
       </div>
 
-      <div className="  flex items-center justify-center rounded-m  mt-[50px] mb-[100px]">
+      <div className=" flex flex-col lg:flex-row justify-center rounded-m  mt-[50px] mb-[100px] px-5 lg:px-32 gap-x-10 gap-y-5">
         <Image
           src="/assets/img1.png"
           width={600}
@@ -100,6 +100,15 @@ export default function Ourstory() {
           className="max-mobile:w-[90vw]"
           alt="image"
         />
+        <p className=" font-sarabun text-[18px] mobile:text-[20px] leading-[25px] mobile:leading-[50px]">
+          Share shadow italic rotate vertical align pencil style. Layout
+          strikethrough component asset overflow pixel strikethrough stroke auto
+          polygon. Arrow distribute scale library pencil distribute arrange
+          prototype union. Layout mask undo figma figjam reesizing image plugin
+          invite arrange. Rectangle horizontal ipsum variant layer. Flatten
+          project undo style mask fill auto text rotate. Polygon library frame
+          reesizing scale distribute ipsum slice follower polygon.{" "}
+        </p>
       </div>
     </div>
   );
