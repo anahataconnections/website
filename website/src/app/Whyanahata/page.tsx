@@ -71,7 +71,8 @@ export default function WhyAnahata() {
     banner_Image?.bannerImage?.formats?.thumbnail?.url || "";
 
   return (
-    <div className="bg-white w-full h-full top-0 overflow-x-hidden">
+    <div className="bg-transparent w-full h-full top-0 overflow-x-hidden z-20 relative">
+
       <Image
         src="assets/banner.svg"
         alt="Hero Image"
@@ -113,7 +114,7 @@ export default function WhyAnahata() {
         ))}
       </div>
 
-      <div className="mb-10">
+      <div className="mb-10 z-[11]">
         <h1 className="my-20 text-[#166534] font-Pattaya text-center text-[2.5rem] xl:text-[3rem] ">
           More from us
         </h1>

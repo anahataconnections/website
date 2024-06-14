@@ -15,7 +15,7 @@ export default function Ourstory() {
         className="story-img w-[100%] h-[50vh] mobile:h-[65vh] object-cover object-center"
         alt="our story banner"
       />
-      <div className="w-full lg:w-full px-5 lg:px-32 flex flex-col items-center pt-[30px] pb-[50px]  mobile:pt-[50px] gap-[50px] ">
+      <div className="w-full lg:w-full px-5 lg:px-52 flex flex-col items-center pt-[30px] pb-[50px]  mobile:pt-[50px] gap-[50px] ">
         {/* image and info */}
         <div className="w-full flex max-mobile:flex-col-reverse max-mobile:items-center mobile:justify-between">
           <div className="flex flex-col gap-[5px] mobile:gap-[20px] max-mobile:items-center ">
@@ -92,7 +92,7 @@ export default function Ourstory() {
         </div>
       </div>
 
-      <div className=" flex flex-col lg:flex-row justify-center rounded-m  mt-[50px] mb-[100px] px-5 lg:px-32 gap-x-10 gap-y-5">
+      <div className=" flex flex-col lg:flex-row justify-center rounded-m  mt-[50px] mb-[100px] px-5 lg:px-52 gap-x-10 gap-y-5">
         <Image
           src="/assets/img1.png"
           width={600}
