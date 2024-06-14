@@ -2,7 +2,7 @@
 "use-client";
 
 import React from "react";
-import Link from "next/link"; // Import Link from Next.js
+import Link from "next/link"; 
 import Motionframe from "./Motionframe";
 import { AnimationFrame } from "./AnimationFrame";
 import "../Style/animation.css";
@@ -13,10 +13,10 @@ const Hero = () => {
   };
 
   return (
-    <div className="w-screen flex flex-col items-center  bg-no-repeat bg-cover bg-center gap-[20px] ">
+    <div className="w-screen flex flex-col items-center bg-no-repeat bg-cover bg-center gap-[20px] ">
       <div className=" w-screen h-fit  items-center flex flex-col gap-[10px]">
         <div className="bg-home-page-back bg-cover bg-no-repeat bg-center">
-          <div className="relative w-screen h-[100vh] mobile:h-[80vh] bg-radial-gradient  flex justify-center overflow-hidden frame ">
+          <div className="relative w-screen min-h-screen mobile:h-[80vh] bg-radial-gradient  flex justify-center overflow-hidden frame ">
             <AnimationFrame />
             <Motionframe />
           </div>

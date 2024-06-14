@@ -29,6 +29,7 @@ const Blogs = () => {
     fetchData();
   }, []);
 
+  console.log(blogs);
   return (
     <div className="w-[100%] flex flex-col  items-center gap-[20px] ">
       <div className="w-[100%] font-sarabun flex max-mobile:flex-col max-mobile:gap-[50px] items-center justify-between">
@@ -46,14 +47,14 @@ const Blogs = () => {
           </Link>
         ))}
       </div>
-      <div className="flex items-center   text-[#979797]">
+      <div className="flex items-center justify-center  text-[#979797]"> 
         <Link
-          className="text-[20px] mobile:text-[25px] underline font-nota font-bold"
+          className="text-lg underline font-nota font-bold"
           href="/Blog"
         >
           Read More
         </Link>
-        <IoIosArrowForward className="text-[28px] mobile:text-[35px]" />
+        <IoIosArrowForward size={20} className="mt-1" />
       </div>
     </div>
   );

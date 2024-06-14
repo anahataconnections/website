@@ -75,7 +75,7 @@ const Testimonials = () => {
                         onClick={() => setLinesToShow(8)}
                         className="max-mobile:text-[12px] text-[#094C3B] font-Satisfy  font-[500] text-end py-[3px] cursor-pointer"
                       >
-                        reade more...
+                        read more...
                       </p>
                     ) : (
                       <p

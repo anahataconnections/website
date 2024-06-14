@@ -37,8 +37,6 @@ const Home = () => {
     fetchData();
   }, []);
 
-  console.log(homeData);
-
   return (
     <main className="w-screen flex flex-col items-center  bg-white smooth-scroll overflow-x-hidden">
       <Hero />
@@ -51,7 +49,7 @@ const Home = () => {
 
         <div className="w-[100%] flex flex-col gap-[20px] mobile:gap-[50px] ">
           <header className="text-[25px] mobile:text-[40px] font-Pattaya flex mt-[50px] items-center justify-center text-[#094C3B]">
-            Our Blogs{" "}
+            Blogs
           </header>
           {/* blog container */}
           <Blogs />

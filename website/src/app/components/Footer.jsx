@@ -71,9 +71,9 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="w-[90%] mobile:w-[40vw] flex flex-col items-end justify-end text-black gap-[50px] ">
-          <div className="flex flex-col items-center z-[2]">
-            <h3 className="text-[20px] mobile:text-[22px] font-[500] capitalize">
+        <div className="w-auto mobile:w-[40vw] flex flex-col items-center justify-center lg:justify-end text-black gap-[50px] ">
+          <div className="flex flex-col items-center lg:items-start z-[2]">
+            <h3 className="text-sm lg:text-[20px] font-[500] capitalize">
               Subscribe for our latest updates
             </h3>
             <form
