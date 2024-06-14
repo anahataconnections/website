@@ -18,7 +18,7 @@ const Privacy = async () => {
   // console.log(item.data.attributes.policy[0].children[0].text);
   return (
     <main className=" w-scren flex justify-center items-center mt-[100px] mb-[100px]">
-      <div className="w-[80vw] mobile:w-[60vw] text-justify bg-grey-gradient p-[20px]">
+      <div className="w-[80vw] mobile:w-[60vw] text-justify bg-[#ffc4b8] p-[20px]">
         <div className="font-Pattaya text-[25px]   mobile:text-3xl text-[#094C3B]">
           Privacy Policy
         </div>

@@ -29,7 +29,6 @@ const Blogs = () => {
     fetchData();
   }, []);
 
-  console.log(blogs);
   return (
     <div className="w-[100%] flex flex-col  items-center gap-[20px] ">
       <div className="w-[100%] font-sarabun flex max-mobile:flex-col max-mobile:gap-[50px] items-center justify-between">
