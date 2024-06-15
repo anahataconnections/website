@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Blogs from "../../components/Blogs";
 import { fetchBlogByName, formatDate } from "@/helpers/blog";
+
 interface BlogPageProps {
   params: {
     Name: string;
