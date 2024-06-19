@@ -8,6 +8,7 @@ import Image from "next/image";
 import Blogs from "../components/Blogs";
 
 interface BannerImage {
+  data: any;
   id: string;
   formats: {
     thumbnail: {
@@ -20,6 +21,7 @@ interface Data {
   attributes: {
     banner_Image: { id: string; bannerImage: BannerImage };
     what_is_anahata_chakra: {
+      image: any;
       Heading_title: string;
       date: string;
       content: { type: string; children: { text: string }[] }[];
@@ -42,21 +44,30 @@ async function fetchWhy(): Promise<Data | null> {
 
 export default function WhyAnahata() {
   const [data, setData] = useState<Data | null>(null);
+  const [loading, setLoading] = useState(true); 
 
   useEffect(() => {
     const fetchData = async () => {
-      const result = await fetchWhy();
-      setData(result);
+      try {
+        const result = await fetchWhy();
+        setData(result);
+        setLoading(false); 
+      } catch (error) {
+        console.error("Failed to fetch data:", error);
+        setLoading(false); 
+      }
     };
     fetchData();
   }, []);
 
-    console.log(data);
+  if (loading) return <div>Loading...</div>;
 
-    
-  if (!data) return <div>Loading...</div>;
+  if (!data) return <div>No data found.</div>; 
 
   const { banner_Image, what_is_anahata_chakra } = data.attributes;
+
+  console.log(what_is_anahata_chakra);
+  console.log(banner_Image);
 
   const formatDate = (dateString: string): string => {
     const date = new Date(dateString);
@@ -70,17 +81,18 @@ export default function WhyAnahata() {
       return `${diffDays} days ago`;
     }
   };
-  const bannerImageUrl = data.attributes.banner_Image.bannerImage.data.attributes.url;
+
+  const bannerImageUrl =
+    data.attributes.banner_Image.bannerImage;
 
   return (
     <div className="bg-transparent w-full h-full top-0 overflow-x-hidden z-20 relative">
-
       <Image
-        src={bannerImageUrl}
+        src={bannerImageUrl.data.attributes.url}
         alt="Hero Image"
-        width={1920} 
-        height={400} 
-        className="w-full object-cover h-[60vh] custom1:h-[70vh] custom:h-[68vh]" 
+        width={1920}
+        height={400}
+        className="w-full object-cover h-[60vh] custom1:h-[70vh] custom:h-[68vh]"
       />
 
       <div className="flex justify-center items-center "></div>
