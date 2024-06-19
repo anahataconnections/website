@@ -11,7 +11,7 @@ const Blogcard = ({ imageUrl, heading, data, published }) => {
           src={imageUrl}
           width={500}
           height={300}
-          className="w-[100%] h-[60%]"
+          className="w-full h-60 rounded-t-xl object-cover"
           alt="Screenshots of the dashboard project showing desktop and mobile versions"
         />
       </div>

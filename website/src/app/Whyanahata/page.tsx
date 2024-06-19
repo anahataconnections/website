@@ -33,7 +33,7 @@ async function fetchWhy(): Promise<Data | null> {
       `https://cms.anahataaconnections.com/api/about-anahata?populate=banner_Image.bannerImage,what_is_anahata_chakra,what_is_anahata_chakra.image`
     );
     const response = await res.json();
-    return response.data || null;
+    return response.data;
   } catch (err) {
     console.error(err);
     return null;
@@ -51,6 +51,9 @@ export default function WhyAnahata() {
     fetchData();
   }, []);
 
+    console.log(data);
+
+    
   if (!data) return <div>Loading...</div>;
 
   const { banner_Image, what_is_anahata_chakra } = data.attributes;
@@ -67,14 +70,13 @@ export default function WhyAnahata() {
       return `${diffDays} days ago`;
     }
   };
-  const bannerImageUrl =
-    banner_Image?.bannerImage?.formats?.thumbnail?.url || "";
+  const bannerImageUrl = data.attributes.banner_Image.bannerImage.data.attributes.url;
 
   return (
     <div className="bg-transparent w-full h-full top-0 overflow-x-hidden z-20 relative">
 
       <Image
-        src="assets/banner.svg"
+        src={bannerImageUrl}
         alt="Hero Image"
         width={1920} 
         height={400} 
@@ -93,11 +95,11 @@ export default function WhyAnahata() {
       <div className="flex justify-center my-4">
         <div>
           <Image
-            src="assets/banner1.svg"
+            src={what_is_anahata_chakra.image.data.attributes.url}
             alt="Additional Image"
             width={500}
             height={100}
-            className="object-fit bg-cover custom:mt-12 custom1:mx-20 custom1:mt-12 custom1:w-[835px] customMax:w-[1700px] customMax:max-h-[570px]"
+            className="object-fit bg-cover custom:mt-12 custom1:mx-20 custom1:mt-12 custom1:w-[835px] customMax:w-[1700px] customMax:max-h-[570px] rounded-md"
           />
         </div>
       </div>

@@ -1,13 +1,36 @@
 /* eslint-disable */
 "use-client";
 
-import React from "react";
-import Link from "next/link"; 
+import React, { useEffect, useState } from "react";
+import Link from "next/link";
 import Motionframe from "./Motionframe";
 import { AnimationFrame } from "./AnimationFrame";
 import "../Style/animation.css";
 
+async function fetchEvents() {
+  try {
+    const res = await fetch(
+      `https://cms.anahataaconnections.com/api/home?populate=*`
+    );
+    const response = await res.json();
+
+    return response.data;
+  } catch (err) {
+    console.error(err);
+  }
+}
+
 const Hero = () => {
+  const [data, setData] = useState(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const res = await fetchEvents();
+      setData(res.attributes.why_anahata_connections);
+    };
+    fetchData();
+  }, []);
+
   const handleClick = () => {
     router.push("/Whyanahata");
   };
@@ -24,19 +47,22 @@ const Hero = () => {
 
         <div className="w-[90vw] small-tab:w-[60vw] flex flex-col gap-[20px] small-tab:gap-[30px] items-center mt-[50px]">
           <header className="font-Pattaya text-[25px] mobile:text-[40px] text-[#094C3B] ">
-            Why Anahata Connections ?
+            {data?.title}
           </header>
           <header className=" text-black text-[17px] mobile:text-[21px]  tab:text-[28px] text-center font-Satisfy  ">
-            Welcome to Anahata Connections, where love intertwines with
-            spirituality. Explore meaningful connections grounded in yogic
-            science and the wisdom of the heart chakra. Our platform unites
-            kindred spirits aligned with mindfulness and compassion. Join us on
-            the journey to deeper connections and conscious relationships
+            {data?.content &&
+              data.content.map((paragraph, index) => (
+                <React.Fragment key={index}>
+                  {paragraph.children.map((child, childIndex) => (
+                    <p key={childIndex}>{child.text}</p>
+                  ))}
+                </React.Fragment>
+              ))}{" "}
           </header>
-          {/* Use Link component to navigate to WhyAnahita page */}
+
           <div className="flex justify-center">
             <Link
-              href="../../Whyanahata" // Corrected the typo here
+              href="../../Whyanahata" 
               className="bg-[#094C3B] text-white rounded-full text-[20px] font-sarabun px-[50px] py-[10px] cursor-pointer hover:bg-[#286f5d] font-[550] hover:font-bold "
             >
               Know More
