@@ -6,7 +6,6 @@ import { JobCard } from "../components/pages/career/JobCard";
 
 const career = async () => {
   const { data } = await getJobs();
-  console.log(data[0]);
   return (
     <div className="w-screen min-h-screen flex flex-col items-center pb-[200px] z-[2]">
       {/* banner */}

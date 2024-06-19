@@ -12,11 +12,14 @@ const Footer = () => {
   return (
     <div className="relative z-[10]">
       {/* flower */}
-      <div className="w-[350px] h-[600px] small-tab:w-[1080px] small-tab:h-[1200px] absolute bottom-0 right-0 mobile:translate-x-[18%] bg-flower_back bg-cover bg-no-repeat z-0"></div>
-      <div className="bg-transparent flex max-mobile:flex-col justify-center items-center gap-[20px] mobile:gap-[300px] border-t-[2px] border-gray-200 pt-[20px] pb-[40px] z-[10]">
-        <div className="flex flex-col gap-[10px] z-[2]">
+      <div className="w-[350px] h-[600px] small-tab:w-[1080px] small-tab:h-[1200px] absolute bottom-0 right-0 mobile:translate-x-[18%] bg-flower_back bg-cover bg-no-repeat -z-[50]"></div>
+
+
+      <div className="bg-transparent flex max-mobile:flex-col justify-center items-center gap-[20px] mobile:gap-[300px] border-t-[2px] border-gray-200 pt-[20px] pb-[40px] z-[10] mx-10">
+
+
+        <div className="flex flex-col justify-center items-center gap-[10px] z-[2]">
           <div className="flex flex-col items-center justify-center gap-[10px] mobile:gap-[15px]">
-            {/* <img src={logo} alt="" className="object-cover h-32 w-32" /> */}
             <Image
               src="/assets/logo1.png"
               width={130}
@@ -24,17 +27,17 @@ const Footer = () => {
               className=" w-[100px]"
               alt="brand log "
             />
-            <div className="font-EvaMayasari font-bold  text-[#094C3B] text-[45px]">
+            <div className="font-EvaMayasari font-bold text-[#094C3B] text-[45px]">
               Anahata Connections
             </div>
           </div>
           {/* social's */}
           <div className="hidden mobile:flex flex-col items-center gap-[15px] mobile:gap-[20px]">
-            <div className="flex flex-col gap-[5px] z-[2] ">
-              <div className="text-[25px] text-[#094C3B] font-bold">
+            <div className="flex flex-col justify-center items-center gap-[5px] z-[2] ">
+              <div className="text-base text-[#094C3B] font-bold mb-4">
                 Follow us on
               </div>
-              <div className="flex  gap-[5px]">
+              <div className="flex justify-center items-center gap-[5px]">
                 {socialObj.map(({ icon, title }) => {
                   return (
                     <div
@@ -71,9 +74,9 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="w-[90%] mobile:w-[40vw] flex flex-col items-end justify-end text-black gap-[50px] ">
-          <div className="flex flex-col items-center z-[2]">
-            <h3 className="text-[20px] mobile:text-[22px] font-[500] capitalize">
+        <div className="w-auto mobile:w-[40vw] flex flex-col items-center lg:items-end justify-center lg:justify-end text-black gap-[50px] ">
+          <div className="flex flex-col items-center lg:items-start z-[2]">
+            <h3 className="text-sm lg:text-[20px] font-[500] capitalize">
               Subscribe for our latest updates
             </h3>
             <form
@@ -125,16 +128,16 @@ const Footer = () => {
                 </div>
               );
             })}
-            <div className="mobile:hidden flex flex-col gap-[10px] z-[2]">
-              <div className="text-[25px] text-[#094C3B] font-bold mt-[20px]">
-                Follow us on :
+            <div className="mobile:hidden flex flex-col justify-center items-center gap-y-[10px] z-[2]">
+              <div className="text-base text-center text-[#094C3B] font-bold mt-[20px]">
+                Follow us on
               </div>
-              <div className="flex  gap-[5px]">
+              <div className="flex gap-x-[10px]">
                 {socialObj.map(({ icon, title }) => {
                   return (
                     <div
                       key={title}
-                      className="text-[14px] text-white bg-[#094C3B] hover:bg-[#094C3Ba8] p-[5px] rounded-full cursor-pointer "
+                      className="text-[14px] text-white bg-[#094C3B] hover:bg-[#094C3Ba8] p-[8px] rounded-full cursor-pointer "
                     >
                       {icon}
                     </div>

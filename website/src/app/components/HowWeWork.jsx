@@ -17,10 +17,10 @@ const HowWeWork = () => {
         <div className=" mobile:w-[33%] flex flex-col gap-[10px] items-center justify-center">
           <Image
             src={"/assets/addAccound-hww.svg"}
-            width={50}
-            height={50}
+            width={100}
+            height={100}
             alt="addaccount logo"
-            className="w-[45px] h-[45px]"
+            className="w-[65px] h-[65px]"
           />
           <div className=" text-[17px] text-black font-medium ">
             Create Account
@@ -29,7 +29,7 @@ const HowWeWork = () => {
 
         <div className="mobile:w-[33%] flex flex-col items-center  gap-[10px] justify-center max-mobile:border-y-[1px] mobile:border-x-2 border-black max-mobile:py-[20px]">
           {/* <img src={two} alt="" /> */}
-          <FaMagnifyingGlass className="text-[#0C6242] text-[40px]" />
+          <FaMagnifyingGlass  className="text-[#0C6242] text-[65px]" />
 
           <div className="text-[17px] text-black font-medium ">
             Discover Compatible Profiles
@@ -42,7 +42,7 @@ const HowWeWork = () => {
             width={50}
             height={50}
             alt="addaccount logo"
-            className="w-[45px] h-[45px]"
+            className="w-[65px] h-[65px]"
           />
           <div className=" text-[17px] text-black ">
             Build Meaningful Connections

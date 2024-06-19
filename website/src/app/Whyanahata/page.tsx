@@ -8,6 +8,7 @@ import Image from "next/image";
 import Blogs from "../components/Blogs";
 
 interface BannerImage {
+  data: any;
   id: string;
   formats: {
     thumbnail: {
@@ -20,6 +21,7 @@ interface Data {
   attributes: {
     banner_Image: { id: string; bannerImage: BannerImage };
     what_is_anahata_chakra: {
+      image: any;
       Heading_title: string;
       date: string;
       content: { type: string; children: { text: string }[] }[];
@@ -33,7 +35,7 @@ async function fetchWhy(): Promise<Data | null> {
       `https://cms.anahataaconnections.com/api/about-anahata?populate=banner_Image.bannerImage,what_is_anahata_chakra,what_is_anahata_chakra.image`
     );
     const response = await res.json();
-    return response.data || null;
+    return response.data;
   } catch (err) {
     console.error(err);
     return null;
@@ -42,18 +44,30 @@ async function fetchWhy(): Promise<Data | null> {
 
 export default function WhyAnahata() {
   const [data, setData] = useState<Data | null>(null);
+  const [loading, setLoading] = useState(true); 
 
   useEffect(() => {
     const fetchData = async () => {
-      const result = await fetchWhy();
-      setData(result);
+      try {
+        const result = await fetchWhy();
+        setData(result);
+        setLoading(false); 
+      } catch (error) {
+        console.error("Failed to fetch data:", error);
+        setLoading(false); 
+      }
     };
     fetchData();
   }, []);
 
-  if (!data) return <div>Loading...</div>;
+  if (loading) return <div>Loading...</div>;
+
+  if (!data) return <div>No data found.</div>; 
 
   const { banner_Image, what_is_anahata_chakra } = data.attributes;
+
+  console.log(what_is_anahata_chakra);
+  console.log(banner_Image);
 
   const formatDate = (dateString: string): string => {
     const date = new Date(dateString);
@@ -67,18 +81,18 @@ export default function WhyAnahata() {
       return `${diffDays} days ago`;
     }
   };
-  const bannerImageUrl =
-    banner_Image?.bannerImage?.formats?.thumbnail?.url || "";
 
-  console.log(bannerImageUrl);
+  const bannerImageUrl =
+    data.attributes.banner_Image.bannerImage;
+
   return (
-    <div className="bg-white w-[100vw] h-full top-0  overflow-x-hidden">
+    <div className="bg-transparent w-full h-full top-0 overflow-x-hidden z-20 relative">
       <Image
-        src="assets/banner.svg"
+        src={bannerImageUrl.data.attributes.url}
         alt="Hero Image"
-        width={1920} // Set width to cover the full width of the screen
-        height={400} // Adjust height as needed
-        className="w-full object-cover h-[60vh] custom1:h-[70vh] custom:h-[68vh]" // Use w-full to occupy full width
+        width={1920}
+        height={400}
+        className="w-full object-cover h-[60vh] custom1:h-[70vh] custom:h-[68vh]"
       />
 
       <div className="flex justify-center items-center "></div>
@@ -93,11 +107,11 @@ export default function WhyAnahata() {
       <div className="flex justify-center my-4">
         <div>
           <Image
-            src="assets/banner1.svg"
+            src={what_is_anahata_chakra.image.data.attributes.url}
             alt="Additional Image"
             width={500}
             height={100}
-            className="object-fit bg-cover custom:mt-12 custom1:mx-20 custom1:mt-12 custom1:w-[835px] customMax:w-[1700px] customMax:max-h-[570px]"
+            className="object-fit bg-cover custom:mt-12 custom1:mx-20 custom1:mt-12 custom1:w-[835px] customMax:w-[1700px] customMax:max-h-[570px] rounded-md"
           />
         </div>
       </div>
@@ -114,8 +128,8 @@ export default function WhyAnahata() {
         ))}
       </div>
 
-      <div className="mt-16">
-        <h1 className="text-[#166534] font-Pattaya text-center text-[2.5rem] xl:text-[3rem] ">
+      <div className="mb-10 z-[11]">
+        <h1 className="my-20 text-[#166534] font-Pattaya text-center text-[2.5rem] xl:text-[3rem] ">
           More from us
         </h1>
         <Blogs />

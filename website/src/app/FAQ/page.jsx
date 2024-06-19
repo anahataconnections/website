@@ -43,12 +43,12 @@ const FAQ = () => {
   };
 
   return (
-    <div className="w-[100%] flex flex-col gap-[20px] mt-[50px] mb-[50px] ">
+    <div className="w-auto flex flex-col gap-[20px] mt-[50px] mb-[50px] z-[20]">
       <header className="font-Pattaya flex items-center text-center justify-center text-[#094C3B] text-[25px] mobile:text-[35px]">
         Frequently Asked Questions
       </header>
 
-      <div className="w-[100%] flex flex-col justify-center items-center ">
+      <div className="w-auto flex flex-col justify-center items-center ">
         {faqData.map((faq, index) => (
           <FAQItem
             key={index}

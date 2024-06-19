@@ -56,12 +56,11 @@ const Slider = () => {
               }`}
           >
             <div>
-              <h1 className="headStyles customMax:translate-y-[13rem]
+              <h1 className=" headStyles customMax:translate-y-[13rem]
               customMax:-translate-x-[40rem]
               custom2:translate-y-[2.4rem]
               custom3:-translate-x-[9rem]
-              "
-                  
+              "   
               >
                 3 Ways For healthy relationship
               </h1>

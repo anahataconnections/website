@@ -44,19 +44,10 @@ async function fetchEvents() {
 
 const Events = async () => {
   const Event = await fetchEvents();
-  // const controls = useAnimationControls();
-  // console.log(Event.data);
   return (
-    <main
-      className="bg-white w-[100%] scroll-smooth 
-     overflow-x-hidden 
-    "
-    >
-      <div className="bg-home-page-back bg-cover bg-no-repeat">
+    <main className="bg-white w-[100%] scroll-smooth overflow-x-hidden">
+      <div className="">
         <Slider />
-        {/* <div>
-          <SliderProgressBar/>
-        </div> */}
         <div className="font-Pattaya my-4 flex justify-center items-center text-5xl text-[#094C3B] pb-10 custom3:pt-10">
           Upcoming Event
         </div>

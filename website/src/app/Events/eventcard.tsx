@@ -25,9 +25,6 @@ export type EventsProps = {
 const Eventcard = (props: EventsProps) => {
   const { events } = props;
   const baseurl = "https://cms.anahataaconnections.com/api/events";
-  // console.log(events);
-  console.log(events);
-  // console.log(events.data[0].attributes.image.data.attributes.url);
   return (
     <div className="flex font-sarabun item-center justify-between overflow-x-hidden">
       {events.map((item: any) => {

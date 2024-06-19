@@ -16,7 +16,6 @@ async function fetchRefund() {
 // export default function Refund()
 const Refund = async () => {
   const item = await fetchRefund();
-  // console.log(item.data.attributes.policy[0].children[0].text);
   return (
     <main className="w-screen flex justify-center items-center mt-[100px] mb-[100px]">
       <div className="w-[80vw] mobile:w-[60vw] bg-grey-gradient p-[20px]">

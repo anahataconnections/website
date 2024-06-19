@@ -36,7 +36,7 @@ const Navbar = () => {
           </div>
         </div>
 
-        <ul className="flex items-center gap-[55px] pc:gap-[100px] font-semibold lg:text-[16px]   text-[9px] font-sarabun ">
+        <ul className="flex items-center gap-[55px] pc:gap-[50px] font-semibold lg:text-[16px]   text-[9px] font-sarabun ">
           {navElemObj.map(({ link, title }) => {
             return (
               <Link href={link} key={link}>

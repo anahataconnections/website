@@ -4,15 +4,14 @@ import Image from "next/image";
 import { formatDate } from "@/helpers/blog";
 
 const Blogcard = ({ imageUrl, heading, data, published }) => {
-  return (
+  return ( 
     <div className=" mobile:w-[250px] tab:w-[300px]">
       <div>
-        {/* <img src={imageUrl} alt="" className="w-[300px]" /> */}
         <Image
           src={imageUrl}
           width={500}
           height={300}
-          className="w-[100%] h-[60%]"
+          className="w-full h-60 rounded-t-xl object-cover"
           alt="Screenshots of the dashboard project showing desktop and mobile versions"
         />
       </div>
