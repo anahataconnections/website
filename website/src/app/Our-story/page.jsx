@@ -7,7 +7,7 @@ import Image from "next/image";
 async function fetchData() {
   try {
     const res = await fetch(
-      `https://cms.anahataaconnections.com/api/our-story?populate[0]=Founder_words&populate[1]=why_choose_us&populate[2]=about_founder.founder_image&populate[3]=Images.banner_image`
+      `https://cms.anahataaconnections.com/api/our-story?populate[0]=Founder_words&populate[1]=why_choose_us.image&populate[2]=about_founder.founder_image&populate[3]=Images.banner_image`
     );
     const response = await res.json();
     return response.data;
@@ -32,6 +32,8 @@ export default function Ourstory() {
   const foundersImage =
     data?.attributes?.about_founder.founder_image.data.attributes;
   const bannerImage = data?.attributes?.Images.banner_image.data.attributes;
+
+  console.log(whyChooseUs);
 
   return (
     <div className="w-screen flex flex-col items-center  ">
@@ -74,23 +76,43 @@ export default function Ourstory() {
               <p className=" font-sarabun text-[18px] mobile:text-[20px] leading-[25px] mobile:leading-[50px]">
                 {founderWords?.content[4].children[0].text}
               </p>
+              <p className=" font-sarabun text-[18px] mobile:text-[20px] leading-[25px] mobile:leading-[50px]">
+                {founderWords?.content[5].children[0].text}
+              </p>
+              <p className=" font-sarabun text-[18px] mobile:text-[20px] leading-[25px] mobile:leading-[50px]">
+                {founderWords?.content[6].children[0].text}
+              </p>
+              <p className=" font-sarabun text-[18px] mobile:text-[20px] leading-[25px] mobile:leading-[50px]">
+                {founderWords?.content[7].children[0].text}
+              </p>
+              <p className=" font-sarabun text-[18px] mobile:text-[20px] leading-[25px] mobile:leading-[50px]">
+                {founderWords?.content[8].children[0].text}
+              </p>
+              <p className=" font-sarabun text-[18px] mobile:text-[20px] leading-[25px] mobile:leading-[50px]">
+                {founderWords?.content[9].children[0].text}
+              </p>
+              <p className=" font-sarabun text-[18px] mobile:text-[20px] leading-[25px] mobile:leading-[50px]">
+                {founderWords?.content[10].children[0].text}
+              </p>
             </div>
           </div>
           {/* why choose us */}
           <div className="w-[100%] flex flex-col gap-[10px] max-mobile:text-left">
-            <h1 className="font-Pattaya  flex items-center justify-center text-[35px] text-[#094C3B]">
-              {founderWords?.content[6].children[0].text}
+            <h1 className="font-Pattaya flex items-center justify-center text-[35px] text-[#094C3B]">
+              {whyChooseUs?.content[0].children[0].text}
             </h1>
             <div className="flex flex-col gap-[7 0px]">
               <p className=" font-sarabun text-[18px] mobile:text-[20px] leading-[25px] mobile:leading-[50px]">
                 {whyChooseUs?.content &&
-                  whyChooseUs.content.map((paragraph, index) => (
-                    <React.Fragment key={index}>
-                      {paragraph.children.map((child, childIndex) => (
-                        <p key={childIndex}>{child.text}</p>
-                      ))}
-                    </React.Fragment>
-                  ))}{" "}
+                  whyChooseUs.content
+                    .filter((_, index) => index !== 0)
+                    .map((paragraph, index) => (
+                      <React.Fragment key={index}>
+                        {paragraph.children.map((child, childIndex) => (
+                          <p key={childIndex}>{child.text}</p>
+                        ))}
+                      </React.Fragment>
+                    ))}{" "}
               </p>
             </div>
           </div>
