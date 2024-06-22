@@ -38,11 +38,11 @@ export const socialObj: {
   link: string;
   icon: React.ReactNode;
 }[] = [
-  { title: "youtube", link: "", icon: <FaYoutube /> },
+  { title: "youtube", link: "https://www.youtube.com/channel/UCn84wLcqIeOq_h_X9aB9d7A", icon: <FaYoutube /> },
   { title: "linkedIn", link: "", icon: <FaLinkedinIn /> },
   { title: "facebook", link: "", icon: <FaFacebookF /> },
   { title: "telegram", link: "", icon: <FaTelegramPlane /> },
-  { title: "instagram", link: "", icon: <FaInstagram /> },
+  { title: "instagram", link: "https://www.instagram.com/anahataaconnections/?hl=en", icon: <FaInstagram /> },
 ];
 
 export const monthsArray = [
