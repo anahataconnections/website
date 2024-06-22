@@ -132,14 +132,16 @@ const Footer = () => {
                 Follow us on
               </div>
               <div className="flex gap-x-[10px]">
-                {socialObj.map(({ icon, title }) => {
+                {socialObj.map(({ icon, title, link }) => {
                   return (
-                    <div
+                    <Link
+                      href={link}
+                      target="_blank"
                       key={title}
                       className="text-[14px] text-white bg-[#094C3B] hover:bg-[#094C3Ba8] p-[8px] rounded-full cursor-pointer "
                     >
                       {icon}
-                    </div>
+                    </Link>
                   );
                 })}
               </div>
