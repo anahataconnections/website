@@ -39,6 +39,7 @@ const Footer = () => {
                   return (
                     <Link
                       href={link}
+                      target="_blank"
                       key={title}
                       className="text-[14px] text-white bg-[#094C3B] hover:bg-[#094C3Ba8] p-[5px] rounded-full cursor-pointer "
                     >
