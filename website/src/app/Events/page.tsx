@@ -44,6 +44,8 @@ async function fetchEvents() {
 
 const Events = async () => {
   const Event = await fetchEvents();
+  console.log(Event);
+  
   return (
     <main className="bg-white w-[100%] scroll-smooth overflow-x-hidden">
       <div className="">
