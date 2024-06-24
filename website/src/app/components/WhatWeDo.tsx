@@ -3,16 +3,19 @@ import Image from "next/image";
 
 interface WhatWeDoProps {
   collaboration: {
+    [x: string]: any;
     content: {
       children: { text: string }[];
     }[];
   };
   advertisement: {
+    [x: string]: any;
     content: {
       children: { text: string }[];
     }[];
   };
   yoga: {
+    [x: string]: any;
     content: {
       children: { text: string }[];
     }[];
@@ -24,6 +27,7 @@ const WhatWeDo: React.FC<WhatWeDoProps> = ({
   advertisement,
   yoga,
 }) => {
+  
   return (
     <div className=" custom2:px-28  pt-16 flex flex-col space-y-3">
       <h1 className="font-Pattaya text-emerald-900 text-center text-5xl my-10">
@@ -34,7 +38,7 @@ const WhatWeDo: React.FC<WhatWeDoProps> = ({
       <div className="text-black py-10 flex flex-row md:flex-row items-center md:items-start gap-2 gap-x-10">
         <div className="md:w-1/2">
           <Image
-            src="assets/collab.svg"
+            src={collaboration.image.data.attributes.url}
             alt="Collaboration Image"
             width={500}
             height={300}
@@ -54,7 +58,7 @@ const WhatWeDo: React.FC<WhatWeDoProps> = ({
       <div className="text-black py-10 flex flex-row md:flex-row-reverse items-center md:items-center gap-2 gap-x-10">
         <div className="md:w-1/2 custom2:pl-6">
           <Image
-            src="assets/collab.svg"
+            src={advertisement.image.data.attributes.url}
             alt="Advertisement Image"
             width={500}
             height={300}
@@ -74,7 +78,7 @@ const WhatWeDo: React.FC<WhatWeDoProps> = ({
       <div className="text-black py-10 flex flex-row md:flex-row items-center md:items-start gap-2 gap-x-10">
         <div className="md:w-1/2">
           <Image
-            src="assets/collab.svg"
+            src={yoga.image.data.attributes.url}
             alt="Yoga Image"
             width={500}
             height={300}

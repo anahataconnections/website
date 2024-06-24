@@ -47,7 +47,7 @@ interface CollaborationData {
 async function fetchWhy(): Promise<CollaborationData | null> {
   try {
     const res = await fetch(
-      `https://cms.anahataaconnections.com/api/collaboration/?populate=*`
+      `https://cms.anahataaconnections.com/api/collaboration?populate=*,collaboration.image,advertisement.image,yoga.image,business_partner.image,any_plans`
     );
     const response = await res.json();
     return response;
@@ -79,7 +79,7 @@ const Collaboration: React.FC = () => {
       <section className="">
         <div className="w-full custom2:h-[70vh] h-[60vh] relative">
           <Image
-            src="/assets/image160.svg"
+            src={"/assets/image160.svg"}
             alt="Additional Image"
             layout="fill"
             objectFit="cover"
