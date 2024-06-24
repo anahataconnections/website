@@ -1,7 +1,7 @@
 /* eslint-disable */
 
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Slider from "./Slider";
 import Eventcard from "./eventcard";
@@ -29,25 +29,30 @@ const wrapperVariants = {
   },
 };
 
-async function fetchEvents() {
-  try {
-    const res = await fetch(
-      `https://cms.anahataaconnections.com/api/events/?populate=*`
-    );
-    const response = await res.json();
+const Events = () => {
+  const [events, setEvents] = useState(null);
 
-    return response.data;
-  } catch (err) {
-    console.error(err);
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const res = await fetch(`https://cms.anahataaconnections.com/api/events/?populate=*`);
+        const data = await res.json();
+        setEvents(data.data); // Update state with fetched data
+      } catch (error) {
+        console.error('Failed to fetch events:', error);
+      }
+    };
+
+    fetchData(); // Call the async function
+  }, []); // Empty dependency array means this effect runs once on mount
+
+  if (!events) {
+    return <div>Loading...</div>; // Or any loading indicator
   }
-}
 
-const Events = async () => {
-  const Event = await fetchEvents();
-  console.log(Event);
   
   return (
-    <main className="bg-white w-[100%] scroll-smooth overflow-x-hidden">
+    <main className="bg-white w-[100%] scroll-smooth overflow-y-hidden z-[11]">
       <div className="">
         <Slider />
         <div className="font-Pattaya my-4 flex justify-center items-center text-5xl text-[#094C3B] pb-10 custom3:pt-10">
@@ -56,7 +61,7 @@ const Events = async () => {
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 mt-10">
         <div className="order-2 lg:order-1 px-6 justify-center items-center flex flex-row w-full lg:w-[80vw] lg:-translate-x-20 xl:px-28">
-          <Eventcard events={Event} />
+          <Eventcard events={events} />
         </div>
         <div className="lg:translate-x-72 custom3:translate-x-76 mt-8 translate-y-4  order-1 lg:order-2 w-full lg:w-[20vw] border-b border-gray-300 lg:border-0">
           <h1 className="text-3xl font-bold border-b border-gray-300 pb-2 px-6 lg:px-0 text-black">
