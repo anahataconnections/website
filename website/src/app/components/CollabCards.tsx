@@ -1,18 +1,30 @@
 import * as React from "react";
 
+interface WhatWeDoProps {
+  data: {
+    [x: string]: any;
+  };
+}
+
 type PartnerCardProps = {
   imgSrc: string;
   name: string;
   country: string;
+  text: string;
 };
 
-const PartnerCard: React.FC<PartnerCardProps> = ({ imgSrc, name, country }) => (
+const PartnerCard: React.FC<PartnerCardProps> = ({
+  imgSrc,
+  name,
+  country,
+  text,
+}) => (
   <div className="flex flex-col grow items-center px-10 pb-14 mx-auto w-full bg-gray-200 rounded border border-solid border-stone-300 max-md:px-5 max-md:mt-10 font-sarabun">
     <img
       loading="lazy"
       src={imgSrc}
       alt={`${name} from ${country}`}
-      className="z-10 mt-0 -translate-y-16 max-w-full aspect-[1.01] w-[124px]"
+      className="z-10 mt-0 -translate-y-16 max-w-full aspect-[1.01] w-[124px] rounded-full object-cover"
     />
     <h3 className="text-3xl text-emerald-900">{name}</h3>
     <p className="mt-4 text-xl text-emerald-900">{country}</p>
@@ -49,57 +61,42 @@ const PartnerCard: React.FC<PartnerCardProps> = ({ imgSrc, name, country }) => (
       />
     </div>
     <p className="self-stretch mt-5 text-xl text-center text-neutral-600">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elitLorem ipsum dolor
-      sit amet, consectetur adipiscing elit
+      {text}
     </p>
   </div>
 );
 
-const partners = [
-  {
-    imgSrc:
-      "https://cdn.builder.io/api/v1/image/assets/TEMP/2a48f410adb534460654a0bb9d939f2546e447a4aa1a8a112b0d74ff566486f4?apiKey=b0951f87dee4449fa252b5f3cfc3b012&",
-    name: "Richard Fury",
-    country: "India",
-  },
-  {
-    imgSrc:
-      "https://cdn.builder.io/api/v1/image/assets/TEMP/2a48f410adb534460654a0bb9d939f2546e447a4aa1a8a112b0d74ff566486f4?apiKey=b0951f87dee4449fa252b5f3cfc3b012&",
-    name: "Richard Fury",
-    country: "India",
-  },
-  {
-    imgSrc:
-      "https://cdn.builder.io/api/v1/image/assets/TEMP/2a48f410adb534460654a0bb9d939f2546e447a4aa1a8a112b0d74ff566486f4?apiKey=b0951f87dee4449fa252b5f3cfc3b012&",
-    name: "Richard Fury",
-    country: "India",
-  },
-];
+const CollabCards: React.FC<WhatWeDoProps> = ({ data }) => {
+  console.log(data);
 
-const CollabCards: React.FC = () => (
-  <section className="flex flex-col px-5">
-    <header className="self-center text-5xl font-Pattaya
+  return (
+    <section className="flex flex-col px-5">
+      <header
+        className="self-center text-5xl font-Pattaya
      custom2:pt-16
-    text-emerald-900 leading-[67.2px] max-md:max-w-full max-md:text-4xl">
-      Our Business Partners
-    </header>
-    <main className="mt-24 w-full max-md:mt-10 max-md:max-w-full">
-      <div className="flex gap-3 max-md:flex-col max-md:gap-0 ">
-        {partners.map((partner, index) => (
-          <div
-            className="flex flex-col mx-auto custom2:w-[28%] w-[33%] custom2:px-2  "
-            key={index}
-          >
-            <PartnerCard
-              imgSrc={partner.imgSrc}
-              name={partner.name}
-              country={partner.country}
-            />
-          </div>
-        ))}
-      </div>
-    </main>
-  </section>
-);
+     text-emerald-900 leading-[67.2px] max-md:max-w-full max-md:text-4xl"
+      >
+        Our Business Partners
+      </header>
+      <main className="mt-24 w-full max-md:mt-10 max-md:max-w-full">
+        <div className="flex gap-3 max-md:flex-col max-md:gap-0 ">
+          {data.map((partner: any, index: any) => (
+            <div
+              className="flex flex-col mx-auto custom2:w-[28%] w-[33%] custom2:px-2  "
+              key={index}
+            >
+              <PartnerCard
+                imgSrc={partner.image?.data?.attributes?.url}
+                name={partner.name}
+                country={partner.country}
+                text={partner.description}
+              />
+            </div>
+          ))}
+        </div>
+      </main>
+    </section>
+  );
+};
 
 export default CollabCards;

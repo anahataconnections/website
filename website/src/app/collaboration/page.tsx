@@ -72,8 +72,8 @@ const Collaboration: React.FC = () => {
 
   const { attributes } = collab.data;
 
-  const { collaboration, advertisement, yoga } = attributes;
-
+  const { collaboration, advertisement, yoga, business_partner } = attributes;
+  
   return (
     <div className="h-auto scroll-smooth">
       <section className="">
@@ -106,9 +106,9 @@ const Collaboration: React.FC = () => {
           yoga={yoga}
         />
 
-        <CollabCards />
+        <CollabCards data ={business_partner} />
 
-        <LetsGet />
+        <LetsGet  />
       </section>
     </div>
   );
