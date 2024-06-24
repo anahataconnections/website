@@ -35,7 +35,7 @@ const Blogs = () => {
         {blogs?.map((blog, index) => (
           <Link key={index} target="_blank" href={`../Blog-main/${blog.attributes.tiltle}`}>
             <Blogcard
-              imageUrl={blog.attributes.image.data.attributes.url}
+              imageUrl={blog?.attributes?.image?.data?.attributes?.url}
               heading={blog.attributes.tiltle}
               published={blog.attributes.published}
               data={blog.attributes.content[0].children[0].text.substring(
