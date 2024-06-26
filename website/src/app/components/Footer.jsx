@@ -86,8 +86,8 @@ const Footer = () => {
                 type="text"
                 id="name"
                 name="name"
-                className="w-[300px] h-[40px]  rounded-md border-solid border-[1px] border-[#094C3B] text-[#094C3B] placeholder:text-black"
-                placeholder="&nbsp;&nbsp; xyz@gmail.com"
+                className="w-[300px] h-[40px] px-3 rounded-md border-solid border-[1px] border-[#094C3B] text-[#094C3B] placeholder:text-black"
+                placeholder="xyz@gmail.com"
               />
               <button
                 className="bg-[#094C3B] h-[40px]  py-[5px] px-[10px] text-white rounded-[7px] cursor-pointer hover:bg-[#286f5d] font-semibold "

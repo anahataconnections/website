@@ -20,7 +20,7 @@ interface FooterElemProp {
 }
 export const footerElem: FooterElemProp = {
   overview: navElemObj.filter(({ link }) => link !== "/Signin"),
-  "privacy Policy": [
+  "privacy & Legal Terms": [
     { title: "Privacy Policy", link: "/Privacy" },
     { title: "Terms Of Use", link: "/Terms" },
     { title: "Refund Policy", link: "/Refund" },
