@@ -17,15 +17,15 @@ type ContentSectionProps = {
 };
 
 const ContentSection: React.FC<ContentSectionProps> = ({ children }) => (
-  <section className="flex flex-col ml-5 w-6/12 custom2:px-20">
-    <p className="text-2xl leading-10 text-justify text-black max-md:mt-10 max-md:max-w-full font-sarabun">
+  <section className="flex flex-col mx-5 md:mx-0 md:ml-5  w-auto md:w-6/12 custom2:px-20">
+    <p className="text-lg md:text-2xl leading-10 text-justify text-black max-md:mt-10 max-md:max-w-full font-sarabun">
       {children}
     </p>
   </section>
 );
 
 const LetsGet: React.FC = () => (
-  <main className="px-5 custom2:h-[30rem] pt-16">
+  <main className="px-5 custom2:h-[30rem] pt-24">
     <div className="flex gap-5 max-md:flex-col max-md:gap-0">
       <TextSection>
         <span className="text-emerald-900 font-Satisfy">

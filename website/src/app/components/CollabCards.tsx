@@ -19,16 +19,16 @@ const PartnerCard: React.FC<PartnerCardProps> = ({
   country,
   text,
 }) => (
-  <div className="flex flex-col grow items-center px-10 pb-14 mx-auto w-full bg-gray-200 rounded border border-solid border-stone-300 max-md:px-5 max-md:mt-10 font-sarabun">
+  <div className="relative flex flex-col grow items-center px-10 pb-10 mx-auto w-[22rem] bg-gray-200 rounded border border-solid border-stone-300 max-md:px-5 max-md:mt-10 font-sarabun">
     <img
       loading="lazy"
       src={imgSrc}
       alt={`${name} from ${country}`}
-      className="z-10 mt-0 -translate-y-16 max-w-full aspect-[1.01] w-[124px] rounded-full object-cover"
+      className="absolute -top-16 z-10 mt-0 max-w-full aspect-[1.01] w-[124px] rounded-full object-cover"
     />
-    <h3 className="text-3xl text-emerald-900">{name}</h3>
+    <h3 className="text-3xl text-emerald-900 mt-24">{name}</h3>
     <p className="mt-4 text-xl text-emerald-900">{country}</p>
-    <div className="flex gap-0 mt-8">
+    <div className="flex gap-0 mt-2">
       <img
         loading="lazy"
         src="https://cdn.builder.io/api/v1/image/assets/TEMP/b53b2acb6fc8980f5c004c0d20a22c000f36bd8292871f4aba21feea468e45ad?apiKey=b0951f87dee4449fa252b5f3cfc3b012&"
@@ -60,9 +60,7 @@ const PartnerCard: React.FC<PartnerCardProps> = ({
         className="shrink-0 aspect-square w-[30px]"
       />
     </div>
-    <p className="self-stretch mt-5 text-xl text-center text-neutral-600">
-      {text}
-    </p>
+    <p className="mt-5 text-lg text-center text-neutral-600">{text}</p>
   </div>
 );
 
@@ -79,10 +77,10 @@ const CollabCards: React.FC<WhatWeDoProps> = ({ data }) => {
         Our Business Partners
       </header>
       <main className="mt-24 w-full max-md:mt-10 max-md:max-w-full">
-        <div className="flex gap-3 max-md:flex-col max-md:gap-0 ">
+        <div className="flex  flex-col gap-y-14 md:gap-y-0 md:flex-row md:gap-3">
           {data.map((partner: any, index: any) => (
             <div
-              className="flex flex-col mx-auto custom2:w-[28%] w-[33%] custom2:px-2  "
+              className="flex flex-col mx-auto custom2:w-[28%] md:w-1/3 custom2:px-2  "
               key={index}
             >
               <PartnerCard
