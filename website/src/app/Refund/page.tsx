@@ -1,68 +1,80 @@
 /* eslint-disable */
+"use client";
+import React, { useEffect, useState } from "react";
 
-import React from "react";
-
-async function fetchRefund() {
-  try {
-    const res = await fetch(
-      `https://cms.anahataaconnections.com/api/refund-policy?populate=*`
-    );
-    const response = await res.json();
-    return response;
-  } catch (err) {
-    console.error(err);
+const Refund = () => {
+  interface RefundPolicyContent {
+    map(
+      arg0: (
+        paragraph: { children: any[] },
+        index: React.Key | null | undefined
+      ) => React.JSX.Element
+    ): React.ReactNode;
+    data: {
+      id: number;
+      attributes: {
+        policy: {
+          type: string;
+          children: {
+            text: string;
+            type: string;
+          }[];
+        }[];
+        createdAt?: string;
+        updatedAt?: string;
+        publishedAt?: string;
+      };
+    };
+    meta: {};
   }
-}
-// export default function Refund()
-const Refund = async () => {
-  const item = await fetchRefund();
+
+  const [refundContent, setRefundContent] =
+    useState<RefundPolicyContent | null>(null);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch(
+          `https://cms.anahataaconnections.com/api/refund-policy?populate=*`
+        );
+        const data = await response.json();
+        setRefundContent(data.data.attributes.policy);
+        setIsLoading(false);
+      } catch (err) {
+        setIsLoading(false);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  console.log(refundContent);
+
+  if (isLoading) {
+    return <div>Loading...</div>;
+  }
+
   return (
     <main className="w-screen flex justify-center items-center mt-[100px] mb-[100px]">
       <div className="w-[80vw] mobile:w-[60vw] bg-grey-gradient p-[20px]">
-        <div className="font-Pattaya my-3 text-[25px] mobile:text-3xl text-[#094C3B]">
+        <div className="font-Pattaya text-center my-3 text-[25px] mobile:text-3xl text-[#094C3B]">
           Refund Policy
         </div>
-        <p className="font-sarabun py-1 text-gray-600 font-medium text-[13px] mobile:text-[18px]">
-          {item.data.attributes.policy[0].children[0].text}
-        </p>
-        <h1 className="font-sarabun  font-bold text-[15px] mobile:text-[20px] text-black pt-8">
-          Collection of your Information
-        </h1>
-        <p className="font-sarabun py-1 text-gray-600 font-medium text-[13px] mobile:text-[18px]">
-          {item.data.attributes.policy[1].children[0].text}
-        </p>
-        <p className="font-sarabun py-1 text-gray-600 font-medium text-[13px] mobile:text-[18px]">
-          {item.data.attributes.policy[1].children[0].text}
-        </p>
-        <p className="font-sarabun py-1 text-gray-600 font-medium text-[13px] mobile:text-[18px]">
-          {item.data.attributes.policy[1].children[0].text}
-        </p>
 
-        <h1 className="font-sarabun font-bold text-[15px] mobile:text-[20px] text-black pt-8">
-          Use of Demographic / Profile Data / Your Information
-        </h1>
-        <p className="font-sarabun py-1 text-gray-600 font-medium text-[13px] mobile:text-[18px]">
-          {item.data.attributes.policy[2].children[0].text}
-        </p>
-        <p className="font-sarabun py-1 text-gray-600 font-medium text-[13px] mobile:text-[18px]">
-          {item.data.attributes.policy[2].children[0].text}
-        </p>
-        <p className="font-sarabun py-1 text-gray-600 font-medium text-[13px] mobile:text-[18px]">
-          {item.data.attributes.policy[2].children[0].text}
-        </p>
-        <p className="font-sarabun py-1 text-gray-600 font-medium text-[13px] mobile:text-[18px]">
-          {item.data.attributes.policy[2].children[0].text}
-        </p>
-
-        <h1 className="font-sarabun font-bold text-[15px] mobile:text-[20px] text-black pt-8">
-          Cookies
-        </h1>
-        <p className="font-sarabun py-1 text-gray-600 font-medium text-[13px] mobile:text-[18px]">
-          {item.data.attributes.policy[2].children[0].text}
-        </p>
-        <p className="font-sarabun py-1 text-gray-600 font-medium text-[13px] mobile:text-[18px]">
-          {item.data.attributes.policy[2].children[0].text}
-        </p>
+        {refundContent &&
+          refundContent.map(
+            (
+              paragraph: { children: any[] },
+              index: React.Key | null | undefined
+            ) => (
+              <p key={index} className="mb-4">
+                {paragraph.children
+                  .map((child: { text: any }) => child.text)
+                  .join(" ")}
+              </p>
+            )
+          )}
       </div>
     </main>
   );

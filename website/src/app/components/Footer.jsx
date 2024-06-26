@@ -66,7 +66,7 @@ const Footer = () => {
                   src="/assets/appstore.png"
                   width={150}
                   height={150}
-                  className="cursor-pointer "
+                  className="cursor-pointer rounded-md scale-90"
                   alt="error"
                 />
               </div>
@@ -167,7 +167,7 @@ const Footer = () => {
                 src="/assets/appstore.png"
                 width={150}
                 height={150}
-                className="cursor-pointer "
+                className="cursor-pointer rounded-md scale-90"
                 alt="error"
               />
             </div>

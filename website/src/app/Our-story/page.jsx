@@ -51,7 +51,7 @@ export default function Ourstory() {
             <div className="font-Pattaya text-[30px] mobile:text-[35px] text-[#094C3B]">
               {founderWords?.content[0].children[0].text}
             </div>
-            <p className="font-sarabun text-[20px] mobile:text-[30px] ">
+            <p className="font-sarabun text-lg ">
               {founderWords?.content[1].children[0].text}
             </p>
           </div>
