@@ -1,17 +1,10 @@
 {
-  "collectionName": "components_website_our_communities",
+  "collectionName": "components_website_chats",
   "info": {
-    "displayName": "Our_Community",
-    "description": ""
+    "displayName": "chat"
   },
   "options": {},
   "attributes": {
-    "title": {
-      "type": "string"
-    },
-    "content": {
-      "type": "blocks"
-    },
     "text1": {
       "type": "string"
     },

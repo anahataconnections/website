@@ -180,6 +180,19 @@ export interface WebsiteBusinessPartner extends Schema.Component {
   };
 }
 
+export interface WebsiteChat extends Schema.Component {
+  collectionName: 'components_website_chats';
+  info: {
+    displayName: 'chat';
+  };
+  attributes: {
+    text1: Attribute.String;
+    text2: Attribute.String;
+    text3: Attribute.String;
+    text4: Attribute.String;
+  };
+}
+
 export interface WebsiteCollaboration extends Schema.Component {
   collectionName: 'components_website_collaborations';
   info: {
@@ -242,10 +255,15 @@ export interface WebsiteOurCommunity extends Schema.Component {
   collectionName: 'components_website_our_communities';
   info: {
     displayName: 'Our_Community';
+    description: '';
   };
   attributes: {
     title: Attribute.String;
     content: Attribute.Blocks;
+    text1: Attribute.String;
+    text2: Attribute.String;
+    text3: Attribute.String;
+    text4: Attribute.String;
   };
 }
 
@@ -259,6 +277,7 @@ export interface WebsiteTestimonial extends Schema.Component {
     title: Attribute.String;
     content: Attribute.Blocks;
     image: Attribute.Media;
+    name: Attribute.String;
   };
 }
 
@@ -329,6 +348,7 @@ declare module '@strapi/types' {
       'website.any-plans': WebsiteAnyPlans;
       'website.banner-image': WebsiteBannerImage;
       'website.business-partner': WebsiteBusinessPartner;
+      'website.chat': WebsiteChat;
       'website.collaboration': WebsiteCollaboration;
       'website.faq': WebsiteFaq;
       'website.founder-words': WebsiteFounderWords;
