@@ -25,7 +25,7 @@ export const footerElem: FooterElemProp = {
     { title: "Terms Of Use", link: "/Terms" },
     { title: "Refund Policy", link: "/Refund" },
   ],
-  more: [
+  more: [ 
     { title: "Events", link: "/Events" },
     { title: "Partner With Us", link: "/collaboration" },
     { title: "Career", link: "/career" },

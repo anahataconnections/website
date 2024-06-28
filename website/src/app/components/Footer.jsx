@@ -2,13 +2,17 @@
 
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Contact from "./contact";
 import { footerElem, socialObj } from "@/constants";
-
+import HelpPopup from "./HelpPopup";
 const Footer = () => {
+  const [isHelpPopupOpen, setIsHelpPopupOpen] = useState(false);
+  const openHelpPopup = () => setIsHelpPopupOpen(true);
+  const closeHelpPopup = () => setIsHelpPopupOpen(false);
+
   return (
     <div className="relative z-[10]">
       {/* flower */}
@@ -97,7 +101,7 @@ const Footer = () => {
               </button>
             </form>
           </div>
-          <div className="w-[100%] flex max-mobile:gap-[20px]  flex-wrap  justify-between z-[2]">
+          <div className="w-[100%] flex max-mobile:gap-[20px]  flex-wrap justify-between z-[50]">
             {Object.keys(footerElem).map((key) => {
               return (
                 <div
@@ -112,7 +116,17 @@ const Footer = () => {
                   <ul className="flex flex-col gap-[10px]">
                     {footerElem[key].map(({ title, link }) => {
                       return link === "none" ? (
-                        <li key={link}>{title}</li>
+                        <li
+                          key={link}
+                          className="cursor-pointer"
+                          onClick={() => {
+                            if (title === "Help Center") {
+                              openHelpPopup();
+                            }
+                          }}
+                        >
+                          {title}
+                        </li>
                       ) : (
                         <Link
                           key={link}
@@ -191,6 +205,8 @@ const Footer = () => {
           <Contact />
         </label>
       </label>
+
+      <HelpPopup isOpen={isHelpPopupOpen} onClose={closeHelpPopup} />
     </div>
   );
 };

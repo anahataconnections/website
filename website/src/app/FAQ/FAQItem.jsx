@@ -15,7 +15,7 @@ const FAQItem = ({ question, answer, index, openIndex, setOpenIndex }) => {
 
   return (
     <div
-      className={`relative z-20  w-[80vw] mobile:w-[60vw] border border-gray-500 mb-4 rounded-xl ease-linear transition-all duration-200 ${
+      className={`relative z-10  w-[80vw] mobile:w-[60vw] border border-gray-500 mb-4 rounded-xl ease-linear transition-all duration-200 ${
         isOpen ? "bg-[#094C3B] text-white " : "bg-transparent text-black "
       }`}
     >

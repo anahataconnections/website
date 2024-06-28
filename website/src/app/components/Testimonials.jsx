@@ -19,6 +19,7 @@ async function fetchTestimonialData() {
 const Testimonials = () => {
   const [testimonialData, setTestimonialData] = useState(null);
   const [linesToShow, setLinesToShow] = useState(5);
+  const [isExpanded, setIsExpanded] = useState(false);
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -40,14 +41,16 @@ const Testimonials = () => {
     fetchData();
   }, []);
 
-  console.log(testimonialData);
+  const toggleTextExpansion = () => {
+    setIsExpanded(!isExpanded);
+  };
 
   if (!testimonialData) {
     return <div>Loading...</div>;
   }
 
   return (
-    <div className="w-[100%]  bg-[#F0FDF9] flex flex-col   gap-[50px] items-center max-mobile:py-[30px] py-[30px] pb-[50px]">
+    <div className="w-[100%]  bg-[#F0FDF9] flex flex-col gap-[50px] items-center max-mobile:py-[30px] py-[30px] pb-[50px]">
       <h1 className="font-Pattaya  text-center text-[25px] mobile:text-[40px] text-[#094C3B] box-border max-mobile:px-[50px] ">
         {testimonialData[currentIndex]?.title}
       </h1>
@@ -60,22 +63,30 @@ const Testimonials = () => {
           alt="Screenshots of the dashboard project showing desktop and mobile versions"
         />
 
-        <div className=" w-[250px] mobile:w-[650px] h-auto py-[10px] mobile:py-[20px] px-[20px] flex flex-col justify-end items-center bg-[#F9EBCD] mobile:translate-x-[-50px] rounded-lg box-border">
+        <div className=" w-[250px] mobile:w-[650px] h-auto py-[10px] mobile:py-[20px] px-[20px] flex flex-col justify-end  bg-[#F9EBCD] mobile:translate-x-[-50px] rounded-lg box-border ">
           {testimonialData[currentIndex].content.map((paragraph, index) => (
             <React.Fragment key={index}>
               {paragraph.children.map((child, childIndex) => (
                 <div className="relative flex flex-col gap-[1px]">
                   <p
-                    key={childIndex}
-                    className="text-[10px] mobile:text-[15px] tab:text-[18px] text-[#094C3B] font-Satisfy font-[500] box-border mobile:px-[50px] underline underline-offset-8 leading-8"
+                    className={`text-[10px] mobile:text-[15px] tab:text-[18px] text-[#094C3B] font-Satisfy font-[500] box-border mobile:px-[50px] underline underline-offset-8 leading-8 
+                    `}
                   >
-                    {child.text}
+                    {isExpanded
+                      ? child.text
+                      : `${child.text.substring(0, 225)}...`}{" "}
                   </p>
+                  <button
+                    onClick={toggleTextExpansion}
+                    className="mt-2 text-[10px] mobile:text-[15px] tab:text-[18px] text-[#094C3B] font-Satisfy font-[500] box-border mobile:px-[50px] text-right"
+                  >
+                    {isExpanded ? "Read Less..." : "Read More..."}
+                  </button>
                 </div>
               ))}
             </React.Fragment>
           ))}
-          <p className="mt-5 text-[10px] mobile:text-[15px] tab:text-[18px] text-[#094C3B] font-Satisfy font-[500] box-border mobile:px-[50px] underline underline-offset-8 leading-8">
+          <p className="mt-5 text-[10px] mobile:text-[15px] tab:text-[18px] text-[#094C3B] font-Satisfy font-[500] box-border mobile:px-[50px] leading-8 text-right">
             - {testimonialData[currentIndex].name}
           </p>
         </div>
