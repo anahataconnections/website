@@ -20,16 +20,14 @@ const Testimonials = () => {
   const [testimonialData, setTestimonialData] = useState(null);
   const [linesToShow, setLinesToShow] = useState(5);
 
-  const [currentIndex, setCurrentIndex] = useState(0); // Initialize current index to 0
+  const [currentIndex, setCurrentIndex] = useState(0);
 
-  // Function to handle moving to the previous testimonial
   const handlePrev = () => {
     setCurrentIndex(
       currentIndex - 1 >= 0 ? currentIndex - 1 : testimonialData.length - 1
     );
   };
 
-  // Function to handle moving to the next testimonial
   const handleNext = () => {
     setCurrentIndex((currentIndex + 1) % testimonialData.length);
   };
@@ -62,7 +60,6 @@ const Testimonials = () => {
           alt="Screenshots of the dashboard project showing desktop and mobile versions"
         />
 
-
         <div className=" w-[250px] mobile:w-[650px] h-auto py-[10px] mobile:py-[20px] px-[20px] flex flex-col justify-end items-center bg-[#F9EBCD] mobile:translate-x-[-50px] rounded-lg box-border">
           {testimonialData[currentIndex].content.map((paragraph, index) => (
             <React.Fragment key={index}>
@@ -78,9 +75,12 @@ const Testimonials = () => {
               ))}
             </React.Fragment>
           ))}
+          <p className="mt-5 text-[10px] mobile:text-[15px] tab:text-[18px] text-[#094C3B] font-Satisfy font-[500] box-border mobile:px-[50px] underline underline-offset-8 leading-8">
+            - {testimonialData[currentIndex].name}
+          </p>
         </div>
-        
-          {/* buttons */}
+
+        {/* buttons */}
         <div className="flex items-center gap-[10px] mobile:absolute top-0 right-0 mobile:translate-x-[-50px]">
           <button
             onClick={handlePrev}
