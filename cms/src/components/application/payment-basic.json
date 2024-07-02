@@ -1,7 +1,8 @@
 {
   "collectionName": "components_application_payment_basics",
   "info": {
-    "displayName": "payment_basic"
+    "displayName": "payment_basic",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -15,6 +16,12 @@
       "type": "component",
       "repeatable": true,
       "component": "application.options"
+    },
+    "quarterly_amount": {
+      "type": "string"
+    },
+    "annual_amount": {
+      "type": "string"
     }
   }
 }

@@ -55,11 +55,14 @@ export interface ApplicationPaymentBasic extends Schema.Component {
   collectionName: 'components_application_payment_basics';
   info: {
     displayName: 'payment_basic';
+    description: '';
   };
   attributes: {
     name: Attribute.String;
     amount: Attribute.String;
     features: Attribute.Component<'application.options', true>;
+    quarterly_amount: Attribute.String;
+    annual_amount: Attribute.String;
   };
 }
 
