@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_application_payment_basics",
+  "info": {
+    "displayName": "payment_basic"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "amount": {
+      "type": "string"
+    },
+    "features": {
+      "type": "component",
+      "repeatable": true,
+      "component": "application.options"
+    }
+  }
+}

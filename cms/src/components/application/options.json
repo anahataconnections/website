@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_application_options",
+  "info": {
+    "displayName": "options"
+  },
+  "options": {},
+  "attributes": {
+    "option": {
+      "type": "text"
+    }
+  }
+}

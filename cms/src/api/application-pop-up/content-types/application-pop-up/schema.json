@@ -23,6 +23,16 @@
       "type": "component",
       "repeatable": false,
       "component": "application.verify-pop-up"
+    },
+    "subscription_pop_up": {
+      "type": "component",
+      "repeatable": false,
+      "component": "application.profile-popup"
+    },
+    "new_user_pop_up": {
+      "type": "component",
+      "repeatable": false,
+      "component": "application.profile-popup"
     }
   }
 }

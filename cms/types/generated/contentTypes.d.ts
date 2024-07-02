@@ -933,6 +933,8 @@ export interface ApiApplicationPopUpApplicationPopUp extends Schema.SingleType {
   attributes: {
     profile_pop_up: Attribute.Component<'application.profile-popup'>;
     verify_pop_up: Attribute.Component<'application.verify-pop-up'>;
+    subscription_pop_up: Attribute.Component<'application.profile-popup'>;
+    new_user_pop_up: Attribute.Component<'application.profile-popup'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1140,6 +1142,38 @@ export interface ApiOurStoryOurStory extends Schema.SingleType {
   };
 }
 
+export interface ApiPaymentPayment extends Schema.SingleType {
+  collectionName: 'payments';
+  info: {
+    singularName: 'payment';
+    pluralName: 'payments';
+    displayName: 'Payment';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Basic: Attribute.Component<'application.payment-basic'>;
+    Premium: Attribute.Component<'application.payment-basic'>;
+    Free: Attribute.Component<'application.payment-basic'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::payment.payment',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::payment.payment',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiPrivacyPolicyPrivacyPolicy extends Schema.SingleType {
   collectionName: 'privacy_policies';
   info: {
@@ -1251,6 +1285,7 @@ declare module '@strapi/types' {
       'api::event.event': ApiEventEvent;
       'api::home.home': ApiHomeHome;
       'api::our-story.our-story': ApiOurStoryOurStory;
+      'api::payment.payment': ApiPaymentPayment;
       'api::privacy-policy.privacy-policy': ApiPrivacyPolicyPrivacyPolicy;
       'api::refund-policy.refund-policy': ApiRefundPolicyRefundPolicy;
       'api::term.term': ApiTermTerm;

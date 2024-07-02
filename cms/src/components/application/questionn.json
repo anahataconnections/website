@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_application_questionns",
+  "info": {
+    "displayName": "Questionn"
+  },
+  "options": {},
+  "attributes": {
+    "Question": {
+      "type": "string"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "single_choice_correct",
+        "multiple_choice_correct",
+        "text"
+      ]
+    },
+    "options": {
+      "type": "component",
+      "repeatable": true,
+      "component": "application.options"
+    }
+  }
+}

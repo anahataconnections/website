@@ -41,6 +41,28 @@ export interface ApplicationLookingFor extends Schema.Component {
   };
 }
 
+export interface ApplicationOptions extends Schema.Component {
+  collectionName: 'components_application_options';
+  info: {
+    displayName: 'options';
+  };
+  attributes: {
+    option: Attribute.Text;
+  };
+}
+
+export interface ApplicationPaymentBasic extends Schema.Component {
+  collectionName: 'components_application_payment_basics';
+  info: {
+    displayName: 'payment_basic';
+  };
+  attributes: {
+    name: Attribute.String;
+    amount: Attribute.String;
+    features: Attribute.Component<'application.options', true>;
+  };
+}
+
 export interface ApplicationProfessions extends Schema.Component {
   collectionName: 'components_application_professions';
   info: {
@@ -88,6 +110,20 @@ export interface ApplicationQuestion extends Schema.Component {
     option_3: Attribute.String;
     option_4: Attribute.String;
     others: Attribute.Boolean;
+  };
+}
+
+export interface ApplicationQuestionn extends Schema.Component {
+  collectionName: 'components_application_questionns';
+  info: {
+    displayName: 'Questionn';
+  };
+  attributes: {
+    Question: Attribute.String;
+    type: Attribute.Enumeration<
+      ['single_choice_correct', 'multiple_choice_correct', 'text']
+    >;
+    options: Attribute.Component<'application.options', true>;
   };
 }
 
@@ -336,10 +372,13 @@ declare module '@strapi/types' {
       'application.interests-list': ApplicationInterestsList;
       'application.language': ApplicationLanguage;
       'application.looking-for': ApplicationLookingFor;
+      'application.options': ApplicationOptions;
+      'application.payment-basic': ApplicationPaymentBasic;
       'application.professions': ApplicationProfessions;
       'application.profile-popup': ApplicationProfilePopup;
       'application.question-screen': ApplicationQuestionScreen;
       'application.question': ApplicationQuestion;
+      'application.questionn': ApplicationQuestionn;
       'application.religion': ApplicationReligion;
       'application.verify-pop-up': ApplicationVerifyPopUp;
       'application.workout': ApplicationWorkout;
