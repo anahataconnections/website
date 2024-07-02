@@ -1108,6 +1108,39 @@ export interface ApiHomeHome extends Schema.SingleType {
   };
 }
 
+export interface ApiNotificationNotification extends Schema.SingleType {
+  collectionName: 'notifications';
+  info: {
+    singularName: 'notification';
+    pluralName: 'notifications';
+    displayName: 'Notification';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    right_swipe: Attribute.String;
+    greeting_message: Attribute.String;
+    update_from_anahata: Attribute.String;
+    image: Attribute.Media;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::notification.notification',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::notification.notification',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiOurStoryOurStory extends Schema.SingleType {
   collectionName: 'our_stories';
   info: {
@@ -1284,6 +1317,7 @@ declare module '@strapi/types' {
       'api::collaboration.collaboration': ApiCollaborationCollaboration;
       'api::event.event': ApiEventEvent;
       'api::home.home': ApiHomeHome;
+      'api::notification.notification': ApiNotificationNotification;
       'api::our-story.our-story': ApiOurStoryOurStory;
       'api::payment.payment': ApiPaymentPayment;
       'api::privacy-policy.privacy-policy': ApiPrivacyPolicyPrivacyPolicy;
