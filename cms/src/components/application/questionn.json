@@ -1,7 +1,8 @@
 {
   "collectionName": "components_application_questionns",
   "info": {
-    "displayName": "Questionn"
+    "displayName": "question_fields",
+    "description": ""
   },
   "options": {},
   "attributes": {

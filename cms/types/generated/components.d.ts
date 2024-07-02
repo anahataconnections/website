@@ -110,13 +110,20 @@ export interface ApplicationQuestion extends Schema.Component {
     option_3: Attribute.String;
     option_4: Attribute.String;
     others: Attribute.Boolean;
+    option_5: Attribute.String;
+    option_6: Attribute.String;
+    option_7: Attribute.String;
+    option_8: Attribute.String;
+    option_9: Attribute.String;
+    option_10: Attribute.String;
   };
 }
 
 export interface ApplicationQuestionn extends Schema.Component {
   collectionName: 'components_application_questionns';
   info: {
-    displayName: 'Questionn';
+    displayName: 'question_fields';
+    description: '';
   };
   attributes: {
     Question: Attribute.String;

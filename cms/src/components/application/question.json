@@ -31,6 +31,24 @@
     },
     "others": {
       "type": "boolean"
+    },
+    "option_5": {
+      "type": "string"
+    },
+    "option_6": {
+      "type": "string"
+    },
+    "option_7": {
+      "type": "string"
+    },
+    "option_8": {
+      "type": "string"
+    },
+    "option_9": {
+      "type": "string"
+    },
+    "option_10": {
+      "type": "string"
     }
   }
 }
