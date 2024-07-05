@@ -43,12 +43,12 @@ const career = () => {
           placeholder="Job title or category"
           className="w-[80vw] mobile:w-[60vw] h-[80px]  outline-none bg-[#F6F6F6]  mobile:text-[25px] text-[#6C6C6C] mobile:placeholder:text-[25px]  placeholder:text-[#6C6C6C] rounded-lg box-border px-[30px]"
         />
-        <div className="w-[100%] flex flex-wrap justify-around">
+        <div className="w-[100%] flex flex-wrap justify-normal gap-x-14">
           {jobs &&
             jobs.map((job, key) => {
               return (
                 <JobCard
-                  key={key} // Use the job ID as the key
+                  key={key} 
                   image_url={job.attributes.role_picture.data.attributes.url}
                   role_description={job.attributes.role_description}
                   role_title={job.attributes.role_title}

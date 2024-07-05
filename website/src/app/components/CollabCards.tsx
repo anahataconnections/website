@@ -19,7 +19,7 @@ const PartnerCard: React.FC<PartnerCardProps> = ({
   country,
   text,
 }) => (
-  <div className="relative flex flex-col grow items-center px-10 pb-10 mx-auto w-[22rem] bg-gray-200 rounded border border-solid border-stone-300 max-md:px-5 max-md:mt-10 font-sarabun">
+  <div className="relative flex flex-col grow items-center px-10 pb-10 mx-auto bg-gray-200 rounded border border-solid border-stone-300 max-md:px-5 max-md:mt-10 font-sarabun">
     <img
       loading="lazy"
       src={imgSrc}
@@ -69,15 +69,11 @@ const CollabCards: React.FC<WhatWeDoProps> = ({ data }) => {
 
   return (
     <section className="flex flex-col px-5">
-      <header
-        className="self-center text-5xl font-Pattaya
-     custom2:pt-16
-     text-emerald-900 leading-[67.2px] max-md:max-w-full max-md:text-4xl"
-      >
+      <header className="self-center text-5xl font-Pattaya custom2:pt-16 text-emerald-900 leading-[67.2px] max-md:max-w-full max-md:text-4xl">
         Our Business Partners
       </header>
       <main className="mt-24 w-full max-md:mt-10 max-md:max-w-full">
-        <div className="flex  flex-col gap-y-14 md:gap-y-0 md:flex-row md:gap-3">
+        <div className="flex flex-col gap-y-14 md:gap-y-0 md:flex-row md:gap-3">
           {data.map((partner: any, index: any) => (
             <div
               className="flex flex-col mx-auto custom2:w-[28%] md:w-1/3 custom2:px-2  "

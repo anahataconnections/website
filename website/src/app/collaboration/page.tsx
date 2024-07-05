@@ -77,7 +77,7 @@ const Collaboration: React.FC = () => {
   return (
     <div className="h-auto scroll-smooth">
       <section className="">
-        <div className="w-full custom2:h-[70vh] h-[60vh] relative">
+        <div className="w-full custom2:h-[70vh] h-[60vh] relative mb-10 lg:mb-0">
           <Image
             src={"/assets/image160.svg"}
             alt="Additional Image"
@@ -86,13 +86,13 @@ const Collaboration: React.FC = () => {
             className="z-10"
           />
           <div className="absolute inset-0 flex flex-col justify-center items-center z-20">
-            <h2 className="font-Satisfy text-white text-[4rem] mb-4">
+            <h2 className="font-Satisfy text-white text-4xl lg:text-[4rem] mb-4">
               Collaborate with us?
             </h2>
             <p className="text-white font-semibold text-lg mb-6 text-center font-sarabun">
               Our collaboration opens doors to new connections.
             </p>
-            <button className="bg-[rgb(9,76,59)] text-white px-6 py-3 rounded-md hover:bg-green-800 font-sarabun">
+            <button className="bg-[rgb(9,76,59)] text-white px-6 py-3 rounded-md hover:bg-green-800 font-sarabun font-semibold">
               Contact Us
             </button>
           </div>

@@ -57,7 +57,7 @@ const Refund = () => {
 
   return (
     <main className="w-screen flex justify-center items-center mt-[100px] mb-[100px]">
-      <div className="w-[80vw] mobile:w-[60vw] bg-[#FFE4C9] p-[20px]">
+      <div className="w-[80vw] mobile:w-[60vw] bg-[#fff1e3] p-[20px]">
         <div className="font-Pattaya text-center my-3 text-[25px] mobile:text-3xl text-[#094C3B]">
           Refund Policy
         </div>

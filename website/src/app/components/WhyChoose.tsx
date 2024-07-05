@@ -46,7 +46,7 @@ function WhyChoose() {
       <h1 className="self-center font-Pattaya text-5xl text-emerald-900 leading-[67.2px] max-md:text-4xl">
         Why choose us ?
       </h1>
-      <div className="flex gap-5 mt-14 w-full text-3xl leading-10 text-justify text-black max-md:flex-wrap max-md:mt-10 max-md:max-w-full">
+      <div className="flex flex-col md:flex-row gap-5 mt-14 w-full text-3xl leading-10 text-justify text-black max-md:flex-wrap max-md:mt-10 max-md:max-w-full">
         {items.map((item, index) => (
           <Item
             key={index}

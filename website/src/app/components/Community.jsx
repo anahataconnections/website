@@ -41,7 +41,7 @@ const Community = () => {
       message: ` ${communityData.text2}`,
     },
     {
-      src: "https://cdn.builder.io/api/v1/image/assets/TEMP/00bd5a9f903d195224eb1daadeb0557f1d7ac99bc58a161a20213f7e4037c86b?apiKey=b0951f87dee4449fa252b5f3cfc3b012&",
+      src: "https://cdn.builder.io/api/v1/image/assets/TEMP/5b98072059023c1cb512919babbfd7091b1e6f4c30e17685f334605454329f07?apiKey=b0951f87dee4449fa252b5f3cfc3b012&",
       message: ` ${communityData.text3}`,
     },
     {
@@ -51,12 +51,12 @@ const Community = () => {
   ];
 
   return (
-    <div className="w-[100%] flex flex-col justify-center items-center mt-[50px] mb-[50px] mobile:mt-[100px] gap-[50px]   mobile:mb-[100px]">
-      <header className="font-Pattaya flex items-center justify-center text-[#094C3B] text-[25px] mobile:text-[45px]">
+    <div className="w-[100%] flex flex-col justify-center items-center mt-[50px] mb-[50px] mobile:mt-[100px] gap-[50px] mobile:mb-[100px]">
+      <div className="font-Pattaya flex items-center justify-center text-[#094C3B] text-3xl lg:text-5xl">
         {communityData.title}
-      </header>
+      </div>
 
-      <div className="w-[100%] flex max-mobile:flex-col justify-center items-center gap-[30px] tab:gap-[110px]  font-sarabun mobile:translate-x-[-40px] tab:translate-x-[-10%]">
+      <div className="w-[100%] flex max-mobile:flex-col justify-center items-center gap-[30px] tab:gap-[110px] font-sarabun mobile:translate-x-[-40px] tab:translate-x-[-10%]">
         <div className="text-gray-700 bg-[#FFFAF0] mobile:w-[350px] tab:w-[400px] py-[20px] flex justify-center items-center text-[16px] mobile:text-[18px] tab:text-[22px] text-center rounded-lg border-[1px] border-black">
           {communityData.content.map((paragraph, index) => (
             <p className="px-6" key={index}>

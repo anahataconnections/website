@@ -54,7 +54,7 @@ const Privacy = () => {
 
   return (
     <main className="w-screen flex justify-center items-center mt-[100px] mb-[100px]">
-      <div className="w-[80vw] mobile:w-[60vw] text-justify bg-[#FFE4C9] p-[20px]">
+      <div className="w-[80vw] mobile:w-[60vw] text-justify bg-[#fff1e3] p-[20px]">
         <div className="font-Pattaya text-[25px] text-center mb-10 mobile:text-3xl text-[#094C3B]">
           Privacy Policy
         </div>
