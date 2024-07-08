@@ -22,6 +22,15 @@
     },
     "annual_amount": {
       "type": "string"
+    },
+    "amount_usd": {
+      "type": "string"
+    },
+    "quarterly_amount_usd": {
+      "type": "string"
+    },
+    "annual_amount_usd": {
+      "type": "string"
     }
   }
 }

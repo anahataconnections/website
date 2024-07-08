@@ -63,6 +63,9 @@ export interface ApplicationPaymentBasic extends Schema.Component {
     features: Attribute.Component<'application.options', true>;
     quarterly_amount: Attribute.String;
     annual_amount: Attribute.String;
+    amount_usd: Attribute.String;
+    quarterly_amount_usd: Attribute.String;
+    annual_amount_usd: Attribute.String;
   };
 }
 
