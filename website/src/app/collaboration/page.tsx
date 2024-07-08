@@ -9,6 +9,7 @@ import WhatWeDo from "../components/WhatWeDo";
 import CollabCards from "../components/CollabCards";
 import LetsGet from "../components/LetsGet";
 
+
 interface CollaborationData {
   data: {
     attributes: {
@@ -71,7 +72,8 @@ const Collaboration: React.FC = () => {
   if (!collab) return <div>Loading...</div>; // Handle loading state
 
   const { attributes } = collab.data;
-
+  console.log(attributes);
+  
   const { collaboration, advertisement, yoga, business_partner } = attributes;
   
   return (
