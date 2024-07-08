@@ -24,7 +24,7 @@ const Motionframe = () => {
         className="absolute top-40 md:top-[50%] lg:top-[50%] xl:top-[25%] 1250:left-[35%] pc:left-[45%] logo-animation max-w-[150px]  mobile:max-w-[300px]"
         alt="Anahata Connections Logo"
       />
-      <div className="absolute lg:bottom-[100px] mobile:bottom-[200px] flex flex-col items-center">
+      <div className="lg:absolute bottom-[100px] mobile:bottom-[200px] flex flex-col items-center justify-center mt-[450px]">
         <div
           className={`font-EvaMayasari text-[35px] small-tab:text-[70px] text-[#094C3B]`}
         >
@@ -35,7 +35,7 @@ const Motionframe = () => {
         </div>
       </div>
 
-      <button className="absolute bottom-[30px] w-[200px] small-tab:w-[250px] text-[12px] small-tab:text-[16px] font-bold text-center py-[7px] small-tab:py-[12px] font-sarabun  bg-[#095340] text-white rounded-full">
+      <button className="lg:absolute bottom-[30px] w-[200px] small-tab:w-[250px] text-[12px] small-tab:text-[16px] font-bold text-center py-[7px] my-2 lg:my-0 small-tab:py-[12px] font-sarabun  bg-[#095340] text-white rounded-full">
         Meet Your Match Now
       </button>
     </div>
