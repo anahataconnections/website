@@ -4,7 +4,8 @@
   "info": {
     "singularName": "about-anahata",
     "pluralName": "about-anahatas",
-    "displayName": "About Anahata"
+    "displayName": "About Anahata",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -20,7 +21,7 @@
     "what_is_anahata_chakra": {
       "displayName": "What_is_Anahata_Chakra",
       "type": "component",
-      "repeatable": false,
+      "repeatable": true,
       "component": "website.what-is-anahata-chakra"
     }
   }

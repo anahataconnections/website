@@ -26,7 +26,7 @@
     },
     "subscription_pop_up": {
       "type": "component",
-      "repeatable": false,
+      "repeatable": true,
       "component": "application.profile-popup"
     },
     "new_user_pop_up": {

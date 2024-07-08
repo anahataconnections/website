@@ -1,0 +1,18 @@
+{
+  "kind": "singleType",
+  "collectionName": "taglines",
+  "info": {
+    "singularName": "tagline",
+    "pluralName": "taglines",
+    "displayName": "Tagline"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "brand_tagline": {
+      "type": "string"
+    }
+  }
+}

@@ -826,13 +826,17 @@ export interface ApiAboutAnahataAboutAnahata extends Schema.SingleType {
     singularName: 'about-anahata';
     pluralName: 'about-anahatas';
     displayName: 'About Anahata';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
     banner_Image: Attribute.Component<'website.banner-image'>;
-    what_is_anahata_chakra: Attribute.Component<'website.what-is-anahata-chakra'>;
+    what_is_anahata_chakra: Attribute.Component<
+      'website.what-is-anahata-chakra',
+      true
+    >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -933,7 +937,7 @@ export interface ApiApplicationPopUpApplicationPopUp extends Schema.SingleType {
   attributes: {
     profile_pop_up: Attribute.Component<'application.profile-popup'>;
     verify_pop_up: Attribute.Component<'application.verify-pop-up'>;
-    subscription_pop_up: Attribute.Component<'application.profile-popup'>;
+    subscription_pop_up: Attribute.Component<'application.profile-popup', true>;
     new_user_pop_up: Attribute.Component<'application.profile-popup'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
@@ -1267,6 +1271,36 @@ export interface ApiRefundPolicyRefundPolicy extends Schema.SingleType {
   };
 }
 
+export interface ApiTaglineTagline extends Schema.SingleType {
+  collectionName: 'taglines';
+  info: {
+    singularName: 'tagline';
+    pluralName: 'taglines';
+    displayName: 'Tagline';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    brand_tagline: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::tagline.tagline',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::tagline.tagline',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiTermTerm extends Schema.SingleType {
   collectionName: 'terms';
   info: {
@@ -1322,6 +1356,7 @@ declare module '@strapi/types' {
       'api::payment.payment': ApiPaymentPayment;
       'api::privacy-policy.privacy-policy': ApiPrivacyPolicyPrivacyPolicy;
       'api::refund-policy.refund-policy': ApiRefundPolicyRefundPolicy;
+      'api::tagline.tagline': ApiTaglineTagline;
       'api::term.term': ApiTermTerm;
     }
   }
