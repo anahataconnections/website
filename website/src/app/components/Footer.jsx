@@ -13,6 +13,43 @@ const Footer = () => {
   const openHelpPopup = () => setIsHelpPopupOpen(true);
   const closeHelpPopup = () => setIsHelpPopupOpen(false);
 
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+
+    const formData = new FormData(event.target);
+    const email = formData.get("email");
+    const requestBody = JSON.stringify({
+      data: {
+        email,
+      },
+    });
+
+    console.log(requestBody);
+
+    // Send the POST request
+    try {
+      const response = await fetch(
+        "https://cms.anahataaconnections.com/api/subscribers",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: requestBody,
+        }
+      );
+
+      if (!response.ok) {
+        throw new Error("Failed to send email");
+      }
+
+      alert("You have successfully subscribed! Thank You.");
+    } catch (error) {
+      console.error("Error sending email:", error);
+      alert("There was an error sending your email.");
+    }
+  };
+
   return (
     <div className="relative z-[10]">
       {/* flower */}
@@ -20,7 +57,10 @@ const Footer = () => {
 
       <div className="bg-transparent flex max-mobile:flex-col justify-center items-center gap-[20px] mobile:gap-[300px] border-t-[2px] border-gray-200 pt-[20px] pb-[40px] z-[10] mx-10">
         <div className="flex flex-col justify-center items-center gap-[10px] z-[2]">
-          <Link href={'/'} className="flex flex-col items-center justify-center gap-[10px] mobile:gap-[15px]">
+          <Link
+            href={"/"}
+            className="flex flex-col items-center justify-center gap-[10px] mobile:gap-[15px]"
+          >
             <Image
               src="/assets/logo1.png"
               width={130}
@@ -85,11 +125,12 @@ const Footer = () => {
             <form
               id="myForm"
               className="flex max-mobile:flex-col items-center gap-[25px] mt-[10px]"
+              onSubmit={handleSubmit}
             >
               <input
-                type="text"
-                id="name"
-                name="name"
+                type="email"
+                id="email"
+                name="email"
                 className="w-[300px] h-[40px] px-3 rounded-md border-solid border-[1px] border-[#094C3B] text-[#094C3B] placeholder:text-black"
                 placeholder="xyz@gmail.com"
               />
