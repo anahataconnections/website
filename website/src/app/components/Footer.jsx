@@ -20,7 +20,7 @@ const Footer = () => {
 
       <div className="bg-transparent flex max-mobile:flex-col justify-center items-center gap-[20px] mobile:gap-[300px] border-t-[2px] border-gray-200 pt-[20px] pb-[40px] z-[10] mx-10">
         <div className="flex flex-col justify-center items-center gap-[10px] z-[2]">
-          <div className="flex flex-col items-center justify-center gap-[10px] mobile:gap-[15px]">
+          <Link href={'/'} className="flex flex-col items-center justify-center gap-[10px] mobile:gap-[15px]">
             <Image
               src="/assets/logo1.png"
               width={130}
@@ -31,7 +31,7 @@ const Footer = () => {
             <div className="font-EvaMayasari font-bold text-[#094C3B] text-[45px]">
               Anahata Connections
             </div>
-          </div>
+          </Link>
           {/* social's */}
           <div className="hidden mobile:flex flex-col items-center gap-[15px] mobile:gap-[20px]">
             <div className="flex flex-col justify-center items-center gap-[5px] z-[2] ">

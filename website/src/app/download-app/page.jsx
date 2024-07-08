@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import img from "@/helpers/images/register.png";
+import img from "@/helpers/images/third.png";
 import logo from "@/helpers/images/logo.png";
 import Link from "next/link";
 
@@ -31,36 +31,15 @@ const page = () => {
               <div className="font-EvaMayasari text-[60px] text-center ">
                 Anahata Connections
               </div>
+              <div className="font-Pattaya uppercase self-center pt-20 font-medium">
+                Download the app
+              </div>
             </div>
 
             <div className="flex flex-col gap-y-6 text-base">
-              <input
-                type="text"
-                name="email"
-                id="name"
-                placeholder="john"
-                className="border-[#FFFFFF] border-2 rounded-lg py-2.5 bg-transparent text-white px-2.5 focus:outline-none"
-              />
-              <input
-                type="email"
-                name="email"
-                id="email"
-                placeholder="xyz@email.com"
-                className="border-[#FFFFFF] border-2 rounded-lg py-2.5 bg-transparent text-white px-2.5 focus:outline-none"
-              />
-              <input
-                type="email"
-                name="text"
-                id="phone"
-                placeholder="123XXXXXXX"
-                className="border-[#FFFFFF] border-2 rounded-lg py-2.5 bg-transparent text-white px-2.5 focus:outline-none"
-              />
+              <img src="/assets/googleplay.png" alt="" />
+              <img src="/assets/appstore.png" className="scale-[85%]" alt="" />
             </div>
-            <Link href={'/overview'} className="self-center">
-            <button className="self-center px-14 py-3 mt-10 text-xl font-bold tracking-wide text-center text-emerald-900 whitespace-nowrap bg-white rounded-[32px] max-md:px-5 max-md:mt-10 hover:scale-105 transition ease-linear duration-200">
-              Signup
-            </button>
-            </Link>
           </form>
         </section>
       </div>
