@@ -21,10 +21,10 @@ const Motionframe = () => {
         src="/assets/logo1.png"
         width={300}
         height={300}
-        className="absolute top-[25%] 1250:left-[43%] pc:left-[45%] logo-animation max-w-[150px]  mobile:max-w-[300px]"
+        className="absolute top-40 md:top-[50%] lg:top-[50%] xl:top-[25%] 1250:left-[35%] pc:left-[45%] logo-animation max-w-[150px]  mobile:max-w-[300px]"
         alt="Anahata Connections Logo"
       />
-      <div className="absolute bottom-[100px] mobile:bottom-[200px] flex flex-col items-center">
+      <div className="absolute lg:bottom-[100px] mobile:bottom-[200px] flex flex-col items-center">
         <div
           className={`font-EvaMayasari text-[35px] small-tab:text-[70px] text-[#094C3B]`}
         >
