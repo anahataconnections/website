@@ -45,6 +45,12 @@ const Testimonials = () => {
     setIsExpanded(!isExpanded);
   };
 
+  const estimatedTotalHeight = 800; // Example: 800px
+  const lineHeight = 24; // Average line height in pixels
+
+  // Calculate the maximum number of lines that can fit
+  const maxLines = Math.floor(estimatedTotalHeight / lineHeight);
+
   if (!testimonialData) {
     return <div>Loading...</div>;
   }
@@ -63,13 +69,20 @@ const Testimonials = () => {
           alt="Screenshots of the dashboard project showing desktop and mobile versions"
         />
 
-        <div className=" w-[250px] mobile:w-[650px] h-auto py-[10px] mobile:py-[20px] px-[20px] flex flex-col justify-end  bg-[#F9EBCD] mobile:translate-x-[-50px] rounded-lg box-border ">
+        <div
+          className=" w-[250px] mobile:w-[650px] h-auto py-[10px] mobile:py-[20px] px-[20px] flex flex-col justify-end bg-[#F9EBCD] mobile:translate-x-[-50px] rounded-lg box-border "
+          style={{
+            backgroundImage: "url('/assets/bg.png')",
+            backgroundRepeat: "repeat-y",
+            backgroundPositionX: "center",
+          }}
+        >
           {testimonialData[currentIndex].content.map((paragraph, index) => (
             <React.Fragment key={index}>
               {paragraph.children.map((child, childIndex) => (
-                <div className="relative flex flex-col gap-[1px]">
+                <div className="relative flex flex-col">
                   <p
-                    className={`text-[10px] mobile:text-[15px] tab:text-[18px] text-[#094C3B] font-Satisfy font-[500] box-border mobile:px-[50px] underline underline-offset-8 leading-8 
+                    className={`text-[10px] -mt-3 mobile:text-[15px] tab:text-[18px] text-[#094C3B] font-Satisfy font-[500] box-border mobile:px-[50px] leading-[40px]
                     `}
                   >
                     {isExpanded
@@ -78,7 +91,7 @@ const Testimonials = () => {
                   </p>
                   <button
                     onClick={toggleTextExpansion}
-                    className="mt-2 text-[10px] mobile:text-[15px] tab:text-[18px] text-[#094C3B] font-Satisfy font-[500] box-border mobile:px-[50px] text-right"
+                    className="text-[10px] mobile:text-[15px] tab:text-[18px] text-[#094C3B] font-Satisfy font-[500] box-border mobile:px-[50px] text-right"
                   >
                     {isExpanded ? "Read Less..." : "Read More..."}
                   </button>
@@ -86,6 +99,7 @@ const Testimonials = () => {
               ))}
             </React.Fragment>
           ))}
+
           <p className="mt-5 text-[10px] mobile:text-[15px] tab:text-[18px] text-[#094C3B] font-Satisfy font-[500] box-border mobile:px-[50px] leading-8 text-right">
             - {testimonialData[currentIndex].name}
           </p>

@@ -34,7 +34,7 @@ const WhatWeDo: React.FC<WhatWeDoProps> = ({
       </h1>
 
       {/* First Item */}
-      <div className="text-black py-10 px-5 md:px-0 flex flex-col md:flex-row items-center md:items-start gap-2 gap-x-10">
+      <div className="text-black py-10 px-5 md:px-0 flex flex-col md:flex-row items-center justify-center md:items-start gap-2 gap-x-10">
         <div className="">
           <Image
             src={collaboration.image.data.attributes.url}
@@ -54,7 +54,7 @@ const WhatWeDo: React.FC<WhatWeDoProps> = ({
       </div>
 
       {/* Second Item */}
-      <div className="text-black py-10 px-5 md:px-0 flex flex-col md:flex-row items-center md:items-center gap-2 gap-x-10">
+      <div className="text-black py-10 px-5 md:px-0 flex flex-col md:flex-row items-center justify-center md:items-center gap-2 gap-x-10">
         <div className="md:w-1/2 ">
           <h1 className="font-bold font-sarabun text-[30px] mb-4">
             {advertisement.content[0].children[0].text}
@@ -74,7 +74,7 @@ const WhatWeDo: React.FC<WhatWeDoProps> = ({
       </div>
 
       {/* Third Item */}
-      <div className="text-black py-10 px-5 md:px-0 flex flex-col md:flex-row items-center md:items-start gap-2 gap-x-10">
+      <div className="text-black py-10 px-5 md:px-0 flex flex-col md:flex-row items-center justify-center md:items-start gap-2 gap-x-10">
         <div className="">
           <Image
             src={yoga.image.data.attributes.url}
