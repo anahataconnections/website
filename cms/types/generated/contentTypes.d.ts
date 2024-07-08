@@ -1271,6 +1271,36 @@ export interface ApiRefundPolicyRefundPolicy extends Schema.SingleType {
   };
 }
 
+export interface ApiSubscriberSubscriber extends Schema.CollectionType {
+  collectionName: 'subscribers';
+  info: {
+    singularName: 'subscriber';
+    pluralName: 'subscribers';
+    displayName: 'Subscribers';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    email: Attribute.Email;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::subscriber.subscriber',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::subscriber.subscriber',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiTaglineTagline extends Schema.SingleType {
   collectionName: 'taglines';
   info: {
@@ -1356,6 +1386,7 @@ declare module '@strapi/types' {
       'api::payment.payment': ApiPaymentPayment;
       'api::privacy-policy.privacy-policy': ApiPrivacyPolicyPrivacyPolicy;
       'api::refund-policy.refund-policy': ApiRefundPolicyRefundPolicy;
+      'api::subscriber.subscriber': ApiSubscriberSubscriber;
       'api::tagline.tagline': ApiTaglineTagline;
       'api::term.term': ApiTermTerm;
     }
