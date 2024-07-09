@@ -22,6 +22,11 @@ async function fetchEvents() {
 
 const Hero = () => {
   const [data, setData] = useState(null);
+  const [isExpanded, setIsExpanded] = useState(true);
+
+  const toggleContent = () => {
+    setIsExpanded(!isExpanded);
+  };
 
   useEffect(() => {
     const fetchData = async () => {
@@ -31,9 +36,19 @@ const Hero = () => {
     fetchData();
   }, []);
 
-  const handleClick = () => {
-    router.push("/Whyanahata");
-  };
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 768) {
+        setIsExpanded(false);
+      } else setIsExpanded(true);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   return (
     <div className="w-screen flex flex-col items-center bg-no-repeat bg-cover bg-center gap-[20px] ">
@@ -53,16 +68,34 @@ const Hero = () => {
             {data?.content &&
               data.content.map((paragraph, index) => (
                 <React.Fragment key={index}>
-                  {paragraph.children.map((child, childIndex) => (
-                    <p key={childIndex}>{child.text}</p>
-                  ))}
+                  {isExpanded || index === 0
+                    ? paragraph.children.map((child, childIndex) => (
+                        <p key={childIndex}>{child.text}</p>
+                      ))
+                    : null}
                 </React.Fragment>
               ))}{" "}
           </header>
 
+          {!isExpanded && data?.content?.length > 1 ? (
+            <button
+              className="-mt-3 flex lg:hidden font-mono text-center justify-center items-center"
+              onClick={toggleContent}
+            >
+              See More...
+            </button>
+          ) : (
+            <button
+              className="flex font-mono lg:hidden text-center justify-center items-center"
+              onClick={toggleContent}
+            >
+              See Less...
+            </button>
+          )}
+
           <div className="flex justify-center">
             <Link
-              href="../../Whyanahata" 
+              href="../../Whyanahata"
               className="bg-[#094C3B] text-white rounded-full text-[20px] font-sarabun px-[50px] py-[10px] cursor-pointer hover:bg-[#286f5d] font-[550] hover:font-bold "
             >
               Know More
