@@ -57,7 +57,7 @@ const career = () => {
             })}
         </div>
         <div className="text-[11px] mobile:text-[20px] font-sarabun flex justify-center items-center mt-[100px]  ">
-          For open position Email Us - <a href="mailto:career@anahataconnections.com">career@anahataconnections.com</a>
+          For more details about Open Positions, email us at career@anahataconnections.com
         </div>
       </div>
     </div>
