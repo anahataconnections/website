@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import Image from "next/image";
 import img from "@/helpers/images/register.png";
@@ -5,6 +6,40 @@ import logo from "@/helpers/images/logo.png";
 import Link from "next/link";
 
 const page = () => {
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    const apiUrl =
+      "https://cms.anahataaconnections.com/api/auth/local/register";
+
+    const payload = {
+      username: document.getElementById("name").value,
+      email: document.getElementById("email").value,
+      password: document.getElementById("password").value,
+    };
+
+    try {
+      const response = await fetch(apiUrl, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(payload),
+      });
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
+      alert("Registration successful! Redirecting to Overview...");
+
+      setTimeout(() => {
+        window.location.href = "/overview";
+      }, 2000);
+    } catch (error) {
+      console.error("Error registering user:", error);
+    }
+  };
+
   return (
     <main className="pt-14 bg-emerald-900 shadow-sm w-full z-[11]">
       <div className="flex gap-5 max-md:flex-col max-md:gap-0">
@@ -18,7 +53,10 @@ const page = () => {
           />
         </section>
         <section className="flex flex-col items-center z-[11] pt-14">
-          <form className="flex flex-col text-2xl leading-8 text-neutral-200 max-md:mt-10 max-md:max-w-full">
+          <form
+            onSubmit={handleSubmit}
+            className="flex flex-col text-2xl leading-8 text-neutral-200 max-md:mt-10 max-md:max-w-full"
+          >
             <div className=" flex flex-col justify-center items-center mb-10">
               <Image
                 src={logo}
@@ -36,7 +74,7 @@ const page = () => {
             <div className="flex flex-col gap-y-6 text-base">
               <input
                 type="text"
-                name="email"
+                name="name"
                 id="name"
                 placeholder="john"
                 className="border-[#FFFFFF] border-2 rounded-lg py-2.5 bg-transparent text-white px-2.5 focus:outline-none"
@@ -49,18 +87,16 @@ const page = () => {
                 className="border-[#FFFFFF] border-2 rounded-lg py-2.5 bg-transparent text-white px-2.5 focus:outline-none"
               />
               <input
-                type="email"
-                name="text"
-                id="phone"
-                placeholder="123XXXXXXX"
+                type="password"
+                name="password"
+                id="password"
+                placeholder="********"
                 className="border-[#FFFFFF] border-2 rounded-lg py-2.5 bg-transparent text-white px-2.5 focus:outline-none"
               />
             </div>
-            <Link href={'/overview'} className="self-center">
             <button className="self-center px-14 py-3 mt-10 text-xl font-bold tracking-wide text-center text-emerald-900 whitespace-nowrap bg-white rounded-[32px] max-md:px-5 max-md:mt-10 hover:scale-105 transition ease-linear duration-200">
               Signup
             </button>
-            </Link>
           </form>
         </section>
       </div>

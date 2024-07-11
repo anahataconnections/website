@@ -13,7 +13,7 @@ export const navElemObj: { title: string; link: string }[] = [
   { title: "Our Story", link: "/Our-story" },
   { title: "Blog", link: "/Blog" },
   { title: "FAQs", link: "/Home#faq" },
-  { title: "Sign In", link: "/Signin" },
+  { title: "Sign Up", link: "/register" },
 ];
 interface FooterElemProp {
   [key: string]: { title: string; link: string }[];

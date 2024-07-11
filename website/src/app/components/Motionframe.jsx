@@ -1,20 +1,37 @@
 /* eslint-disable */
 
 "use client";
-import React from "react";
+import React, { useState , useEffect} from "react";
 import "../Style/motion.css";
 import "../Style/hero.css";
 import Aos from "aos";
 import "aos/dist/aos.css";
-import { useEffect } from "react";
 
 import Image from "next/image";
 
 const Motionframe = () => {
+
+  const [tagline, setTagline] = useState("");
+  
   useEffect(() => {
     Aos.init();
-  });
 
+    const fetchTagline = async () => {
+      try {
+        const response = await fetch(
+          "https://cms.anahataaconnections.com/api/tagline"
+        );
+        const data = await response.json();
+        setTagline(data);
+      } catch (error) {
+        console.error("Failed to fetch tagline:", error);
+      }
+    };
+
+    fetchTagline();
+  }, []);
+
+    console.log(tagline);
   return (
     <div className="w-[100%] h-[100%] relative flex flex-col items-center justify-center">
       <Image
@@ -31,7 +48,7 @@ const Motionframe = () => {
           Anahata&nbsp;Connections
         </div>
         <div className="logic-blossoms font-cantarell text-[15px] small-tab:text-[28px] font-bold  text-[#094C3B] ">
-          Where Yogic love Blossoms
+          {tagline?.data?.attributes?.brand_tagline}
         </div>
       </div>
 
