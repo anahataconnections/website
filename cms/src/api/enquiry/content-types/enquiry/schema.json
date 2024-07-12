@@ -4,7 +4,8 @@
   "info": {
     "singularName": "enquiry",
     "pluralName": "enquiries",
-    "displayName": "Enquiry"
+    "displayName": "Enquiry",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -22,6 +23,9 @@
     },
     "message": {
       "type": "text"
+    },
+    "data": {
+      "type": "string"
     }
   }
 }
