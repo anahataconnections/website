@@ -1147,6 +1147,39 @@ export interface ApiHomeHome extends Schema.SingleType {
   };
 }
 
+export interface ApiMessageMessage extends Schema.CollectionType {
+  collectionName: 'messages';
+  info: {
+    singularName: 'message';
+    pluralName: 'messages';
+    displayName: 'messages';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    name: Attribute.String;
+    gender: Attribute.String;
+    email: Attribute.Email;
+    message: Attribute.Text;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::message.message',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::message.message',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiNotificationNotification extends Schema.SingleType {
   collectionName: 'notifications';
   info: {
@@ -1417,6 +1450,7 @@ declare module '@strapi/types' {
       'api::enquiry.enquiry': ApiEnquiryEnquiry;
       'api::event.event': ApiEventEvent;
       'api::home.home': ApiHomeHome;
+      'api::message.message': ApiMessageMessage;
       'api::notification.notification': ApiNotificationNotification;
       'api::our-story.our-story': ApiOurStoryOurStory;
       'api::payment.payment': ApiPaymentPayment;
