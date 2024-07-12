@@ -23,9 +23,6 @@
     },
     "message": {
       "type": "text"
-    },
-    "data": {
-      "type": "string"
     }
   }
 }

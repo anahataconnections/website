@@ -1065,7 +1065,6 @@ export interface ApiEnquiryEnquiry extends Schema.CollectionType {
     email: Attribute.Email;
     gender: Attribute.String;
     message: Attribute.Text;
-    data: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

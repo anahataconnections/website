@@ -1,7 +1,7 @@
 /* eslint-disable */
 
 "use client";
-import React, { useState , useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import "../Style/motion.css";
 import "../Style/hero.css";
 import Aos from "aos";
@@ -10,9 +10,8 @@ import "aos/dist/aos.css";
 import Image from "next/image";
 
 const Motionframe = () => {
-
   const [tagline, setTagline] = useState("");
-  
+
   useEffect(() => {
     Aos.init();
 
@@ -31,7 +30,6 @@ const Motionframe = () => {
     fetchTagline();
   }, []);
 
-    console.log(tagline);
   return (
     <div className="w-[100%] h-[100%] relative flex flex-col items-center justify-center">
       <Image
