@@ -78,7 +78,7 @@ const Events = () => {
               name="bday"
             />
             <p className="my-2 text-xs text-gray-600">MM/DD/YYYY</p>
-            <div className="flex flex-col mt-4">
+            {/* <div className="flex flex-col mt-4">
               <h1 className="text-2xl my-2 font-bold">Event Agenda</h1>
               <div className="flex items-center">
                 <input
@@ -110,8 +110,8 @@ const Events = () => {
                 />
                 <label htmlFor="marriage">Marriage</label>
               </div>
-            </div>
-            <div className="flex flex-col mt-4">
+            </div> */}
+            {/* <div className="flex flex-col mt-4">
               <h1 className="text-2xl my-2 font-bold">Sort By:</h1>
               <button className="border border-green-500 hover:bg-[#094C3B] hover:text-white font-bold py-2 px-4 rounded-3xl my-2 w-[180px]">
                 Duration
@@ -122,7 +122,7 @@ const Events = () => {
               <button className="border border-green-500 hover:bg-[#094C3B] hover:text-white font-bold py-2 px-4 rounded-3xl my-2 w-[180px]">
                 Relevance
               </button>
-            </div>
+            </div> */}
           </form>
         </div>
       </div>
