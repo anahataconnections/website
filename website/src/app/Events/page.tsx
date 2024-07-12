@@ -59,7 +59,7 @@ const Events = () => {
           Upcoming Event
         </div>
       </div>
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 mt-10">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 my-10">
         <div className="order-2 lg:order-1 px-6 justify-center items-center flex flex-row w-full lg:w-[80vw] lg:-translate-x-20 xl:px-28">
           <Eventcard events={events} />
         </div>
