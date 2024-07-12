@@ -36,7 +36,7 @@ const Motionframe = () => {
         src="/assets/logo1.png"
         width={300}
         height={300}
-        className="absolute top-40 md:top-[50%] lg:top-[50%] xl:top-[25%] 1250:left-[35%] pc:left-[45%] logo-animation max-w-[150px]  mobile:max-w-[300px]"
+        className="absolute top-40 md:top-[25%] logo-animation w-40 md:w-auto"
         alt="Anahata Connections Logo"
       />
       <div className="lg:absolute bottom-[100px] mobile:bottom-[200px] flex flex-col items-center justify-center mt-[450px]">
