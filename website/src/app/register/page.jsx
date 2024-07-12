@@ -8,12 +8,11 @@ import Link from "next/link";
 const page = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
-    const apiUrl =
-      "https://cms.anahataaconnections.com/api/auth/local/register";
+    const apiUrl = "https://admin.anahataaconnections.com/api/auth/register";
 
     const payload = {
-      username: document.getElementById("name").value,
-      email: document.getElementById("email").value,
+      name: document.getElementById("name").value,
+      email_phone: document.getElementById("email").value,
       password: document.getElementById("password").value,
     };
 
@@ -30,11 +29,12 @@ const page = () => {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
 
-      alert("Registration successful! Redirecting to Overview...");
+      const data = await response.json();
+      
+      localStorage.setItem("token", data.token);
 
-      setTimeout(() => {
-        window.location.href = "/overview";
-      }, 2000);
+      alert("Registration successful! Redirecting to Overview...");
+      window.location.href = "/overview";
     } catch (error) {
       console.error("Error registering user:", error);
     }

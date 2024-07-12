@@ -8,7 +8,39 @@ import Link from "next/link";
 
 const page = () => {
   const [selectedGender, setSelectedGender] = useState("");
-  const router = useRouter();
+  const [purpose, setPurpose] = useState("");
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    const token = localStorage.getItem("token");
+    const apiUrl =
+      "https://admin.anahataaconnections.com/api/profile/add-purpose-gender";
+
+    const payload = {
+      gender: selectedGender,
+      purpose: purpose,
+    };
+
+    try {
+      const response = await fetch(apiUrl, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
+        },
+        body: JSON.stringify(payload),
+      });
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      localStorage.removeItem("token");
+      window.location.href = "/download-app";
+    } catch (error) {
+      console.error("Error registering user:", error);
+    }
+  };
+
   return (
     <main className="pt-14 bg-emerald-900 shadow-sm w-full z-[11]">
       <div className="flex gap-5 max-md:flex-col max-md:gap-0">
@@ -111,6 +143,8 @@ const page = () => {
               <select
                 id="relationship-status"
                 name="relationshipStatus"
+                value={purpose}
+                onChange={(e) => setPurpose(e.target.value)}
                 className="mt-1 block w-full pl-3 pr-10 text-base border-[#FFFFFF] border-2 rounded-lg py-2.5 bg-transparent text-white px-2.5 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
               >
                 <option className="text-black" value="">
@@ -130,11 +164,13 @@ const page = () => {
                 </option>
               </select>
             </div>
-            <Link href={'/download-app'} className="self-center">
-              <button className="self-center px-14 py-3 mt-10 text-xl font-bold tracking-wide text-center text-emerald-900 whitespace-nowrap bg-white rounded-[32px] max-md:px-5 max-md:mt-10 hover:scale-105 transition ease-linear duration-200">
-                Next
-              </button>
-            </Link>
+
+            <button
+              onClick={handleSubmit}
+              className="self-center px-14 py-3 mt-10 text-xl font-bold tracking-wide text-center text-emerald-900 whitespace-nowrap bg-white rounded-[32px] max-md:px-5 max-md:mt-10 hover:scale-105 transition ease-linear duration-200"
+            >
+              Next
+            </button>
           </form>
         </section>
       </div>
