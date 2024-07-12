@@ -51,7 +51,7 @@ const Motionframe = () => {
         </div>
       </div>
       <button className="lg:absolute bottom-[30px] w-[200px] small-tab:w-[250px] text-[12px] small-tab:text-[16px] font-bold text-center py-[7px] my-2 lg:my-0 small-tab:py-[12px] font-sarabun  bg-[#095340] text-white rounded-full">
-        <Link href={"/register"} className="p-5 px-10">
+        <Link href={"/register"} className="p-5 lg:px-10">
           Meet Your Match Now
         </Link>
       </button>
