@@ -23,6 +23,9 @@
     },
     "message": {
       "type": "text"
+    },
+    "is_it_working": {
+      "type": "string"
     }
   }
 }
