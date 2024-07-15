@@ -1,7 +1,48 @@
-import React from "react";
+import React, { useState } from "react";
 
 const HelpPopup = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
+
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    gender: "",
+    message: "",
+  });
+
+  console.log(formData);
+
+  const dataToSend = { data: formData };
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+
+    try {
+      const response = await fetch(
+        "https://cms.anahataaconnections.com/api/enquiries",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(dataToSend),
+        }
+      );
+
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+
+      console.log("Form submitted successfully");
+      onClose(); 
+      alert('We have recieved your query. You will be reached out soon.')
+    } catch (error) {
+      console.error(
+        "There has been a problem with your fetch operation:",
+        error
+      );
+    }
+  };
 
   return (
     <div className="absolute bottom-0 left-0 w-screen h-screen bg-black bg-opacity-50 flex justify-center items-center z-[50]">
@@ -17,13 +58,17 @@ const HelpPopup = ({ isOpen, onClose }) => {
             {`×`}{" "}
           </div>
         </div>
-        <div className="flex flex-col gap-y-5 px-5 pt-5">
+        <form
+          onSubmit={handleSubmit}
+          className="flex flex-col gap-y-5 px-5 pt-5"
+        >
           <input
             type="text"
             name="name"
             id="name"
             placeholder="Name"
             className="p-2 border border-black rounded-lg focus:outline-none"
+            onChange={(e) => setFormData({ ...formData, name: e.target.value })}
           />
           <input
             type="email"
@@ -31,6 +76,9 @@ const HelpPopup = ({ isOpen, onClose }) => {
             id="email"
             placeholder="E-Mail"
             className="p-2 border border-black rounded-lg focus:outline-none"
+            onChange={(e) =>
+              setFormData({ ...formData, email: e.target.value })
+            }
           />
           <input
             type="text"
@@ -38,6 +86,9 @@ const HelpPopup = ({ isOpen, onClose }) => {
             id="gender"
             placeholder="Gender"
             className="p-2 border border-black rounded-lg focus:outline-none"
+            onChange={(e) =>
+              setFormData({ ...formData, gender: e.target.value })
+            }
           />
           <textarea
             placeholder="Write to us ..."
@@ -45,12 +96,18 @@ const HelpPopup = ({ isOpen, onClose }) => {
             id="message"
             rows="10"
             className="p-2 border border-black rounded-lg focus:outline-none"
+            onChange={(e) =>
+              setFormData({ ...formData, message: e.target.value })
+            }
           ></textarea>
 
-          <div className="w-40 py-3 font-semibold bg-[#094C3B] text-white text-center rounded-[32px]">
+          <button
+            type="submit"
+            className="w-40 py-3 font-semibold bg-[#094C3B] text-white text-center rounded-[32px]"
+          >
             Submit
-          </div>
-        </div>
+          </button>
+        </form>
       </div>
     </div>
   );
