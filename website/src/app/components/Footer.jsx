@@ -8,6 +8,8 @@ import Link from "next/link";
 import Contact from "./contact";
 import { footerElem, socialObj } from "@/constants";
 import HelpPopup from "./HelpPopup";
+
+
 const Footer = () => {
   const [isHelpPopupOpen, setIsHelpPopupOpen] = useState(false);
   const openHelpPopup = () => setIsHelpPopupOpen(true);

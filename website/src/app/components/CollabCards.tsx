@@ -19,14 +19,14 @@ const PartnerCard: React.FC<PartnerCardProps> = ({
   country,
   text,
 }) => (
-  <div className="relative flex flex-col grow items-center px-20 pb-10 mx-auto bg-gray-200 rounded border border-solid border-stone-300 max-md:px-5 max-md:mt-10 font-sarabun">
+  <div className="relative flex flex-col grow items-center px-5 pb-5 mx-auto bg-gray-200 rounded border border-solid border-stone-300 max-md:px-5 max-md:mt-10 font-sarabun">
     <img
       loading="lazy"
       src={imgSrc}
       alt={`${name} from ${country}`}
       className="absolute -top-16 z-10 mt-0 max-w-full aspect-[1.01] w-[124px] rounded-full object-cover"
     />
-    <h3 className="text-3xl text-emerald-900 mt-24">{name}</h3>
+    <h3 className="text-3xl text-emerald-900 mt-20">{name}</h3>
     <p className="mt-4 text-xl text-emerald-900">{country}</p>
     <div className="flex gap-0 mt-2">
       <img
@@ -65,7 +65,6 @@ const PartnerCard: React.FC<PartnerCardProps> = ({
 );
 
 const CollabCards: React.FC<WhatWeDoProps> = ({ data }) => {
-  console.log(data);
 
   return (
     <section className="flex flex-col px-5">
@@ -73,10 +72,10 @@ const CollabCards: React.FC<WhatWeDoProps> = ({ data }) => {
         Our Business Partners
       </header>
       <main className="mt-24 w-full max-md:mt-10 max-md:max-w-full">
-        <div className="flex flex-col gap-y-14 md:gap-y-0 md:flex-row md:gap-3">
+        <div className="flex flex-col gap-y-14 md:gap-y-0 md:flex-row md:gap-x-5 mx-20">
           {data.map((partner: any, index: any) => (
             <div
-              className="flex flex-col mx-auto custom2:w-[23%] md:w-1/3 custom2:px-2 "
+              className="flex flex-col mx-auto md:w-full custom2:px-2 "
               key={index}
             >
               <PartnerCard

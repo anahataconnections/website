@@ -39,8 +39,8 @@ const WhatWeDo: React.FC<WhatWeDoProps> = ({
           <Image
             src={collaboration.image.data.attributes.url}
             alt="Collaboration Image"
-            width={500}
-            height={300}
+            width={400}
+            height={200}
           />
         </div>
         <div className="md:w-1/2 md:pl-8">
@@ -67,8 +67,8 @@ const WhatWeDo: React.FC<WhatWeDoProps> = ({
           <Image
             src={advertisement.image.data.attributes.url}
             alt="Advertisement Image"
-            width={500}
-            height={300}
+            width={400}
+            height={200}
           />
         </div>
       </div>
@@ -79,8 +79,8 @@ const WhatWeDo: React.FC<WhatWeDoProps> = ({
           <Image
             src={yoga.image.data.attributes.url}
             alt="Yoga Image"
-            width={500}
-            height={300}
+            width={400}
+            height={200}
           />
         </div>
         <div className="md:w-1/2 md:pl-8">

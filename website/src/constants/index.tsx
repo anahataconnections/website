@@ -40,8 +40,8 @@ export const socialObj: {
 }[] = [
   { title: "youtube", link: "https://www.youtube.com/channel/UCn84wLcqIeOq_h_X9aB9d7A", icon: <FaYoutube /> },
   { title: "linkedIn", link: "https://www.linkedin.com/company/anahata-connections/", icon: <FaLinkedinIn /> },
-  { title: "facebook", link: "", icon: <FaFacebookF /> },
-  { title: "telegram", link: "", icon: <FaTelegramPlane /> },
+  // { title: "facebook", link: "", icon: <FaFacebookF /> },
+  // { title: "telegram", link: "", icon: <FaTelegramPlane /> },
   { title: "instagram", link: "https://www.instagram.com/anahataaconnections/?hl=en", icon: <FaInstagram /> },
 ];
 

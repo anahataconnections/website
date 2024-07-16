@@ -34,8 +34,8 @@ const HelpPopup = ({ isOpen, onClose }) => {
       }
 
       console.log("Form submitted successfully");
-      onClose(); 
-      alert('We have recieved your query. You will be reached out soon.')
+      onClose();
+      alert("We have recieved your query. You will be reached out soon.");
     } catch (error) {
       console.error(
         "There has been a problem with your fetch operation:",
@@ -80,16 +80,20 @@ const HelpPopup = ({ isOpen, onClose }) => {
               setFormData({ ...formData, email: e.target.value })
             }
           />
-          <input
-            type="text"
+          <select
             name="gender"
             id="gender"
-            placeholder="Gender"
+            value={formData.gender}
             className="p-2 border border-black rounded-lg focus:outline-none"
             onChange={(e) =>
               setFormData({ ...formData, gender: e.target.value })
             }
-          />
+          >
+            <option value="">Select Gender</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</option>
+          </select>
           <textarea
             placeholder="Write to us ..."
             name="message"

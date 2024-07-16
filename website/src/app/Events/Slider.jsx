@@ -1,16 +1,13 @@
 /* eslint-disable */
 
-"use client"
+"use client";
 
-import left from "../../../public/left.svg"
+import left from "../../../public/left.svg";
 import right from "../../../public/right.svg";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { images } from "./constants";
-import './event.css'
-
-
-
+import "./event.css";
 
 const Slider = () => {
   const [activeImage, setActiveImage] = useState(0);
@@ -33,7 +30,7 @@ const Slider = () => {
     return () => {
       clearTimeout(timer);
     };
-  }, [activeImage,clickNext]);
+  }, [activeImage, clickNext]);
   return (
     <main className="  place-items-center flex w-full mx- px-20 py-10 relative">
       <div className="absolute inset-0 bg-rgba-black-33 opacity-75"></div>
@@ -50,28 +47,22 @@ const Slider = () => {
         {images.map((elem, idx) => (
           <div
             key={idx}
-            className={`${idx === activeImage
-              ? "block w-full h-[65vh] object-cover object-center transition-all duration-500 ease-in-out relative"
-              : "hidden"
-              }`}
+            className={`relative ${
+              idx === activeImage
+                ? "block w-full h-[65vh] object-cover object-center transition-all duration-500 ease-in-out relative"
+                : "hidden"
+            }`}
           >
-            <div>
-              <h1 className=" headStyles customMax:translate-y-[13rem]
-              customMax:-translate-x-[40rem]
-              custom2:translate-y-[2.4rem]
-              custom3:-translate-x-[9rem]
-              "   
-              >
-                3 Ways For healthy relationship
-              </h1>
-            </div>
             <Image
               src={elem.src}
               alt=""
               width={400}
               height={400}
-              className="w-full h-full object-cover md:rounded-3xl"
+              className="w-full h-full object-cover md:rounded-3xl z-1"
             />
+            <div className="absolute -mt-16 ml-16">
+              <h1 className="z-20 font-Pattaya text-5xl text-white">3 Ways For healthy relationship</h1>
+            </div>
           </div>
         ))}
       </div>
