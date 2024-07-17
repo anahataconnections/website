@@ -12,7 +12,7 @@ export type EventsProps = {
 const Eventcard = (props: EventsProps) => {
   const { events } = props;
   return (
-    <div className="flex font-sarabun item-center justify-between overflow-x-hidden relative z-[11]">
+    <div className="flex font-sarabun item-center justify-between overflow-x-hidden relative z-[50]">
       {events.map((item: any) => {
         return (
           <div key={item.id} className="w-[400px]">
@@ -21,8 +21,8 @@ const Eventcard = (props: EventsProps) => {
                 src={item.attributes.image.data.attributes.url}
                 width={400}
                 height={300}
-                className="border-solid h-52 w-full  rounded-t-xl border-2 border-[0,0,0,0.45] object-cover"
-                alt="Screenshots of  the dashboard project showing desktop and mobile versions"
+                className="border-solid h-52 w-full rounded-t-xl border-2 border-[0,0,0,0.45] object-cover"
+                alt="Screenshots of the dashboard project showing desktop and mobile versions"
               />
 
               <div className="bg-white px-5  text-black py-5 rounded-b-2xl border-solid border-2 border-[0,0,0,0.45]">
@@ -43,8 +43,8 @@ const Eventcard = (props: EventsProps) => {
                 </div>
 
                 <button
+                  onClick={() => alert('You will be notified on your registered email and phone number!')}
                   className="mt-2 bg-[#094C3B] text-white rounded-[3px] px-14 py-2.5 cursor-pointer hover:bg-[#286f5d] font-semibold"
-                  type="submit"
                 >
                   Notify
                 </button>

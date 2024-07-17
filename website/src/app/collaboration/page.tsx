@@ -9,7 +9,6 @@ import WhatWeDo from "../components/WhatWeDo";
 import CollabCards from "../components/CollabCards";
 import LetsGet from "../components/LetsGet";
 
-
 interface CollaborationData {
   data: {
     attributes: {
@@ -73,9 +72,9 @@ const Collaboration: React.FC = () => {
 
   const { attributes } = collab.data;
   console.log(attributes);
-  
+
   const { collaboration, advertisement, yoga, business_partner } = attributes;
-  
+
   return (
     <div className="h-auto scroll-smooth">
       <section className="">
@@ -94,7 +93,12 @@ const Collaboration: React.FC = () => {
             <p className="text-white font-semibold text-lg mb-6 text-center font-sarabun">
               Our collaboration opens doors to new connections.
             </p>
-            <button className="bg-[rgb(9,76,59)] text-white px-6 py-3 rounded-md hover:bg-green-800 font-sarabun font-semibold">
+            <button
+              onClick={() =>
+                alert("You will be reached out by us on your email shortly! ")
+              }
+              className="bg-[rgb(9,76,59)] text-white px-6 py-3 rounded-md hover:bg-green-800 font-sarabun font-semibold"
+            >
               Contact Us
             </button>
           </div>
@@ -108,9 +112,9 @@ const Collaboration: React.FC = () => {
           yoga={yoga}
         />
 
-        <CollabCards data ={business_partner} />
+        <CollabCards data={business_partner} />
 
-        <LetsGet  />
+        <LetsGet />
       </section>
     </div>
   );

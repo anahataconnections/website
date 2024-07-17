@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 export const JobCard = ({
   role_description,
@@ -22,10 +23,12 @@ export const JobCard = ({
         <h2 className="text-gray-800 font-semibold text-lg mb-2">
           {role_title}
         </h2>
-        <p className="text-gray-600 mb-4 text-center">{role_description}</p>
-        <button className=" bg-[#094C3B] rounded-md font-sarabun text-white px-4 py-2 mt-4">
-          Apply Now
-        </button>
+        {/* <p className="text-gray-600 mb-4 text-center">{role_description}</p> */}
+        <Link href={role_description} target="_blank">
+          <button className=" bg-[#094C3B] rounded-md font-sarabun text-white px-4 py-2 mt-4">
+            Apply Now
+          </button>
+        </Link>
       </div>
     </div>
   );
