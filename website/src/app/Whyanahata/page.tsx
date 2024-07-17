@@ -8,24 +8,68 @@ import Image from "next/image";
 import Blogs from "../components/Blogs";
 
 interface BannerImage {
-  data: any;
   id: string;
-  formats: {
-    thumbnail: {
-      url: string;
+  bannerImage: {
+    data: {
+      id: number;
+      attributes: {
+        name: string;
+        alternativeText: null | string;
+        caption: null | string;
+        width: number;
+        height: number;
+        formats: null | object;
+        hash: string;
+        ext: string;
+        mime: string;
+        size: number;
+        url: string;
+        previewUrl: null | string;
+        provider: string;
+        provider_metadata: null | object;
+        createdAt: string;
+        updatedAt: string;
+      };
     };
   };
 }
 
 interface Data {
   attributes: {
-    banner_Image: { id: string; bannerImage: BannerImage };
-    what_is_anahata_chakra: {
-      image: any;
+    banner_Image: BannerImage;
+    what_is_anahata_chakra: Array<{
+      id: number;
       Heading_title: string;
       date: string;
-      content: { type: string; children: { text: string }[] }[];
-    };
+      subtitle: string;
+      content: Array<{
+        type: string;
+        children: Array<{ text: string; type: string }>;
+      }>;
+      image: {
+        data: {
+          id: number;
+          attributes: {
+            name: string;
+            alternativeText: null | string;
+            caption: null | string;
+            width: number;
+            height: number;
+            formats: null | object;
+            hash: string;
+            ext: string;
+            mime: string;
+            size: number;
+            url: string;
+            previewUrl: null | string;
+            provider: string;
+            provider_metadata: null | object;
+            createdAt: string;
+            updatedAt: string;
+          };
+        };
+      };
+    }>;
   };
 }
 
@@ -44,17 +88,18 @@ async function fetchWhy(): Promise<Data | null> {
 
 export default function WhyAnahata() {
   const [data, setData] = useState<Data | null>(null);
-  const [loading, setLoading] = useState(true); 
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const result = await fetchWhy();
+        console.log(result);
         setData(result);
-        setLoading(false); 
+        setLoading(false);
       } catch (error) {
         console.error("Failed to fetch data:", error);
-        setLoading(false); 
+        setLoading(false);
       }
     };
     fetchData();
@@ -62,12 +107,9 @@ export default function WhyAnahata() {
 
   if (loading) return <div>Loading...</div>;
 
-  if (!data) return <div>No data found.</div>; 
+  if (!data) return <div>No data found.</div>;
 
   const { banner_Image, what_is_anahata_chakra } = data.attributes;
-
-  console.log(what_is_anahata_chakra);
-  console.log(banner_Image);
 
   const formatDate = (dateString: string): string => {
     const date = new Date(dateString);
@@ -82,8 +124,7 @@ export default function WhyAnahata() {
     }
   };
 
-  const bannerImageUrl =
-    data.attributes.banner_Image.bannerImage;
+  const bannerImageUrl = data.attributes.banner_Image.bannerImage;
 
   return (
     <div className="bg-transparent w-full h-full top-0 overflow-x-hidden z-20 relative">
@@ -95,38 +136,42 @@ export default function WhyAnahata() {
         className="w-full object-cover h-[60vh] custom1:h-[70vh] custom:h-[68vh]"
       />
 
-      <div className="flex justify-center items-center "></div>
-      <div className="text-center mt-16 custom1:mt-24 customMax:mt-28">
-        <h1 className="text-5xl my-4 text-[#166534] font-Pattaya">
-          {what_is_anahata_chakra.Heading_title}
-        </h1>
-        <p className="text-gray-500">
-          {formatDate(what_is_anahata_chakra.date)} • 5 min read
-        </p>
-      </div>
-      <div className="flex justify-center my-4">
-        <div>
-          <Image
-            src={what_is_anahata_chakra.image.data.attributes.url}
-            alt="Additional Image"
-            width={500}
-            height={100}
-            className="object-fit bg-cover custom:mt-12 custom1:mx-20 custom1:mt-12 custom1:w-[835px] customMax:w-[1700px] customMax:max-h-[570px] rounded-md"
-          />
-        </div>
-      </div>
-      <div className="mx-20  custom1:mx-20 customMax:mx-[14.7rem] mt-8 text-justify">
-        {what_is_anahata_chakra.content.map((item, index) => (
-          <p key={index} className="my-2 text-black text-[1.3rem] ">
-            {item.children.map((child, idx) => (
-              <span key={idx}>
-                {child.text}
-                {"\n"}
-              </span>
+      {what_is_anahata_chakra.map((item, index) => (
+        <div
+          key={index}
+          className="text-center mt-16 custom1:mt-24 customMax:mt-28"
+        >
+          <h1 className="text-5xl my-4 text-[#166534] font-Pattaya">
+            {item.Heading_title}
+          </h1>
+          <p className="text-gray-500">{formatDate(item.date)} • 5 min read</p>
+
+          {/* Image rendering */}
+          <div className="flex justify-center my-4">
+            <Image
+              src={item.image.data.attributes.url}
+              alt="Additional Image"
+              width={500}
+              height={100}
+              className="object-fit bg-cover custom:mt-12 custom1:mx-20 custom1:mt-12 custom1:w-[835px] customMax:w-[1700px] customMax:max-h-[570px] rounded-md"
+            />
+          </div>
+
+          {/* Content rendering */}
+          <div className="mx-20  custom1:mx-20 customMax:mx-[14.7rem] mt-8 text-justify">
+            {item.content.map((contentItem, contentIndex) => (
+              <p key={contentIndex} className="my-2 text-black text-[1.3rem] ">
+                {contentItem.children.map((child, childIdx) => (
+                  <span key={childIdx}>
+                    {child.text}
+                    {"\n"}
+                  </span>
+                ))}
+              </p>
             ))}
-          </p>
-        ))}
-      </div>
+          </div>
+        </div>
+      ))}
 
       <div className="mb-10 z-[11]">
         <h1 className="my-20 text-[#166534] font-Pattaya text-center text-[2.5rem] xl:text-[3rem] ">

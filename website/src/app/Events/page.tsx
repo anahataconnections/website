@@ -61,17 +61,30 @@ const Events = () => {
         </div>
       </div>
 
-      <form className="mx-32 my-8 relative text-black px-6">
-        <h1 className="text-2xl my-4 font-bold">Select Date Range</h1>
-
-        <input
-          type="date"
-          className="w-1/4 mt-2 h-10 border border-gray-300 px-4"
-          placeholder="DD/MM/YYYY"
-          id="date"
-          name="bday"
-        />
-        <p className="my-2 text-xs text-gray-600">MM/DD/YYYY</p>
+      <h1 className="text-2xl mx-32 my-4 font-bold px-6">Select Date Range</h1>
+      <form className="mx-32 my-8 relative text-black px-6 flex w-full justify-start">
+        <div className="flex flex-wrap w-full justify-start gap-x-5">
+          <div className="flex flex-col w-full md:w-1/5">
+            <p className="my-2 text-xs text-gray-600">START DATE</p>
+            <input
+              type="date"
+              className="w-full mt-2 h-10 border border-gray-300 px-4"
+              placeholder="Start Date"
+              id="startDate"
+              name="startDate"
+            />
+          </div>
+          <div className="flex flex-col w-full md:w-1/5">
+            <p className="my-2 text-xs text-gray-600">END DATE</p>
+            <input
+              type="date"
+              className="w-full mt-2 h-10 border border-gray-300 px-4"
+              placeholder="End Date"
+              id="endDate"
+              name="endDate"
+            />
+          </div>
+        </div>
       </form>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 my-10">
