@@ -42,7 +42,7 @@ const page = () => {
   };
 
   return (
-    <main className="pt-14 bg-emerald-900 shadow-sm w-full z-[11]">
+    <main className="bg-emerald-900 shadow-sm w-full z-[11] pb-40">
       <div className="flex gap-5 max-md:flex-col max-md:gap-0">
         <section className="flex flex-col w-1/2 ">
           <Image

@@ -30,11 +30,11 @@ const page = () => {
       }
 
       const data = await response.json();
+      console.log(data);
+      // localStorage.setItem("token", data.token);
 
-      localStorage.setItem("token", data.token);
-
-      alert("Registration successful! Redirecting to Overview...");
-      window.location.href = "/overview";
+      // alert("Registration successful! Redirecting to Overview...");
+      // window.location.href = "/overview";
     } catch (error) {
       console.error("Error registering user:", error);
     }
@@ -43,7 +43,7 @@ const page = () => {
   return (
     <main className="bg-emerald-900 shadow-sm w-full z-[11]">
       <div className="flex justify-center items-center pb-40">
-        <section className="flex flex-col items-center justify-center w-full z-[11] pt-14">
+        <section className="flex flex-col items-center justify-center w-full z-[11]">
           <form
             onSubmit={handleSubmit}
             className="relative flex flex-col justify-center items-center text-2xl leading-8 text-neutral-200 max-md:mt-10 w-full"
