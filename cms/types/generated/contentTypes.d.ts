@@ -742,7 +742,6 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
   };
   options: {
     draftAndPublish: false;
-    timestamps: true;
   };
   attributes: {
     username: Attribute.String &
@@ -771,6 +770,11 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
       'manyToOne',
       'plugin::users-permissions.role'
     >;
+    purpose: Attribute.Enumeration<
+      ['dating', 'bff', 'marriage', 'life_partner']
+    >;
+    gender: Attribute.Enumeration<['male', 'female', 'other']>;
+    mobile: Attribute.BigInteger;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
@@ -1306,6 +1310,36 @@ export interface ApiRefundPolicyRefundPolicy extends Schema.SingleType {
   };
 }
 
+export interface ApiSignUpSignUp extends Schema.SingleType {
+  collectionName: 'sign_ups';
+  info: {
+    singularName: 'sign-up';
+    pluralName: 'sign-ups';
+    displayName: 'signUp';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    register_banner: Attribute.Component<'website.banner-image'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::sign-up.sign-up',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::sign-up.sign-up',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiSubscriberSubscriber extends Schema.CollectionType {
   collectionName: 'subscribers';
   info: {
@@ -1422,6 +1456,7 @@ declare module '@strapi/types' {
       'api::payment.payment': ApiPaymentPayment;
       'api::privacy-policy.privacy-policy': ApiPrivacyPolicyPrivacyPolicy;
       'api::refund-policy.refund-policy': ApiRefundPolicyRefundPolicy;
+      'api::sign-up.sign-up': ApiSignUpSignUp;
       'api::subscriber.subscriber': ApiSubscriberSubscriber;
       'api::tagline.tagline': ApiTaglineTagline;
       'api::term.term': ApiTermTerm;

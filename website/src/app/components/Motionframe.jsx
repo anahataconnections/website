@@ -37,24 +37,24 @@ const Motionframe = () => {
         src="/assets/logo1.png"
         width={300}
         height={300}
-        className="absolute top-40 md:top-[25%] logo-animation w-40 md:w-auto"
+        className="absolute top-40 md:top-[25%] logo-animation w-80 md:w-72 lg:w-auto"
         alt="Anahata Connections Logo"
       />
-      <div className="lg:absolute bottom-[100px] mobile:bottom-[200px] flex flex-col items-center justify-center mt-[450px]">
-        <div
-          className={`font-EvaMayasari text-[35px] small-tab:text-[70px] text-[#094C3B]`}
-        >
+      {tagline?.data?.attributes?.brand_tagline && <div className="lg:absolute bottom-[100px] mobile:bottom-[200px] flex flex-col items-center justify-center mt-[35rem] md:mt-[35rem]">
+        <div className={`font-EvaMayasari text-4xl lg:text-5xl animate-fade-down animate-once animate-ease-in text-[#094C3B]`}>
           Anahata&nbsp;Connections
         </div>
-        <div className="logic-blossoms font-cantarell text-[15px] small-tab:text-[28px] font-bold  text-[#094C3B] ">
+        <div className="font-cantarell text-[14px] small-tab:text-[28px] animate-fade-up animate-once animate-ease-in lg:text-base font-bold text-[#094C3B]">
           {tagline?.data?.attributes?.brand_tagline}
         </div>
-      </div>
-      <button className="lg:absolute bottom-[30px] w-[200px] small-tab:w-[250px] text-[12px] small-tab:text-[16px] font-bold text-center py-[7px] my-2 lg:my-0 small-tab:py-[12px] font-sarabun  bg-[#095340] text-white rounded-full">
-        <Link href={"/register"} className="p-5 lg:px-10">
-          Meet Your Match Now
-        </Link>
-      </button>
+      </div>}
+      {
+        tagline?.data?.attributes?.brand_tagline && <button className="lg:absolute animate-fade-up animate-once animate-ease-in bottom-[30px] w-[200px] small-tab:w-[250px] text-[12px] small-tab:text-[16px] font-bold text-center py-[7px] my-2 lg:my-0 small-tab:py-[12px] font-sarabun  bg-[#095340] text-white rounded-full">
+          <Link href={"/register"} className="p-5 lg:px-10">
+            Meet Your Match Now
+          </Link>
+        </button>
+      }
     </div>
   );
 };

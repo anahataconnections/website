@@ -1,96 +1,110 @@
 "use client";
-import React from "react";
 import Image from "next/image";
-import img from "@/helpers/images/registerbanner.png";
+import { useEffect, useState } from "react";
 import logo from "@/helpers/images/logo.png";
-import Link from "next/link";
+import img from "@/helpers/images/registerbanner.png";
+import Phase1 from "./_phases/Phase1.tsx"
+import Phase2 from "./_phases/Phase2.tsx"
+import Phase3 from "./_phases/Phase3"
+import toast from "react-hot-toast";
+import Loader from "@/components/shared/Loader/Loader.tsx";
+import axios from "axios";
+import { setCookie } from "cookies-next";
 
-const page = () => {
-  const handleSubmit = async (event) => {
-    event.preventDefault();
-    const apiUrl = "https://admin.anahataaconnections.com/api/auth/register";
+const STRAPI_URL = process.env.STRAPI_URL || "http://localhost:1337";
 
-    const payload = {
-      name: document.getElementById("name").value,
-      email_phone: document.getElementById("email").value,
-      password: document.getElementById("password").value,
+const Register = () => {
+    const [phase1Data, setPhase1Data] = useState(null);
+    const [showDownloadPage, setShowDownloadPage] = useState(false);
+
+    const [bannerImage, setBannerImage] = useState(img);
+
+    const [loading, setLoading] = useState(false);
+
+    useEffect(() => {
+        const fetchBanner = async () => {
+            setLoading(true);
+            try {
+                // http://localhost:1337/api/sign-up?populate[0]=register_banner.bannerImage
+                const res = await axios.get(`${STRAPI_URL}/api/sign-up?populate[0]=register_banner.bannerImage`);
+                // console.log(res.data.data.attributes.register_banner.bannerImage.data.attributes.url);
+                setBannerImage(res.data.data.attributes.register_banner.bannerImage.data.attributes.url);
+            } catch (error) {
+                console.log(error);
+                toast.error("Error loading banner image. Please try again later.");
+            } finally {
+                setLoading(false);
+            }
+        }
+
+        fetchBanner();
+    }, []);
+
+    const handlePhase1Submit = (values) => {
+        setPhase1Data(values);
     };
 
-    try {
-      const response = await fetch(apiUrl, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(payload),
-      });
+    const handleFinalSubmit = async (finalData) => {
+        setLoading(true);
+        const apiUrl = `${STRAPI_URL}/api/auth/local/register`;
+        const payload = { ...finalData, password: finalData.email, username: finalData.email };
 
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
+        try {
+            const response = await axios.post(apiUrl, payload);
 
-      const data = await response.json();
-      console.log(data);
-      // localStorage.setItem("token", data.token);
+            if (response.status === 200) {
+                const data = await response.data;
+                setCookie("token", data.jwt);
+                setCookie("user", JSON.stringify(data.user));
+                toast.success("User registered successfully!", {
+                    icon: "👏",
+                });
+                setShowDownloadPage(true);
+            } else {
+                toast.error("Error registering user. Please try again later.", {
+                    icon: "🚫",
+                });
+            }
+        } catch (error) {
+            console.error(error);
+            toast.error("Error registering user. Please try again later.", {
+                icon: "🚫",
+            });
+        } finally {
+            setLoading(false);
+        }
+    };
 
-      // alert("Registration successful! Redirecting to Overview...");
-      // window.location.href = "/overview";
-    } catch (error) {
-      console.error("Error registering user:", error);
-    }
-  };
-
-  return (
-    <main className="bg-emerald-900 shadow-sm w-full z-[11]">
-      <div className="flex justify-center items-center pb-40">
-        <section className="flex flex-col items-center justify-center w-full z-[11]">
-          <form
-            onSubmit={handleSubmit}
-            className="relative flex flex-col justify-center items-center text-2xl leading-8 text-neutral-200 max-md:mt-10 w-full"
-          >
-            <div className=" flex flex-col justify-center items-center">
-              <Image
-                src={logo}
-                alt="Logo"
-                width={279}
-                height={372}
-                className="object-cover"
-              />
+    return (
+        <main className="bg-emerald-900 shadow-sm w-full z-[11] overflow-hidden h-screen">
+            <div className="flex justify-center items-center pb-40">
+                <section className="flex flex-col items-center justify-center w-full z-[11]">
+                    <div className="relative flex flex-col justify-center items-center text-2xl leading-8 text-neutral-200 max-md:mt-10 w-full">
+                        <div className="flex flex-col justify-center items-center">
+                            <Image src={logo} alt="Logo" width={250} height={250} className="object-contain" />
+                        </div>
+                        <div className="relative flex flex-col gap-y-6 text-base z-[11] text-white">
+                            <Image src={bannerImage} width={1200} height={1200} alt="Banner" className="absolute scale-[2] -z-10" />
+                            {!phase1Data ? (
+                                <Phase1 onFormSubmit={handlePhase1Submit} />
+                            ) : (
+                                <Phase2 phase1Data={phase1Data} onFinalSubmit={handleFinalSubmit} />
+                            )}
+                        </div>
+                    </div>
+                </section>
             </div>
-
-            <div className="relative flex flex-col gap-y-6 text-base z-[11]">
-              <Image src={img} className="absolute scale-[2] -z-10" />
-
-              <input
-                type="text"
-                name="name"
-                id="name"
-                placeholder="john"
-                className="border-[#FFFFFF] border-2 rounded-lg py-2.5 bg-transparent text-white px-2.5 focus:outline-none w-96"
-              />
-              <input
-                type="email"
-                name="email"
-                id="email"
-                placeholder="xyz@email.com"
-                className="border-[#FFFFFF] border-2 rounded-lg py-2.5 bg-transparent text-white px-2.5 focus:outline-none"
-              />
-              <input
-                type="password"
-                name="password"
-                id="password"
-                placeholder="********"
-                className="border-[#FFFFFF] border-2 rounded-lg py-2.5 bg-transparent text-white px-2.5 focus:outline-none"
-              />
-            </div>
-            <button className="self-center px-14 py-3 mt-10 text-xl font-bold tracking-wide text-center text-emerald-900 whitespace-nowrap bg-white rounded-[32px] max-md:px-5 max-md:mt-10 hover:scale-105 transition ease-linear duration-200 cursor-pointer z-[11]">
-              Signup
-            </button>
-          </form>
-        </section>
-      </div>
-    </main>
-  );
+            {
+                showDownloadPage && <Phase3 />
+            }
+            {
+                loading && <div className="absolute inset-0 z-30 bg-white opacity-95 flex gap-4 flex-col items-center justify-center h-full text-5xl font-bold">
+                    <Loader />
+                    <span className="text-4xl font-semibold text-red-600 font-EvaMayasari">Hold up... Looking for your match!</span>
+                </div>
+            }
+        </main>
+    );
 };
 
-export default page;
+export default Register;

@@ -4,7 +4,7 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Motionframe from "./Motionframe";
-import { AnimationFrame } from "./AnimationFrame";
+import AnimationFrame from "./AnimationFrame.tsx";
 import "../Style/animation.css";
 
 async function fetchEvents() {
@@ -52,10 +52,12 @@ const Hero = () => {
 
   return (
     <div className="w-screen flex flex-col items-center bg-no-repeat bg-cover bg-center gap-[20px] ">
-      <div className=" w-screen h-fit  items-center flex flex-col gap-[10px]">
+      <div className=" w-screen h-fit items-center flex flex-col gap-[10px]">
         <div className="bg-home-page-back bg-cover bg-no-repeat bg-center">
           <div className="relative w-screen min-h-screen mobile:h-[80vh] bg-radial-gradient  flex justify-center overflow-hidden frame ">
+            <div className="absolute">
             <AnimationFrame />
+            </div>
             <Motionframe />
           </div>
         </div>
@@ -70,8 +72,8 @@ const Hero = () => {
                 <React.Fragment key={index}>
                   {isExpanded || index === 0
                     ? paragraph.children.map((child, childIndex) => (
-                        <p key={childIndex}>{child.text}</p>
-                      ))
+                      <p key={childIndex}>{child.text}</p>
+                    ))
                     : null}
                 </React.Fragment>
               ))}{" "}

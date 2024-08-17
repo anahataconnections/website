@@ -2,50 +2,43 @@ import React from "react";
 import Image from "next/image";
 import "../Style/animation.css";
 
-export const AnimationFrame = () => {
+const AnimationFrame = () => {
   return (
-    <div className="absolute w-[100%] h-[100%]">
-      <div className="relative w-[100%] h-[100%]">
-        <div className="flex justify-center items-center">
-          {/* man */}
-          <div className="man-image absolute max-mobile:top-[40%] max-mobile:left-0 mobile:bottom-0 1250:left-[5%] 1370:left-[8%] pc:left-[8%]  ">
-            <div className="relative w-full h-fit mobile:h-fit">
-              <div
-                className="absolute w-[100%] h-[100%]  bg-no-repeat bg-50-width-left rose-opacity"
-                style={{
-                  backgroundImage: "url('/assets/left-rose.svg')",
-                }}
-              />
-              <Image
-                src={"/assets/man.svg"}
-                alt="man image"
-                width={550}
-                height={750}
-                className="w-[100%] h-[200px] mobile:h-[650px] translate-x-[30%] z-[10] "
-              />
-            </div>
-          </div>
-
-          {/* woman */}
-          <div className="woman-image absolute max-mobile:top-[40%] right-0 bottom-0">
-            <div className="relative w-[100%] h-fit mobile:h-fit">
-              <div
-                className="absolute w-[100%] h-[100%] bg-no-repeat bg-50-width-right rose-opacity"
-                style={{
-                  backgroundImage: "url('/assets/right-rose.svg')",
-                }}
-              ></div>
-              <Image
-                src={"/assets/woman.svg"}
-                alt="woman image"
-                width={550}
-                height={750}
-                className="w-auto h-[200px] mobile:h-[650px] translate-x-[-40%] lg:translate-y-4"
-              />
-            </div>
-          </div>
-        </div>
+    <div className="flex items-center justify-center xl:translate-y-48 lg:translate-y-32 md:translate-y-72">
+      <div className="animate-fade-right animate-once animate-ease-in relative">
+        <Image
+          src={"/assets/left-rose.svg"}
+          alt="rose image"
+          width={1200}
+          height={1200}
+          className="lg:w-[16.5rem] md:w-56 w-32 translate-y-80 -translate-x-2 lg:translate-y-48 lg:-translate-x-32 md:-translate-x-4 md:translate-y-32 absolute animate-fade animate-delay-500"
+        />
+        <Image
+          src={"/assets/man.svg"}
+          alt="man image"
+          width={1200}
+          height={1200}
+          className="xl:w-[32rem] md:w-96 w-[70rem] lg:translate-y-12 md:translate-y-24 lg:translate-x-14 md:translate-x-10 translate-y-80 translate-x-4"
+        />
+      </div>
+      <div className="animate-fade-left animate-once animate-ease-in relative">
+        <Image
+          src={"/assets/right-rose.svg"}
+          alt="rose image"
+          width={1200}
+          height={1200}
+          className="lg:w-[16.5rem] md:w-56 w-32 translate-y-80 translate-x-20 lg:translate-y-48 lg:translate-x-96 md:translate-x-48 md:translate-y-32  absolute animate-fade animate-delay-500"
+        />
+        <Image
+          src={"/assets/woman.svg"}
+          alt="woman image"
+          width={1200}
+          height={1200}
+          className="xl:w-[36rem] md:w-[27rem] w-[78rem] lg:translate-y-14 md:translate-y-24 lg:-translate-x-14 md:-translate-x-10 translate-y-80 -translate-x-4"
+        />
       </div>
     </div>
   );
 };
+
+export default AnimationFrame;

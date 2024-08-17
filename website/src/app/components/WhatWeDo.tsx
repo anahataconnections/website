@@ -28,7 +28,7 @@ const WhatWeDo: React.FC<WhatWeDoProps> = ({
   yoga,
 }) => {
   return (
-    <div className=" custom2:px-28  pt-16 flex flex-col space-y-3">
+    <div className=" pt-16 flex flex-col space-y-3">
       <h1 className="font-Pattaya text-emerald-900 text-center text-5xl my-10">
         What we do?
       </h1>

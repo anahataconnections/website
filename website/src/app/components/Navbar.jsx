@@ -20,9 +20,9 @@ const Navbar = () => {
   return (
     <header
       ref={navbar}
-      className="hidden mobile:flex fixed top-0 w-screen bg-[#094C3B] h-[90px] customPhone:h-[75px] custom:h-[90px]  px-4 z-[50] transition-all delay-300 duration-300"
+      className="hidden mobile:flex fixed top-0 w-screen bg-[#094C3B] h-[90px] customPhone:h-[75px] custom:h-[90px] px-4 z-[50] transition-all delay-300 duration-300"
     >
-      <div className="flex flex-col md:flex-row  justify-between items-center w-full box-border mobile:pr-[50px]   pc:pr-[100px] ">
+      <div className="flex flex-col md:flex-row  justify-between items-center w-full px-8">
         <div className="flex items-center justify-center md:justify-start">
           <Image
             src="/assets/logo1.png"

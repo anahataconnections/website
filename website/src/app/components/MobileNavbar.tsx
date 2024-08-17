@@ -21,7 +21,7 @@ export const MobileNavbar = () => {
   return (
     <header
       ref={navbar}
-      className="flex mobile:hidden fixed top-0 w-screen bg-[#094C3B] h-[60px]   z-[50] transition-all delay-300 duration-300 overflow-hidden"
+      className="flex mobile:hidden fixed top-0 w-screen bg-[#094C3B] h-[60px] z-[50] transition-all delay-300 duration-300 overflow-hidden"
     >
       <div className="relative w-[100%] h-[100%] flex  items-center  ">
         {/* logo */}
@@ -56,7 +56,7 @@ export const MobileNavbar = () => {
         ></div>
         {/*navbar*/}
         <div
-          className={`fixed top-0 right-0 flex flex-col gap-[20px]  bg-[#094C3B] w-[50vw] h-screen   z-[50] ${
+          className={`fixed top-0 right-0 flex flex-col gap-[20px]  bg-[#094C3B] w-[50vw] h-screen z-[50] ${
             open ? "" : "scale-x-0"
           } origin-right trasition-all duration-[300ms]  `}
         >

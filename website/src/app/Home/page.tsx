@@ -32,6 +32,7 @@ const Home = () => {
   useEffect(() => {
     const fetchData = async () => {
       const data = await fetchEvents();
+      console.log(data);
       setHomeData(data);
     };
     fetchData();

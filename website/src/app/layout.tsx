@@ -7,6 +7,7 @@ import Navbar from "./components/Navbar";
 import { MobileNavbar } from "./components/MobileNavbar";
 import Footer from "./components/Footer";
 import { usePathname } from "next/navigation";
+import { Toaster } from "react-hot-toast";
 
 // const na = eva-maya ;
 const inter = Inter({ subsets: ["latin"] });
@@ -41,6 +42,7 @@ export default function RootLayout({
           pathname !== "/download-app" && <Navbar />}
         <MobileNavbar />
         {children}
+        <Toaster position="top-center" reverseOrder={false} />
         {pathname !== "/register" &&
           pathname !== "/overview" &&
           pathname !== "/download-app" && (

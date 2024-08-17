@@ -71,7 +71,11 @@ const Collaboration: React.FC = () => {
   if (!collab) return <div>Loading...</div>; // Handle loading state
 
   const { attributes } = collab.data;
-  console.log(attributes);
+  
+  const handlePrompt = () => {
+    const email = prompt("Enter your email", "anahataconnections@gmail.com");
+    console.log(email);
+  };
 
   const { collaboration, advertisement, yoga, business_partner } = attributes;
 
@@ -94,9 +98,7 @@ const Collaboration: React.FC = () => {
               Our collaboration opens doors to new connections.
             </p>
             <button
-              onClick={() =>
-                alert("You will be reached out by us on your email shortly! ")
-              }
+              onClick={handlePrompt}
               className="bg-[rgb(9,76,59)] text-white px-6 py-3 rounded-md hover:bg-green-800 font-sarabun font-semibold"
             >
               Contact Us

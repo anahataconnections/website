@@ -15,10 +15,7 @@ const FAQItem = ({ question, answer, index, openIndex, setOpenIndex }) => {
 
   return (
     <div
-      className={`relative z-10  w-[80vw] mobile:w-[60vw] border border-gray-500 mb-4 rounded-xl ease-linear transition-all duration-200 ${
-        isOpen ? "bg-[#094C3B] text-white " : "bg-transparent text-black "
-      }`}
-    >
+      className={`relative w-[80vw] mobile:w-[60vw] border border-gray-500 mb-4 rounded-xl ease-linear transition-all duration-200 ${isOpen ? "bg-[#094C3B] text-white" : "bg-transparent text-black"}`}>
       <div
         className="bg-inherit h-[58px] rounded-xl px-4 py-5 cursor-pointer flex items-center justify-between font-sarabun"
         onClick={toggleAccordion}

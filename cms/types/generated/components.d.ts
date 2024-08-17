@@ -316,6 +316,17 @@ export interface WebsiteOurCommunity extends Schema.Component {
   };
 }
 
+export interface WebsiteRegister extends Schema.Component {
+  collectionName: 'components_website_registers';
+  info: {
+    displayName: 'Register';
+    icon: 'crown';
+  };
+  attributes: {
+    register_banner: Attribute.Component<'website.banner-image'>;
+  };
+}
+
 export interface WebsiteTestimonial extends Schema.Component {
   collectionName: 'components_website_testimonials';
   info: {
@@ -407,6 +418,7 @@ declare module '@strapi/types' {
       'website.home-blog': WebsiteHomeBlog;
       'website.images': WebsiteImages;
       'website.our-community': WebsiteOurCommunity;
+      'website.register': WebsiteRegister;
       'website.testimonial': WebsiteTestimonial;
       'website.what-is-anahata-chakra': WebsiteWhatIsAnahataChakra;
       'website.why-anahata-connections': WebsiteWhyAnahataConnections;

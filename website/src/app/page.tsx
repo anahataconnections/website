@@ -3,9 +3,6 @@ import React from "react";
 
 export const runtime = "edge";
 
-
 export default function Home() {
- 
-     redirect("/Home");
-
+  redirect("/Home");
 }

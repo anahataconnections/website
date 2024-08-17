@@ -1,6 +1,4 @@
-
-
-.rotateY180{
+.rotateY180 {
   transform: rotateY(180deg);
 }
 
@@ -17,27 +15,28 @@
 
 
 
-.logo-animation{
+.logo-animation {
   animation: logo-animation 2.5s ease-out;
- 
 }
 
 
 
 @keyframes logo-animation {
-  0%{
-    
+  0% {
+
     top: 0;
     transform: scale(0);
     opacity: 0;
   }
-  50%{
+
+  50% {
     top: 0;
     transform: scale(0);
     opacity: 0;
   }
-  100%{
-   
+
+  100% {
+
     opacity: 1;
     transform: scale(1);
   }
@@ -49,13 +48,16 @@
   0% {
     opacity: 0;
   }
-  25%{
+
+  25% {
     opacity: 0;
   }
+
   75% {
     opacity: 0;
   }
-  100%{
+
+  100% {
     opacity: 1;
   }
 }
@@ -64,74 +66,83 @@
   0% {
     left: -240px;
   }
+
   25% {
     left: -240px;
   }
-  
+
 }
 
 @keyframes from-240px-rigth {
-   0% {
+  0% {
     right: -240px;
   }
+
   25% {
     right: -240px;
   }
-  
-   
+
+
 }
+
 /* small screen animation */
 @keyframes from-100px-left {
   0% {
     left: -100px;
   }
+
   25% {
     left: -100px;
   }
-  
+
 }
 
 @keyframes from-100px-rigth {
-   0% {
+  0% {
     right: -100px;
   }
+
   25% {
     right: -100px;
   }
-  
-   
+
+
 }
 
-@media(min-width:550px) 
-{
+@media(min-width:550px) {
   .man-image {
-    animation: from-240px-left 3s  ease-out ;
- }
- .woman-image {
-     animation: from-240px-rigth 3s   ease-out ;
- }
- .rose-opacity {
-  animation: opcity-0-1 4.5s ease-out;
-}
+    animation: from-240px-left 3s ease-out;
+  }
+
+  .woman-image {
+    animation: from-240px-rigth 3s ease-out;
+  }
+
+  .rose-opacity {
+    animation: opcity-0-1 4.5s ease-out;
+  }
 }
 
 @media (max-height:700px) {
   .man-image {
     left: -4%;
- }
- .woman-image {
-     right: -4%
- }
+  }
+
+  .woman-image {
+    right: -4%
+  }
 }
 
 
-@media(max-width:500px){
+@media(max-width:500px) {
   .man-image {
-    animation: from-100px-left 2s  ease-out ;
- }
- .woman-image {
-     animation: from-100px-rigth 2s   ease-out ;
- }
+    animation: from-100px-left 2s ease-out;
+  }
+
+  .woman-image {
+    animation: from-100px-rigth 2s ease-out;
+  }
+
   .rose-opacity {
     animation: opcity-0-1 2.5s ease-out;
   }
