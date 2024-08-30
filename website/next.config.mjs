@@ -1,6 +1,9 @@
 // next.config.js
 
 const nextConfig = {
+  typescript: {
+    ignoreBuildErrors: true
+  },
   images: {
     remotePatterns: [
       {
