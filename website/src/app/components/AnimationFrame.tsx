@@ -11,6 +11,7 @@ const AnimationFrame = () => {
           alt="rose image"
           width={1200}
           height={1200}
+          priority
           className="lg:w-[16.5rem] md:w-56 w-32 translate-y-80 -translate-x-2 lg:translate-y-48 lg:-translate-x-32 md:-translate-x-4 md:translate-y-32 absolute animate-fade animate-delay-500"
         />
         <Image
@@ -18,6 +19,7 @@ const AnimationFrame = () => {
           alt="man image"
           width={1200}
           height={1200}
+          priority
           className="xl:w-[32rem] md:w-96 w-[70rem] lg:translate-y-12 md:translate-y-24 lg:translate-x-14 md:translate-x-10 translate-y-80 translate-x-4"
         />
       </div>
@@ -27,6 +29,7 @@ const AnimationFrame = () => {
           alt="rose image"
           width={1200}
           height={1200}
+          priority
           className="lg:w-[16.5rem] md:w-56 w-32 translate-y-80 translate-x-20 lg:translate-y-48 lg:translate-x-96 md:translate-x-48 md:translate-y-32  absolute animate-fade animate-delay-500"
         />
         <Image
@@ -34,6 +37,7 @@ const AnimationFrame = () => {
           alt="woman image"
           width={1200}
           height={1200}
+          priority
           className="xl:w-[36rem] md:w-[27rem] w-[78rem] lg:translate-y-14 md:translate-y-24 lg:-translate-x-14 md:-translate-x-10 translate-y-80 -translate-x-4"
         />
       </div>
