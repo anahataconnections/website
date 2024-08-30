@@ -26,7 +26,7 @@ const Register = () => {
             setLoading(true);
             try {
                 // http://localhost:1337/api/sign-up?populate[0]=register_banner.bannerImage
-                const res = await axios.get(`${NEXT_PUBLIC_BACKEND_DOMAIN}/api/sign-up?populate[0]=register_banner.bannerImage`);
+                const res = await axios.get(`${NEXT_PUBLIC_BACKEND_DOMAIN}api/sign-up?populate[0]=register_banner.bannerImage`);
                 // console.log(res.data.data.attributes.register_banner.bannerImage.data.attributes.url);
                 setBannerImage(res.data.data.attributes.register_banner.bannerImage.data.attributes.url);
             } catch (error) {
@@ -46,7 +46,7 @@ const Register = () => {
 
     const handleFinalSubmit = async (finalData) => {
         setLoading(true);
-        const apiUrl = `${NEXT_PUBLIC_BACKEND_DOMAIN}/api/auth/local/register`;
+        const apiUrl = `${NEXT_PUBLIC_BACKEND_DOMAIN}api/auth/local/register`;
         const payload = { ...finalData, password: finalData.email, username: finalData.email };
 
         try {
