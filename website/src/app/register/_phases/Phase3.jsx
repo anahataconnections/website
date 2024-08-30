@@ -6,7 +6,7 @@ const Phase3 = () => {
     return (
         <div className="absolute inset-0 z-20 bg-emerald-900 h-screen flex text-white">
             <div className="flex flex-1">
-                <Image src={phase3} alt="phase3" width={1200} height={1200} quality={100} className="object-cover" />
+                <Image src={phase3} alt="phase3" width={1200} height={1200} priority quality={100} className="object-cover" />
             </div>
             <div className="flex flex-1 flex-col items-center justify-between">
                 <div className="flex">
