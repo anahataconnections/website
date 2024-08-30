@@ -11,7 +11,7 @@ import Loader from "@/components/shared/Loader/Loader.tsx";
 import axios from "axios";
 import { setCookie } from "cookies-next";
 
-const STRAPI_URL = process.env.STRAPI_URL || "http://localhost:1337";
+const NEXT_PUBLIC_BACKEND_DOMAIN = process.env.NEXT_PUBLIC_BACKEND_DOMAIN || "http://localhost:1337";
 
 const Register = () => {
     const [phase1Data, setPhase1Data] = useState(null);
@@ -26,7 +26,7 @@ const Register = () => {
             setLoading(true);
             try {
                 // http://localhost:1337/api/sign-up?populate[0]=register_banner.bannerImage
-                const res = await axios.get(`${STRAPI_URL}/api/sign-up?populate[0]=register_banner.bannerImage`);
+                const res = await axios.get(`${NEXT_PUBLIC_BACKEND_DOMAIN}/api/sign-up?populate[0]=register_banner.bannerImage`);
                 // console.log(res.data.data.attributes.register_banner.bannerImage.data.attributes.url);
                 setBannerImage(res.data.data.attributes.register_banner.bannerImage.data.attributes.url);
             } catch (error) {
@@ -46,7 +46,7 @@ const Register = () => {
 
     const handleFinalSubmit = async (finalData) => {
         setLoading(true);
-        const apiUrl = `${STRAPI_URL}/api/auth/local/register`;
+        const apiUrl = `${NEXT_PUBLIC_BACKEND_DOMAIN}/api/auth/local/register`;
         const payload = { ...finalData, password: finalData.email, username: finalData.email };
 
         try {
