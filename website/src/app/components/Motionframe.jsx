@@ -49,8 +49,8 @@ const Motionframe = () => {
         </div>
       </div>}
       {
-        tagline?.data?.attributes?.brand_tagline && <button className="lg:absolute animate-fade-up animate-once animate-ease-in bottom-[30px] w-[200px] small-tab:w-[250px] text-[12px] small-tab:text-[16px] font-bold text-center py-[7px] my-2 lg:my-0 small-tab:py-[12px] font-sarabun  bg-[#095340] text-white rounded-full">
-          <Link href={"/register"} className="p-5 lg:px-10">
+        tagline?.data?.attributes?.brand_tagline && <button className="lg:absolute animate-fade-up animate-once animate-ease-in lg:bottom-[90px] w-[200px] small-tab:w-[250px] text-[12px] small-tab:text-[16px] font-bold text-center py-[7px] my-2 lg:my-0 small-tab:py-[12px] font-sarabun  bg-[#095340] text-white rounded-full">
+          <Link href={"/register"}>
             Meet Your Match Now
           </Link>
         </button>

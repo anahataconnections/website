@@ -139,7 +139,7 @@ export default function WhyAnahata() {
       {what_is_anahata_chakra.map((item, index) => (
         <div
           key={index}
-          className="text-center mt-16 custom1:mt-24 customMax:mt-28"
+          className="text-center mt-16 px-4 custom1:mt-24 customMax:mt-28"
         >
           <h1 className="text-5xl my-4 text-[#166534] font-Pattaya">
             {item.Heading_title}
@@ -160,7 +160,7 @@ export default function WhyAnahata() {
           {/* Content rendering */}
           <div className="mx-20  custom1:mx-20 customMax:mx-[14.7rem] mt-8 text-justify">
             {item.content.map((contentItem, contentIndex) => (
-              <p key={contentIndex} className="my-2 text-black text-[1.3rem] ">
+              <p key={contentIndex} className="my-2 text-black text-lg">
                 {contentItem.children.map((child, childIdx) => (
                   <span key={childIdx}>
                     {child.text}

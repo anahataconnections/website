@@ -34,9 +34,7 @@ const BlogPage: React.FC<BlogPageProps> = ({ params }) => {
         style={{
           backgroundImage: "url('/assets/blog_bg.png')",
         }}
-        className="w-[100vw] h-[50vh] mobile:h-[65vh]
-         bg-cover bg-no-repeat bg-center
-        "
+        className="w-[100vw] h-[50vh] mobile:h-[65vh] bg-cover bg-no-repeat bg-center"
       ></div>
       <div className="w-screen flex items-center justify-center  pt-[30px] pb-[60px] mobile:pt-[50px] mobile:pb-[100px]">
         <div className="w-[80vw] mobile:w-[60vw] flex flex-col items-center  bg-cover bg-no-repeat customMax:mt-28">
@@ -61,7 +59,7 @@ const BlogPage: React.FC<BlogPageProps> = ({ params }) => {
                 {blog.attributes.content.map((i: any, index: number) => (
                   <p
                     key={index}
-                    className=" text-[#6E6E6E] text-[16px]  mobile:text-[20px] text-left  mobile:text-center"
+                    className=" text-[#6E6E6E] text-lg mobile:text-[20px] text-left mobile:text-center"
                   >
                     {i.children[0].text}
                   </p>

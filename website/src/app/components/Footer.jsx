@@ -1,5 +1,3 @@
-/* eslint-disable */
-
 "use client";
 
 import React, { useState } from "react";
@@ -8,7 +6,6 @@ import Link from "next/link";
 import Contact from "./contact";
 import { footerElem, socialObj } from "@/constants";
 import HelpPopup from "./HelpPopup";
-
 
 const Footer = () => {
   const [isHelpPopupOpen, setIsHelpPopupOpen] = useState(false);
@@ -28,7 +25,6 @@ const Footer = () => {
 
     console.log(requestBody);
 
-    // Send the POST request
     try {
       const response = await fetch(
         "https://cms.anahataaconnections.com/api/subscribers",
@@ -54,114 +50,102 @@ const Footer = () => {
 
   return (
     <div className="relative">
-      {/* flower */}
-      <div className="w-[350px] h-[600px] small-tab:w-[1080px] small-tab:h-[1200px] absolute bottom-0 -right-[20rem] mobile:translate-x-[18%] bg-flower_back bg-cover bg-no-repeat -z-[50]"></div>
+      <div className="w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] absolute bottom-0 right-0 bg-flower_back bg-cover bg-no-repeat -z-[50]"></div>
 
-      <div className="bg-transparent flex max-mobile:flex-col justify-center items-center gap-[20px] mobile:gap-[300px] border-t-[2px] border-gray-200 pt-[20px] pb-[40px] z-[10] mx-10">
-        <div className="flex flex-col justify-center items-center gap-[10px] z-[2]">
-          <Link
-            href={"/"}
-            className="flex flex-col items-center justify-center gap-[10px] mobile:gap-[15px]"
-          >
+      <div className="bg-transparent flex flex-col md:flex-row justify-center items-center gap-8 md:gap-16 lg:gap-24 border-t-2 border-gray-200 pt-8 pb-12 z-[10] mx-4 sm:mx-8 md:mx-12 lg:mx-16">
+        <div className="flex flex-col justify-center items-center gap-4 z-[2]">
+          <Link href={"/"} className="flex flex-col items-center justify-center gap-2 sm:gap-4">
             <Image
               src="/assets/logo1.png"
-              width={130}
-              height={130}
-              className=" w-[100px]"
-              alt="brand log "
+              width={100}
+              height={100}
+              className="w-20 sm:w-24 md:w-28 lg:w-32"
+              alt="brand logo"
             />
-            <div className="font-EvaMayasari font-bold text-[#094C3B] text-[45px]">
+            <div className="font-EvaMayasari font-bold text-[#094C3B] text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-center">
               Anahata Connections
             </div>
           </Link>
-          {/* social's */}
-          <div className="hidden mobile:flex flex-col items-center gap-[15px] mobile:gap-[20px]">
-            <div className="flex flex-col justify-center items-center gap-[5px] z-[2] ">
-              <div className="text-base text-[#094C3B] font-bold mb-4">
+          
+          <div className="flex flex-col items-center gap-4 mt-4">
+            <div className="flex flex-col justify-center items-center gap-2">
+              <div className="text-sm sm:text-base text-[#094C3B] font-bold mb-2">
                 Follow us on
               </div>
-              <div className="flex justify-center items-center gap-[5px]">
-                {socialObj.map(({ icon, title, link }) => {
-                  return (
-                    <Link
-                      href={link}
-                      target="_blank"
-                      key={title}
-                      className="text-[14px] text-white bg-[#094C3B] hover:bg-[#094C3Ba8] p-[5px] rounded-full cursor-pointer "
-                    >
-                      {icon}
-                    </Link>
-                  );
-                })}
+              <div className="flex justify-center items-center gap-2">
+                {socialObj.map(({ icon, title, link }) => (
+                  <Link
+                    href={link}
+                    target="_blank"
+                    key={title}
+                    className="text-xs sm:text-sm text-white bg-[#094C3B] hover:bg-[#094C3Ba8] p-2 rounded-full cursor-pointer"
+                  >
+                    {icon}
+                  </Link>
+                ))}
               </div>
             </div>
-            <div className="flex flex-col justify-center items-center">
-              <div className="text-[25px] font-Pattaya text-[#094C3B]">
+            <div className="flex flex-col justify-center items-center mt-4">
+              <div className="text-lg sm:text-xl md:text-2xl font-Pattaya text-[#094C3B] text-center">
                 DOWNLOAD THE APP
               </div>
-
-              <div className="flex flex-row items-center justify-center">
+              <div className="flex flex-row items-center justify-center mt-2">
                 <Image
                   src="/assets/googleplay.png"
-                  width={150}
-                  height={150}
-                  className="cursor-pointer  "
-                  alt="error"
+                  width={120}
+                  height={120}
+                  className="cursor-pointer w-28 sm:w-32 md:w-36"
+                  alt="Google Play"
                 />
                 <Image
                   src="/assets/appstore.png"
-                  width={150}
-                  height={150}
-                  className="cursor-pointer rounded-md scale-90"
-                  alt="error"
+                  width={120}
+                  height={120}
+                  className="cursor-pointer rounded-md scale-90 w-28 sm:w-32 md:w-36"
+                  alt="App Store"
                 />
               </div>
             </div>
           </div>
         </div>
-        <div className="w-auto mobile:w-[40vw] flex flex-col items-center lg:items-end justify-center lg:justify-end text-black gap-[50px] ">
-          <div className="flex flex-col items-center lg:items-start z-[2]">
-            <h3 className="text-sm lg:text-[20px] font-[500] capitalize">
+
+        <div className="w-full md:w-1/2 lg:w-2/5 flex flex-col items-center md:items-end justify-center text-black gap-8">
+          <div className="flex flex-col items-center md:items-start z-[2] w-full">
+            <h3 className="text-sm sm:text-base md:text-lg font-medium capitalize text-center md:text-left">
               Subscribe for our latest updates
             </h3>
             <form
               id="myForm"
-              className="flex max-mobile:flex-col items-center gap-[25px] mt-[10px]"
+              className="flex flex-col sm:flex-row items-center gap-4 mt-4 w-full"
               onSubmit={handleSubmit}
             >
               <input
                 type="email"
                 id="email"
                 name="email"
-                className="w-[300px] h-[40px] px-3 rounded-md border-solid border-[1px] border-[#094C3B] text-[#094C3B] placeholder:text-black"
+                className="w-full sm:w-64 md:w-72 h-10 px-3 rounded-md border border-[#094C3B] text-[#094C3B] placeholder:text-black"
                 placeholder="xyz@gmail.com"
               />
               <button
-                className="bg-[#094C3B] h-[40px]  py-[5px] px-[10px] text-white rounded-[7px] cursor-pointer hover:bg-[#286f5d] font-semibold "
+                className="bg-[#094C3B] h-10 py-2 px-4 text-white rounded-md cursor-pointer hover:bg-[#286f5d] font-semibold w-full sm:w-auto"
                 type="submit"
               >
                 Subscribe
               </button>
             </form>
           </div>
-          <div className="w-[100%] flex max-mobile:gap-[20px]  flex-wrap justify-between z-[50]">
-            {Object.keys(footerElem).map((key) => {
-              return (
-                <div
-                  key={key}
-                  className="max-mobile:mt-[20px] flex flex-col gap-[20px]"
-                >
-                  {/* heading */}
-                  <h1 className="text-[22px] font-[600] capitalize underline">
-                    {key}
-                  </h1>
-                  {/* elements */}
-                  <ul className="flex flex-col gap-[10px]">
-                    {footerElem[key].map(({ title, link }) => {
-                      return link === "none" ? (
-                        <li
-                          key={link}
-                          className="cursor-pointer"
+          <div className="w-full grid grid-cols-2 sm:grid-cols-3 gap-8 z-[50]">
+            {Object.keys(footerElem).map((key) => (
+              <div key={key} className="flex flex-col gap-4">
+                <h1 className="text-lg sm:text-xl font-semibold capitalize underline">
+                  {key}
+                </h1>
+                <ul className="flex flex-col gap-2">
+                  {footerElem[key].map(({ title, link }) => (
+                    <li key={link}>
+                      {link === "none" ? (
+                        <span
+                          className="cursor-pointer hover:underline"
                           onClick={() => {
                             if (title === "Help Center") {
                               openHelpPopup();
@@ -169,65 +153,17 @@ const Footer = () => {
                           }}
                         >
                           {title}
-                        </li>
+                        </span>
                       ) : (
-                        <Link
-                          key={link}
-                          href={link}
-                          className="cursor-pointer hover:underline"
-                        >
-                          <li key={link}>{title}</li>
+                        <Link href={link} className="cursor-pointer hover:underline">
+                          {title}
                         </Link>
-                      );
-                    })}
-                  </ul>
-                </div>
-              );
-            })}
-            <div className="mobile:hidden flex flex-col justify-center items-center gap-y-[10px] z-[2]">
-              <div className="text-base text-center text-[#094C3B] font-bold mt-[20px]">
-                Follow us on
+                      )}
+                    </li>
+                  ))}
+                </ul>
               </div>
-              <div className="flex gap-x-[10px]">
-                {socialObj.map(({ icon, title, link }) => {
-                  return (
-                    <Link
-                      href={link}
-                      target="_blank"
-                      key={title}
-                      className="text-[14px] text-white bg-[#094C3B] hover:bg-[#094C3Ba8] p-[8px] rounded-full cursor-pointer "
-                    >
-                      {icon}
-                    </Link>
-                  );
-                })}
-              </div>
-            </div>
-          </div>
-        </div>
-        {/* social's */}
-        <div className=" mobile:hidden flex flex-col items-center gap-[20px] mt-[30px]">
-          <div className="flex flex-col justify-center items-center z-[2]">
-            <div className="text-[25px] font-Pattaya text-[#094C3B]">
-              DOWNLOAD THE APP
-            </div>
-
-            <div className="flex flex-row items-center justify-center">
-              <Image
-                src="/assets/googleplay.png"
-                width={150}
-                height={150}
-                className="cursor-pointer  "
-                alt="error"
-              />
-              <Image
-                src="/assets/appstore.png"
-                width={150}
-                height={150}
-                className="cursor-pointer rounded-md scale-90"
-                alt="error"
-              />
-            </div>
+            ))}
           </div>
         </div>
       </div>
@@ -242,7 +178,7 @@ const Footer = () => {
         className="pointer-events-none invisible fixed inset-0 flex overflow-hidden overflow-contain bg-slate-700/30 opacity-0 transition-all duration-200 ease-in-out peer-checked:pointer-events-auto peer-checked:visible peer-checked:opacity-100 peer-checked:[&>*]:translate-y-0 peer-checked:[&>*]:scale-100"
       >
         <label
-          className="max-h-[calc(100vh - 5em)] h-fit max-w-lg scale-90 overflow-auto overscroll-y-contain rounded-md bg-white p-6 text-black transition absolute right-80 top-20"
+          className="max-h-[calc(100vh - 5em)] h-fit max-w-lg scale-90 overflow-auto overscroll-y-contain rounded-md bg-white p-6 text-black transition absolute right-8 sm:right-16 md:right-20 lg:right-80 top-20"
           htmlFor=""
         >
           <Contact />

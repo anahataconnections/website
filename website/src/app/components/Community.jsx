@@ -57,9 +57,11 @@ const Community = () => {
       </div>
 
       <div className="w-[100%] flex max-mobile:flex-col justify-center items-center gap-[30px] tab:gap-[110px] font-sarabun mobile:translate-x-[-40px] tab:translate-x-[-10%]">
-        <div className="text-gray-700 bg-[#FFFAF0] mobile:w-[350px] tab:w-[400px] py-[20px] flex justify-center items-center text-[16px] mobile:text-[18px] tab:text-[22px] text-center rounded-lg border-[1px] border-black">
+        <div className="text-gray-700 bg-[#FFFAF0] border mobile:w-[350px] tab:w-[400px] py-[20px] flex justify-center items-center text-[16px] mobile:text-[18px] tab:text-[22px] text-lg text-center rounded-lg ">
+        {/* <div className=" w-80 rounded-lg shadow-lg bg-[#FFFAF0] text-lg p-4"> */}
+          
           {communityData.content.map((paragraph, index) => (
-            <p className="px-6" key={index}>
+            <p className="px-2 text-center whitespace-pre-wrap" key={index}>
               {paragraph.children[0].text}
             </p>
           ))}
@@ -70,10 +72,9 @@ const Community = () => {
             return (
               <div
                 key={index}
-                className={`w-[100%] h-min-fit flex  justify-center ${
-                  (index === 1 || index === 3) &&
+                className={`w-[100%] h-min-fit flex  justify-center ${(index === 1 || index === 3) &&
                   "mobile:translate-x-[30%] tab:translate-x-[60%]"
-                }`}
+                  }`}
               >
                 <img
                   src={src}
@@ -82,7 +83,7 @@ const Community = () => {
                   className="w-[100%] h-min-fit"
                   alt="image"
                 />
-                <p className="absolute flex justify-center items-center text-white text-[16px] box-border p-[6px] mobile:p-[10px]">
+                <p className="absolute flex justify-center items-center text-white text-base box-border p-2 mobile:p-[10px]">
                   {message}
                 </p>
               </div>

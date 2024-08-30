@@ -8,7 +8,7 @@ import { FaMagnifyingGlass } from "react-icons/fa6";
 
 const HowWeWork = () => {
   return (
-    <div className="w-[100%]  flex flex-col justify-end gap-[20px] mobile:gap-[50px] bg-[rgb(240,253,249)] box-border pt-[30px] pb-[30px]">
+    <div className="w-[100%] shadow-xl rounded-lg flex flex-col justify-end gap-[20px] mobile:gap-[50px] bg-[rgb(240,253,249)] box-border pt-[30px] pb-[30px]">
       <header className="font-Pattaya flex items-center justify-center text-[#0C6242] text-[25px] mobile:text-[40px] max-mobile:pt-[20px]  ">
         How We Work
       </header>

@@ -78,6 +78,26 @@ const config: Config = {
         "76": "280px",
       },
       keyframes: {
+        'fade-left': {
+          '0%': {
+            opacity: '0',
+            transform: 'translateX(15rem)',
+          },
+          '100%': {
+            opacity: '1',
+            transform: 'translateX(0)',
+          },
+        },
+        'fade-right': {
+          '0%': {
+            opacity: '0',
+            transform: 'translateX(-15rem)',
+          },
+          '100%': {
+            opacity: '1',
+            transform: 'translateX(0)',
+          },
+        },
         "accordion-down": {
           from: { height: "0" },
           to: { height: "var(--radix-accordion-content-height)" },

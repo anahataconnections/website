@@ -46,12 +46,12 @@ export default function Ourstory() {
       />
       <div className="w-full lg:w-full px-5 lg:px-52 flex flex-col items-center pt-[30px] pb-[50px]  mobile:pt-[50px] gap-[50px] ">
         {/* image and info */}
-        <div className="w-full flex max-mobile:flex-col-reverse max-mobile:items-center mobile:justify-between">
+        <div className="w-full flex items-center px-12 max-mobile:flex-col-reverse max-mobile:items-center mobile:justify-between">
           <div className="flex flex-col gap-[5px] mobile:gap-[20px] max-mobile:items-center ">
             <div className="font-Pattaya text-[30px] mobile:text-[35px] text-[#094C3B]">
               {founderWords?.content[0].children[0].text}
             </div>
-            <p className="font-sarabun text-lg ">
+            <p className="font-sarabun text-lg">
               {founderWords?.content[1].children[0].text}
             </p>
           </div>
@@ -66,50 +66,50 @@ export default function Ourstory() {
         <div className="flex flex-col gap-[50px] mobile:gap-[100px]">
           {/* founder's word */}
           <div className="w-[100%] flex flex-col gap-[10px] max-mobile:text-left">
-            <h1 className="font-Pattaya  flex items-center justify-center text-[30px] mobile:text-[35px]  text-[#094C3B]">
+            <h1 className="font-Pattaya flex items-center justify-center text-4xl text-[#094C3B]">
               {founderWords?.content[2].children[0].text}
             </h1>
             <div className="flex flex-col gap-[20px]">
-              <p className=" font-sarabun text-[18px] mobile:text-[20px] leading-[25px] mobile:leading-[50px]">
+              <p className=" font-sarabun text-xl">
                 {founderWords?.content[3].children[0].text}
               </p>
-              <p className=" font-sarabun text-[18px] mobile:text-[20px] leading-[25px] mobile:leading-[50px]">
+              <p className=" font-sarabun text-xl">
                 {founderWords?.content[4].children[0].text}
               </p>
-              <p className=" font-sarabun text-[18px] mobile:text-[20px] leading-[25px] mobile:leading-[50px]">
+              <p className=" font-sarabun text-xl">
                 {founderWords?.content[5].children[0].text}
               </p>
-              <p className=" font-sarabun text-[18px] mobile:text-[20px] leading-[25px] mobile:leading-[50px]">
+              <p className=" font-sarabun text-xl">
                 {founderWords?.content[6].children[0].text}
               </p>
-              <p className=" font-sarabun text-[18px] mobile:text-[20px] leading-[25px] mobile:leading-[50px]">
+              <p className=" font-sarabun text-xl">
                 {founderWords?.content[7].children[0].text}
               </p>
-              <p className=" font-sarabun text-[18px] mobile:text-[20px] leading-[25px] mobile:leading-[50px]">
+              <p className=" font-sarabun text-xl">
                 {founderWords?.content[8].children[0].text}
               </p>
-              <p className=" font-sarabun text-[18px] mobile:text-[20px] leading-[25px] mobile:leading-[50px]">
+              <p className=" font-sarabun text-xl">
                 {founderWords?.content[9].children[0].text}
               </p>
-              <p className=" font-sarabun text-[18px] mobile:text-[20px] leading-[25px] mobile:leading-[50px]">
+              <p className=" font-sarabun text-xl">
                 {founderWords?.content[10].children[0].text}
               </p>
             </div>
           </div>
           {/* why choose us */}
           <div className="w-[100%] flex flex-col gap-[10px] max-mobile:text-left">
-            <h1 className="font-Pattaya flex items-center justify-center text-[35px] text-[#094C3B]">
+            <h1 className="font-Pattaya flex items-center justify-center text-4xl my-1 text-[#094C3B]">
               {whyChooseUs?.content[0].children[0].text}
             </h1>
-            <div className="flex flex-col gap-[7 0px]">
-              <p className=" font-sarabun text-[18px] mobile:text-[20px] leading-[25px] mobile:leading-[50px]">
+            <div className="flex flex-col">
+              <p className=" font-sarabun flex gap-8 flex-col">
                 {whyChooseUs?.content &&
                   whyChooseUs.content
                     .filter((_, index) => index !== 0)
                     .map((paragraph, index) => (
                       <React.Fragment key={index}>
                         {paragraph.children.map((child, childIndex) => (
-                          <p key={childIndex}>{child.text}</p>
+                          <p key={childIndex} className="text-xl">{child.text}</p>
                         ))}
                       </React.Fragment>
                     ))}{" "}
@@ -127,7 +127,7 @@ export default function Ourstory() {
           className="max-mobile:w-[90vw]"
           alt="image"
         />
-        <p className=" font-sarabun text-[18px] mobile:text-[20px] leading-[25px] mobile:leading-[50px]">
+        <p className=" font-sarabun text-xl">
           Share shadow italic rotate vertical align pencil style. Layout
           strikethrough component asset overflow pixel strikethrough stroke auto
           polygon. Arrow distribute scale library pencil distribute arrange

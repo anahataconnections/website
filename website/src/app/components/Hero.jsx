@@ -56,7 +56,7 @@ const Hero = () => {
         <div className="bg-home-page-back bg-cover bg-no-repeat bg-center">
           <div className="relative w-screen min-h-screen mobile:h-[80vh] bg-radial-gradient  flex justify-center overflow-hidden frame ">
             <div className="absolute">
-            <AnimationFrame />
+              <AnimationFrame />
             </div>
             <Motionframe />
           </div>
@@ -95,10 +95,10 @@ const Hero = () => {
             </button>
           )}
 
-          <div className="flex justify-center">
+          <div className="flex justify-center rounded-full p-2 px-8 text-base shadow-xl font-semibold text-white bg-[#286f5d]">
             <Link
               href="../../Whyanahata"
-              className="bg-[#094C3B] text-white rounded-full text-[20px] font-sarabun px-[50px] py-[10px] cursor-pointer hover:bg-[#286f5d] font-[550] hover:font-bold "
+              className=""
             >
               Know More
             </Link>
