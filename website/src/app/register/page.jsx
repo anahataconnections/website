@@ -11,7 +11,7 @@ import Loader from "@/components/shared/Loader/Loader.tsx";
 import axios from "axios";
 import { setCookie } from "cookies-next";
 
-const NEXT_PUBLIC_BACKEND_DOMAIN = process.env.NEXT_PUBLIC_BACKEND_DOMAIN || "http://localhost:1337";
+const NEXT_PUBLIC_BACKEND_DOMAIN = process.env.NEXT_PUBLIC_BACKEND_DOMAIN || "http://localhost:1337/";
 
 const Register = () => {
     const [phase1Data, setPhase1Data] = useState(null);

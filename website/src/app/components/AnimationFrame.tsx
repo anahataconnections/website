@@ -30,7 +30,7 @@ const AnimationFrame = () => {
           width={1200}
           height={1200}
           priority
-          className="lg:w-[16.5rem] md:w-56 w-32 translate-y-80 translate-x-20 lg:translate-y-48 lg:translate-x-96 md:translate-x-48 md:translate-y-32  absolute animate-fade animate-delay-500"
+          className="lg:w-[16.5rem] md:w-56 w-32 translate-y-80 translate-x-24 lg:translate-y-48 lg:translate-x-96 md:translate-x-48 md:translate-y-32 absolute animate-fade animate-delay-500"
         />
         <Image
           src={"/assets/woman.svg"}

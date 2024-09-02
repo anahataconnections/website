@@ -133,32 +133,27 @@ export default function WhyAnahata() {
         alt="Hero Image"
         width={1920}
         height={400}
-        className="w-full object-cover h-[60vh] custom1:h-[70vh] custom:h-[68vh]"
+        className="w-full object-cover h-[60vh] sm:h-[70vh] md:h-[68vh]"
       />
 
       {what_is_anahata_chakra.map((item, index) => (
-        <div
-          key={index}
-          className="text-center mt-16 px-4 custom1:mt-24 customMax:mt-28"
-        >
-          <h1 className="text-5xl my-4 text-[#166534] font-Pattaya">
+        <div key={index} className="text-center mt-16 px-4 sm:mt-24 md:mt-28">
+          <h1 className="text-4xl md:text-5xl my-4 text-[#166534] font-Pattaya">
             {item.Heading_title}
           </h1>
           <p className="text-gray-500">{formatDate(item.date)} • 5 min read</p>
 
-          {/* Image rendering */}
           <div className="flex justify-center my-4">
             <Image
               src={item.image.data.attributes.url}
               alt="Additional Image"
               width={500}
               height={100}
-              className="object-fit bg-cover custom:mt-12 custom1:mx-20 custom1:mt-12 custom1:w-[835px] customMax:w-[1700px] customMax:max-h-[570px] rounded-md"
+              className="object-fit bg-cover sm:mt-12 sm:mx-20 sm:w-[835px] md:w-[1700px] md:max-h-[570px] rounded-md"
             />
           </div>
 
-          {/* Content rendering */}
-          <div className="mx-20  custom1:mx-20 customMax:mx-[14.7rem] mt-8 text-justify">
+          <div className="mx-4 mt-8 text-justify">
             {item.content.map((contentItem, contentIndex) => (
               <p key={contentIndex} className="my-2 text-black text-lg">
                 {contentItem.children.map((child, childIdx) => (
@@ -173,8 +168,8 @@ export default function WhyAnahata() {
         </div>
       ))}
 
-      <div className="mb-10 z-[11]">
-        <h1 className="my-20 text-[#166534] font-Pattaya text-center text-[2.5rem] xl:text-[3rem] ">
+      <div className="mb-10 z-[11] px-4">
+        <h1 className="my-8 text-[#166534] font-Pattaya text-center text-[2.5rem] xl:text-[3rem]">
           More from us
         </h1>
         <Blogs />

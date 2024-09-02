@@ -30,8 +30,8 @@ const Blogs = () => {
   }, []);
 
   return (
-    <div className="w-[100%] flex flex-col  items-center gap-[20px] z-[11]">
-      <div className="w-[100%] font-sarabun gap-4 flex justify-center items-center gap-x-10 max-mobile:flex-col max-mobile:gap-[50px]">
+    <div className="w-[100%] flex flex-col items-center gap-[20px] z-[11]">
+      <div className="w-[100%] font-sarabun gap-4 flex justify-center items-center gap-x-4 max-mobile:flex-col max-mobile:gap-[50px]">
         {blogs?.map((blog, index) => (
           <Link key={index} target="_blank" href={`../Blog-main/${blog.attributes.tiltle}`}>
             <Blogcard

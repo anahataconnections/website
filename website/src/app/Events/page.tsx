@@ -1,3 +1,4 @@
+/* eslint-disable */
 "use client";
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
@@ -5,6 +6,7 @@ import Slider from "./Slider";
 import Eventcard from "./eventcard";
 import SliderProgressBar from "../components/SliderProgressBar";
 import { useAnimationControls } from "framer-motion";
+import { format } from "date-fns";
 
 const wrapperVariants = {
   hidden: {
@@ -27,8 +29,32 @@ const wrapperVariants = {
   },
 };
 
+interface Event {
+  id: number;
+  attributes: {
+    name: string;
+    date: string;
+    description: {
+      type: string;
+      children: {
+        text: string;
+        type: string;
+      }[];
+    }[];
+    image: {
+      data: {
+        attributes: {
+          url: string;
+        };
+      };
+    };
+  };
+}
+
 const Events = () => {
-  const [events, setEvents] = useState(null);
+  const [events, setEvents] = useState<Event[] | null>(null);
+  const [startDate, setStartDate] = useState<string | null>(null);
+  const [endDate, setEndDate] = useState<string | null>(null);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -45,6 +71,8 @@ const Events = () => {
 
     fetchData();
   }, []);
+
+  console.log(events);
 
   if (!events) {
     return <div className="text-center py-10">Loading...</div>;
@@ -72,6 +100,8 @@ const Events = () => {
               placeholder="Start Date"
               id="startDate"
               name="startDate"
+              value={startDate || ""}
+              onChange={(e) => setStartDate(e.target.value)}
             />
           </div>
           <div className="flex flex-col w-full sm:w-1/2 md:w-1/5">
@@ -82,6 +112,8 @@ const Events = () => {
               placeholder="End Date"
               id="endDate"
               name="endDate"
+              value={endDate || ""}
+              onChange={(e) => setEndDate(e.target.value)}
             />
           </div>
         </div>
@@ -89,7 +121,19 @@ const Events = () => {
 
       <div className="flex items-center justify-center">
         <div className="px-2 md:px-6 justify-center items-center flex flex-col flex-wrap">
-          <Eventcard events={events} />
+          <Eventcard
+            events={
+              startDate && endDate
+                ? events.filter((event) => {
+                    const eventDate = new Date(event.attributes.date);
+                    return (
+                      eventDate >= new Date(startDate) &&
+                      eventDate <= new Date(endDate)
+                    );
+                  })
+                : events
+            }
+          />
         </div>
       </div>
     </main>
