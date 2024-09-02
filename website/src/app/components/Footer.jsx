@@ -91,14 +91,14 @@ const Footer = () => {
               </div>
               <div className="flex flex-row items-center justify-center mt-2">
                 <Image
-                  src="/assets/googleplay.png"
+                  src="/assets/google.svg"
                   width={120}
                   height={120}
                   className="cursor-pointer w-28 sm:w-32 md:w-36"
                   alt="Google Play"
                 />
                 <Image
-                  src="/assets/appstore.png"
+                  src="/assets/app.svg"
                   width={120}
                   height={120}
                   className="cursor-pointer rounded-md scale-90 w-28 sm:w-32 md:w-36"
