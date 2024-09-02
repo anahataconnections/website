@@ -3,9 +3,9 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import logo from "@/helpers/images/logo.png";
 import img from "@/helpers/images/registerbanner.png";
-import Phase1 from "./_phases/Phase1.tsx"
-import Phase2 from "./_phases/Phase2.tsx"
-import Phase3 from "./_phases/Phase3"
+import Phase1 from "./_phases/Phase1.tsx";
+import Phase2 from "./_phases/Phase2.tsx";
+import Phase3 from "./_phases/Phase3";
 import toast from "react-hot-toast";
 import Loader from "@/components/shared/Loader/Loader.tsx";
 import axios from "axios";
@@ -25,9 +25,7 @@ const Register = () => {
         const fetchBanner = async () => {
             setLoading(true);
             try {
-                // http://localhost:1337/api/sign-up?populate[0]=register_banner.bannerImage
                 const res = await axios.get(`${NEXT_PUBLIC_BACKEND_DOMAIN}api/sign-up?populate[0]=register_banner.bannerImage`);
-                // console.log(res.data.data.attributes.register_banner.bannerImage.data.attributes.url);
                 setBannerImage(res.data.data.attributes.register_banner.bannerImage.data.attributes.url);
             } catch (error) {
                 console.log(error);
@@ -85,18 +83,19 @@ const Register = () => {
                         </div>
                         <div className="relative flex flex-col gap-y-6 text-base z-[11] text-white">
                             <Image src={bannerImage} width={1200} height={1200} alt="Banner" className="absolute scale-[2] -z-10" />
-                            {!phase1Data ? (
+                            {!phase1Data && !showDownloadPage ? (
                                 <Phase1 onFormSubmit={handlePhase1Submit} />
                             ) : (
-                                <Phase2 phase1Data={phase1Data} onFinalSubmit={handleFinalSubmit} />
+                                showDownloadPage ? (
+                                    <Phase3 />
+                                ) : (
+                                    <Phase2 phase1Data={phase1Data} onFinalSubmit={handleFinalSubmit} />
+                                )
                             )}
                         </div>
                     </div>
                 </section>
             </div>
-            {
-                showDownloadPage && <Phase3 />
-            }
             {
                 loading && <div className="absolute inset-0 z-30 bg-white opacity-95 flex gap-4 flex-col items-center justify-center h-full text-5xl font-bold">
                     <Loader />
