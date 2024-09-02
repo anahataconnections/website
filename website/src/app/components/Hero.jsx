@@ -95,14 +95,13 @@ const Hero = () => {
             </button>
           )}
 
-          <div className="flex justify-center rounded-full p-2 px-8 text-base shadow-xl font-semibold text-white bg-[#286f5d]">
-            <Link
-              href="../../Whyanahata"
-              className=""
-            >
+          <Link
+            href="../../Whyanahata"
+          >
+            <div className="flex justify-center rounded-full p-2 px-8 text-base shadow-xl font-semibold text-white bg-[#286f5d]">
               Know More
-            </Link>
-          </div>
+            </div>
+          </Link>
         </div>
       </div>
     </div>
