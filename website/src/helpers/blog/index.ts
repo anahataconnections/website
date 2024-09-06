@@ -34,8 +34,8 @@ export const formatDate = (publishedDate: string) => {
 
 export const fetchBannerImage = async () => {
   try {
-    const res = await fetch(`http://127.0.0.1:1337/api/blog-banner?populate=*`);
-    // const res = await fetch(`${baseurl}/blog-banner?populate=*`);
+    // const res = await fetch(`http://127.0.0.1:1337/api/blog-banner?populate=*`);
+    const res = await fetch(`${baseurl}/blog-banner?populate=*`);
     const response = await res.json();
     console.log(response)
     return response;
