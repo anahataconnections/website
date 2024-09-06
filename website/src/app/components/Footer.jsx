@@ -124,7 +124,7 @@ const Footer = () => {
                 id="email"
                 name="email"
                 className="w-full sm:w-64 md:w-72 h-10 px-3 rounded-md border border-[#094C3B] text-[#094C3B] placeholder:text-black"
-                placeholder="xyz@gmail.com"
+                placeholder="example@example.com"
               />
               <button
                 className="bg-[#094C3B] h-10 py-2 px-4 text-white rounded-md cursor-pointer hover:bg-[#286f5d] font-semibold w-full sm:w-auto"

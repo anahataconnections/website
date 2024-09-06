@@ -42,7 +42,7 @@ const Home = () => {
       <div className="p-4">
         <Hero />
       </div>
-      <div className="w-[80vw] mobile:w-[60vw] flex flex-col items-center mt-[80px]">
+      <div className="w-[80vw] flex flex-col items-center mt-[80px]">
         <HowWeWork />
         <Community />
 

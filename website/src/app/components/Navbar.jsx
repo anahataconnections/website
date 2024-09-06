@@ -23,7 +23,7 @@ const Navbar = () => {
       className="hidden mobile:flex fixed top-0 w-screen bg-[#094C3B] h-[90px] customPhone:h-[75px] custom:h-[90px] px-4 z-[50] transition-all delay-300 duration-300"
     >
       <div className="flex flex-col md:flex-row  justify-between items-center w-full px-8">
-        <div className="flex items-center justify-center md:justify-start">
+        <Link href={"/Home"} className="flex items-center justify-center md:justify-start">
           <Image
             src="/assets/logo1.png"
             width={80}
@@ -34,7 +34,7 @@ const Navbar = () => {
           <div className="mt-2 md:mt-2 ml-[-14px] font-EvaMayasari font-semibold text-xl md:text-3xl sm:text-2xl text-white">
             Anahata Connections
           </div>
-        </div>
+        </Link>
 
         <ul className="flex items-center gap-[55px] pc:gap-[50px] font-semibold lg:text-[16px]   text-[9px] font-sarabun ">
           {navElemObj.map(({ link, title }) => {

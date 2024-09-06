@@ -986,6 +986,36 @@ export interface ApiBlogBlog extends Schema.CollectionType {
   };
 }
 
+export interface ApiBlogBannerBlogBanner extends Schema.SingleType {
+  collectionName: 'blog_banners';
+  info: {
+    singularName: 'blog-banner';
+    pluralName: 'blog-banners';
+    displayName: 'Blog Banner';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    banner_image: Attribute.Media;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::blog-banner.blog-banner',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::blog-banner.blog-banner',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiCareerCareer extends Schema.CollectionType {
   collectionName: 'careers';
   info: {
@@ -1446,6 +1476,7 @@ declare module '@strapi/types' {
       'api::application-list.application-list': ApiApplicationListApplicationList;
       'api::application-pop-up.application-pop-up': ApiApplicationPopUpApplicationPopUp;
       'api::blog.blog': ApiBlogBlog;
+      'api::blog-banner.blog-banner': ApiBlogBannerBlogBanner;
       'api::career.career': ApiCareerCareer;
       'api::collaboration.collaboration': ApiCollaborationCollaboration;
       'api::enquiry.enquiry': ApiEnquiryEnquiry;

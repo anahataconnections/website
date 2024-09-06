@@ -1,16 +1,23 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { fetchBlog, formatDate } from "@/helpers/blog";
+import { fetchBannerImage, fetchBlog, formatDate } from "@/helpers/blog";
 
 const Blog = async () => {
   const Blog = await fetchBlog();
+
+  const BannerImageResponse = await fetchBannerImage();
+
+  const BannerImage =
+    BannerImageResponse.data.attributes.banner_image.data.attributes;
+
   return (
     <main className="bg-white text-black w-full overflow-x-hidden">
       <Image
-        src="/assets/blog_bg.png"
-        width={500}
-        height={300}
+        src={BannerImage.url}
+        quality={100}
+        width={2400}
+        height={2400}
         className="w-full h-[35vh] sm:h-[52vh] lg:h-[70vh] xl:h-[75vh] object-cover object-center"
         alt="Screenshots of the dashboard project showing desktop and mobile versions"
       />

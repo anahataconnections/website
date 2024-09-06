@@ -22,7 +22,7 @@ const HowWeWork = () => {
             alt="addaccount logo"
             className="w-[65px] h-[65px]"
           />
-          <div className=" text-[17px] text-black font-medium ">
+          <div className=" text-14 text-center text-black font-medium ">
             Create Account
           </div>
         </div>
@@ -31,7 +31,7 @@ const HowWeWork = () => {
           {/* <img src={two} alt="" /> */}
           <FaMagnifyingGlass  className="text-[#0C6242] text-[65px]" />
 
-          <div className="text-[17px] text-black font-medium ">
+          <div className="text-14 text-center text-black font-medium">
             Discover Compatible Profiles
           </div>
         </div>
@@ -44,7 +44,7 @@ const HowWeWork = () => {
             alt="addaccount logo"
             className="w-[65px] h-[65px]"
           />
-          <div className=" text-[17px] text-black ">
+          <div className=" text-14 text-center text-black ">
             Build Meaningful Connections
           </div>
         </div>

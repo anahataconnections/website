@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_application_ads_banners",
+  "info": {
+    "displayName": "Ads Banner",
+    "icon": "stack"
+  },
+  "options": {},
+  "attributes": {
+    "ad_banner1": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "ad_banner2": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

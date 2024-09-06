@@ -1,5 +1,17 @@
 import type { Schema, Attribute } from '@strapi/strapi';
 
+export interface ApplicationAdsBanner extends Schema.Component {
+  collectionName: 'components_application_ads_banners';
+  info: {
+    displayName: 'Ads Banner';
+    icon: 'stack';
+  };
+  attributes: {
+    ad_banner1: Attribute.Media;
+    ad_banner2: Attribute.Media;
+  };
+}
+
 export interface ApplicationEducation extends Schema.Component {
   collectionName: 'components_application_educations';
   info: {
@@ -392,6 +404,7 @@ export interface WebsiteYoga extends Schema.Component {
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
+      'application.ads-banner': ApplicationAdsBanner;
       'application.education': ApplicationEducation;
       'application.interests-list': ApplicationInterestsList;
       'application.language': ApplicationLanguage;
