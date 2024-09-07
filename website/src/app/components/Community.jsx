@@ -73,14 +73,15 @@ const Community = () => {
               <div
                 key={index}
                 className={`w-[100%] h-min-fit flex  justify-center ${(index === 1 || index === 3) &&
-                  "mobile:translate-x-[30%] tab:translate-x-[60%]"
+                  // "mobile:translate-x-[30%] tab:translate-x-[60%]"
+                  ""
                   }`}
               >
                 <img
                   src={src}
                   width={100}
                   height={60}
-                  className="w-[100%] h-min-fit"
+                  className="w-full h-max"
                   alt="image"
                 />
                 <p className="absolute flex justify-center items-center text-white text-base box-border p-2 mobile:p-[10px]">
