@@ -83,19 +83,19 @@ const Collaboration: React.FC = () => {
   const { collaboration, advertisement, yoga, business_partner, banner_image } =
     attributes;
 
-  const bannerImage = banner_image.data.attributes.url;
-
   return (
     <div className="h-auto scroll-smooth">
       <section className="">
         <div className="w-full custom2:h-[70vh] h-[60vh] relative mb-10 lg:mb-0">
-          <Image
-            src={bannerImage}
-            alt="Additional Image"
-            layout="fill"
-            objectFit="cover"
-            className="z-10"
-          />
+          {banner_image && (
+            <Image
+              src={banner_image.data.attributes.url}
+              alt="Additional Image"
+              layout="fill"
+              objectFit="cover"
+              className="z-10"
+            />
+          )}
           <div className="absolute inset-0 flex flex-col justify-center items-center z-20">
             <h2 className="font-Satisfy text-white text-4xl lg:text-[4rem] mb-4">
               Collaborate with us?
