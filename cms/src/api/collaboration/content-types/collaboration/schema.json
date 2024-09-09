@@ -41,6 +41,13 @@
       "type": "component",
       "repeatable": false,
       "component": "website.any-plans"
+    },
+    "banner_image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }

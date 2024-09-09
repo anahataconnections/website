@@ -1048,6 +1048,36 @@ export interface ApiCareerCareer extends Schema.CollectionType {
   };
 }
 
+export interface ApiCareerBannerCareerBanner extends Schema.SingleType {
+  collectionName: 'career_banners';
+  info: {
+    singularName: 'career-banner';
+    pluralName: 'career-banners';
+    displayName: 'Career Banner';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    banner_image: Attribute.Media;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::career-banner.career-banner',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::career-banner.career-banner',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiCollaborationCollaboration extends Schema.SingleType {
   collectionName: 'collaborations';
   info: {
@@ -1065,6 +1095,7 @@ export interface ApiCollaborationCollaboration extends Schema.SingleType {
     yoga: Attribute.Component<'website.yoga'>;
     business_partner: Attribute.Component<'website.business-partner', true>;
     any_plans: Attribute.Component<'website.any-plans'>;
+    banner_image: Attribute.Media;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1478,6 +1509,7 @@ declare module '@strapi/types' {
       'api::blog.blog': ApiBlogBlog;
       'api::blog-banner.blog-banner': ApiBlogBannerBlogBanner;
       'api::career.career': ApiCareerCareer;
+      'api::career-banner.career-banner': ApiCareerBannerCareerBanner;
       'api::collaboration.collaboration': ApiCollaborationCollaboration;
       'api::enquiry.enquiry': ApiEnquiryEnquiry;
       'api::event.event': ApiEventEvent;
