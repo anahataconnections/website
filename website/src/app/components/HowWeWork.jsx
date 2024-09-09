@@ -8,13 +8,13 @@ import { FaMagnifyingGlass } from "react-icons/fa6";
 
 const HowWeWork = () => {
   return (
-    <div className="w-[100%] shadow-xl rounded-lg flex flex-col justify-end gap-[20px] mobile:gap-[50px] bg-[rgb(240,253,249)] box-border pt-[30px] pb-[30px]">
-      <header className="font-Pattaya flex items-center justify-center text-[#0C6242] text-[25px] mobile:text-[40px] max-mobile:pt-[20px]  ">
+    <div className="w-full p-8 shadow-xl rounded-xl flex flex-col justify-end gap-4 bg-[rgb(240,253,249)]">
+      <header className="font-Pattaya flex items-center justify-center text-[#0C6242] text-4xl">
         How We Work
       </header>
 
       <div className=" flex max-mobile:flex-col items-center max-mobile:gap-[20px] font-medium font-sarabun">
-        <div className=" mobile:w-[33%] flex flex-col gap-[10px] items-center justify-center">
+        <div className=" mobile:w-[33%] flex flex-col gap-2 items-center justify-center">
           <Image
             src={"/assets/addAccound-hww.svg"}
             width={100}
@@ -27,16 +27,16 @@ const HowWeWork = () => {
           </div>
         </div>
 
-        <div className="mobile:w-[33%] flex flex-col items-center  gap-[10px] justify-center max-mobile:border-y-[1px] mobile:border-x-2 border-black max-mobile:py-[20px]">
+        <div className="mobile:w-[33%] flex flex-col items-center gap-2 justify-center max-mobile:border-y-[1px] mobile:border-x-2 border-black max-mobile:py-[20px]">
           {/* <img src={two} alt="" /> */}
-          <FaMagnifyingGlass  className="text-[#0C6242] text-[65px]" />
+          <FaMagnifyingGlass className="text-[#0C6242] text-[65px]" />
 
           <div className="text-14 text-center text-black font-medium">
             Discover Compatible Profiles
           </div>
         </div>
 
-        <div className="mobile:w-[33%] flex flex-col  items-center gap-[10px] justify-center ">
+        <div className="mobile:w-[33%] flex flex-col  items-center gap-2 justify-center ">
           <Image
             src={"/assets/connectioin-hww.svg"}
             width={50}

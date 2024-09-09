@@ -38,18 +38,18 @@ const Home = () => {
   }, []);
 
   return (
-    <main className="w-screen flex flex-col items-center  bg-white smooth-scroll overflow-x-hidden">
+    <main className="w-screen flex flex-col items-center bg-white smooth-scroll overflow-x-hidden">
       <div className="p-4">
         <Hero />
       </div>
-      <div className="w-[80vw] flex flex-col items-center mt-[80px]">
+      <div className="w-[80vw] flex flex-col gap-12 items-center mt-8">
         <HowWeWork />
         <Community />
 
         <Testimonials />
 
-        <div className="w-[100%] flex flex-col gap-[20px] mobile:gap-[50px] ">
-          <header className="text-[25px] mobile:text-[40px] font-Pattaya flex mt-[50px] items-center justify-center text-[#094C3B]">
+        <div className="w-full flex flex-col gap-4">
+          <header className="text-5xl font-Pattaya flex items-center justify-center text-[#094C3B]">
             Blogs
           </header>
           {/* blog container */}

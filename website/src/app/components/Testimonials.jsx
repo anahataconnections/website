@@ -66,7 +66,7 @@ const Testimonials = () => {
           </div>
         </div>
 
-        <div className="bg-[#F9EBCC] rounded-lg p-8 text-center w-full mb-4 h-max relative shadow-lg z-10">
+        <div className="bg-[#F9EBCC] rounded-lg p-8 text-left w-full mb-4 h-max relative shadow-lg z-10">
           <div className="max-h-full overflow-y-auto">
             {testimonialData[currentIndex].content.map((paragraph, index) => (
               <div key={index}>

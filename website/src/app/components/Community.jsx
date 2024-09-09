@@ -51,17 +51,17 @@ const Community = () => {
   ];
 
   return (
-    <div className="w-[100%] flex flex-col justify-center items-center mt-[50px] mb-[50px] mobile:mt-[100px] gap-[50px] mobile:mb-[100px]">
+    <div className="w-[100%] flex flex-col justify-center items-center gap-4">
       <div className="font-Pattaya flex items-center justify-center text-[#094C3B] text-3xl lg:text-5xl">
         {communityData.title}
       </div>
 
       <div className="w-[100%] flex flex-col md:flex-row justify-center items-center gap-[30px] font-sarabun">
-        <div className="text-gray-700 bg-[#FFFAF0] shadow-lg border mobile:w-[350px] tab:w-[400px] py-[14px] flex justify-center items-center text-[16px] mobile:text-[18px] tab:text-[22px] text-lg text-center rounded-lg ">
+        <div className="text-gray-700 bg-[#FFFAF0] shadow-lg border mobile:w-[350px] tab:w-[400px] py-4 flex justify-center items-center text-lg rounded-lg ">
           {/* <div className=" w-80 rounded-lg shadow-lg bg-[#FFFAF0] text-lg p-4"> */}
 
           {communityData.content.map((paragraph, index) => (
-            <p className="px-2 text-center whitespace-pre-wrap" key={index}>
+            <p className="px-2 whitespace-pre-wrap" key={index}>
               {paragraph.children[0].text}
             </p>
           ))}

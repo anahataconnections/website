@@ -33,6 +33,14 @@ interface CollaborationData {
           children: { text: string; type: string }[];
         }[];
       };
+      banner_image: {
+        data: {
+          id: number;
+          attributes: {
+            url: string;
+          };
+        };
+      };
       business_partner: {
         id: number;
         name: string;
@@ -47,7 +55,7 @@ interface CollaborationData {
 async function fetchWhy(): Promise<CollaborationData | null> {
   try {
     const res = await fetch(
-      `https://cms.anahataaconnections.com/api/collaboration?populate=*,collaboration.image,advertisement.image,yoga.image,business_partner.image,any_plans`
+      `https://cms.anahataaconnections.com/api/collaboration?populate=*,collaboration.image,advertisement.image,yoga.image,business_partner.image,any_plans,banner_image`
     );
     const response = await res.json();
     return response;
@@ -71,20 +79,18 @@ const Collaboration: React.FC = () => {
   if (!collab) return <div>Loading...</div>; // Handle loading state
 
   const { attributes } = collab.data;
-  
-  const handlePrompt = () => {
-    const email = prompt("Enter your email", "anahataconnections@gmail.com");
-    console.log(email);
-  };
 
-  const { collaboration, advertisement, yoga, business_partner } = attributes;
+  const { collaboration, advertisement, yoga, business_partner, banner_image } =
+    attributes;
+
+  const bannerImage = banner_image.data.attributes.url;
 
   return (
     <div className="h-auto scroll-smooth">
       <section className="">
         <div className="w-full custom2:h-[70vh] h-[60vh] relative mb-10 lg:mb-0">
           <Image
-            src={"/assets/image160.svg"}
+            src={bannerImage}
             alt="Additional Image"
             layout="fill"
             objectFit="cover"
@@ -97,10 +103,7 @@ const Collaboration: React.FC = () => {
             <p className="text-white font-semibold text-lg mb-6 text-center font-sarabun">
               Our collaboration opens doors to new connections.
             </p>
-            <button
-              onClick={handlePrompt}
-              className="bg-[rgb(9,76,59)] text-white px-6 py-3 rounded-md hover:bg-green-800 font-sarabun font-semibold"
-            >
+            <button className="bg-[rgb(9,76,59)] text-white px-6 py-3 rounded-md hover:bg-green-800 font-sarabun font-semibold">
               Contact Us
             </button>
           </div>

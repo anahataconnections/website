@@ -1,11 +1,34 @@
-import React from "react";
+"use client";
+
+import { useEffect, useState } from "react";
 
 export const Banner = () => {
+  const [banner_image, setBanner_image] = useState("");
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const res = await fetch(
+          "https://cms.anahataaconnections.com/api/career-banner?populate=*"
+        );
+
+        const response = await res.json();
+        console.log(response);
+        setBanner_image(
+          response.data.attributes.banner_image.data.attributes.url
+        );
+      } catch (error) {
+        console.error(error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
   return (
     <div
       className="w-full h-[40vh] sm:h-[50vh] md:h-[60vh] bg-cover bg-no-repeat bg-center text-white"
       style={{
-        backgroundImage: "url('/assets/careers.svg')",
+        backgroundImage: `url('${banner_image}')`,
       }}
     >
       <div

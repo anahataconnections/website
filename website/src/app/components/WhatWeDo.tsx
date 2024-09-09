@@ -27,6 +27,11 @@ const WhatWeDo: React.FC<WhatWeDoProps> = ({
   advertisement,
   yoga,
 }) => {
+
+  console.log(collaboration);
+  console.log(advertisement)
+  console.log(yoga)
+
   return (
     <div className=" pt-16 flex flex-col space-y-3">
       <h1 className="font-Pattaya text-emerald-900 text-center text-5xl my-10">

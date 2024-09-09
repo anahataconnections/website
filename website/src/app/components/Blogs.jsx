@@ -30,7 +30,7 @@ const Blogs = () => {
   }, []);
 
   return (
-    <div className="w-[100%] flex flex-col items-center gap-[20px] z-[11]">
+    <div className="w-[100%] flex flex-col items-center gap-4 z-[11]">
       <div className="w-[100%] font-sarabun gap-4 flex justify-center items-center gap-x-4 max-mobile:flex-col max-mobile:gap-[50px]">
         {blogs?.map((blog, index) => (
           <Link key={index} target="_blank" href={`../Blog-main/${blog.attributes.tiltle}`}>
@@ -46,14 +46,13 @@ const Blogs = () => {
           </Link>
         ))}
       </div>
-      <div className="flex items-center justify-center text-[#979797]"> 
+      <div className="flex items-center justify-center text-gray-400"> 
         <Link
-          className="text-lg underline font-nota font-bold"
+          className="text-lg underline font-nota font-semibold"
           href="/Blog"
         >
           Read More
         </Link>
-        <IoIosArrowForward size={20} className="mt-1" />
       </div>
     </div>
   );
