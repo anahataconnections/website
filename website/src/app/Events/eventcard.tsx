@@ -3,6 +3,7 @@ import React from "react";
 import Image from "next/image";
 import "./event.css";
 import { format } from "date-fns";
+import { useRouter } from "next/navigation";
 
 export type EventsProps = {
   events: any[];
@@ -16,9 +17,15 @@ const truncateDescription = (description: string, maxLength: number) => {
 };
 
 const Eventcard = (props: EventsProps) => {
-  if (props.events.length === 0) return <div>No Events</div>;
+  const router = useRouter();
 
+  if (props.events.length === 0) return <div>No Events</div>;
   const { events } = props;
+
+  const redirectSignup = () => {
+    router.push("/register");
+  };
+
   return (
     <div className="flex flex-wrap font-sarabun items-center justify-center md:justify-between relative z-[50]">
       {events.map((item: any) => {
@@ -50,11 +57,7 @@ const Eventcard = (props: EventsProps) => {
                 </div>
 
                 <button
-                  onClick={() =>
-                    alert(
-                      "You will be notified on your registered email and phone number!"
-                    )
-                  }
+                  onClick={redirectSignup}
                   className="mt-2 bg-[#094C3B] text-white rounded-[3px] px-10 sm:px-14 py-2 sm:py-2.5 cursor-pointer hover:bg-[#286f5d] font-semibold text-sm sm:text-base w-full sm:w-auto"
                 >
                   Notify
