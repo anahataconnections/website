@@ -46,7 +46,7 @@ const Career = () => {
               return (
                 <JobCard
                   key={key}
-                  image_url={job.attributes.role_picture.data.attributes.url}
+                  image_url={job.attributes.role_picture.data?.attributes?.url}
                   role_description={job.attributes.role_description}
                   role_title={job.attributes.role_title}
                 />
