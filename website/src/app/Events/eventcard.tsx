@@ -23,7 +23,8 @@ const Eventcard = (props: EventsProps) => {
   const { events } = props;
 
   const redirectSignup = () => {
-    router.push("/register");
+    window.location.href =
+      "https://docs.google.com/forms/d/e/1FAIpQLSesxDqtEEfJDtu5kk3ydhYok35PQwTrwe2AwTWaldyc9CFNmw/viewform?usp=sf_link";
   };
 
   return (

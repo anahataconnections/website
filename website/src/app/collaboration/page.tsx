@@ -18,6 +18,13 @@ interface CollaborationData {
           type: string;
           children: { bold?: boolean; text: string; type: string }[];
         }[];
+        image: {
+          data: {
+            attributes: {
+              url: string;
+            };
+          };
+        };
       };
       advertisement: {
         id: number;
@@ -25,6 +32,13 @@ interface CollaborationData {
           type: string;
           children: { text: string; type: string }[];
         }[];
+        image: {
+          data: {
+            attributes: {
+              url: string;
+            };
+          };
+        };
       };
       yoga: {
         id: number;
@@ -32,6 +46,13 @@ interface CollaborationData {
           type: string;
           children: { text: string; type: string }[];
         }[];
+        image: {
+          data: {
+            attributes: {
+              url: string;
+            };
+          };
+        };
       };
       banner_image: {
         data: {
@@ -83,9 +104,28 @@ const Collaboration: React.FC = () => {
   const { collaboration, advertisement, yoga, business_partner, banner_image } =
     attributes;
 
+  const sections = [
+    {
+      image: {
+        data: { attributes: { url: collaboration.image.data.attributes.url } },
+      },
+      content: collaboration.content,
+    },
+    {
+      image: {
+        data: { attributes: { url: advertisement.image.data.attributes.url } },
+      },
+      content: advertisement.content,
+    },
+    {
+      image: { data: { attributes: { url: yoga.image.data.attributes.url } } },
+      content: yoga.content,
+    },
+  ];
+
   return (
     <div className="h-auto scroll-smooth">
-      <section className="">
+      <section className="mb-10">
         <div className="w-full custom2:h-[70vh] h-[60vh] relative mb-10 lg:mb-0">
           {banner_image && (
             <Image
@@ -111,11 +151,7 @@ const Collaboration: React.FC = () => {
 
         <WhyChoose />
 
-        <WhatWeDo
-          collaboration={collaboration}
-          advertisement={advertisement}
-          yoga={yoga}
-        />
+        <WhatWeDo sections={sections} />
 
         <CollabCards data={business_partner} />
 

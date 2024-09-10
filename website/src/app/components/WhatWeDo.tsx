@@ -1,102 +1,132 @@
 import React from "react";
 import Image from "next/image";
 
-interface WhatWeDoProps {
-  collaboration: {
-    [x: string]: any;
-    content: {
-      children: { text: string }[];
-    }[];
-  };
-  advertisement: {
-    [x: string]: any;
-    content: {
-      children: { text: string }[];
-    }[];
-  };
-  yoga: {
-    [x: string]: any;
-    content: {
-      children: { text: string }[];
-    }[];
-  };
+interface TextItem {
+  text: string;
+  bold?: boolean;
+  italic?: boolean;
+  underline?: boolean;
 }
 
-const WhatWeDo: React.FC<WhatWeDoProps> = ({
-  collaboration,
-  advertisement,
-  yoga,
-}) => {
+interface ContentItem {
+  type: string;
+  children: TextItem[];
+  level?: number;
+}
 
-  console.log(collaboration);
-  console.log(advertisement)
-  console.log(yoga)
+interface SectionData {
+  image: {
+    data: {
+      attributes: {
+        url: string;
+      };
+    };
+  };
+  content: ContentItem[];
+}
+
+interface WhatWeDoProps {
+  sections: SectionData[];
+}
+
+const WhatWeDo: React.FC<WhatWeDoProps> = ({ sections }) => {
+  const renderTextWithFormat = (textItem: TextItem, index: number): React.ReactNode => {
+    let text: React.ReactNode = textItem.text;
+
+    if (textItem.bold) {
+      text = <strong key={`bold-${index}`}>{text}</strong>;
+    }
+    if (textItem.italic) {
+      text = <em key={`italic-${index}`}>{text}</em>;
+    }
+    if (textItem.underline) {
+      text = <u key={`underline-${index}`}>{text}</u>;
+    }
+
+    return text;
+  };
+
+  const renderContent = (content: ContentItem[]) => {
+    return content.map((item, index) => {
+      switch (item.type) {
+        case 'heading':
+          return renderHeading(item, index);
+        case 'paragraph':
+          return (
+            <p key={index} className="font-sarabun text-xl text-justify mb-4">
+              {item.children.map((child, childIndex) =>
+                renderTextWithFormat(child, childIndex)
+              )}
+            </p>
+          );
+        default:
+          return null;
+      }
+    });
+  };
+
+  const renderHeading = (item: ContentItem, index: number) => {
+    const headingClasses: { [key: number]: string } = {
+      1: "text-4xl font-bold",
+      2: "text-3xl font-semibold",
+      3: "text-2xl font-medium",
+      4: "text-xl font-medium",
+      5: "text-lg font-medium",
+      6: "text-base font-medium",
+    };
+
+    const HeadingTag = `h${item.level || 1}` as keyof JSX.IntrinsicElements;
+
+    return (
+      <HeadingTag
+        key={index}
+        className={`font-sarabun text-emerald-900 mb-4 ${headingClasses[item.level || 1]}`}
+      >
+        {item.children.map((child, childIndex) =>
+          renderTextWithFormat(child, childIndex)
+        )}
+      </HeadingTag>
+    );
+  };
 
   return (
-    <div className=" pt-16 flex flex-col space-y-3">
+    <div className="pt-16 flex flex-col space-y-3">
       <h1 className="font-Pattaya text-emerald-900 text-center text-5xl my-10">
         What we do?
       </h1>
 
-      {/* First Item */}
-      <div className="text-black py-10 px-5 md:px-0 flex flex-col md:flex-row items-center justify-center md:items-start gap-2 gap-x-10">
-        <div className="">
-          <Image
-            src={collaboration.image.data.attributes.url}
-            alt="Collaboration Image"
-            width={400}
-            height={200}
-          />
+      {sections?.map((section, index) => (
+        <div
+          key={index}
+          className="text-black py-10 px-5 md:px-0 flex flex-col md:flex-row items-center justify-center md:items-start gap-2 gap-x-10"
+        >
+          {index % 2 === 0 ? (
+            <>
+              <div>
+                <Image
+                  src={section.image.data.attributes.url}
+                  alt={`Section ${index + 1} Image`}
+                  width={400}
+                  height={200}
+                />
+              </div>
+              <div className="md:w-1/2 md:pl-8">{renderContent(section.content)}</div>
+            </>
+          ) : (
+            <>
+              <div className="md:w-1/2">{renderContent(section.content)}</div>
+              <div className="custom2:pl-6">
+                <Image
+                  src={section.image.data.attributes.url}
+                  alt={`Section ${index + 1} Image`}
+                  width={400}
+                  height={200}
+                />
+              </div>
+            </>
+          )}
         </div>
-        <div className="md:w-1/2 md:pl-8">
-          <h1 className="font-bold font-sarabun text-[30px] mb-4">
-            {collaboration.content[0].children[0].text}
-          </h1>
-          <p className=" font-sarabun text-xl text-justify ">
-            {collaboration.content[1].children[0].text}
-          </p>
-        </div>
-      </div>
-
-      {/* Second Item */}
-      <div className="text-black py-10 px-5 md:px-0 flex flex-col md:flex-row items-center justify-center md:items-center gap-2 gap-x-10">
-        <div className="md:w-1/2 ">
-          <h1 className="font-bold font-sarabun text-[30px] mb-4">
-            {advertisement.content[0].children[0].text}
-          </h1>
-          <p className=" font-sarabun text-xl text-justify ">
-            {advertisement.content[1].children[0].text}
-          </p>
-        </div>
-        <div className="custom2:pl-6">
-          <Image
-            src={advertisement.image.data.attributes.url}
-            alt="Advertisement Image"
-            width={400}
-            height={200}
-          />
-        </div>
-      </div>
-
-      {/* Third Item */}
-      <div className="text-black py-10 px-5 md:px-0 flex flex-col md:flex-row items-center justify-center md:items-start gap-2 gap-x-10">
-        <div className="">
-          <Image
-            src={yoga.image.data.attributes.url}
-            alt="Yoga Image"
-            width={400}
-            height={200}
-          />
-        </div>
-        <div className="md:w-1/2 md:pl-8">
-          <h1 className="font-bold font-sarabun text-[30px] mb-4">
-            {yoga.content[0].children[0].text}
-          </h1>
-          <p className=" font-sarabun text-xl text-justify ">
-            {yoga.content[1].children[0].text}
-          </p>
-        </div>
-      </div>
+      ))}
     </div>
   );
 };

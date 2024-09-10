@@ -46,6 +46,8 @@ const Testimonials = () => {
     return <div>Loading...</div>;
   }
 
+  console.log(testimonialData);
+
   return (
     <div className="w-full bg-[#F0FDF9] flex flex-col items-center py-12 px-4">
       <h1 className="font-Pattaya text-center text-3xl md:text-4xl text-[#094C3B] mb-8">

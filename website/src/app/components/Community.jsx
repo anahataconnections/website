@@ -33,19 +33,19 @@ const Community = () => {
 
   const images = [
     {
-      src: "https://cdn.builder.io/api/v1/image/assets/TEMP/5b98072059023c1cb512919babbfd7091b1e6f4c30e17685f334605454329f07?apiKey=b0951f87dee4449fa252b5f3cfc3b012&",
+      src: "/assets/chat/green.svg",
       message: ` ${communityData.text1}`,
     },
     {
-      src: "https://cdn.builder.io/api/v1/image/assets/TEMP/3b6276de1c719c39f7ef529931d0f9363baf8c463fed31657c275cc214691980?apiKey=b0951f87dee4449fa252b5f3cfc3b012&",
+      src: "/assets/chat/red.svg",
       message: ` ${communityData.text2}`,
     },
     {
-      src: "https://cdn.builder.io/api/v1/image/assets/TEMP/5b98072059023c1cb512919babbfd7091b1e6f4c30e17685f334605454329f07?apiKey=b0951f87dee4449fa252b5f3cfc3b012&",
+      src: "/assets/chat/green.svg",
       message: ` ${communityData.text3}`,
     },
     {
-      src: "https://cdn.builder.io/api/v1/image/assets/TEMP/3b6276de1c719c39f7ef529931d0f9363baf8c463fed31657c275cc214691980?apiKey=b0951f87dee4449fa252b5f3cfc3b012&",
+      src: "/assets/chat/red.svg",
       message: ` ${communityData.text4}`,
     },
   ];
