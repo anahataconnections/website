@@ -55,14 +55,18 @@ const Testimonials = () => {
       <div className="flex flex-col items-center max-w-2xl w-full">
         <div className="relative mb-[-2rem]">
           <div className="h-64 w-64 rounded-full ring-4 ring-yellow-400 ring-offset-8 ring-offset-[#F0FDF9] shadow-lg">
-            <Image
-              src={testimonialData[currentIndex]?.image.data.attributes.url}
-              layout="fill"
-              objectFit="cover"
-              quality={100}
-              className="rounded-full shadow-lg"
-              alt="Testimonial"
-            />
+            {
+              testimonialData[currentIndex]?.image && (
+                <Image
+                  src={testimonialData[currentIndex]?.image.data.attributes.url}
+                  layout="fill"
+                  objectFit="cover"
+                  quality={100}
+                  className="rounded-full shadow-lg"
+                  alt="Testimonial"
+                />
+              )
+            }
           </div>
         </div>
 
