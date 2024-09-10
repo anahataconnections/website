@@ -56,7 +56,7 @@ const Hero = () => {
           </div>
         </div>
 
-        <div className="w-[90vw] small-tab:w-[60vw] flex flex-col gap-4 items-center mt-14">
+        <div className="w-[90vw] small-tab:w-[60vw] flex flex-col gap-4 items-center mt-10">
           <header className="font-Pattaya md:text-5xl  text-4xl text-center text-[#094C3B]">
             {data?.title}
           </header>

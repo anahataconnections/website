@@ -67,12 +67,12 @@ const Community = () => {
           ))}
         </div>
 
-        <div className="relative flex flex-col w-fit gap-[10px]">
+        <div className="relative hidden md:flex flex-col w-fit gap-[10px]">
           {images.map(({ message, src }, index) => {
             return (
               <div
                 key={index}
-                className={`w-[100%] h-min-fit flex  justify-center ${(index === 1 || index === 3) &&
+                className={`w-[100%] h-min-fit flex justify-center ${(index === 1 || index === 3) &&
                   // "mobile:translate-x-[30%] tab:translate-x-[60%]"
                   ""
                   }`}
