@@ -1,22 +1,51 @@
-import React, { useState } from "react";
+import React from "react";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import * as z from "zod";
+import { X } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import { Textarea } from "@/components/ui/textarea";
+import toast from "react-hot-toast";
+
+const formSchema = z.object({
+  name: z.string().min(2, "Name must be at least 2 characters"),
+  email: z.string().email("Invalid email address"),
+  gender: z.enum(["Male", "Female", "Other"], {
+    required_error: "Please select a gender",
+  }),
+  message: z.string().min(10, "Message must be at least 10 characters"),
+});
 
 const HelpPopup = ({ isOpen, onClose }) => {
-  if (!isOpen) return null;
-
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    gender: "",
-    message: "",
+  const form = useForm({
+    resolver: zodResolver(formSchema),
+    defaultValues: {
+      name: "",
+      email: "",
+      gender: "",
+      message: "",
+    },
   });
 
-  console.log(formData);
+  if (!isOpen) return null;
 
-  const dataToSend = { data: formData };
-
-  const handleSubmit = async (event) => {
-    event.preventDefault();
-
+  const onSubmit = async (data) => {
     try {
       const response = await fetch(
         "https://cms.anahataaconnections.com/api/enquiries",
@@ -25,7 +54,7 @@ const HelpPopup = ({ isOpen, onClose }) => {
           headers: {
             "Content-Type": "application/json",
           },
-          body: JSON.stringify(dataToSend),
+          body: JSON.stringify({ data }),
         }
       );
 
@@ -33,10 +62,14 @@ const HelpPopup = ({ isOpen, onClose }) => {
         throw new Error("Network response was not ok");
       }
 
-      console.log("Form submitted successfully");
       onClose();
-      alert("We have recieved your query. You will be reached out soon.");
+      toast.success("We've received your message, we'll get back to you soon", {
+        icon: "👏",
+      });
     } catch (error) {
+      toast.error("Error sending message. Please try again later.", {
+        icon: "🚫",
+      });
       console.error(
         "There has been a problem with your fetch operation:",
         error
@@ -45,73 +78,93 @@ const HelpPopup = ({ isOpen, onClose }) => {
   };
 
   return (
-    <div className="absolute bottom-0 left-0 w-screen h-screen bg-black bg-opacity-50 flex justify-center items-center z-[50]">
-      <div className="bg-white p-6 rounded-lg shadow-lg w-[897px] h-[1017]">
-        <div className="flex justify-between">
-          <h2 className="text-[40px] text-[#094C3B] font-bold font-Pattaya">
+    <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
+      <div className="bg-white p-6 rounded-lg shadow-lg w-full max-w-2xl">
+        <div className="flex justify-between items-center mb-6">
+          <h2 className="text-3xl text-[#094C3B] font-bold font-pattaya">
             How can we help you?
           </h2>
-          <div
+          <Button
+            variant="ghost"
+            size="icon"
             onClick={onClose}
-            className="w-8 h-8 bg-[#094C3B] rounded-full flex justify-center items-center text-white text-center text-xl cursor-pointer"
+            className="rounded-full bg-[#094C3B] text-white hover:bg-[#083C2F]"
           >
-            {`×`}{" "}
-          </div>
+            <X className="h-4 w-4" />
+          </Button>
         </div>
-        <form
-          onSubmit={handleSubmit}
-          className="flex flex-col gap-y-5 px-5 pt-5"
-        >
-          <input
-            type="text"
-            name="name"
-            id="name"
-            placeholder="Name"
-            className="p-2 border border-black rounded-lg focus:outline-none"
-            onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-          />
-          <input
-            type="email"
-            name="email"
-            id="email"
-            placeholder="E-Mail"
-            className="p-2 border border-black rounded-lg focus:outline-none"
-            onChange={(e) =>
-              setFormData({ ...formData, email: e.target.value })
-            }
-          />
-          <select
-            name="gender"
-            id="gender"
-            value={formData.gender}
-            className="p-2 border border-black rounded-lg focus:outline-none"
-            onChange={(e) =>
-              setFormData({ ...formData, gender: e.target.value })
-            }
-          >
-            <option value="">Select Gender</option>
-            <option value="Male">Male</option>
-            <option value="Female">Female</option>
-            <option value="Other">Other</option>
-          </select>
-          <textarea
-            placeholder="Write to us ..."
-            name="message"
-            id="message"
-            rows="10"
-            className="p-2 border border-black rounded-lg focus:outline-none"
-            onChange={(e) =>
-              setFormData({ ...formData, message: e.target.value })
-            }
-          ></textarea>
-
-          <button
-            type="submit"
-            className="w-40 py-3 font-semibold bg-[#094C3B] text-white text-center rounded-[32px]"
-          >
-            Submit
-          </button>
-        </form>
+        <Form {...form}>
+          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+            <FormField
+              control={form.control}
+              name="name"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Name</FormLabel>
+                  <FormControl>
+                    <Input placeholder="Your name" {...field} />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <FormField
+              control={form.control}
+              name="email"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Email</FormLabel>
+                  <FormControl>
+                    <Input placeholder="Your email" {...field} />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <FormField
+              control={form.control}
+              name="gender"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Gender</FormLabel>
+                  <Select onValueChange={field.onChange} defaultValue={field.value}>
+                    <FormControl>
+                      <SelectTrigger>
+                        <SelectValue placeholder="Select gender" />
+                      </SelectTrigger>
+                    </FormControl>
+                    <SelectContent>
+                      <SelectItem value="Male">Male</SelectItem>
+                      <SelectItem value="Female">Female</SelectItem>
+                      <SelectItem value="Other">Other</SelectItem>
+                    </SelectContent>
+                  </Select>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <FormField
+              control={form.control}
+              name="message"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Message</FormLabel>
+                  <FormControl>
+                    <Textarea
+                      placeholder="Write to us ..."
+                      className="resize-none"
+                      {...field}
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <Button type="submit" className="w-full bg-[#094C3B] text-white hover:bg-[#083C2F]">
+              Submit
+            </Button>
+          </form>
+        </Form>
       </div>
     </div>
   );

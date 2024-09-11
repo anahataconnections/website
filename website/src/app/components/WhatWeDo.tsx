@@ -90,8 +90,8 @@ const WhatWeDo: React.FC<WhatWeDoProps> = ({ sections }) => {
   };
 
   return (
-    <div className="pt-16 flex flex-col space-y-3">
-      <h1 className="font-Pattaya text-emerald-900 text-center text-5xl my-10">
+    <div className="flex flex-col">
+      <h1 className="font-Pattaya text-emerald-900 text-center text-5xl mt-14">
         What we do?
       </h1>
 

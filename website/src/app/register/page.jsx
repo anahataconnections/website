@@ -74,7 +74,7 @@ const Register = () => {
     };
 
     return (
-        <main className="shadow-sm w-full z-[11] overflow-hidden h-screen bg-center bg-no-repeat bg-contain" style={{ backgroundImage: `url(${bannerImage})` }}>
+        <main className="shadow-sm w-full z-[11] overflow-hidden h-screen bg-no-repeat bg-cover bg-origin-content" style={{ backgroundImage: `url(${bannerImage})` }}>
             <div className="flex bg-emerald-900 h-screen bg-opacity-85 justify-center items-center pb-40">
                 <section className="flex flex-col items-center justify-center w-full z-[11] opacity-100">
                     <div className="relative flex flex-col justify-center items-center text-2xl leading-8 text-neutral-200 max-md:mt-10 w-full">

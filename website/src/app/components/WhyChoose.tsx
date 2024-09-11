@@ -7,15 +7,16 @@ type ItemProps = {
 };
 
 const Item: React.FC<ItemProps> = ({ imgSrc, altText, text }) => (
-  <div className="flex flex-col flex-1">
+  <div className="flex flex-col flex-1 gap-4">
     <img
       loading="lazy"
       src={imgSrc}
       alt={altText}
       className="self-center aspect-[1.12] w-[169px]"
     />
-    <div className="mt-12 text-center font-sarabun
-     max-md:mt-8 text-[25px]">{text}</div>
+    <div className="text-center font-nota text-2xl font-semibold text-[#0C6242]">
+      {text}
+    </div>
   </div>
 );
 
@@ -42,8 +43,8 @@ function WhyChoose() {
   ];
 
   return (
-    <section className="flex flex-col px-5 custom2:pt-20">
-      <h1 className="self-center font-Pattaya text-5xl text-emerald-900 leading-[67.2px] max-md:text-4xl">
+    <section className="flex flex-col px-5 custom2:pt-14">
+      <h1 className="self-center font-Pattaya text-emerald-900 text-5xl">
         Why choose us ?
       </h1>
       <div className="flex flex-col md:flex-row gap-5 mt-14 w-full text-3xl leading-10 text-justify text-black max-md:flex-wrap max-md:mt-10 max-md:max-w-full">

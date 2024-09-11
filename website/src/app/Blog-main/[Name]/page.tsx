@@ -216,7 +216,7 @@ const BlogPage: React.FC<BlogPageProps> = ({ params }) => {
         }}
         className="w-[100vw] h-[50vh] mobile:h-[65vh] bg-cover bg-no-repeat bg-center"
       ></div>
-      <div className="w-screen flex items-center justify-center  pt-[30px] pb-[60px] mobile:pt-[50px] mobile:pb-[100px]">
+      <div className="w-screen flex items-center justify-center pt-[30px] pb-[30px] mobile:pt-[50px] mobile:pb-[100px]">
         <div className="w-[80vw] mobile:w-[60vw] flex flex-col items-center  bg-cover bg-no-repeat customMax:mt-28">
           <div className="flex flex-col gap-[30px] mobile:gap-[60px]">
             <div className="flex flex-col gap-[10px] mobile:gap-[30px]">

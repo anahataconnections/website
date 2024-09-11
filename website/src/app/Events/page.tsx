@@ -80,16 +80,16 @@ const Events = () => {
     <main className="bg-white scroll-smooth overflow-y-auto z-[11]">
       <div>
         <Slider />
-        <div className="font-Pattaya my-4 flex justify-center items-center text-3xl md:text-5xl text-[#094C3B] pb-6 md:pb-10">
+        <div className="font-Pattaya mt-4 flex justify-center items-center text-3xl md:text-5xl text-[#094C3B] pb-6 md:pb-10">
           Upcoming Event
         </div>
       </div>
 
-      <h1 className="text-xl md:text-2xl mx-4 md:mx-32 my-4 font-bold px-2 md:px-6">
+      <h1 className="text-xl md:text-2xl font-bold px-2 md:px-4 text-center">
         Select Date Range
       </h1>
       <form className="my-4 md:my-8 relative text-black px-2 md:px-6 flex w-full justify-start">
-        <div className="flex flex-wrap w-full justify-start gap-x-5 gap-y-4">
+        <div className="flex flex-wrap w-full justify-center gap-x-5 gap-y-4">
           <div className="flex flex-col w-full sm:w-1/2 md:w-1/5">
             <p className="my-2 text-xs text-gray-600">START DATE</p>
             <input

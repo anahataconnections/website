@@ -21,13 +21,13 @@ const Blog = async () => {
         className="w-full h-[35vh] sm:h-[52vh] lg:h-[70vh] xl:h-[75vh] object-cover object-center"
         alt="Screenshots of the dashboard project showing desktop and mobile versions"
       />
-      <div className="w-full px-4 sm:px-8 md:px-16 lg:px-32 flex justify-center items-center bg-contain bg-no-repeat">
+      <div className="w-full p-4 px-16 flex justify-center items-center bg-contain bg-no-repeat">
         <div className="w-full flex justify-center bg-white bg-opacity-[0.5]">
-          <div className="w-full flex flex-col items-center">
-            <h1 className="font-Pattaya mt-6 sm:mt-10 lg:mt-20 text-4xl sm:text-5xl lg:text-7xl text-[#094C3B]">
+          <div className="w-full flex flex-col items-center gap-4">
+            <h1 className="font-Pattaya text-4xl p-4 sm:text-5xl lg:text-7xl text-[#094C3B]">
               Blogs
             </h1>
-            <div className="w-full flex flex-col lg:flex-row justify-center mt-8 sm:mt-12 lg:mt-20 mb-12 sm:mb-16 lg:mb-24 gap-8 lg:gap-16">
+            <div className="w-full flex flex-col lg:flex-row justify-center mb-12 sm:mb-16 lg:mb-24 gap-8 lg:gap-16">
               <div className="flex flex-col gap-8 lg:w-2/3">
                 {Blog.data.slice(2, 4).map((item: any) => (
                   <div

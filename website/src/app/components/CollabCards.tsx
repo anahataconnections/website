@@ -24,18 +24,20 @@ const PartnerCard: React.FC<PartnerCardProps> = ({
   text,
 }) => {
   return (
-    <div className="relative flex flex-col grow items-center px-5 pb-5 mx-auto bg-gray-200 rounded border border-solid border-stone-300 max-md:px-5 max-md:mt-10 font-sarabun">
+    <div className="relative w-96 h-[30rem] items-center bg-gray-100 rounded-md shadow-lg px-4 py-2 flex flex-col gap-4">
       <Image
         src={imgSrc}
         width={1200}
         height={720}
         loading="lazy"
         alt={`${name} from ${country}`}
-        className="absolute -top-16 z-10 mt-0 max-w-full aspect-[1.01] w-[124px] rounded-full object-cover"
+        className="absolute -top-16 z-10 mt-0 shadow-lg max-w-full aspect-[1.01] w-[124px] rounded-full object-cover"
       />
-      <h3 className="text-3xl text-emerald-900 mt-20">{name}</h3>
-      <p className="mt-4 text-xl text-emerald-900">{country}</p>
-      <div className="flex gap-0 mt-2 text-2xl">
+      <div className="flex flex-col gap-2 items-center mt-16">
+        <h3 className="text-3xl text-emerald-900 font-bold">{name}</h3>
+        <p className="text-lg text-emerald-900">{country}</p>
+      </div>
+      <div className="flex text-2xl">
         {[...Array(rating)].map((_, index) => (
           <FaStar key={index} className="text-emerald-900" />
         ))}
@@ -43,7 +45,7 @@ const PartnerCard: React.FC<PartnerCardProps> = ({
           <FaRegStar key={index} className="text-emerald-900" />
         ))}
       </div>
-      <p className="mt-5 text-lg text-center text-neutral-600">{text}</p>
+      <p className="text-lg text-center text-gray-500">{text}</p>
     </div>
   );
 };
@@ -54,11 +56,11 @@ const CollabCards: React.FC<WhatWeDoProps> = ({ data }) => {
       <header className="self-center text-5xl font-Pattaya custom2:pt-16 text-emerald-900 leading-[67.2px] max-md:max-w-full max-md:text-4xl">
         Our Business Partners
       </header>
-      <main className="mt-24 w-full max-md:mt-10 max-md:max-w-full">
-        <div className="flex flex-col gap-y-14 md:gap-y-0 md:flex-row md:gap-x-5 mx-20">
+      <main className="mt-20 w-full">
+        <div className="flex flex-col md:flex-row items-center justify-center gap-24">
           {data.map((partner: any, index: any) => (
             <div
-              className="flex flex-col mx-auto md:w-full custom2:px-2 "
+              className="flex flex-col items-center justify-center "
               key={index}
             >
               <PartnerCard

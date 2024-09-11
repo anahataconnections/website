@@ -66,7 +66,7 @@ const Footer = () => {
               Anahata Connections
             </div>
           </Link>
-          
+
           <div className="flex flex-col items-center gap-4 mt-4">
             <div className="flex flex-col justify-center items-center gap-2">
               <div className="text-sm sm:text-base text-[#094C3B] font-bold mb-2">
@@ -89,19 +89,19 @@ const Footer = () => {
               <div className="text-lg sm:text-xl md:text-2xl font-Pattaya text-[#094C3B] text-center">
                 DOWNLOAD THE APP
               </div>
-              <div className="flex flex-row items-center justify-center mt-2">
+              <div className="flex flex-row items-center justify-center gap-4">
                 <Image
                   src="/assets/google.svg"
                   width={120}
                   height={120}
-                  className="cursor-pointer w-28 sm:w-32 md:w-36"
+                  className="cursor-pointer w-36"
                   alt="Google Play"
                 />
                 <Image
                   src="/assets/app.svg"
                   width={120}
                   height={120}
-                  className="cursor-pointer rounded-md scale-90 w-28 sm:w-32 md:w-36"
+                  className="cursor-pointer w-36"
                   alt="App Store"
                 />
               </div>
@@ -123,7 +123,7 @@ const Footer = () => {
                 type="email"
                 id="email"
                 name="email"
-                className="w-full sm:w-64 md:w-72 h-10 px-3 rounded-md border border-[#094C3B] text-[#094C3B] placeholder:text-black"
+                className="w-full sm:w-64 md:w-72 h-10 px-3 rounded-md border border-[#094C3B] text-[#094C3B] placeholder:text-gray-300"
                 placeholder="example@example.com"
               />
               <button
