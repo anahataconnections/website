@@ -1,0 +1,20 @@
+{
+  "kind": "singleType",
+  "collectionName": "event_sliders",
+  "info": {
+    "singularName": "event-slider",
+    "pluralName": "event-sliders",
+    "displayName": "Event-slider"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "events": {
+      "type": "component",
+      "repeatable": true,
+      "component": "website.event"
+    }
+  }
+}

@@ -1054,12 +1054,16 @@ export interface ApiCareerBannerCareerBanner extends Schema.SingleType {
     singularName: 'career-banner';
     pluralName: 'career-banners';
     displayName: 'Career Banner';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
     banner_image: Attribute.Media;
+    heading: Attribute.String;
+    subheading: Attribute.Text;
+    description: Attribute.Text;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1096,6 +1100,9 @@ export interface ApiCollaborationCollaboration extends Schema.SingleType {
     business_partner: Attribute.Component<'website.business-partner', true>;
     any_plans: Attribute.Component<'website.any-plans'>;
     banner_image: Attribute.Media;
+    heading: Attribute.String;
+    description: Attribute.Text;
+    button_text: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1178,6 +1185,36 @@ export interface ApiEventEvent extends Schema.CollectionType {
       Attribute.Private;
     updatedBy: Attribute.Relation<
       'api::event.event',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiEventSliderEventSlider extends Schema.SingleType {
+  collectionName: 'event_sliders';
+  info: {
+    singularName: 'event-slider';
+    pluralName: 'event-sliders';
+    displayName: 'Event-slider';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    events: Attribute.Component<'website.event', true>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::event-slider.event-slider',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::event-slider.event-slider',
       'oneToOne',
       'admin::user'
     > &
@@ -1513,6 +1550,7 @@ declare module '@strapi/types' {
       'api::collaboration.collaboration': ApiCollaborationCollaboration;
       'api::enquiry.enquiry': ApiEnquiryEnquiry;
       'api::event.event': ApiEventEvent;
+      'api::event-slider.event-slider': ApiEventSliderEventSlider;
       'api::home.home': ApiHomeHome;
       'api::notification.notification': ApiNotificationNotification;
       'api::our-story.our-story': ApiOurStoryOurStory;

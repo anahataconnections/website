@@ -4,7 +4,8 @@
   "info": {
     "singularName": "career-banner",
     "pluralName": "career-banners",
-    "displayName": "Career Banner"
+    "displayName": "Career Banner",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -12,11 +13,21 @@
   "pluginOptions": {},
   "attributes": {
     "banner_image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
+    },
+    "heading": {
+      "type": "string"
+    },
+    "subheading": {
+      "type": "text"
+    },
+    "description": {
+      "type": "text"
     }
   }
 }

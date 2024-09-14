@@ -265,6 +265,17 @@ export interface WebsiteCollaboration extends Schema.Component {
   };
 }
 
+export interface WebsiteEvent extends Schema.Component {
+  collectionName: 'components_website_events';
+  info: {
+    displayName: 'event';
+  };
+  attributes: {
+    image: Attribute.Media;
+    text: Attribute.Text;
+  };
+}
+
 export interface WebsiteFaq extends Schema.Component {
   collectionName: 'components_website_faqs';
   info: {
@@ -426,6 +437,7 @@ declare module '@strapi/types' {
       'website.business-partner': WebsiteBusinessPartner;
       'website.chat': WebsiteChat;
       'website.collaboration': WebsiteCollaboration;
+      'website.event': WebsiteEvent;
       'website.faq': WebsiteFaq;
       'website.founder-words': WebsiteFounderWords;
       'website.home-blog': WebsiteHomeBlog;
