@@ -13,6 +13,9 @@ import ContactUsDialog from "../components/ContactUsDialog";
 interface CollaborationData {
   data: {
     attributes: {
+      heading: string;
+      description: string;
+      button_text: string;
       collaboration: {
         id: number;
         content: {
@@ -80,6 +83,7 @@ async function fetchWhy(): Promise<CollaborationData | null> {
       `https://cms.anahataaconnections.com/api/collaboration?populate=*,collaboration.image,advertisement.image,yoga.image,business_partner.image,any_plans,banner_image`
     );
     const response = await res.json();
+    console.log(response);
     return response;
   } catch (err) {
     console.error(err);
@@ -102,8 +106,16 @@ const Collaboration: React.FC = () => {
 
   const { attributes } = collab.data;
 
-  const { collaboration, advertisement, yoga, business_partner, banner_image } =
-    attributes;
+  const {
+    collaboration,
+    advertisement,
+    yoga,
+    business_partner,
+    banner_image,
+    heading,
+    description,
+    button_text,
+  } = attributes;
 
   const sections = [
     {
@@ -139,10 +151,10 @@ const Collaboration: React.FC = () => {
           )}
           <div className="absolute inset-0 flex flex-col justify-center items-center z-20">
             <h2 className="font-Satisfy text-white text-4xl lg:text-[4rem] mb-4">
-              Collaborate with us?
+              {heading}
             </h2>
             <p className="text-white font-semibold text-lg mb-6 text-center font-sarabun">
-              Our collaboration opens doors to new connections.
+              {description}{" "}
             </p>
             <ContactUsDialog />
           </div>
