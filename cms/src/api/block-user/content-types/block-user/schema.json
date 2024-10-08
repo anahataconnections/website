@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "block_users",
+  "info": {
+    "singularName": "block-user",
+    "pluralName": "block-users",
+    "displayName": "block_user"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "user_id": {
+      "type": "string"
+    },
+    "block_user_id": {
+      "type": "string"
+    }
+  }
+}

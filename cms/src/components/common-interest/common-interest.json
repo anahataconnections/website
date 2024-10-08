@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_common_interest_common_interests",
+  "info": {
+    "displayName": "common_interest"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string"
+    },
+    "img": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

@@ -53,6 +53,12 @@
       "type": "component",
       "repeatable": false,
       "component": "application.workout"
+    },
+    "common_interest": {
+      "displayName": "common_interest",
+      "type": "component",
+      "repeatable": true,
+      "component": "common-interest.common-interest"
     }
   }
 }

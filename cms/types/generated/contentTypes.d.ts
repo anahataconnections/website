@@ -961,6 +961,37 @@ export interface ApiApplicationPopUpApplicationPopUp extends Schema.SingleType {
   };
 }
 
+export interface ApiBlockUserBlockUser extends Schema.CollectionType {
+  collectionName: 'block_users';
+  info: {
+    singularName: 'block-user';
+    pluralName: 'block-users';
+    displayName: 'block_user';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    user_id: Attribute.String;
+    block_user_id: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::block-user.block-user',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::block-user.block-user',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiBlogBlog extends Schema.CollectionType {
   collectionName: 'blogs';
   info: {
@@ -1543,6 +1574,7 @@ declare module '@strapi/types' {
       'api::application.application': ApiApplicationApplication;
       'api::application-list.application-list': ApiApplicationListApplicationList;
       'api::application-pop-up.application-pop-up': ApiApplicationPopUpApplicationPopUp;
+      'api::block-user.block-user': ApiBlockUserBlockUser;
       'api::blog.blog': ApiBlogBlog;
       'api::blog-banner.blog-banner': ApiBlogBannerBlogBanner;
       'api::career.career': ApiCareerCareer;
