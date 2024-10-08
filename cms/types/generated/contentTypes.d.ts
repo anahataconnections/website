@@ -909,6 +909,10 @@ export interface ApiApplicationListApplicationList extends Schema.SingleType {
     Language: Attribute.Component<'application.language'>;
     Looking_for: Attribute.Component<'application.looking-for'>;
     workout: Attribute.Component<'application.workout'>;
+    common_interest: Attribute.Component<
+      'common-interest.common-interest',
+      true
+    >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

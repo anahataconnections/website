@@ -183,6 +183,17 @@ export interface ApplicationWorkout extends Schema.Component {
   };
 }
 
+export interface CommonInterestCommonInterest extends Schema.Component {
+  collectionName: 'components_common_interest_common_interests';
+  info: {
+    displayName: 'common_interest';
+  };
+  attributes: {
+    text: Attribute.String;
+    img: Attribute.Media;
+  };
+}
+
 export interface WebsiteAboutFounder extends Schema.Component {
   collectionName: 'components_website_about_founders';
   info: {
@@ -430,6 +441,7 @@ declare module '@strapi/types' {
       'application.religion': ApplicationReligion;
       'application.verify-pop-up': ApplicationVerifyPopUp;
       'application.workout': ApplicationWorkout;
+      'common-interest.common-interest': CommonInterestCommonInterest;
       'website.about-founder': WebsiteAboutFounder;
       'website.advertisements': WebsiteAdvertisements;
       'website.any-plans': WebsiteAnyPlans;
