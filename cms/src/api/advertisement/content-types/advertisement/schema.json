@@ -1,0 +1,21 @@
+{
+  "kind": "singleType",
+  "collectionName": "advertisements",
+  "info": {
+    "singularName": "advertisement",
+    "pluralName": "advertisements",
+    "displayName": "advertisement"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "advert": {
+      "displayName": "compo",
+      "type": "component",
+      "repeatable": true,
+      "component": "advertisement.compo"
+    }
+  }
+}

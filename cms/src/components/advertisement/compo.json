@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_advertisement_compos",
+  "info": {
+    "displayName": "compo"
+  },
+  "options": {},
+  "attributes": {
+    "img": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "link": {
+      "type": "string"
+    },
+    "title": {
+      "type": "text"
+    }
+  }
+}

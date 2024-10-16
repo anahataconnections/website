@@ -859,6 +859,36 @@ export interface ApiAboutAnahataAboutAnahata extends Schema.SingleType {
   };
 }
 
+export interface ApiAdvertisementAdvertisement extends Schema.SingleType {
+  collectionName: 'advertisements';
+  info: {
+    singularName: 'advertisement';
+    pluralName: 'advertisements';
+    displayName: 'advertisement';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    advert: Attribute.Component<'advertisement.compo', true>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::advertisement.advertisement',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::advertisement.advertisement',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiApplicationApplication extends Schema.SingleType {
   collectionName: 'applications';
   info: {
@@ -1575,6 +1605,7 @@ declare module '@strapi/types' {
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'api::about.about': ApiAboutAbout;
       'api::about-anahata.about-anahata': ApiAboutAnahataAboutAnahata;
+      'api::advertisement.advertisement': ApiAdvertisementAdvertisement;
       'api::application.application': ApiApplicationApplication;
       'api::application-list.application-list': ApiApplicationListApplicationList;
       'api::application-pop-up.application-pop-up': ApiApplicationPopUpApplicationPopUp;

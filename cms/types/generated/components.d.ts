@@ -1,5 +1,17 @@
 import type { Schema, Attribute } from '@strapi/strapi';
 
+export interface AdvertisementCompo extends Schema.Component {
+  collectionName: 'components_advertisement_compos';
+  info: {
+    displayName: 'compo';
+  };
+  attributes: {
+    img: Attribute.Media;
+    link: Attribute.String;
+    title: Attribute.Text;
+  };
+}
+
 export interface ApplicationAdsBanner extends Schema.Component {
   collectionName: 'components_application_ads_banners';
   info: {
@@ -426,6 +438,7 @@ export interface WebsiteYoga extends Schema.Component {
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
+      'advertisement.compo': AdvertisementCompo;
       'application.ads-banner': ApplicationAdsBanner;
       'application.education': ApplicationEducation;
       'application.interests-list': ApplicationInterestsList;
