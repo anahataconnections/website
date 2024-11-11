@@ -142,6 +142,7 @@ const Collaboration: React.FC = () => {
         <div className="w-full custom2:h-[70vh] h-[60vh] relative mb-10 lg:mb-0">
           {banner_image && (
             <Image
+              style={{opacity:.8}}
               src={banner_image.data.attributes.url}
               alt="Additional Image"
               layout="fill"
@@ -150,10 +151,10 @@ const Collaboration: React.FC = () => {
             />
           )}
           <div className="absolute inset-0 flex flex-col justify-center items-center z-20">
-            <h2 className="font-Satisfy text-white text-4xl lg:text-[4rem] mb-4">
+            <h2 className="font-Satisfy text-black text-4xl lg:text-[4rem] mb-4">
               {heading}
             </h2>
-            <p className="text-white font-semibold text-lg mb-6 text-center font-sarabun">
+            <p className="text-black font-semibold text-lg mb-6 text-center font-sarabun">
               {description}{" "}
             </p>
             <ContactUsDialog />

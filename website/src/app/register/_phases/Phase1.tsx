@@ -38,7 +38,8 @@ const Phase1 = ({ onFormSubmit }: Phase1Props) => {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className="space-y-8 flex flex-col w-96 items-center"
+        className="space-y-8 flex flex-col w-full sm:w-80 md:w-96 items-center"
+        // style={{marginRight:'10xp'}}
       >
         <FormField
           control={form.control}
