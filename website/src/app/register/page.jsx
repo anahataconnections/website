@@ -65,7 +65,7 @@ const Register = () => {
             }
         } catch (error) {
             console.error(error);
-            toast.error("Error registering user. Please try again later.", {
+            toast.error("A user with this email already exists", {
                 icon: "🚫",
             });
         } finally {
