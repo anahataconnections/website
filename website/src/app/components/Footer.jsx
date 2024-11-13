@@ -6,6 +6,7 @@ import Link from "next/link";
 import Contact from "./contact";
 import { footerElem, socialObj } from "@/constants";
 import HelpPopup from "./HelpPopup";
+import toast from "react-hot-toast";
 
 const Footer = () => {
   const [isHelpPopupOpen, setIsHelpPopupOpen] = useState(false);
@@ -40,8 +41,10 @@ const Footer = () => {
       if (!response.ok) {
         throw new Error("Failed to send email");
       }
-
-      alert("You have successfully subscribed! Thank You.");
+      toast.success("You have successfully subscribed! Thank You.", {
+        icon: "👏",
+    });
+      // alert("You have successfully subscribed! Thank You.");
     } catch (error) {
       console.error("Error sending email:", error);
       alert("There was an error sending your email.");
@@ -91,6 +94,7 @@ const Footer = () => {
               </div>
               <div className="flex flex-row items-center justify-center gap-4">
                 <Image
+                onClick={()=>window.open("https://play.google.com/store/apps/details?id=com.connections.anahata&hl=en", "_blank")}
                   src="/assets/google.svg"
                   width={120}
                   height={120}

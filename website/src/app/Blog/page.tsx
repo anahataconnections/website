@@ -17,8 +17,8 @@ const Blog = async () => {
         src={BannerImage.url}
         quality={100}
         width={2400}
-        height={2400}
-        className="w-full h-[35vh] sm:h-[52vh] lg:h-[70vh] xl:h-[75vh] object-cover object-center"
+        height={1600}
+        className="w-full h-[30vh] sm:h-[45vh] lg:h-[60vh] xl:h-[65vh] object-cover object-center"
         alt="Screenshots of the dashboard project showing desktop and mobile versions"
       />
       <div className="w-full p-4 px-16 flex justify-center items-center bg-contain bg-no-repeat">

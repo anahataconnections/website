@@ -65,9 +65,10 @@ const Register = () => {
             }
         } catch (error) {
             console.error(error);
-            toast.error("A user with this email already exists", {
+            toast.success("A user with this email already exists", {
                 icon: "🚫",
             });
+              setShowDownloadPage(true);
         } finally {
             setLoading(false);
         }
